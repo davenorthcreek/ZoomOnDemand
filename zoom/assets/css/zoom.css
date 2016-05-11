@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'Tw Cen MT';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
+}
+
+body{
+	font-family: 'Tw Cen MT';
+	font-size:14px;
+	background:#f3fcfe;
+}
+
+.navbar-brand {padding: 5px 15px;}
+.no-margin{margin:0px;}
+.no-border-radius{-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}
+
+nav.navbar{
+	background: #43C9E1;
+    border: 0px;
+    margin:0;
+}
+
+span#msjSubHeader{
+	background-color: #2e9014;
+	color:#fff;
+	display:block;
+	width:100%;
+	text-align:center;
+	padding:10px;
+}
+
+/*-------SIDEBAR IZQUIERDA-------*/
+.container section #latIzq .textContainer{
+	padding:0px 10px 50px 10px;
+	background:#76939e;
+	color:#fff;
+	font-size:18px;
+}
+
+.container section #latIzq .textContainer .sub-textContainer{
+	padding:30px 25px;
+}
+
+.container section #latIzq .textContainer .step{
+	margin:20px 0px;
+}
+
+.container section #latIzq .textContainer .step span{
+	display:block;
+	width:25px;
+	height:25px;
+	line-height:25px;
+	margin:0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	border-radius: 80px;
+	background-color:#fff;
+	color:#76939e;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+.container section #latIzq .textContainer .number{
+	border:2px solid #fff;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.container section #latDer .containerTabs{
+	background:#43C9E2;
+	padding:10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color:#fff;
+	font-size:20px;
+	text-align:center;
+	margin-bottom:5px;
+}
+
+.container section #latDer .nav-tabs{
+	border:0px;
+}
+
+.container section #latDer .nav-tabs li{
+	width:calc(100% / 3);
+	border:1px solid #c3c3c3;
+	font-size:16px;
+}
+
+.container section #latDer .nav-tabs>li.active>a,
+.container section #latDer .nav-tabs>li.active>a:focus,
+.container section #latDer .nav-tabs>li.active>a:hover,
+.container section #latDer .nav-tabs>li>a:hover{
+	margin:0px;
+	color:#fff;
+    cursor: pointer;
+    background-color: #43C9E2;
+	border:1px solid #43C9E2;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+/*-------SIDEBAR IZQUIERDA-------*/
