@@ -78,25 +78,37 @@
                         <div class="containerTimepicker">
                           <span class="textTimepicker">I need this on </span>
                           <!-- Begins -->
-                          <div class="dropdown">
-                            <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
-                              <div class="input-group">
-                                <input type="text" class="form-control" data-ng-model="data.dateDropDownInput">
+                          <div class="dropdown form-group">
+                            <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
+                              <div class="input-group date">
+                                <input type="text" class="form-control" data-ng-model="form.data">
                               </div>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="data.dateDropDownInput" data-on-set-time="logDate(newDate, oldDate)" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', minView: 'day' }"/>
+                              <datetimepicker data-ng-model="form.data" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day' }"/>
                             </ul>
-                            <span class="textTimepicker"> , 
-                            </span> 
+                          </div>
+                          
+                          <div class="dropdown form-group">
+                            <span class="textTimepicker"> , </span> 
                             <input type="text" id="dayZoom" class="form-control input-sm no-border-radius" placeholder="day"> 
-                            <span class="textTimepicker"> at </span> 
-                            <input type="text" name="" id="hourZoom" class="form-control input-sm no-border-radius" placeholder="00:00 AM">
+                            <span class="textTimepicker"> at </span>
+                            <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
+                              <div class="input-group date">
+                                <input type="text" class="form-control" data-ng-model="form.time">
+                              </div>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                              <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute' }"/>
+                            </ul>
                             <div class="clearfix"></div>
                           </div>
+                          <!-- -->
+
                           <!-- Ends -->
                           <!-- Begins 
                           <input type="text" name="" id="dateZoom" class="form-control input-sm no-border-radius" placeholder="dd/mm/yy">
+                            <input type="text" name="" id="hourZoom" class="form-control input-sm no-border-radius" placeholder="00:00 AM">
                           Ends -->
 
                         </div>

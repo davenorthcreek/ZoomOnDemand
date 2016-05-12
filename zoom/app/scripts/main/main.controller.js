@@ -11,9 +11,17 @@ zoomApp.controller('MainController', MainController);
 MainController.$inject = ['$scope'];
 
 function MainController($scope) {
-  $scope.logDate = function(newDate, oldDate) {
-    console.log($scope.data.dateDropDownInput);
-    console.log(newDate);
-    console.log(oldDate);
+
+  var main = this;
+
+  main.setDate = setDate;
+  main.setTime = setTime;
+
+  function setDate(selectedDate) {
+    console.log('selectedDate: ' + selectedDate);
+  }
+
+  function setTime(selectedTime) {
+    console.log('selectedTime: ' + selectedTime);
   }
 };
