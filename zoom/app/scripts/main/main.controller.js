@@ -13,6 +13,7 @@ MainController.$inject = ['$scope', 'moment'];
 function MainController($scope, moment) {
 
   var main = $scope;
+  main.locations = ['Los Angeles', 'Option 1', 'Option 2', 'Option n'];
   var momentFormat = 'D/M/YYYY';
   var date = new moment();
   main.form = {
@@ -20,13 +21,17 @@ function MainController($scope, moment) {
     serviceLocation: '',
     date: getFormatedDate(date), 
     day: getWeekDayName(date),
-    time: getTimeWithTimeZone(date)
+    time: getTimeWithTimeZone(date),
+    frequencyNumber: 1,
+    frequencyWord: ''
   };
 
   console.log(main.form);
 
   main.setDate = setDate;
   main.setTime = setTime;
+  main.setFrequency = setFrequency;
+  main.next = next;
 
   function getFormatedDate(date) {
     return moment(date).format(momentFormat);
@@ -51,5 +56,18 @@ function MainController($scope, moment) {
   function setTime(newDate, oldDate) {
     console.log('newTime: ' + newDate);
     console.log('main.form.time: ' + main.form.time)
+  }
+
+  function setFrequency(frequency) {
+    var frequencyTable = { 1: 'oneTime', 4: 'weekly', 12: 'monthly', 1000: 'other' };
+    main.form.frequencyNumber = frequency;
+    main.form.frequencyWord = frequencyTable[frequency];
+    console.log('main.form.frequencyNumber: ' + main.form.frequencyNumber);
+    console.log('main.form.frequencyWord: ' + main.form.frequencyWord);
+  }
+
+  function next() {
+    console.log('next');
+    console.log(main.form);
   }
 };
