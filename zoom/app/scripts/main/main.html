@@ -85,7 +85,7 @@
                               </div>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'M/D/YYYY' }" data-on-set-time="setDate(selectedDate, oldDate)" />
+                              <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'D/M/YYYY' }" data-on-set-time="setDate(newDate, oldDate)" />
                             </ul>
                           </div>
                           <div class="dropdown">
@@ -98,7 +98,7 @@
                               </div>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(selectedTime, oldTime)" />
+                              <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(newDate, oldDate)" />
                             </ul>
                           </div>
                           <!-- -->
