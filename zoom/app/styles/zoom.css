@@ -350,14 +350,43 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 }*/
 
 .datetimepicker {
-  width: 100%;
+	width: 290px;
+}
+
+.dropdown-menu {
+	/*position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;*/
+}
+.dropdown-menu:after, .dropdown-menu:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.dropdown-menu:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.dropdown-menu:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #c2e1f5;
+	border-width: 36px;
+	margin-left: -36px;
 }
 
 .open > .dropdown-menu {
-    padding:10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+	padding:10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 	border:1px solid #76939e;
 
 }
@@ -367,7 +396,12 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 }
 
 
-.datetimepicker .table td {
+.datetimepicker .table td,
+.datetimepicker .table td span {
 	border:1px solid #bac9ce;
-	padding:2px;
+	padding:0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	margin:0px;
 }
