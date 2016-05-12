@@ -13,6 +13,7 @@ MainController.$inject = ['$scope', 'moment'];
 function MainController($scope, moment) {
 
   var main = $scope;
+  var momentFormat = 'D/M/YYYY';
   var date = new moment();
   main.form = {
     whatDoYouNeed: '',
@@ -28,24 +29,27 @@ function MainController($scope, moment) {
   main.setTime = setTime;
 
   function getFormatedDate(date) {
-    return moment(date).format('D/M/YYYY');
+    return moment(date).format(momentFormat);
   }
 
   function getWeekDayName(date) {
-    return moment(date).format('dddd');
+    return moment(date, momentFormat).format('dddd');
   }
 
   function getTimeWithTimeZone(date) {
     return moment(date).format('LT Z');
   }
 
-  function setDate(selectedDate, oldDate) {
-    console.log('selectedDate: ' + selectedDate);
-    main.form.date = getFormatedDate(selectedDate);
+  function setDate(newDate, oldDate) {
+    console.log('newDate: ' + newDate);
+    console.log('oldDate: ' + oldDate);
+    console.log('main.form.date: ' + main.form.date);
+    main.form.day = getWeekDayName(main.form.date);
+    console.log('main.form.day: ' + main.form.day);
   }
 
-  function setTime(selectedTime, oldTime) {
-    console.log('selectedTime: ' + selectedTime);
-    main.form.time = getTimeWithTimeZone(date);
+  function setTime(newDate, oldDate) {
+    console.log('newTime: ' + newDate);
+    console.log('main.form.time: ' + main.form.time)
   }
 };
