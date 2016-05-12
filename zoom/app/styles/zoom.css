@@ -338,3 +338,36 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	color:#fff;
 	font-size:18px;
 }
+
+.dropdown,
+#dropdown1,
+#dropdown2{
+	float: left;
+}
+
+/*.day-view tbody{
+	border:2px solid #76939e;
+}*/
+
+.datetimepicker {
+  width: 100%;
+}
+
+.open > .dropdown-menu {
+    padding:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	border:1px solid #76939e;
+
+}
+
+.datetimepicker .table tbody{
+	border:2px solid #76939e;
+}
+
+
+.datetimepicker .table td {
+	border:1px solid #bac9ce;
+	padding:2px;
+}
