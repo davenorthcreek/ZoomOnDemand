@@ -57,17 +57,14 @@
                         <label for="">What errand do you need help with?</label>
                         <div class="input-group margin-bottom-sm">
                           <span class="input-group-addon"><i class="fa fa-search fa-fw" aria-hidden="true"></i></span>
-                          <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom">
+                          <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" ng-model="form.whatDoYouNeed">
                         </div>
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                       <div class="form-group">
                         <label for="">Your Service Location</label>
-                        <select name="" id="" class="form-control no-border-radius input-md">
-                          <option value="">Los Angeles</option>
-                          <option value="1">Opción 1</option>
-                          <option value="2">Opción 2</option>
+                        <select class="form-control no-border-radius input-md" ng-options="location for location in locations" ng-model="form.serviceLocation">
                         </select>
                       </div>
                     </div>
@@ -85,7 +82,7 @@
                               </div>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'M/D/YYYY' }" data-on-set-time="setDate(selectedDate, oldDate)" />
+                              <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'D/M/YYYY' }" data-on-set-time="setDate(newDate, oldDate)" />
                             </ul>
                           </div>
                           <div class="dropdown">
@@ -98,7 +95,7 @@
                               </div>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(selectedTime, oldTime)" />
+                              <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(newDate, oldDate)" />
                             </ul>
                           </div>
                           <!-- -->
@@ -124,19 +121,19 @@
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm active">This one time</button>
+                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1) }" ng-click="setFrequency(1)">This one time</button>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm">Weekly</button>
+                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 4) }" ng-click="setFrequency(4)">Weekly</button>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm">Monthly</button>
+                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 12) }" ng-click="setFrequency(12)">Monthly</button>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm">Other</button>
+                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1000) }" ng-click="setFrequency(1000)">Other</button>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
-                      <button class="btn btnNext pull-right">NEXT</button>
+                      <button class="btn btnNext pull-right" ng-click="next()">NEXT</button>
                     </div>
                   </div>
                 </form>
