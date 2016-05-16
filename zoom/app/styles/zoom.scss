@@ -1,0 +1,604 @@
+@import '_functions.scss';
+@import '_colors.scss';
+
+@font-face{
+	font-family: 'Tw Cen MT';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
+}
+
+body{
+	font-family: 'Tw Cen MT';
+	font-size:14px;
+}
+ 
+*{
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	outline:none !important;
+}
+
+textarea::-webkit-input-placeholder, 
+   input::-webkit-input-placeholder {
+   color: $placeholder !important;
+} /* WebKit */
+
+textarea:-moz-placeholder, 
+   input:-moz-placeholder {
+   color: $placeholder !important;
+} /* Firefox 18- */
+
+textarea::-moz-placeholder, 
+   input::-moz-placeholder {
+   color: $placeholder !important;
+} /* Firefox 19+ */
+
+textarea:-ms-input-placeholder, 
+   input:-ms-input-placeholder {
+   color: $placeholder !important;
+} /* IE 10+ */
+
+.zoom{
+	// ----------------------------------------------------
+	// -----------------------HEADER-----------------------
+	// ----------------------------------------------------
+	header{
+		nav.navbar{
+			background:$blueZoom;
+		    @include border(0px);
+		    @include margin(0px,0px,0px,0px);
+		    .container-fluid{
+		    	.navbar-collapse{
+		    		.navbar-nav{
+		    			li{
+		    				a{
+								color: $white;
+							    font-size:18px;
+							    &:hover{
+									background:$blueZoom;						    	
+							    }
+							}
+		    			}
+		    			img{
+		    				@include margin(5px,10px,5px,10px);
+		    			}
+		    		}
+		    	}
+		    	.navbar-header{
+		    		.navbar-brand{
+						@include padding(5px,15px,5px,15px);
+					}
+					.navbar-toggle{
+					    @include border(0px,solid,$white);
+					    background:transparent;
+						&:hover{
+							@include border(0px,solid,$white);
+					    	background:transparent;						    	
+					    }
+					    .icon-bar{
+						    background-color: $white;
+						}
+					}
+		    	}
+			}
+		}
+		span#msjSubHeader{
+			background-color: $greenBarSafety;
+			color:$white;
+			display:block;
+			width:100%;
+			@include text-align(center);
+			@include padding(10px,10px,10px,10px);
+		}
+	}
+	// ----------------------------------------------------
+	// -----------------------HEADER-----------------------
+	// ----------------------------------------------------
+
+	
+	section{
+		.row{
+			// ---------------------------------------------------------------
+			// -----------------------SIDEBAR IZQUIERDA-----------------------
+			// ---------------------------------------------------------------
+			aside#latIzq{
+				.textContainer{
+					@include padding(0px,10px,0px,10px);
+					background:$graySideBarIzq;
+					color:$white;
+					font-size:18px;
+					.sub-textContainer{
+						@include padding(36px,25px,0px,25px);
+						.row{
+							@include margin(56px,0px,0px,0px);
+							.step{
+								@include margin(0px,0px,38px,0px);
+								span{
+									display:block;
+									width:25px;
+									height:25px;
+									line-height:25px;
+									@include border-radius(80px);
+									background-color:$white;
+									color:$graySideBarIzq;
+									font-size:16px;
+									font-weight:bold;
+									@include margin(0px,auto,18px,auto);
+								}
+								p{
+									line-height:1em;
+								}
+							}
+						}
+						.orText{
+							@include margin(0px,0px,33px,0px);
+						}
+						.callText{
+							@include margin(0px,0px,15px,0px);
+						}
+						.number{
+							@include border(2px,solid,$white);
+							@include border-radius(20px);
+							@include padding(0px,0px,0px,0px);
+							@include margin(0px,auto,15px,auto);
+							width:140px;
+						}
+					}
+					p.toMakeText{
+						@include margin(0px,0px,0px,0px);
+						@include padding(0px,0px,40px,0px);
+					}
+				}
+			}
+			// ---------------------------------------------------------------
+			// -----------------------SIDEBAR IZQUIERDA-----------------------
+			// ---------------------------------------------------------------
+			
+
+			// -------------------------------------------------------------
+			// -----------------------SIDEBAR DERECHO-----------------------
+			// -------------------------------------------------------------
+			aside#latDer{
+				.tabParent{
+					.tab-parent-header{
+						@include margin(50px,0px,36px,0px);
+						@include border(0px);
+						li{	
+							width:calc(100% / 3);
+							@include text-align(center);
+							@include border-bottom(0px);
+							font-size:16px;
+							a{	
+								@include padding(0px,0px,10px,0px);
+								@include margin(0px,0px,0px,0px);
+								@include border(0px,solid,transparent);
+								color:$tabParentHeader;
+								cursor: pointer;
+								font-weight:600;
+								display:block;
+								&:hover{
+									background:transparent;
+								}
+							}
+							&:hover{
+								@include border-bottom(5px,solid,$graySideBarIzq);		
+							}
+						}
+						li.active{
+							a{
+								@include border-bottom(5px,solid,$graySideBarIzq);								
+							}
+							&:hover{
+								@include border-bottom(0px,solid,transparent);		
+							}
+						}
+					}
+					.tab-parent-content{
+						.tab-pane{
+							.titleTabErrand{
+								background:$blueZoom;
+								@include padding(10px,10px,10px,10px);
+								@include border-radius-top-left(10px);
+								@include border-radius-top-right(10px);
+								color:$white;
+								font-size:20px;
+								@include text-align(center);
+								@include margin(10px,0px,5px,0px);
+							}
+							.tab-header-post-errand{
+								@include border(0px);
+								li{
+									width:calc(100% / 3);
+									@include border(1px,solid,$grayBorder);
+									font-size:16px;
+									&:nth-child(2){
+										@include border-left(0px);
+										@include border-right(0px);
+									}
+									a{
+										&:hover{
+											@include margin(0px,0px,0px,0px);
+											color:$white;
+											cursor: pointer;
+											background-color: $blueZoom;
+											@include border(1px,solid,$blueZoom);
+											@include border-radius(0px);
+										}
+									}
+								}
+								li.active{
+									a{
+										@include margin(0px,0px,0px,0px);
+										color:$white;
+										cursor: pointer;
+										background-color: $blueZoom;
+										@include border(1px,solid,$blueZoom);
+										@include border-radius(0px);
+										&:hover,:focus{
+											@include margin(0px,0px,0px,0px);
+											color:$white;
+											cursor: pointer;
+											background-color: $blueZoom;
+											@include border(1px,solid,$blueZoom);
+											@include border-radius(0px);
+										}
+									}
+								}
+							}
+							.tab-content-post-errand{
+								.tab-pane{
+									.containerForm{
+										background: $bgFormTab;
+										@include box-shadow(0px,15px,30px,0px,173,173,173,0.75);
+										@include border-radius-bottom-left(10px);
+										@include border-radius-bottom-right(10px);
+										@include padding(40px,40px,40px,40px);
+										color:$colorTextForm;
+										font-size:16px;
+										letter-spacing:0.7px;
+										form{
+											.row{
+												span.spanBalance{
+													@include border(1px,solid,$gray);
+													@include border-radius(40px);
+													display:block;
+													width:220px;
+													letter-spacing:0px;
+													@include padding(5px,10px,5px,10px);
+													-webkit-box-sizing: border-box;
+													-moz-box-sizing: border-box;
+													box-sizing: border-box;
+													background:#fff;
+												}
+												.form-group{
+													input, textarea{
+														font-size:17.93px;
+													}
+													.textarea{
+														position: relative;
+														textarea{
+															@include padding(10px,20px,10px,20px);
+															letter-spacing:1.4px;
+															font-weight:normal;
+															resize:none;
+														}
+														.imageClip{
+															position: absolute;
+															bottom:10px;
+															right:10px;
+															background:url('../images/clip.png');
+															width:14px;
+															height:18px;
+														}
+													}
+													.input-group{
+														input.searchZoom{
+															@include border-left(0px,solid,transparent);
+														}
+														.input-group-addon{
+														    background-color: $white;
+														    @include border-right(0px,solid,transparent);
+														    @include border-radius(0px);
+														}
+													}
+													.containerTimepicker{
+														.dropdown{
+															.textTimepicker{
+																float:left;
+																font-weight:bold;
+															}
+															input[type="text"]{
+																color:$colorTextForm;
+																@include margin(6px,0px,6px,0px);
+																width:206px;
+																background:transparent;
+																@include border(0px,solid,transparent);
+																@include border-bottom(1px,solid,$colorTextForm);
+																@include padding(0px,0px,0px,0px);
+																@include text-align(center);
+																font-size:16px;
+																height: 20px;
+																float:left;
+																font-weight:bold;
+															}
+														}
+													}
+												}
+											}
+											button.btnBottomForm{
+												width:100%;
+												background:transparent;
+												@include border(2px,solid,$graySideBarIzq);
+												color:$graySideBarIzq;
+												@include border-radius(10px);
+												font-size:16px;
+											}
+											button.btnBottomForm.active,
+											button.btnBottomForm:hover{
+												background:$graySideBarIzq;
+												color:$white;
+												&:hover{
+													background:$graySideBarIzq;
+													color:$white;
+												}
+											}
+											button.btnNext,
+											button.btnBack{
+												width:170px;
+												color:$graySideBarIzq;
+												@include border-radius(10px);
+												font-size:16px;
+												background:$blueZoom;
+												color:$white;
+												@include margin(40px,0px,0px,0px);
+												height:40px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			// -------------------------------------------------------------
+			// -----------------------SIDEBAR DERECHO-----------------------
+			// -------------------------------------------------------------
+		}
+	}
+
+	// -----------------------------------------------------
+	// -----------------------ARTICLE-----------------------
+	// -----------------------------------------------------
+	article{
+		background:$bgArticle;
+		h3{
+			@include padding(50px,0px,50px,0px);
+			@include margin(0px,0px,0px,0px);
+			font-size:30px;
+		}
+		.containerImage{
+			@include margin(0px,0px,40px,0px);
+			img{
+				@include border-radius(10px);
+				@include margin(0px,auto,0px,auto);
+			}
+			h4{
+				font-weight:normal;
+				color:$titlesErrandsPopular;
+			}
+		}
+	}
+	// -----------------------------------------------------
+	// -----------------------ARTICLE-----------------------
+	// -----------------------------------------------------
+	
+	// ----------------------------------------------------
+	// -----------------------FOOTER-----------------------
+	// ----------------------------------------------------
+	footer{
+		h3,h4{
+			color:$titlesFooter;
+			font-weight:bold;
+			font-size:20px;
+		}
+
+		button{
+			width:200px;
+			background:transparent;
+			font-size:16px;
+			background:transparent;
+			color:$blueZoom;
+			font-weight:normal;
+			height:40px;
+			@include border-radius(10px);
+			@include border(2px,solid,$blueZoom);
+			@include text-align(center);
+			@include margin(50px,auto,0px,auto);
+			&:hover{
+				background:$blueZoom;
+				color:$white;
+			}
+		}
+		button.active{
+			background:$blueZoom;
+			color:$white;
+		}
+		.subfooter{
+			background:$blueZoom;
+			width:100%;
+			height:60px;
+			line-height:60px;
+			@include margin(50px,0px,0px,0px);
+			color:$white;
+			font-size:18px;
+		}
+	} 
+	// ----------------------------------------------------
+	// -----------------------FOOTER-----------------------
+	// ----------------------------------------------------
+
+	// -------------------------------------------------------
+	// -----------------------GENERALES-----------------------
+	// -------------------------------------------------------
+	.no-margin{
+		@include margin(0px,0px,0px,0px);
+	}
+	.no-border-radius{
+		@include border-radius(0px);
+	}
+
+	.form-control{
+		@include box-shadow(0px,0px,0px,0px,50,50,50,0.75);
+	}
+	.form-control:focus{
+		@include border(1px,solid,$grayBorder);
+		@include box-shadow(0px,0px,0px,0px,0,0,0,0.75,inset);
+		@include box-shadow(0px,0px,0px,0px,255,0,0,0.6);
+	}
+
+	.btn:hover,
+	.btn:focus,
+	.btn:visited,
+	.btn:active,
+	.btn.active{
+		@include box-shadow(0px,0px,0px,0px,0,0,0, .125,inset);
+	}
+
+	.dropdown,
+	#dropdown1,
+	#dropdown2{
+		float: left;
+	}
+
+	.datetimepicker{
+		width: 290px;
+	}
+
+	.open > .dropdown-menu{
+		@include padding(10px,10px,10px,10px);
+		@include border-radius(10px);
+		@include border(1px,solid,$graySideBarIzq);
+
+	}
+
+	.datetimepicker .table tbody{
+		@include border(2px,solid,$graySideBarIzq);
+	}
+
+
+	.datetimepicker .table td,
+	.datetimepicker .table td span{
+		@include border(1px,solid,$grayBorder);
+		@include padding(0px,0px,0px,0px);
+		@include border-radius(0px);
+		@include margin(0px,0px,0px,0px);
+	}
+	// -------------------------------------------------------
+	// -----------------------GENERALES-----------------------
+	// -------------------------------------------------------
+}
+
+
+/* 
+.switch {
+	position: relative;
+	display: block;
+	vertical-align: top;
+	width: 100px;
+	height: 30px;
+	padding: 3px;
+	margin: 0 10px 10px 0;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	border-radius: 18px;
+	box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 11px;
+	color: #aaaaaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background: #E1B42B;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	border-radius: 100%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	border-radius: 6px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+	left: 74px;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-label, .switch-handle {
+	transition: All 0.3s ease;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+}
+*/
