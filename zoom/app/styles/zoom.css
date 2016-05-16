@@ -8,43 +8,46 @@
 body{
 	font-family: 'Tw Cen MT';
 	font-size:14px;
-	/*background:#f3fcfe;*/
 }
 
-.navbar-brand {padding: 5px 15px;}
-.no-margin{margin:0px;}
-.no-border-radius{-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline:none !important;
+}
 
-header nav.navbar{
+/*--------------------------------------------------------------*/
+/*----------------------------HEADER----------------------------*/
+/*--------------------------------------------------------------*/
+.zoom header nav.navbar{
 	background: #43C9E1;
     border: 0px;
-    margin:0;
+    margin: 0px;
 }
-
-header nav.navbar .navbar-nav{
-	color:#fff;
-}
-
-header nav.navbar .navbar-right li a{
-	color:#fff;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: #fff;
+.zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li a{
+	color:red;
+	color: #fff;
     font-size:18px;
 }
-
-.navbar-default .navbar-nav>li>img{
+.zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li a:hover{
+	background: #43C9E1;
+}
+.zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav img{
 	margin:5px 10px;
 }
-
-header nav.navbar .navbar-nav .customerText{
-	font-size:18px;
-	margin-top:15px;
-	padding-left:15px;
+.zoom header nav.navbar .container-fluid .navbar-header .navbar-brand {
+	padding: 5px 15px;
 }
-
-span#msjSubHeader{
+.zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle,
+.zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle:hover {
+    border-color: #fff;
+    background:transparent;
+}
+.zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.zoom header span#msjSubHeader{
 	background-color: #2e9014;
 	color:#fff;
 	display:block;
@@ -52,20 +55,34 @@ span#msjSubHeader{
 	text-align:center;
 	padding:10px;
 }
+/*--------------------------------------------------------------*/
+/*----------------------------HEADER----------------------------*/
+/*--------------------------------------------------------------*/
 
-/*-------SIDEBAR IZQUIERDA-------*/
-.container section #latIzq .textContainer{
-	padding:0px 10px 50px 10px;
+/*-------------------------------------------------------------*/
+/*----------------------SIDEBAR IZQUIERDA----------------------*/
+/*-------------------------------------------------------------*/
+.zoom section .row aside#latIzq .textContainer{
+	padding:0px 10px 0px 10px;
 	background:#76939e;
 	color:#fff;
 	font-size:18px;
 }
 
-.container section #latIzq .textContainer .sub-textContainer{
-	padding:30px 25px;
+.zoom section .row aside#latIzq .textContainer .sub-textContainer{
+	padding:36px 25px 0px 25px;
 }
 
-.container section #latIzq .textContainer .step span{
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .row{
+	margin-top:56px;
+}
+
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step{
+	margin:0px 0px;
+	margin-bottom:38px;
+}
+
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step span{
 	display:block;
 	width:25px;
 	height:25px;
@@ -76,26 +93,42 @@ span#msjSubHeader{
 	border-radius: 80px;
 	background-color:#fff;
 	color:#76939e;
-	font-size:14px;
+	font-size:16px;
 	font-weight:bold;
-	margin-bottom:10px;
+	margin-bottom:18px;
 }
 
-.container section #latIzq .textContainer .step{
-	margin:20px 0px;
-}
-
-.container section #latIzq .textContainer p{
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step p{
 	line-height:1em;
 }
 
-.container section #latIzq .textContainer .number{
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .orText{
+	margin-bottom:33px;
+}
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .callText{
+	margin-bottom:15px;
+}
+.zoom section .row aside#latIzq .textContainer .sub-textContainer .number{
 	border:2px solid #fff;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
+	padding:0px;
+	width:140px;
+	margin:0px auto 15px auto;
 }
-.container section #latDer .containerTabs{
+.zoom section .row aside#latIzq .textContainer .toMakeText{
+	padding-bottom:56px;
+	margin:0px;
+}
+/*-------------------------------------------------------------*/
+/*----------------------SIDEBAR IZQUIERDA----------------------*/
+/*-------------------------------------------------------------*/
+
+/*-----------------------------------------------------------*/
+/*----------------------SIDEBAR DERECHO----------------------*/
+/*-----------------------------------------------------------*/
+.zoom section .row aside#latDer .titleTabErrand{
 	background:#43C9E2;
 	padding:10px;
 	-webkit-border-top-left-radius: 10px;
@@ -108,54 +141,43 @@ span#msjSubHeader{
 	font-size:20px;
 	text-align:center;
 	margin-bottom:5px;
+	margin-top:10px;
 }
 
-.container section #latDer .nav-tabs{
+.zoom section .row aside#latDer .nav-tabs{
 	border:0px;
 }
 
-.container section #latDer .nav-tabs li{
+.zoom section .row aside#latDer .nav-tabs li{
 	width:calc(100% / 3);
 	border:1px solid #c3c3c3;
 	font-size:16px;
 }
 
-.container section #latDer .nav-tabs>li.active>a,
-.container section #latDer .nav-tabs>li.active>a:focus,
-.container section #latDer .nav-tabs>li.active>a:hover,
-.container section #latDer .nav-tabs>li>a:hover{
+.zoom section .row aside#latDer .nav-tabs li:nth-child(2){
+	border-left:0px;
+	border-right:0px;
+}
+
+.zoom section .row aside#latDer .nav-tabs>li.active>a,
+.zoom section .row aside#latDer .nav-tabs>li.active>a:focus,
+.zoom section .row aside#latDer .nav-tabs>li.active>a:hover,
+.zoom section .row aside#latDer .nav-tabs>li>a:hover{
 	margin:0px;
 	color:#fff;
-    cursor: pointer;
-    background-color: #43C9E2;
+	cursor: pointer;
+	background-color: #43C9E2;
 	border:1px solid #43C9E2;
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
 
-.container section #latDer .progressbarZoom{
-	margin:20px 0px;
-	border-bottom:2px solid #76939E;
-}
-.container section #latDer .progressbarZoom p{
-	width:calc(100% / 3);
-	float:left;
-	font-weight:bold;
-	text-align:center;
-	margin:0px;
-	padding-bottom:10px;
-}
-
-.container section #latDer .progressbarZoom p.active{
-	border-bottom:5px solid #76939E;
-}
-
-.container section #latDer .containerForm{
--webkit-box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
--moz-box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
-box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm{
 	background: #f3fcfe;
+	-webkit-box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
+	-moz-box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
+	box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	-webkit-border-bottom-right-radius: 20px;
 	-webkit-border-bottom-left-radius: 20px;
 	-moz-border-radius-bottomright: 20px;
@@ -163,30 +185,21 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 	padding:40px;
-}
-
-.container section #latDer .containerForm form{
 	color:#8A8E8E;
 	font-size:16px;
 	letter-spacing:0.7px;
 }
 
-.container section #latDer .containerForm form .searchZoom{
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form .row .form-group .input-group input.searchZoom{
 	border-left: 0px solid transparent;
 }
 
-.container section #latDer .containerForm form .containerTimepicker{
-	margin-top:10px
-}
-
-.container section #latDer .containerForm form .containerTimepicker .textTimepicker,
-.container section #latDer .containerForm form .containerTimepicker input[type="text"]{
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form .row .form-group .containerTimepicker .dropdown .textTimepicker{
 	float:left;
-	line-height:20px;
 	font-weight:bold;
 }
 
-.container section #latDer .containerForm form .containerTimepicker input[type="text"]{
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form .row .form-group .containerTimepicker .dropdown input[type="text"]{
 	color:#8A8E8E;
 	margin:0px 6px;
 	width:206px;
@@ -197,13 +210,11 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	text-align:center;
 	font-size:16px;
 	height: 20px;
+	float:left;
+	font-weight:bold;
 }
 
-.container section #latDer .containerForm form .containerTimepicker .textTimepicker{
-	
-}
-
-.container section #latDer .containerForm form button.btnBottomForm{
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form button.btnBottomForm{
 	width:100%;
 	background:transparent;
 	border:2px solid #76939E;
@@ -214,16 +225,15 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	font-size:16px;
 }
 
-.container section #latDer .containerForm form button.btnBottomForm.active,
-.container section #latDer .containerForm form button.btnBottomForm:hover{
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form button.btnBottomForm.active,
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form button.btnBottomForm:hover{
 
 	background:#76939E;
 	color:#fff;
 }
 
-.container section #latDer .containerForm form button.btnNext{
+.zoom section .row aside#latDer .tab-content .tab-pane .containerForm form button.btnNext{
 	width:100%;
-	background:transparent;
 	color:#76939E;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -235,76 +245,52 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	margin-top:40px;
 	height:40px;
 }
+/*-----------------------------------------------------------*/
+/*----------------------SIDEBAR DERECHO----------------------*/
+/*-----------------------------------------------------------*/
 
-.container section #latDer .containerForm form .containerRecurring label{
-	float:left;
-	text-align: center;
-}
-
-.container section #latDer .containerForm form .containerRecurring span.line{
-	height:1px;
-	width:calc(85%/2);
-	background:#76939E;
-	float:left;
-	line-height:30px;
-	margin:12px 5px 0px 5px;
+/*---------------------------------------------------*/
+/*----------------------ARTICLE----------------------*/
+/*---------------------------------------------------*/
+.zoom article{
+	background:#f6f6f6;
 }
 
-.input-group-addon {
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 10px solid red;
-    -webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-}
-.form-control{
-	-webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-	box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-}
-.form-control:focus {
-	/*border-color: #FF0000;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);*/
-	border: 1px solid #ccc;
-	box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(255, 0, 0, 0.6);
-}
-/*-------SIDEBAR IZQUIERDA-------*/
-
-.container article{
-	background:#F6F6F6;
-}
-
-.container article h3{
+.zoom article h3{
 	padding:50px 0px;
 	margin:0px;
 	font-size:30px;
 }
 
-.container article .containerImage{
+.zoom article .containerImage{
 	margin-bottom:40px;
 }
-.container article .containerImage img{
+.zoom article .containerImage img{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	margin:0 auto;
 }
-.container article .containerImage h4{
+.zoom article .containerImage h4{
 	font-weight:normal;
 	color:#6E6E6E;
 }
+/*---------------------------------------------------*/
+/*----------------------ARTICLE----------------------*/
+/*---------------------------------------------------*/
 
-.container footer h3,
-.container footer h4{
+
+/*--------------------------------------------------*/
+/*----------------------FOOTER----------------------*/
+/*--------------------------------------------------*/
+.zoom footer h3,
+.zoom footer h4{
 	color:#4F4F4F;
 	font-weight:bold;
 	font-size:20px;
 }
 
-.container footer button{
+.zoom footer button{
 	width:200px;
 	background:transparent;
 	color:#76939E;
@@ -323,13 +309,13 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	margin-top:50px;
 }
 
-.container footer button:hover,
-.container footer button.active{
+.zoom footer button:hover,
+.zoom footer button.active{
 	background:#43C9E2;
 	color:#fff;
 }
 
-.container footer .subfooter{
+.zoom footer .subfooter{
 	background:#43C9E2;
 	width:100%;
 	height:60px;
@@ -338,6 +324,42 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	color:#fff;
 	font-size:18px;
 }
+/*--------------------------------------------------*/
+/*----------------------FOOTER----------------------*/
+/*--------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+/*----------------------GENERALES----------------------*/
+/*-----------------------------------------------------*/
+.no-margin{
+	margin:0px;
+}
+.no-border-radius{
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+
+.input-group-addon {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 10px solid red;
+    -webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.form-control{
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+}
+.form-control:focus {
+	border: 1px solid #ccc;
+	box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(255, 0, 0, 0.6);
+}
 
 .dropdown,
 #dropdown1,
@@ -345,41 +367,8 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	float: left;
 }
 
-/*.day-view tbody{
-	border:2px solid #76939e;
-}*/
-
 .datetimepicker {
 	width: 290px;
-}
-
-.dropdown-menu {
-	/*position: relative;
-	background: #88b7d5;
-	border: 4px solid #c2e1f5;*/
-}
-.dropdown-menu:after, .dropdown-menu:before {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-
-.dropdown-menu:after {
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #88b7d5;
-	border-width: 30px;
-	margin-left: -30px;
-}
-.dropdown-menu:before {
-	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: #c2e1f5;
-	border-width: 36px;
-	margin-left: -36px;
 }
 
 .open > .dropdown-menu {
@@ -405,3 +394,6 @@ box-shadow: 0px 15px 30px 0px rgba(173,173,173,0.75);
 	border-radius: 0px;
 	margin:0px;
 }
+/*-----------------------------------------------------*/
+/*----------------------GENERALES----------------------*/
+/*-----------------------------------------------------*/

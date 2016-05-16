@@ -1,198 +1,177 @@
 <section>
-  <div class="row">
-    <aside id="latIzq">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-left">
-        <div class="textContainer">
-          <div class="sub-textContainer">
-            <p>It just takes 3 easy steps to post an errand . . . </p>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 step">
-                <span class="text-center">1</span>
-                <p>Select an errand and provide us with errand details</p>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 step">
-                <span class="text-center">2</span>
-                <p>Enter the location, date and time in which you need our help.</p>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 step">
-                <span class="text-center">3</span>
-                <p>Submit the errand form and our services providers will take it from there!</p>
-              </div>
-            </div>
-            <p class="text-center no-margin">OR</p> <br>
-            <p class="text-center no-margin">Call us today at</p> <br>
-            <p class="text-center no-margin number">(310) 425 6425</p>
-          </div>
-          <p class="no-margin">To make an errand booking or if you have any questions.</p>
-        </div>
-      </div>
-    </aside>
-    <aside id="latDer">
-      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-        <div class="progressbarZoom">
-          <p class="active">POST NEW ERRAND</p>
-          <p>ERRANDS IN PROGRESS</p>
-          <p>MY HOURS</p>
-          <div class="clearfix"></div>
-        </div>
-        <div class="containerTabs">POST ERRAND</div>
-        <div>
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="no-border-radius text-center active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="no-margin">1. Select Errant</a></li>
-            <li role="presentation" class="no-border-radius text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="no-margin">2. Provide Errant Details</a></li>
-            <li role="presentation" class="no-border-radius text-center"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="no-margin">2. Confirm & Post</a></li>
-          </ul>
-
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="home">
-              <div class="containerForm">
-                <!-- <input type="text" id="datetimepicker1" class="form-control" /> -->
-                <!-- <input type="text" id="datepicker1" class="form-control" /> -->
-                <form>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                      <div class="form-group">
-                        <label for="">What errand do you need help with?</label>
-                        <div class="input-group margin-bottom-sm">
-                          <span class="input-group-addon"><i class="fa fa-search fa-fw" aria-hidden="true"></i></span>
-                          <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" ng-model="form.whatDoYouNeed">
+    <div class="row">
+        <aside id="latIzq" class="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-left">
+            <div class="textContainer">
+                <div class="sub-textContainer">
+                    <p class="descriptionTextSteps">It just takes 3 easy steps to post an errand . . . </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 step">
+                            <span class="text-center">1</span>
+                            <p>Select an errand and provide us with errand details</p>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                      <div class="form-group">
-                        <label for="">Your Service Location</label>
-                        <select class="form-control no-border-radius input-md" ng-options="location for location in locations" ng-model="form.serviceLocation">
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                      <div class="form-group">
-                        <label for="">When do you need this service?</label>
-                        <br>
-                        <div class="containerTimepicker">
-                          <!-- Begins -->
-                          <div class="dropdown">
-                            <span class="textTimepicker">I need this on </span>
-                            <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
-                              <div class="input-group date">
-                                <input type="text" class="form-control" data-ng-model="form.date">
-                              </div>
-                            </a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'D/M/YYYY' }" data-on-set-time="setDate(newDate, oldDate)" />
-                            </ul>
-                          </div>
-                          <div class="dropdown">
-                            <span class="textTimepicker"> , </span> 
-                            <input type="text" id="dayZoom" class="form-control input-sm no-border-radius" ng-model="form.day" placeholder="day"> 
-                            <span class="textTimepicker"> at </span>
-                            <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
-                              <div class="input-group date">
-                                <input type="text" class="form-control" data-ng-model="form.time">
-                              </div>
-                            </a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(newDate, oldDate)" />
-                            </ul>
-                          </div>
-                          <!-- -->
-
-                          <!-- Ends -->
-                          <!-- Begins 
-                          <input type="text" name="" id="dateZoom" class="form-control input-sm no-border-radius" placeholder="dd/mm/yy">
-                            <input type="text" name="" id="hourZoom" class="form-control input-sm no-border-radius" placeholder="00:00 AM">
-                          Ends -->
-
-                            <div class="clearfix"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 step">
+                            <span class="text-center">2</span>
+                            <p>Enter the location, date and time in which you need our help.</p>
                         </div>
-                      </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 step">
+                            <span class="text-center">3</span>
+                            <p>Submit the errand form and our services providers will take it from there!</p>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                      <div class="form-group">
-                        <label for="">How frequently do you need our service? So we can set a reminder.</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                      <div class="form-group containerRecurring text-center">
-                        recurring
-                      </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1) }" ng-click="setFrequency(1)">This one time</button>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 4) }" ng-click="setFrequency(4)">Weekly</button>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 12) }" ng-click="setFrequency(12)">Monthly</button>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                      <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1000) }" ng-click="setFrequency(1000)">Other</button>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
-                      <button class="btn btnNext pull-right" ng-click="next()">NEXT</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+                    <p class="text-center no-margin orText">OR</p>
+                    <p class="text-center no-margin callText">Call us today at</p>
+                    <p class="text-center no-margin number">(310) 425 6425</p>
+                </div>
+                <p class="toMakeText">To make an errand booking or if you have any questions.</p>
             </div>
-            <div role="tabpanel" class="tab-pane" id="profile">
-              <div class="containerForm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ratione possimus ipsum, saepe odio aspernatur amet, perspiciatis quia! Id nostrum, reprehenderit dicta mollitia obcaecati suscipit accusantium, excepturi sint cumque sapiente.											
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="messages">
-              <div class="containerForm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vero veritatis beatae quibusdam perferendis delectus deleniti quae aspernatur, laborum aut molestiae labore praesentium fugit, natus sint dolor atque tempora, amet.											
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
-  </div>
+        </aside>          
+        <aside id="latDer" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div class="titleTabErrand">POST ERRAND</div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="no-border-radius text-center active">
+                    <a href="#selectErrandTab" aria-controls="selectErrandTab" role="tab" data-toggle="tab" class="no-margin">1. Select Errant</a>
+                </li>
+                <li role="presentation" class="no-border-radius text-center">
+                    <a href="#provideErrantTab" aria-controls="provideErrantTab" role="tab" data-toggle="tab" class="no-margin">2. Provide Errant Details</a>
+                </li>
+                <li role="presentation" class="no-border-radius text-center">
+                    <a href="#confirmErrandTab" aria-controls="confirmErrandTab" role="tab" data-toggle="tab" class="no-margin">2. Confirm & Post</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="selectErrandTab">
+                    <div class="containerForm">
+                        <form>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="form-group">
+                                        <label for="">What errand do you need help with?</label>
+                                        <div class="input-group margin-bottom-sm">
+                                            <span class="input-group-addon"><i class="fa fa-search fa-fw" aria-hidden="true"></i></span>
+                                            <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" ng-model="form.whatDoYouNeed">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                    <div class="form-group">
+                                        <label for="">Your Service Location</label>
+                                        <select class="form-control no-border-radius input-md" ng-options="location for location in locations" ng-model="form.serviceLocation">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <br><label for="">When do you need this service?</label><br><br>
+                                        <div class="containerTimepicker">
+                                            <div class="dropdown">
+                                                <span class="textTimepicker">I need this on </span>
+                                                <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                                    <div class="input-group date">
+                                                        <input type="text" class="form-control" data-ng-model="form.date">
+                                                    </div>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                    <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'DD/MM/YYYY' }" data-on-set-time="setDate(newDate, oldDate)" />
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown">
+                                                <span class="textTimepicker"> , </span> 
+                                                <input type="text" readonly="readonly" id="dayZoom" class="form-control input-sm no-border-radius" ng-model="form.day" placeholder="day"> 
+                                                <span class="textTimepicker"> at </span>
+                                                <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                                    <div class="input-group date">
+                                                        <input type="text" class="form-control" data-ng-model="form.time">
+                                                    </div>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                    <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(newDate, oldDate)" />
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="">How frequently do you need our service? So we can set a reminder.</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                                    <div class="form-group containerRecurring text-center">
+                                        recurring
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1) }" ng-click="setFrequency(1)">This one time</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 4) }" ng-click="setFrequency(4)">Weekly</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 12) }" ng-click="setFrequency(12)">Monthly</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1000) }" ng-click="setFrequency(1000)">Other</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
+                                    <button class="btn btnNext pull-right" ng-click="next()">NEXT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="provideErrantTab">
+                    <div class="containerForm">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ratione possimus ipsum, saepe odio aspernatur amet, perspiciatis quia! Id nostrum, reprehenderit dicta mollitia obcaecati suscipit accusantium, excepturi sint cumque sapiente.                      
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="confirmErrandTab">
+                    <div class="containerForm">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vero veritatis beatae quibusdam perferendis delectus deleniti quae aspernatur, laborum aut molestiae labore praesentium fugit, natus sint dolor atque tempora, amet.                      
+                    </div>
+                </div>
+            </div>            
+        </aside>
+    </div>            
 </section>
 <article>
-  <h3 class="text-center">ERRANDS POPULAR IN YOUR AREA</h3>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-      <div class="containerImage">
-        <img src="images/img1.jpg" alt="" title="" class="img-responsive">
-        <h4>Household & Waiting</h4>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-      <div class="containerImage">
-        <img src="images/img2.jpg" alt="" title="" class="img-responsive">
-        <h4>Errand Services</h4>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-      <div class="containerImage">
-        <img src="images/img3.jpg" alt="" title="" class="img-responsive">
-        <h4>Moving & Relocating</h4>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-      <div class="containerImage">
-        <img src="images/img4.jpg" alt="" title="" class="img-responsive">
-        <h4>Concierge Services</h4>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-      <div class="containerImage">
-        <img src="images/img5.jpg" alt="" title="" class="img-responsive">
-        <h4>Senior Services</h4>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-      <div class="containerImage">
-        <img src="images/img6.jpg" alt="" title="" class="img-responsive">
-        <h4>Business Services</h4>
-      </div>
-    </div>
-  </div>				
+    <h3 class="text-center">ERRANDS POPULAR IN YOUR AREA</h3>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="containerImage">
+                <img src="images/img1.jpg" alt="" title="" class="img-responsive">
+                <h4>Household & Waiting</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="containerImage">
+                <img src="images/img2.jpg" alt="" title="" class="img-responsive">
+                <h4>Errand Services</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="containerImage">
+                <img src="images/img3.jpg" alt="" title="" class="img-responsive">
+                <h4>Moving & Relocating</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="containerImage">
+                <img src="images/img4.jpg" alt="" title="" class="img-responsive">
+                <h4>Concierge Services</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="containerImage">
+                <img src="images/img5.jpg" alt="" title="" class="img-responsive">
+                <h4>Senior Services</h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+            <div class="containerImage">
+                <img src="images/img6.jpg" alt="" title="" class="img-responsive">
+                <h4>Business Services</h4>
+            </div>
+        </div>
+    </div>				
 </article>
