@@ -1,0 +1,31 @@
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/zoomlogo.png" class="logo100" /></a>
+                <h5 class="float-left contact">Customer Service: (310) 425 6425</h5>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Post Errand</a></li>
+                    <li><a href="#">My Errands</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle image-circle" data-toggle="dropdown"><img src="images/user.jpg" /> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a >Profile</a></li>
+                            <li><a ui-sref="app.myaccount">My Account</a></li>
+                            <li><a  ng-click="Logout()">Logoout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   <div ui-view></div>

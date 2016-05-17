@@ -1,0 +1,266 @@
+/**********  Styles   ************/
+@font-face {
+    font-family: tw-cem;
+    src: url(../fonts/tw-cen-mt.ttf);
+}
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    font-family: tw-cem;
+        letter-spacing: 0.5px;
+    font-weight: 300;
+
+}
+.navbar{
+        background: #52C9E0;
+}
+.logo100{
+        width: 100px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.navbar-brand {
+overflow: auto;
+height: auto;
+padding: 10px 15px;
+}
+.contact{
+        color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 5px;
+}
+.shutter{
+    cursor:pointer;
+}
+.shutter.yes{
+    background: #1BA852;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    width: 76px;
+    border-radius: 17px;
+    height: 33px;
+    font-size: 16px;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+}
+.shutter.no{
+    background: #EE6B51;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    width: 76px;
+    border-radius: 17px;
+    height: 33px;
+    font-size: 16px;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+}
+.button-in{
+    background: #D7D7D7;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    display: block;
+}
+.shutter.yes .button{
+    padding: 3px ;
+    display: inline-block;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(left top, #eee 60%, #666); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right,  #eee,  #666); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom  #eee,  #666); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom  #eee,  #666); /* Standard syntax */
+        position: relative;
+    left: 18px;
+    bottom: 24px;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+}
+.shutter.no .button{
+    padding: 3px ;
+    display: inline-block;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(left top, #eee 60%, #666); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right,  #eee,  #666); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom  #eee,  #666); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom  #eee,  #666); /* Standard syntax */
+        position: relative;
+    left: -18px;
+    bottom: 24px;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+}
+.navbar-nav li a{
+        color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 20px;
+}
+.inputs{
+width: 100%;
+    height: 45px;
+    border: 2px solid #ccc;
+    margin-bottom: 30px;
+    font-size: 22px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+.registration-btn{
+    color: #fff;
+    border: 2px solid #52C9E0;
+    background: #52c9e0;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+.registration-btn:hover{
+    color: #52C9E0;
+    background: #fff;
+}
+.reverse-btn{
+        color: #52C9E0;
+    background: #fff;
+    border: 2px solid #52C9E0;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-right: 30px;
+}
+.reverse-btn:hover{
+color: #fff;
+    background: #52c9e0;
+}
+.content-block{
+        border: 1px solid #ccc;
+    padding: 15px;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
+}
+.navbar-toggle .icon-bar{
+    background: #fff;
+}
+.navbar-toggle{
+    border:1px solid #fff;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+    background: transparent;
+    color: #333;
+}
+.image-circle img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.dropdown-toggle.image-circle{
+        padding: 5px 20px;
+}
+.dropdown-menu li a{
+    padding: 5px 20px;
+    color: #666;
+}
+.dropdown-menu{
+    background: #fff;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    background: #52C9E0;
+    color: #fff;
+}
+.account-head{
+        color: #718E99;
+    border-bottom: 2px solid #718E99;
+    padding-bottom: 10px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.setting-list{
+    list-style: none;
+}
+.setting-list h3{
+    color: #718E99;
+}
+.setting-list a:hover{
+    color: #718E99;
+    text-decoration: none;
+    
+}
+.setting-list h3{
+margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.setting-list h3.active{
+    border-bottom: 2px solid #718E99;
+    padding-bottom: 3px;
+}
+.setting-list h3:hover{
+    border-bottom: 2px solid #718E99;
+    padding-bottom: 3px;
+}
+.section-head{
+     background: #52C9E0;
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 30px;
+
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background: #718E99;
+    margin: 20px 0px;
+}
+.bottom-space-20{
+    padding-bottom: 20px;
+}
+.bottom-space-0{
+    margin-bottom: 0px;
+}
+.selection{
+        -webkit-appearance: none;
+    height: 35px;
+    width: 65px;
+    border-radius: 0px;
+    background-image: url(../images/dn-arrow.png);
+        background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 25px 44px;
+    padding-left: 5px
+}
+@media (min-width:768px){
+.section-block{
+    border-left: 2px solid #718E99;
+}
+.for-mobile{
+    display: none;
+}
+.for-desktop{
+    display: block;
+}
+}
+@media (max-width:767px){
+.section-block{
+    border-top: 2px solid #718E99;
+}
+.for-mobile{
+    display: block;
+}
+.for-desktop{
+    display: none;
+}
+}

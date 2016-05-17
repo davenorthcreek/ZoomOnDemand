@@ -12,7 +12,9 @@ var zoomApp = angular.module('zoomApp', [
   'ngResource',
   'ui.router',
   'ngSanitize',
-  'ui.bootstrap.datetimepicker'
+  'ui.bootstrap.datetimepicker',
+  'ng-token-auth'
+  
 ]);
 
 zoomApp.constant('moment', moment);
