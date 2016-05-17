@@ -9,6 +9,7 @@
     "angular-resource": "^1.4.0",
     "angular-ui-router" : "^0.2.18",
     "angular-sanitize": "^1.4.0",
+    "ng-token-auth": "^0.0.29",
     "angular-bootstrap-datetimepicker": "^1.0.1"
   },
   "devDependencies": {
