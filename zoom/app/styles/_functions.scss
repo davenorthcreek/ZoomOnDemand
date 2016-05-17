@@ -1,0 +1,74 @@
+// @if $inset != "" {
+// 	-webkit-box-shadow:$top $left $blur $color $inset;
+// 	-moz-box-shadow:$top $left $blur $color $inset;
+// 	box-shadow:$top $left $blur $color $inset;
+// }
+
+@mixin box-shadow($top,$right,$bottom,$left,$r,$g,$b,$o,$inset:"") {
+	-webkit-box-shadow : unquote($inset) $top $right $bottom $left rgba($r,$g,$b,$o);
+		-moz-box-shadow: unquote($inset) $top $right $bottom $left rgba($r,$g,$b,$o);
+			box-shadow : unquote($inset) $top $right $bottom $left rgba($r,$g,$b,$o);
+}
+
+@mixin border($px,$type:"",$color:"") {
+	border:$px unquote($type) unquote($color);
+}
+
+@mixin border-left($px,$type:"",$color:"") {
+	border-left:$px $type $color;
+}
+
+@mixin border-right($px,$type:"",$color:"") {
+	border-right:$px $type $color;
+}
+
+@mixin border-bottom($px,$type:"",$color:"") {
+	border-bottom:$px $type $color;
+}
+
+@mixin border-top($px,$type:"",$color:"") {
+	border-top:$px $type $color;
+}
+
+@mixin text-align($position) {
+	text-align:$position;
+}
+
+@mixin margin($top,$right,$bottom,$left) {
+	margin:$top $right $bottom $left;
+}
+
+@mixin padding($top,$right,$bottom,$left) {
+	padding:$top $right $bottom $left;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius; 
+          border-radius: $radius; 
+}
+
+@mixin border-radius-top-left($radius) {
+	-webkit-border-top-left-radius: $radius;
+		-moz-border-radius-topleft: $radius;
+			border-top-left-radius: $radius;
+}
+
+@mixin border-radius-bottom-left($radius) {
+	-webkit-border-bottom-left-radius: $radius;
+		-moz-border-radius-bottomleft: $radius;
+			border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-top-right($radius) {
+	-webkit-border-top-right-radius: $radius;
+		-moz-border-radius-topright: $radius;
+			border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom-right($radius) {
+	-webkit-border-bottom-right-radius: $radius;
+		-moz-border-radius-bottomright: $radius;
+			border-bottom-right-radius: $radius;
+}

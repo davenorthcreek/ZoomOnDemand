@@ -14,7 +14,7 @@ function MainController($scope, moment) {
 
   var main = $scope;
   main.locations = ['Los Angeles', 'Option 1', 'Option 2', 'Option n'];
-  var momentFormat = 'D/M/YYYY';
+  var momentFormat = 'DD/MM/YYYY';
   var date = new moment();
   main.form = {
     whatDoYouNeed: '',
