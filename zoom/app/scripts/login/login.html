@@ -1,0 +1,42 @@
+
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/zoomlogo.png" class="logo100" /></a>
+                <h5 class="float-left contact">Customer Service: (310) 425 6425</h5>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Log In</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid minimum">
+    <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-12 content-block">
+        <h2 class="center-head center">Log In</h2>
+        <form name="loginform" ng-submit="submitLogin(vm.form, {config: 'default'})" role="form">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 left">
+                <input placeholder="E-mail address" name="user" ng-model="vm.form.email" type="email" class="inputs">
+
+                <input type="password" name="password" placeholder="Password" ng-model="vm.form.password" class="inputs">
+
+                <button type="submit" class="registration-btn">Log In</button>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+   <div class="container-fluid padding0 footer">
+    <div class="container">
+        <h4>Zoom Errands, Inc. Copyright 2016</h4>
+    </div>
+</div>

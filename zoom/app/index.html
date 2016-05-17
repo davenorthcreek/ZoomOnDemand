@@ -1,7 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
   <head>
+    
     <meta charset="utf-8">
+    <base href="/">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -14,7 +16,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
+      <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/zoom.css">
+    <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
   </head>
   <body ng-app="zoomApp">
@@ -22,20 +26,15 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container zoom">
+<!--class="container zoom"-->
+      <div class="container zoom">
+          <!--<header ng-include="'scripts/static/header.html'"> </header>-->
+          <!-- Add your site or application content here -->
+          <div ui-view="" ></div>
 
-      <header ng-include="'scripts/static/header.html'">
-      </header>
-
-      <!-- Add your site or application content here -->
-      <div ui-view=""></div>
-
-      <footer ng-include="'scripts/static/footer.html'">
-      </footer>
-
-    </div>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+          <!--<footer ng-include="'scripts/static/footer.html'"> </footer>-->
+          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+      </div>
     <script>
 !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
   (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -51,6 +50,8 @@ ga('send', 'pageview');
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-cookie/angular-cookie.js"></script>
+    <script src="bower_components/ng-token-auth/dist/ng-token-auth.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -59,13 +60,31 @@ ga('send', 'pageview');
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+    <!--<script type="text/javascript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
     <script type="text/javascript" src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
 
     <script src="scripts/app.js"></script>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/run.js"></script>
+    <script src="scripts/login/login.routes.js"></script>
+    <script src="scripts/login/login.controller.js"></script>
     <script src="scripts/main/main.routes.js"></script>
     <script src="scripts/main/main.controller.js"></script>
     <script src="scripts/main/main.service.js"></script>
+
+      <script src="scripts/client/customer/customer.routes.js"></script>
+      <script src="scripts/client/customer/customer.controller.js"></script>
+      <script src="scripts/client/customer/customer.service.js"></script>
+
+      <script src="scripts/client/customer/myaccount/myaccount.routes.js"></script>
+      <script src="scripts/client/customer/myaccount/myaccount.controller.js"></script>
+      <script src="scripts/client/customer/myaccount/myaccount.service.js"></script>
+
+      <script src="scripts/client/customer/myaccount/resetPassword/resetpassword.routes.js"></script>
+      <script src="scripts/client/customer/myaccount/resetPassword/resetpassword.controller.js"></script>
+
     <!-- endbuild -->
   </body>
 </html>
