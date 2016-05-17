@@ -164,7 +164,6 @@ textarea:-ms-input-placeholder,
 				.tabParent{
 					.tab-parent-header{
 						@include margin(50px,0px,36px,0px);
-						@include border(0px);
 						li{	
 							width:calc(100% / 3);
 							@include text-align(center);
@@ -214,8 +213,8 @@ textarea:-ms-input-placeholder,
 									@include border(1px,solid,$grayBorder);
 									font-size:16px;
 									&:nth-child(2){
-										@include border-left(0px);
-										@include border-right(0px);
+										@include border-left(0px,solid,transparent);
+										@include border-right(0px,solid,transparent);
 									}
 									a{
 										&:hover{
@@ -254,10 +253,13 @@ textarea:-ms-input-placeholder,
 										@include box-shadow(0px,15px,30px,0px,173,173,173,0.75);
 										@include border-radius-bottom-left(10px);
 										@include border-radius-bottom-right(10px);
-										@include padding(40px,40px,40px,40px);
+										@include padding(20px,20px,20px,20px);
 										color:$colorTextForm;
 										font-size:16px;
 										letter-spacing:0.7px;
+										.tabPayment{
+											@include margin(20px,20px,20px,20px);
+										}
 										form{
 											.row{
 												span.spanBalance{
@@ -355,6 +357,238 @@ textarea:-ms-input-placeholder,
 												@include margin(40px,0px,0px,0px);
 												height:40px;
 											}
+											h3{
+												color:$white;
+												background:$blueZoom;
+												font-weight:normal;
+												font-size:20px;
+												@include padding(5px,10px,5px,10px);
+												@include margin(20px,20px,20px,20px);
+											}
+											ul.header-payment-container{
+												@include margin(30px,0px,0px,0px);
+												li{	
+													background:transparent;
+													width:50%;
+													@include text-align(center);
+													@include border-bottom(0px);
+													font-size:21.85px;
+													a{	
+														@include padding(0px,0px,0px,0px);
+														@include margin(0px,0px,0px,0px);
+														@include border(0px,solid,transparent);
+														color:$graySideBarIzq;
+														cursor: pointer;
+														display:block;
+														font-weight:normal;
+														&:hover{
+															background:transparent;
+														}
+													}
+													&:hover{
+														@include border-bottom(5px,solid,$graySideBarIzq);		
+													}
+												}
+												li.active{
+													a{
+														background:transparent;
+														@include border-bottom(5px,solid,$graySideBarIzq);								
+													}
+													&:hover{
+														@include border-bottom(0px,solid,transparent);		
+													}
+												}
+											}
+											div.content-payment-container{
+												@include padding(39px,0px,0px,0px);
+												#tab-use-hours{
+													p{
+														font-size:19.77px;
+														color:$colorTextSubmission3;
+														span{
+															font-weight:bold;
+															color:$blueZoom;
+														}
+													}
+													hr{
+														@include margin(17px,0px,30px,0px);
+														@include border-bottom(1px,solid,$colorLine);
+													}
+												}
+												#tab-pay{
+													.row{
+														.form-group{
+															label{
+																color:$labelPay;
+																font-size:19px;
+																font-weight:normal;
+															}
+															.input-group{
+																input[type="text"]{
+																	@include border-right(0px,solid,transparent);
+																}
+																span.input-group-addon{
+																	background-color:$white;
+																	@include border-left(0px,solid,transparent);
+																	@include border-right(1px,solid,$grayBorder	);
+																	i{
+																		font-size:20px;
+																		color:$securePay;
+																	}
+																}
+															}
+															img{
+																@include margin(32px,0px,0px,0px);
+															}
+														}
+													}
+												}
+											}
+											.order{
+												@include padding(0px,0px,20px,0px);
+												h3{
+													color:$white;
+													background:$blueZoom;
+													font-weight:normal;
+													font-size:20px;
+													@include padding(10px,10px,10px,10px);
+													@include margin(0px,0px,0px,0px);
+												}
+												.text{
+													color: $tabParentHeader;
+													@include border(1px,solid,$graySideBarIzq);
+													@include padding(20px,20px,40px,20px);
+													@include margin(20px,20px,20px,20px);
+													background:$white;
+													font-weight:bold;
+													hr{
+														@include margin(17px,0px,30px,0px);
+														@include border-bottom(1px,solid,$colorLine);
+													}
+													.return{
+														@include padding(90px,0px,0px,0px);														
+														i{
+															color:$blueZoom;
+															line-height:15px;
+															float:left;
+															font-size:16px;
+															height:15px;
+															margin-top:5px;
+															font-weight:normal;
+														}
+														a{
+															font-size:18px;
+															color:$blueZoom;
+															text-decoration:none;
+															display:block;
+															float:left;
+															@include padding(0px,0px,0px,0px);
+															height:25px;
+															line-height:25px;
+															@include margin(0px,0px,0px,2px);
+															font-weight:normal;
+														}
+													}													
+												}
+											}
+											.buttonFinish{
+												width:100%;
+												text-align: center;
+												@include margin(0,auto,30px,auto);
+												.btnConfirm{
+													width:292px;
+													height:53px;
+													@include text-align(center);
+													@include border-radius(10px);
+													background:#76939e;
+													@include padding(10px,10px,10px,10px);
+													font-size:21.85px;
+													color:$white;
+												}
+												p{
+													font-size:14px;
+													color:$graySideBarIzq;
+													@include padding(10px,0px,0px,0px);
+													letter-spacing:0px;
+												}
+											}
+										}
+									}
+									.payment-form{
+										@include padding(20px,0px,0px,0px);
+									}
+								}
+							}
+							div.table-responsive{
+								@include box-shadow(0px,15px,30px,0px,173,173,173,0.40);
+								@include border-radius(20px);
+								@include border(1px, solid, $blueZoom);
+								@include padding(0px,0px,30px,0px);
+								@include margin(0px,0px,0px,0px);
+								background:$bgFormTab;
+								table{
+									thead{
+										tr{
+											background:$blueZoom;
+											th{
+												@include border(0px, solid, transparent);
+												color:$white;
+												font-weight:normal;
+												@include text-align(center);
+												vertical-align:middle;
+												font-size:16px;
+											}
+										}
+									}
+									tbody{
+										tr{
+											td{
+												vertical-align:middle;
+												// width:calc(100% / 6);
+												@include text-align(center);
+												@include border-bottom(1px,solid,$borderTable);
+												&:nth-child(4){
+													p{
+														@include margin(0px,auto,0px,auto);
+														text-align: center;
+														width:80px;
+														white-space: nowrap;
+														overflow: hidden;
+														text-overflow: ellipsis;
+													}
+												}
+												&:nth-child(5){
+													text-align: left;
+												}
+												button.btnOrderAgain{
+													background:$blueZoom;
+													@include border(0px, solid, transparent);
+													@include padding(5px,5px,5px,5px);
+													@include border-radius(25px);
+													@include margin(0px,0px,10px,0px);
+													color:$white;
+													width:100px;
+												}
+												button.btnEditOrder{
+													background:$white;
+													color:$blueZoom;
+													@include border(1px, solid, $blueZoom);
+													@include padding(2px,5px,2px,5px);
+													width:100px;
+												}
+												.image{
+													width:40px;
+													height:40px;
+													@include border-radius(40px);
+													overflow:hidden;
+													@include text-align(center);
+													@include margin(0px,auto,0px,auto);
+													img{
+														@include text-align(center);
+														@include margin(0px,auto,0px,auto);
+													}
+												}
+											}
 										}
 									}
 								}
@@ -368,7 +602,6 @@ textarea:-ms-input-placeholder,
 			// -------------------------------------------------------------
 		}
 	}
-
 	// -----------------------------------------------------
 	// -----------------------ARTICLE-----------------------
 	// -----------------------------------------------------

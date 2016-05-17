@@ -51,7 +51,7 @@
                                         <a href="#provideErrantTab" aria-controls="provideErrantTab" role="tab" data-toggle="tab" class="no-margin">2. Provide Errant Details</a>
                                     </li>
                                     <li role="presentation" class="no-border-radius text-center">
-                                        <a href="#confirmErrandTab" aria-controls="confirmErrandTab" role="tab" data-toggle="tab" class="no-margin">2. Confirm & Post</a>
+                                        <a href="#confirmErrandTab" aria-controls="confirmErrandTab" role="tab" data-toggle="tab" class="no-margin">3. Confirm & Post</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content tab-content-post-errand">
@@ -221,17 +221,253 @@
                                                 </div>
                                             </form>
                                         </div>
+                                        <br><br><br><br><br>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="confirmErrandTab">
-                                        <div class="containerForm">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vero veritatis beatae quibusdam perferendis delectus deleniti quae aspernatur, laborum aut molestiae labore praesentium fugit, natus sint dolor atque tempora, amet.                      
+                                        <div class="containerForm payment-form">
+                                            <form>
+                                                <h3>Please choose your payment method:</h3>
+                                                <div role="tabpanel" class="tabPayment">
+                                                    <ul class="nav nav-tabs header-payment-container" role="tablist">
+                                                        <li role="presentation" class="active">
+                                                            <a href="#tab-use-hours" aria-controls="tab-use-hours" role="tab" data-toggle="tab">Use Hours in Account</a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a href="#tab-pay" aria-controls="tab-pay" role="tab" data-toggle="tab">Pay with Credit Card</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content content-payment-container">
+                                                        <div role="tabpanel" class="tab-pane active" id="tab-use-hours">
+                                                            <p>Hours Available: <span id="hours">10.5</span></p>
+                                                            <p>Purchase For Me’ Available: <span id="price">$178.00</span></p>
+                                                            <hr>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group pull-right">
+                                                                    <p>Pay with Purchased Hours</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="tab-pay">
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                                                                    <div class="form-group">
+                                                                        <label for="">Credit Card</label>
+                                                                        <div class="input-group margin-bottom-sm">
+                                                                            <input type="text" class="form-control no-border-radius" placeholder="">
+                                                                            <span class="input-group-addon no-border-radius">
+                                                                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                                                    <div class="form-group">
+                                                                        <img src="images/payments.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                                                    <div class="form-group">
+                                                                        <label for="">Expiry Date</label>
+                                                                        <input type="text" class="form-control no-border-radius" placeholder="MM/YY">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                                                    <div class="form-group">
+                                                                        <label for="">CVV</label>
+                                                                        <input type="text" class="form-control no-border-radius" placeholder="_ _ _">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order">
+                                                    <h3>Your Order Summary</h3>
+                                                    <div class="text">
+                                                        <p>Date & Time:</p>
+                                                        <p>dd/mm/yy  (week) at 00:00 AM PST</p>
+                                                        <p>Frequency:</p>
+                                                        <p>This one time</p>
+                                                        <p>Errand Location:</p>
+                                                        <p>1577 McAllister Street, San Francisco, California, 94115. <span>Apt 408.</span></p>
+                                                        <p>Errand Detail:</p>
+                                                        <p>I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops. </p>
+                                                        <p>Purchase For Me:</p>
+                                                        <p>For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner.</p>
+                                                        <hr>
+                                                        <p>*Satisfaction guaranteed with every order.</p>
+                                                        <div class="return">
+                                                            <i class="fa fa-caret-left" aria-hidden="true"></i> <a href="#">Return to last step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="buttonFinish">
+                                                    <button class="btn btnConfirm">CONFIRM & POST</button>
+                                                    <p>
+                                                        By selecting this you agree to Zoom Errands <a href="#">Terms & Conditions.</a>
+                                                    </p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </form>
                                         </div>
+                                        <br><br><br><br><br>
                                     </div>
                                 </div> 
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab-errants-in-progress">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, impedit!
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Errand Date</th>
+                                            <th>Service Provider</th>
+                                            <th>Errand Type</th>
+                                            <th>Description</th>
+                                            <th>Hours/Funds Used</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>04/04/16</td>
+                                            <td>
+                                                <div class="image">
+                                                    <img src="images/photo1.png" alt="" class="img-responsive">
+                                                </div>
+                                            </td>
+                                            <td>Courier Service</td>
+                                            <td>
+                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                            </td>
+                                            <td>
+                                                Hours Used:  In Progress
+                                                <br>
+                                                Funds Used:  None
+                                            </td>
+                                            <td>
+                                                <button class="btnOrderAgain">Order Again</button>
+                                                <br>
+                                                <button class="btnEditOrder">Edit Order</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>04/04/16</td>
+                                            <td>
+                                                <div class="image">
+                                                    <img src="images/photo2.png" alt="" class="img-responsive">
+                                                </div>
+                                            </td>
+                                            <td>Courier Service</td>
+                                            <td>
+                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                            </td>
+                                            <td>
+                                                Hours Used:  In Progress
+                                                <br>
+                                                Funds Used:  None
+                                            </td>
+                                            <td>
+                                                <button class="btnOrderAgain">Order Again</button>
+                                                <br>
+                                                <button class="btnEditOrder">Edit Order</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>04/04/16</td>
+                                            <td>
+                                                <div class="image">
+                                                    <img src="images/photo3.png" alt="" class="img-responsive">
+                                                </div>
+                                            </td>
+                                            <td>Courier Service</td>
+                                            <td>
+                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                            </td>
+                                            <td>
+                                                Hours Used:  In Progress
+                                                <br>
+                                                Funds Used:  None
+                                            </td>
+                                            <td>
+                                                <button class="btnOrderAgain">Order Again</button>
+                                                <br>
+                                                <button class="btnEditOrder">Edit Order</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>04/04/16</td>
+                                            <td>
+                                                <div class="image">
+                                                    <img src="images/photo4.png" alt="" class="img-responsive">
+                                                </div>
+                                            </td>
+                                            <td>Courier Service</td>
+                                            <td>
+                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                            </td>
+                                            <td>
+                                                Hours Used:  In Progress
+                                                <br>
+                                                Funds Used:  None
+                                            </td>
+                                            <td>
+                                                <button class="btnOrderAgain">Order Again</button>
+                                                <br>
+                                                <button class="btnEditOrder">Edit Order</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>04/04/16</td>
+                                            <td>
+                                                <div class="image">
+                                                    <img src="images/photo5.png" alt="" class="img-responsive">
+                                                </div>
+                                            </td>
+                                            <td>Courier Service</td>
+                                            <td>
+                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                            </td>
+                                            <td>
+                                                Hours Used:  In Progress
+                                                <br>
+                                                Funds Used:  None
+                                            </td>
+                                            <td>
+                                                <button class="btnOrderAgain">Order Again</button>
+                                                <br>
+                                                <button class="btnEditOrder">Edit Order</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>04/04/16</td>
+                                            <td>
+                                                <div class="image">
+                                                    <img src="images/photo6.png" alt="" class="img-responsive">
+                                                </div>
+                                            </td>
+                                            <td>Courier Service</td>
+                                            <td>
+                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                            </td>
+                                            <td>
+                                                Hours Used:  In Progress
+                                                <br>
+                                                Funds Used:  None
+                                            </td>
+                                            <td>
+                                                <button class="btnOrderAgain">Order Again</button>
+                                                <br>
+                                                <button class="btnEditOrder">Edit Order</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br><br><br><br><br>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab-my-hours">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, aspernatur.
