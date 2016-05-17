@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
-
+ 
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
-
+ 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -66,7 +66,8 @@ module.exports = function (grunt) {
         ]
       }
     },
-
+  
+    
     // The actual grunt server settings
     connect: {
       options: {
@@ -115,7 +116,8 @@ module.exports = function (grunt) {
           open: true,
           base: '<%= yeoman.dist %>'
         }
-      }
+      },
+    
     },
 
     // Make sure there are no obvious mistakes
