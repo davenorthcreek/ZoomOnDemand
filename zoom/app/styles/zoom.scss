@@ -493,7 +493,7 @@ textarea:-ms-input-placeholder,
 											}
 											.buttonFinish{
 												width:100%;
-												text-align: center;
+												@include text-align(center);
 												@include margin(0,auto,30px,auto);
 												.btnConfirm{
 													width:292px;
@@ -522,7 +522,7 @@ textarea:-ms-input-placeholder,
 							div.table-responsive{
 								@include box-shadow(0px,15px,30px,0px,173,173,173,0.40);
 								@include border-radius(20px);
-								@include border(1px, solid, $blueZoom);
+								// @include border(1px, solid, $blueZoom);
 								@include padding(0px,0px,30px,0px);
 								@include margin(0px,0px,0px,0px);
 								background:$bgFormTab;
@@ -550,7 +550,7 @@ textarea:-ms-input-placeholder,
 												&:nth-child(4){
 													p{
 														@include margin(0px,auto,0px,auto);
-														text-align: center;
+														@include text-align(center);
 														width:80px;
 														white-space: nowrap;
 														overflow: hidden;
@@ -558,7 +558,7 @@ textarea:-ms-input-placeholder,
 													}
 												}
 												&:nth-child(5){
-													text-align: left;
+													@include text-align(left);
 												}
 												button.btnOrderAgain{
 													background:$blueZoom;
@@ -672,7 +672,129 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	// -----------------------FOOTER-----------------------
 	// ----------------------------------------------------
-
+	div.errandsProgressDetail{
+		h3{
+			background:$blueZoom;
+			color:$white;
+			@include text-align(center);
+			@include padding(10px,10px,10px,10px);
+			@include margin(20px,0px,0px,0px);			
+			font-size:17px;
+		}
+		.panel-group{
+			@include margin(0px,0px,0px,0px);			
+			.panel{
+				@include border(0px,solid,transparent);
+				@include box-shadow(0px,0px,0px,0px,0,0,0,0.75,inset);
+				@include box-shadow(0px,0px,0px,0px,255,0,0,0.6);
+				.panel-heading{
+					background:$graySideBarIzq;
+					color:$white;
+					.panel-title{
+						a{
+							text-decoration:none;
+							span.number{
+								@include border(2px,solid,$white);
+								@include border-radius(20px);
+								@include padding(0px,5px,0px,5px);
+								font-weight:bold;
+								display:inline-block;
+								background:$white;
+								color:$graySideBarIzq;
+							}
+							span.text{
+								display:inline-block;
+								@include padding(0px,19px,0px,19px);
+								text-align:left;
+							}
+							&:after {					
+								font-family: 'Glyphicons Halflings';
+								// content: "\e114"; 
+								content:"\e252";
+								display:inline-block;
+							}
+							&.collapsed:after {
+								content:"\e250";
+								// content: "\e080";  
+							}
+						}
+						width:686px;
+						@include margin(0px,auto,0px,auto);
+					}
+				}
+				.panel-collapse{					
+					.panel-body{
+						.row{
+							.provider{
+								background:$errandDetailBox1;
+								width:100%;
+								@include padding(10px,10px,10px,10px);
+								.row{
+									.image{
+										width:70px;
+										height:70px;
+										@include border-radius(40px);
+										overflow:hidden;
+										@include text-align(center);
+										@include margin(0px,auto,0px,auto);
+										img{
+											@include text-align(center);
+											@include margin(0px,auto,0px,auto);
+										}
+									}
+									p{
+										color:$errandDetailColor;
+										@include margin(0px,0px,0px,0px);
+										@include padding(0px,0px,0px,0px);
+										font-size:16px;
+									}
+									hr{
+										@include margin(7px,0px,7px,0px);
+										@include border(0px,solid,transparent);
+										@include border-bottom(1px,solid,$errandDetailHr);
+									}
+								}
+							}
+							.details{
+								background:$errandDetailBox2;
+								width:100%;
+								@include margin(10px,0px,0px,0px);
+								@include padding(10px,10px,10px,10px);
+								p{
+									font-size:16px;
+									color:$errandDetailColor;
+									@include margin(0px,0px,0px,0px);
+									@include padding(0px,0px,0px,0px);
+									font-size:16px;
+								}
+								button.btnEditErrand{
+									background:$blueZoom;
+									@include border-radius(10px);
+									color:$white;
+									@include padding(2px,10px,2px,10px);
+									@include border(0px,solid,transparent);
+								}
+							}
+						}
+						a.contactZoom{
+							@include border(2px,solid,$blueZoom);
+							color:$blueZoom;
+							width:100%;
+							@include padding(5px,5px,5px,5px);
+							display:block;
+							@include border-radius(20px);
+							@include text-align(center);
+							@include margin(20px,0px,0px,0px);
+						}
+						@include padding(10px,0px,10px,0px);
+						@include border(0px,solid,transparent);
+						@include margin(0px,auto,0px,auto);
+						width:686px;
+					}
+				}
+			}
+		}
+	}
 	// -------------------------------------------------------
 	// -----------------------GENERALES-----------------------
 	// -------------------------------------------------------
