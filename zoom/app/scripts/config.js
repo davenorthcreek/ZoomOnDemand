@@ -1,5 +1,5 @@
 
-
+/*
 (function () {
     'use strict';
 
@@ -9,7 +9,7 @@
 
    
 
-    /** @ngInject */
+    // @ngInject
     config.$inject = ['API_URL', '$authProvider', '$windowProvider', '$locationProvider'];
     function config(API_URL, $authProvider, $windowProvider, $locationProvider) {
         $locationProvider.html5Mode(true).hashPrefix('!');
@@ -51,7 +51,7 @@
     }
  
 })();
-
+*/
 
 
 
