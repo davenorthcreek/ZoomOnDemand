@@ -597,3 +597,6 @@ span.chat img{
 .minimum{
     min-height:calc(100vh - 153px);
  }
+.pointer{
+    cursor:pointer;
+}

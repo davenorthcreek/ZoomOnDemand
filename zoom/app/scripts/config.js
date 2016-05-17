@@ -10,8 +10,9 @@
    
 
     /** @ngInject */
-    config.$inject = ['API_URL', '$authProvider',  '$windowProvider'];
-    function config( API_URL, $authProvider, $windowProvider) {
+    config.$inject = ['API_URL', '$authProvider', '$windowProvider', '$locationProvider'];
+    function config(API_URL, $authProvider, $windowProvider, $locationProvider) {
+        $locationProvider.html5Mode(true).hashPrefix('!');
        var $window = $windowProvider.$get();
        var isMob = $window.cordova !== angular.undefined;
         $authProvider.configure([
