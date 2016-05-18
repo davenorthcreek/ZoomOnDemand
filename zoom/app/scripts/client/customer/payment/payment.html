@@ -141,7 +141,7 @@
                     <h2 class="credit-head">Expiration</h2>
                     <input type="date" class="inputs date">
                 </div>
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-3 col-sm-4">
                     <h2 class="credit-head">Security Code</h2>
                     <input type="text" class="inputs">
                 </div>
@@ -155,19 +155,20 @@
             <div class="col-md-6 col-sm-6 right top-offset-20">
                 <button type="button" class="fund-btn">Use 'Purchase For Me' Funds</button>
             </div>
-            <div class="col-md-6 col-sm-6">
-                <h2 class="credit-head question">What Is This?</h2>
+            <div class="col-md-6 col-sm-6" >
+                <h2 class="credit-head pointer" ng-click="vm.shownote = !vm.shownote">What Is This?</h2>
             </div>
             <div class="col-md-12 col-sm-12">
-            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 center popup">
-                <div class="gray-box">
-                    <h2 class="pack-duration">'Purchase For Me' Funds<span class="close">X</span></h2>
-                    <h3 class="sub-text">This payment option allows us to make purchases on your behalf, for example for groceries, cleaning supplies and other items, in addition to our standard services. 
-                    <br>
-                    *Make sure to add enough funds to cover your specific purchases. Funds not used for purchases can be refunded at anytime by contacting us.
-                    </h3>
+                <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 center popup" ng-show="vm.shownote" ng-init="vm.shownote = false">
+                    <div class="gray-box">
+                        <h2 class="pack-duration">'Purchase For Me' Funds<span class="close pointer" ng-click="vm.shownote = !vm.shownote">X</span></h2>
+                        <h3 class="sub-text">
+                            This payment option allows us to make purchases on your behalf, for example for groceries, cleaning supplies and other items, in addition to our standard services.
+                            <br>
+                            *Make sure to add enough funds to cover your specific purchases. Funds not used for purchases can be refunded at anytime by contacting us.
+                        </h3>
+                    </div>
                 </div>
-            </div>
             </div>
             <!-- popup -->
             <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">

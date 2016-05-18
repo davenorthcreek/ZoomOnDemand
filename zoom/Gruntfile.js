@@ -6,9 +6,8 @@
 // 'test/spec/{,*/}*.js'
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
-
+var modRewrite = require('connect-modrewrite');
 module.exports = function (grunt) {
-
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
  
@@ -65,6 +64,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
+        
     },
   
     
@@ -76,12 +76,14 @@ module.exports = function (grunt) {
        hostname: 'localhost',
        livereload: 35729
       },
+    
       livereload: {
         options: {
           open: true,
           middleware: function (connect) {
-            return [
-              connect.static('.tmp'),
+              return [
+            modRewrite(['^[^\\.]*$ /index.html [L]']),
+             connect.static('.tmp'),
               connect().use(
                 '/bower_components',
                 connect.static('./bower_components')
@@ -482,4 +484,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+ 
 };

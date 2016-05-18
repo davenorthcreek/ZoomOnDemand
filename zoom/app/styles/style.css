@@ -55,7 +55,6 @@ padding: 10px 15px;
     padding: 5px;
 }
 .popup{
-    display: none;
     position: absolute;
     z-index: 1;
     top: -22px;
@@ -435,6 +434,9 @@ table.table>tbody>tr>td{
     overflow: hidden;
     background: #F0F7F8;
 }
+.table-body{
+    overflow-x: auto;
+}
  .gray-box{
     border: 2px solid #657177;
     border-radius: 15px;
@@ -487,7 +489,6 @@ table.table>tbody>tr>td{
 .top-space-0{
     margin-top: 0px;
 }
-sp
 span.chat{
         padding: 10px;
     background: #78939E;
@@ -496,9 +497,20 @@ span.chat{
     box-shadow: 5px 5px 10px #ddd;
     cursor: pointer;
 }
+@media (max-width:340px){
+    span.chat{
+   margin-top:20px;
+}
+}
+@media (max-width:767px){
+    .unit{
+            top: 70px;
+    }
+}
 span.chat img{
     width: 50px;
 }
+
 .bottom-offset-20{
     margin-bottom: 20px;
 }
