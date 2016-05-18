@@ -12,6 +12,9 @@ body{
     font-weight: 300;
 
 }
+.table > thead > tr > th{
+    text-align:center;
+}
 .navbar{
         background: #52C9E0;
         border-radius: 0px;
