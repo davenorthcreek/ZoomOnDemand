@@ -27,29 +27,33 @@ body{
 }
 @media (max-width:767px){
 .table h3{
-    font-size:3vw;
+    font-size:3.5vw;
 }
 .table h4{
-    font-size:2.5vw;
+    font-size:3vw;
 }
 .table th,.table td{
-    padding:1px !important;
+    padding:5px 1px !important;
 }
 h2.account-head{
     margin-bottom:0px;
-    font-size:24px;
+    font-size:20px;
 }
 .setting-list li h3{
-    font-size:22px;
-        margin-top: 10px;
+    font-size: 18px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 .section-head{
-    font-size:24px;
+    font-size:20px;
+}
+.mobile-0{
+    padding:0px;
 }
 button.again-btn{
-    margin-right:0px;
-        font-size: 14px;
+    margin-right: 0px;
+    font-size: 11px;
+    width: 76px;
 }
 input.inputs{
     height:30px;
