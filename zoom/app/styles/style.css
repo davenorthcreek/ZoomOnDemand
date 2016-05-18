@@ -112,8 +112,8 @@ padding: 10px 15px;
     border-radius: 50%;
     background: -webkit-linear-gradient(left top, #eee 60%, #666); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right,  #eee,  #666); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom  #eee,  #666); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom  #eee,  #666); /* Standard syntax */
+  background: -moz-linear-gradient(bottom,  #eee,  #666); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom,  #eee,  #666); /* Standard syntax */
         position: relative;
     left: 18px;
     bottom: 24px;
@@ -126,8 +126,8 @@ padding: 10px 15px;
     border-radius: 50%;
     background: -webkit-linear-gradient(left top, #eee 60%, #666); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right,  #eee,  #666); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom  #eee,  #666); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom  #eee,  #666); /* Standard syntax */
+  background: -moz-linear-gradient(bottom,  #eee,  #666); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom,  #eee,  #666); /* Standard syntax */
         position: relative;
     left: -18px;
     bottom: 24px;
@@ -182,8 +182,8 @@ width: 100%;
     padding: 5px 20px;
 }
 .profile-img{
-    width: 100%;
-    max-width: 155px;
+    height:155px;
+    width: 155px;
     padding: 0px;
     border: 1px solid #78939E;
 }
@@ -210,6 +210,7 @@ width: 100%;
     background: #fff;
 }
 .reverse-btn{
+    margin-bottom:10px;
         color: #52C9E0;
     background: #fff;
     border: 2px solid #52C9E0;
@@ -372,6 +373,7 @@ color: #EAF5FA;
 }
 .setting-list{
     list-style: none;
+        padding-left: 20px;
 }
 .setting-list h3{
     color: #718E99;
@@ -482,6 +484,10 @@ table.table>tbody>tr>td{
 .bottom-space-20{
     padding-bottom: 20px;
 }
+.top-space-0{
+    margin-top: 0px;
+}
+sp
 span.chat{
         padding: 10px;
     background: #78939E;
@@ -595,8 +601,18 @@ span.chat img{
 }
 }
 .minimum{
+    min-height:80vh;
     min-height:calc(100vh - 153px);
+     min-height:-webkit-calc(100vh - 153px);
  }
 .pointer{
     cursor:pointer;
+}
+@media (max-width:768px){
+    .mobile-none{
+        padding:0px;
+    }
+    .reverse-btn{
+        margin-right:0px;
+    }
 }
