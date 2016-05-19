@@ -11,6 +11,8 @@
 body{
 	font-family: 'Tw Cen MT';
 	font-size:14px;
+	margin:0px;
+	padding:0px;
 }
  
 *{
@@ -41,30 +43,36 @@ textarea:-ms-input-placeholder,
 } /* IE 10+ */
 
 .zoom{
+	width:100%;
+		padding:0px;
+		margin:0px;
 	// ----------------------------------------------------
 	// -----------------------HEADER-----------------------
 	// ----------------------------------------------------
 	header{
+		width:100%;
+		padding:0px;
+		margin:0px;
 		nav.navbar{
 			// Laptop/Tablet (1024px)
-			@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
-				background:$blueZoom;
-			}
+			// @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+			// 	background:red;
+			// }
 
-			// Tablet Portrait (768px)
-			@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
-				background:$blueZoom;
-			}
+			// // Tablet Portrait (768px)
+			// @media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
+			// 	background:blue;
+			// }
 
-			// Phone Landscape (480px)
-			@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
-				background:$blueZoom;
-			}
+			// // Phone Landscape (480px)
+			// @media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+			// 	background:green;
+			// }
 
-			// Phone Portrait (320px)
-			@media only screen and (max-width: 320px) {
-				background:$blueZoom;
-			}
+			// // Phone Portrait (320px)
+			// @media only screen and (max-width: 320px) {
+			// 	background:gray;
+			// }
 			background:$blueZoom;
 		    @include border(0px);
 		    @include margin(0px,0px,0px,0px);

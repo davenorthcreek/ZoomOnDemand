@@ -5,7 +5,9 @@
   src: local("Tw Cen MT"), url("../fonts/tw-cent-mt/Tw Cen MT.woff") format("woff"); }
 body {
   font-family: 'Tw Cen MT';
-  font-size: 14px; }
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px; }
 
 * {
   -webkit-box-sizing: border-box !important;
@@ -33,1000 +35,996 @@ input:-ms-input-placeholder {
   color: #b5b3b3 !important; }
 
 /* IE 10+ */
-.zoom header nav.navbar {
-  background: #43C9E1;
-  border: 0px  ;
-  margin: 0px 0px 0px 0px; }
-  @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+.zoom {
+  width: 100%;
+  padding: 0px;
+  margin: 0px; }
+  .zoom header {
+    width: 100%;
+    padding: 0px;
+    margin: 0px; }
     .zoom header nav.navbar {
-      background: #43C9E1; } }
-  @media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
-    .zoom header nav.navbar {
-      background: #43C9E1; } }
-  @media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
-    .zoom header nav.navbar {
-      background: #43C9E1; } }
-  @media only screen and (max-width: 320px) {
-    .zoom header nav.navbar {
-      background: #43C9E1; } }
-  .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li a {
+      background: #43C9E1;
+      border: 0px  ;
+      margin: 0px 0px 0px 0px; }
+      .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li a {
+        color: #FFFFFF;
+        font-size: 18px; }
+        .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li a:hover {
+          background: #43C9E1; }
+      .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown {
+        padding: 0px 0px 0px 0px; }
+        .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a {
+          background: #43C9E1;
+          padding: 0px 0px 0px 0px;
+          margin: 5px 0px 0px 0px; }
+          .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a:hover, .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a :focus, .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a :active, .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a :visited {
+            background: #43C9E1; }
+        .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu {
+          border: 1px solid #959595;
+          padding: 5px 20px 5px 20px; }
+          .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu li {
+            margin: 20px 0px 20px 0px; }
+            .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu li a {
+              font-size: 20px;
+              background: #FFFFFF;
+              color: #67838d; }
+      .zoom header nav.navbar .container-fluid .navbar-header .navbar-brand {
+        padding: 5px 15px 5px 15px; }
+      .zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle {
+        border: 0px solid #FFFFFF;
+        background: transparent; }
+        .zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle:hover {
+          border: 0px solid #FFFFFF;
+          background: transparent; }
+        .zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle .icon-bar {
+          background-color: #FFFFFF; }
+    .zoom header span#msjSubHeader {
+      background-color: #2e9014;
+      color: #FFFFFF;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 10px 10px 10px; }
+  .zoom section .row aside#latIzq .textContainer {
+    padding: 0px 10px 0px 10px;
+    background: #76939e;
     color: #FFFFFF;
     font-size: 18px; }
-    .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li a:hover {
-      background: #43C9E1; }
-  .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown {
-    padding: 0px 0px 0px 0px; }
-    .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a {
-      background: #43C9E1;
-      padding: 0px 0px 0px 0px;
-      margin: 5px 0px 0px 0px; }
-      .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a:hover, .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a :focus, .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a :active, .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown a :visited {
-        background: #43C9E1; }
-    .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu {
-      border: 1px solid #959595;
-      padding: 5px 20px 5px 20px; }
-      .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu li {
-        margin: 20px 0px 20px 0px; }
-        .zoom header nav.navbar .container-fluid .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu li a {
-          font-size: 20px;
-          background: #FFFFFF;
-          color: #67838d; }
-  .zoom header nav.navbar .container-fluid .navbar-header .navbar-brand {
-    padding: 5px 15px 5px 15px; }
-  .zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle {
-    border: 0px solid #FFFFFF;
-    background: transparent; }
-    .zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle:hover {
-      border: 0px solid #FFFFFF;
-      background: transparent; }
-    .zoom header nav.navbar .container-fluid .navbar-header .navbar-toggle .icon-bar {
-      background-color: #FFFFFF; }
-.zoom header span#msjSubHeader {
-  background-color: #2e9014;
-  color: #FFFFFF;
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 10px 10px 10px 10px; }
-.zoom section .row aside#latIzq .textContainer {
-  padding: 0px 10px 0px 10px;
-  background: #76939e;
-  color: #FFFFFF;
-  font-size: 18px; }
-  .zoom section .row aside#latIzq .textContainer .sub-textContainer {
-    padding: 36px 25px 0px 25px; }
-    .zoom section .row aside#latIzq .textContainer .sub-textContainer .row {
-      margin: 56px 0px 0px 0px; }
-      .zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step {
-        margin: 0px 0px 38px 0px; }
-        .zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step span {
-          display: block;
-          width: 25px;
-          height: 25px;
-          line-height: 25px;
-          -webkit-border-radius: 80px;
-          -moz-border-radius: 80px;
-          -ms-border-radius: 80px;
-          border-radius: 80px;
-          background-color: #FFFFFF;
-          color: #76939e;
-          font-size: 16px;
-          font-weight: bold;
-          margin: 0px auto 18px auto; }
-        .zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step p {
-          line-height: 1em; }
-    .zoom section .row aside#latIzq .textContainer .sub-textContainer .orText {
-      margin: 0px 0px 33px 0px; }
-    .zoom section .row aside#latIzq .textContainer .sub-textContainer .callText {
-      margin: 0px 0px 15px 0px; }
-    .zoom section .row aside#latIzq .textContainer .sub-textContainer .number {
-      border: 2px solid #FFFFFF;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      border-radius: 20px;
-      padding: 0px 0px 0px 0px;
-      margin: 0px auto 15px auto;
-      width: 140px; }
-  .zoom section .row aside#latIzq .textContainer p.toMakeText {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 40px 0px; }
-.zoom section .row aside#latDer .tabParent .tab-parent-header {
-  margin: 50px 0px 36px 0px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-header li {
-    width: calc(100% / 3);
-    text-align: center;
-    border-bottom: 0px "" "";
-    font-size: 16px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-header li a {
-      padding: 0px 0px 10px 0px;
-      margin: 0px 0px 0px 0px;
-      border: 0px solid transparent;
-      color: #545353;
-      cursor: pointer;
-      font-weight: 600;
-      display: block; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-header li a:hover {
-        background: transparent; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-header li:hover {
-      border-bottom: 5px solid #76939e; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-header li.active a {
-    border-bottom: 5px solid #76939e; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-header li.active:hover {
-    border-bottom: 0px solid transparent; }
-.zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .titleTabErrand {
-  background: #43C9E1;
-  padding: 10px 10px 10px 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
-  color: #FFFFFF;
-  font-size: 20px;
-  text-align: center;
-  margin: 10px 0px 5px 0px; }
-.zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand {
-  border: 0px  ; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li {
-    width: calc(100% / 3);
-    border: 1px solid #CCCCCC;
-    font-size: 16px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li:nth-child(2) {
-      border-left: 0px solid transparent;
-      border-right: 0px solid transparent; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li a:hover {
-      margin: 0px 0px 0px 0px;
-      color: #FFFFFF;
-      cursor: pointer;
-      background-color: #43C9E1;
-      border: 1px solid #43C9E1;
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      -ms-border-radius: 0px;
-      border-radius: 0px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li.active a {
-    margin: 0px 0px 0px 0px;
-    color: #FFFFFF;
-    cursor: pointer;
-    background-color: #43C9E1;
-    border: 1px solid #43C9E1;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    border-radius: 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li.active a:hover, .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li.active a :focus {
-      margin: 0px 0px 0px 0px;
-      color: #FFFFFF;
-      cursor: pointer;
-      background-color: #43C9E1;
-      border: 1px solid #43C9E1;
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      -ms-border-radius: 0px;
-      border-radius: 0px; }
-.zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm {
-  background: #f3fcfe;
-  -webkit-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.75);
-  -moz-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.75);
-  box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.75);
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-bottom-left-radius: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 20px 20px 20px 20px;
-  color: #8A8E8E;
-  font-size: 16px;
-  letter-spacing: 0.7px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .tabPayment {
-    margin: 20px 20px 20px 20px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row span.spanBalance {
-    border: 1px solid #AAAAAA;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    border-radius: 40px;
-    display: block;
-    width: 220px;
-    letter-spacing: 0px;
-    padding: 5px 10px 5px 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: #FFFFFF; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group input, .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group textarea {
-    font-size: 17.93px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .textarea {
-    position: relative; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .textarea textarea {
-      padding: 10px 20px 10px 20px;
-      letter-spacing: 1.4px;
-      font-weight: normal;
-      resize: none; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .textarea .imageClip {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: url("../images/clip.png");
-      width: 14px;
-      height: 18px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .input-group input.searchZoom {
-    border-left: 0px solid transparent; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .input-group .input-group-addon {
-    background-color: #FFFFFF;
-    border-right: 0px solid transparent;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    border-radius: 0px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .containerTimepicker .dropdown .textTimepicker {
-    float: left;
-    font-weight: bold; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .containerTimepicker .dropdown input[type="text"] {
-    color: #8A8E8E;
-    margin: 6px 0px 6px 0px;
-    width: 206px;
-    background: transparent;
-    border: 0px solid transparent;
-    border-bottom: 1px solid #8A8E8E;
-    padding: 0px 0px 0px 0px;
-    text-align: center;
-    font-size: 16px;
-    height: 20px;
-    float: left;
-    font-weight: bold; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm {
-    width: 100%;
-    background: transparent;
-    border: 2px solid #76939e;
-    color: #76939e;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
-    font-size: 16px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm.active,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm:hover {
-    background: #76939e;
-    color: #FFFFFF; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm.active:hover,
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm:hover:hover {
-      background: #76939e;
-      color: #FFFFFF; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnNext,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBack {
-    width: 170px;
-    color: #76939e;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    background: #43C9E1;
-    color: #FFFFFF;
-    margin: 40px 0px 0px 0px;
-    height: 40px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form h3 {
-    color: #FFFFFF;
-    background: #43C9E1;
-    font-weight: normal;
-    font-size: 20px;
-    padding: 5px 10px 5px 10px;
-    margin: 20px 20px 20px 20px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container {
-    margin: 30px 0px 0px 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li {
-      background: transparent;
-      width: 50%;
-      text-align: center;
-      border-bottom: 0px "" "";
-      font-size: 21.85px; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li a {
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px;
-        border: 0px solid transparent;
-        color: #76939e;
-        cursor: pointer;
-        display: block;
-        font-weight: normal; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li a:hover {
-          background: transparent; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li:hover {
-        border-bottom: 5px solid #76939e; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li.active a {
-      background: transparent;
-      border-bottom: 5px solid #76939e; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li.active:hover {
-      border-bottom: 0px solid transparent; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container {
-    padding: 39px 0px 0px 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p {
-      font-size: 19.77px;
-      color: #777676; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p span {
-        font-weight: bold;
-        color: #43C9E1; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours hr {
-      margin: 17px 0px 30px 0px;
-      border-bottom: 1px solid #b9cbd1; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group label {
-      color: #8c8a8a;
-      font-size: 19px;
-      font-weight: normal; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group .input-group input[type="text"] {
-      border-right: 0px solid transparent; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group .input-group span.input-group-addon {
-      background-color: #FFFFFF;
-      border-left: 0px solid transparent;
-      border-right: 1px solid #CCCCCC; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group .input-group span.input-group-addon i {
-        font-size: 20px;
-        color: #abacab; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group img {
-      margin: 32px 0px 0px 0px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order {
-    padding: 0px 0px 20px 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order h3 {
-      color: #FFFFFF;
-      background: #43C9E1;
-      font-weight: normal;
-      font-size: 20px;
-      padding: 10px 10px 10px 10px;
-      margin: 0px 0px 0px 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text {
-      color: #545353;
-      border: 1px solid #76939e;
-      padding: 20px 20px 40px 20px;
-      margin: 20px 20px 20px 20px;
-      background: #FFFFFF;
-      font-weight: bold; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text hr {
-        margin: 17px 0px 30px 0px;
-        border-bottom: 1px solid #b9cbd1; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return {
-        padding: 90px 0px 0px 0px; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return i {
-          color: #43C9E1;
-          line-height: 15px;
-          float: left;
-          font-size: 16px;
-          height: 15px;
-          margin-top: 5px;
-          font-weight: normal; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return a {
-          font-size: 18px;
-          color: #43C9E1;
-          text-decoration: none;
-          display: block;
-          float: left;
-          padding: 0px 0px 0px 0px;
-          height: 25px;
-          line-height: 25px;
-          margin: 0px 0px 0px 2px;
-          font-weight: normal; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto 30px auto; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish .btnConfirm {
-      width: 292px;
-      height: 53px;
-      text-align: center;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      border-radius: 10px;
-      background: #76939e;
-      padding: 10px 10px 10px 10px;
-      font-size: 21.85px;
-      color: #FFFFFF; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish p {
-      font-size: 14px;
-      color: #76939e;
-      padding: 10px 0px 0px 0px;
-      letter-spacing: 0px; }
-.zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .payment-form {
-  padding: 20px 0px 0px 0px; }
-.zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress {
-  -webkit-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.4);
-  -moz-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.4);
-  box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.4);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  border-radius: 20px;
-  padding: 0px 0px 30px 0px;
-  margin: 0px 0px 0px 0px;
-  background: #f3fcfe; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table thead tr {
-    background: #43C9E1; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table thead tr th {
-      border: 0px solid transparent;
-      color: #FFFFFF;
-      font-weight: normal;
-      text-align: center;
-      vertical-align: middle;
-      font-size: 16px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td {
-    vertical-align: middle;
-    text-align: center;
-    border-bottom: 1px solid #c7cccd; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip {
-      font-family: 'Tw Cen MT';
-      font-size: 14px;
-      opacity: 1; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner {
-        color: #686969;
-        position: relative;
-        background: #FFFFFF;
-        text-align: left;
-        padding: 15px 10px 15px 10px;
+    .zoom section .row aside#latIzq .textContainer .sub-textContainer {
+      padding: 36px 25px 0px 25px; }
+      .zoom section .row aside#latIzq .textContainer .sub-textContainer .row {
+        margin: 56px 0px 0px 0px; }
+        .zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step {
+          margin: 0px 0px 38px 0px; }
+          .zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step span {
+            display: block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            -webkit-border-radius: 80px;
+            -moz-border-radius: 80px;
+            -ms-border-radius: 80px;
+            border-radius: 80px;
+            background-color: #FFFFFF;
+            color: #76939e;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0px auto 18px auto; }
+          .zoom section .row aside#latIzq .textContainer .sub-textContainer .row .step p {
+            line-height: 1em; }
+      .zoom section .row aside#latIzq .textContainer .sub-textContainer .orText {
+        margin: 0px 0px 33px 0px; }
+      .zoom section .row aside#latIzq .textContainer .sub-textContainer .callText {
+        margin: 0px 0px 15px 0px; }
+      .zoom section .row aside#latIzq .textContainer .sub-textContainer .number {
+        border: 2px solid #FFFFFF;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         -ms-border-radius: 20px;
         border-radius: 20px;
-        border: 1px solid #898989; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner button {
-          float: right;
-          clear: both;
-          background: #43C9E1;
-          color: #FFFFFF;
-          width: 40px;
-          line-height: 16px;
-          padding: 2px 5px 2px 5px;
-          border: 0px solid transparent;
-          -webkit-border-radius: 0px;
-          -moz-border-radius: 0px;
-          -ms-border-radius: 0px;
-          border-radius: 0px; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner p {
-          font-weight: normal; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after, .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
-        bottom: 100%;
-        left: 50%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after {
-        border-color: rgba(137, 137, 137, 0);
-        border-bottom-color: #FFFFFF;
-        border-width: 15px;
-        margin-left: -15px; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
-        border-color: rgba(137, 137, 137, 0);
-        border-bottom-color: #898989;
-        border-width: 16px;
-        margin-left: -16px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.tooltipErrandService {
-      background: transparent;
-      border: 1px solid transparent; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.tooltipDescription {
-      background: transparent;
-      border: 1px solid transparent; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td:nth-child(4) button.tooltipDescription {
-      margin: 0px auto 0px auto;
+        padding: 0px 0px 0px 0px;
+        margin: 0px auto 15px auto;
+        width: 140px; }
+    .zoom section .row aside#latIzq .textContainer p.toMakeText {
+      margin: 0px 0px 0px 0px;
+      padding: 0px 0px 40px 0px; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-header {
+    margin: 50px 0px 36px 0px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-header li {
+      width: calc(100% / 3);
       text-align: center;
-      width: 80px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td:nth-child(5) {
-      text-align: left; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.btnOrderAgain {
-      background: #43C9E1;
-      border: 0px solid transparent;
-      padding: 5px 5px 5px 5px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      -ms-border-radius: 25px;
-      border-radius: 25px;
-      margin: 0px 0px 10px 0px;
+      border-bottom: 0px "" "";
+      font-size: 16px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-header li a {
+        padding: 0px 0px 10px 0px;
+        margin: 0px 0px 0px 0px;
+        border: 0px solid transparent;
+        color: #545353;
+        cursor: pointer;
+        font-weight: 600;
+        display: block; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-header li a:hover {
+          background: transparent; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-header li:hover {
+        border-bottom: 5px solid #76939e; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-header li.active a {
+      border-bottom: 5px solid #76939e; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-header li.active:hover {
+      border-bottom: 0px solid transparent; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .titleTabErrand {
+    background: #43C9E1;
+    padding: 10px 10px 10px 10px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-right-radius: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0px 5px 0px; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand {
+    border: 0px  ; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li {
+      width: calc(100% / 3);
+      border: 1px solid #CCCCCC;
+      font-size: 16px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li:nth-child(2) {
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li a:hover {
+        margin: 0px 0px 0px 0px;
+        color: #FFFFFF;
+        cursor: pointer;
+        background-color: #43C9E1;
+        border: 1px solid #43C9E1;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        border-radius: 0px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li.active a {
+      margin: 0px 0px 0px 0px;
       color: #FFFFFF;
-      width: 100px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.btnEditOrder {
-      background: #FFFFFF;
-      color: #43C9E1;
+      cursor: pointer;
+      background-color: #43C9E1;
       border: 1px solid #43C9E1;
-      padding: 2px 5px 2px 5px;
-      width: 100px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .image {
-      width: 40px;
-      height: 40px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      border-radius: 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li.active a:hover, .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li.active a :focus {
+        margin: 0px 0px 0px 0px;
+        color: #FFFFFF;
+        cursor: pointer;
+        background-color: #43C9E1;
+        border: 1px solid #43C9E1;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        border-radius: 0px; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm {
+    background: #f3fcfe;
+    -webkit-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.75);
+    -moz-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.75);
+    box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.75);
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    color: #8A8E8E;
+    font-size: 16px;
+    letter-spacing: 0.7px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .tabPayment {
+      margin: 20px 20px 20px 20px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row span.spanBalance {
+      border: 1px solid #AAAAAA;
       -webkit-border-radius: 40px;
       -moz-border-radius: 40px;
       -ms-border-radius: 40px;
       border-radius: 40px;
-      overflow: hidden;
-      text-align: center;
-      margin: 0px auto 0px auto; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .image img {
-        text-align: center;
-        margin: 0px auto 0px auto; }
-.zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours {
-  background: #f3fcfe;
-  -webkit-border-bottom-right-radius: 20px;
-  -moz-border-radius-bottomright: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  border-bottom-left-radius: 20px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours h1,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds h1 {
-    margin: 0px 0px 0px 0px;
-    padding: 20px 20px 20px 20px;
-    font-size: 24px;
-    color: #FFFFFF; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonHours,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonFunds,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonHours,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonFunds {
-    margin: 32px 0px 32px 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonHours button,
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonFunds button,
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonHours button,
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonFunds button {
-      width: 200px;
-      height: 60px;
+      display: block;
+      width: 220px;
+      letter-spacing: 0px;
+      padding: 5px 10px 5px 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #FFFFFF; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group input, .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group textarea {
+      font-size: 17.93px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .textarea {
+      position: relative; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .textarea textarea {
+        padding: 10px 20px 10px 20px;
+        letter-spacing: 1.4px;
+        font-weight: normal;
+        resize: none; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .textarea .imageClip {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: url("../images/clip.png");
+        width: 14px;
+        height: 18px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .input-group input.searchZoom {
+      border-left: 0px solid transparent; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .input-group .input-group-addon {
+      background-color: #FFFFFF;
+      border-right: 0px solid transparent;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      border-radius: 0px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .containerTimepicker .dropdown .textTimepicker {
+      float: left;
+      font-weight: bold; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .row .form-group .containerTimepicker .dropdown input[type="text"] {
+      color: #8A8E8E;
+      margin: 6px 0px 6px 0px;
+      width: 206px;
+      background: transparent;
       border: 0px solid transparent;
-      font-size: 22px;
-      color: #FFFFFF;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      border-radius: 20px; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonHours button,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonHours button {
-    background: #43C9E1; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonFunds button,
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonFunds button {
-    background: #76939e; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours {
-    padding: 0px 0px 0px 15px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours h1 {
-      -webkit-border-top-left-radius: 10px;
-      -moz-border-radius-topleft: 10px;
-      border-top-left-radius: 10px;
-      background: #43C9E1; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row {
-      vertical-align: middle;
-      margin: 0px 0px 0px 0px; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .available-hours {
-        height: 240px;
-        background: #d0f2f8;
-        border-bottom: 1px solid #959595; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .available-hours h4 {
-          font-size: 22px;
-          margin: 27px 0px 60px 0px;
-          color: #525353; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .available-hours h2 {
-          font-size: 43px;
-          color: #757677; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .used-hours {
-        height: 240px;
-        border-bottom: 1px solid #959595; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .used-hours h4 {
-          font-size: 22px;
-          margin: 27px 0px 60px 0px;
-          color: #525353; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .used-hours h2 {
-          font-size: 43px;
-          color: #757677; }
-  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds {
-    padding: 0px 15px 0px 0px; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds h1 {
-      -webkit-border-top-right-radius: 10px;
-      -moz-border-radius-topright: 10px;
-      border-top-right-radius: 10px;
-      background: #76939e; }
-    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row {
-      vertical-align: middle;
-      margin: 0px 0px 0px 0px; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .available-funds {
-        height: 240px;
-        background: #dae7eb;
-        border-left: 1px solid #959595;
-        border-bottom: 1px solid #959595; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .available-funds h4 {
-          font-size: 22px;
-          margin: 27px 0px 60px 0px;
-          color: #525353; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .available-funds h2 {
-          font-size: 43px;
-          color: #757677; }
-      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .used-funds {
-        height: 240px;
-        border-bottom: 1px solid #959595; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .used-funds h4 {
-          font-size: 22px;
-          margin: 27px 0px 60px 0px;
-          color: #525353; }
-        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .used-funds h2 {
-          font-size: 43px;
-          color: #757677; }
-.zoom article {
-  background: #f6f6f6; }
-  .zoom article h3 {
-    padding: 50px 0px 50px 0px;
-    margin: 0px 0px 0px 0px;
-    font-size: 30px; }
-  .zoom article .containerImage {
-    margin: 0px 0px 40px 0px; }
-    .zoom article .containerImage img {
+      border-bottom: 1px solid #8A8E8E;
+      padding: 0px 0px 0px 0px;
+      text-align: center;
+      font-size: 16px;
+      height: 20px;
+      float: left;
+      font-weight: bold; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm {
+      width: 100%;
+      background: transparent;
+      border: 2px solid #76939e;
+      color: #76939e;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       border-radius: 10px;
-      margin: 0px auto 0px auto; }
-    .zoom article .containerImage h4 {
+      font-size: 16px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm.active,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm:hover {
+      background: #76939e;
+      color: #FFFFFF; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm.active:hover,
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm:hover:hover {
+        background: #76939e;
+        color: #FFFFFF; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnNext,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBack {
+      width: 170px;
+      color: #76939e;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      background: #43C9E1;
+      color: #FFFFFF;
+      margin: 40px 0px 0px 0px;
+      height: 40px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form h3 {
+      color: #FFFFFF;
+      background: #43C9E1;
       font-weight: normal;
-      color: #6E6E6E; }
-.zoom footer h3, .zoom footer h4 {
-  color: #4F4F4F;
-  font-weight: bold;
-  font-size: 20px; }
-.zoom footer button {
-  width: 200px;
-  background: transparent;
-  font-size: 16px;
-  background: transparent;
-  color: #43C9E1;
-  font-weight: normal;
-  height: 40px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  border: 2px solid #43C9E1;
-  text-align: center;
-  margin: 50px auto 0px auto; }
-  .zoom footer button:hover {
+      font-size: 20px;
+      padding: 5px 10px 5px 10px;
+      margin: 20px 20px 20px 20px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container {
+      margin: 30px 0px 0px 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li {
+        background: transparent;
+        width: 50%;
+        text-align: center;
+        border-bottom: 0px "" "";
+        font-size: 21.85px; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li a {
+          padding: 0px 0px 0px 0px;
+          margin: 0px 0px 0px 0px;
+          border: 0px solid transparent;
+          color: #76939e;
+          cursor: pointer;
+          display: block;
+          font-weight: normal; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li a:hover {
+            background: transparent; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li:hover {
+          border-bottom: 5px solid #76939e; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li.active a {
+        background: transparent;
+        border-bottom: 5px solid #76939e; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li.active:hover {
+        border-bottom: 0px solid transparent; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container {
+      padding: 39px 0px 0px 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p {
+        font-size: 19.77px;
+        color: #777676; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p span {
+          font-weight: bold;
+          color: #43C9E1; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours hr {
+        margin: 17px 0px 30px 0px;
+        border-bottom: 1px solid #b9cbd1; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group label {
+        color: #8c8a8a;
+        font-size: 19px;
+        font-weight: normal; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group .input-group input[type="text"] {
+        border-right: 0px solid transparent; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group .input-group span.input-group-addon {
+        background-color: #FFFFFF;
+        border-left: 0px solid transparent;
+        border-right: 1px solid #CCCCCC; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group .input-group span.input-group-addon i {
+          font-size: 20px;
+          color: #abacab; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .row .form-group img {
+        margin: 32px 0px 0px 0px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order {
+      padding: 0px 0px 20px 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order h3 {
+        color: #FFFFFF;
+        background: #43C9E1;
+        font-weight: normal;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 0px 0px 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text {
+        color: #545353;
+        border: 1px solid #76939e;
+        padding: 20px 20px 40px 20px;
+        margin: 20px 20px 20px 20px;
+        background: #FFFFFF;
+        font-weight: bold; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text hr {
+          margin: 17px 0px 30px 0px;
+          border-bottom: 1px solid #b9cbd1; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return {
+          padding: 90px 0px 0px 0px; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return i {
+            color: #43C9E1;
+            line-height: 15px;
+            float: left;
+            font-size: 16px;
+            height: 15px;
+            margin-top: 5px;
+            font-weight: normal; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return a {
+            font-size: 18px;
+            color: #43C9E1;
+            text-decoration: none;
+            display: block;
+            float: left;
+            padding: 0px 0px 0px 0px;
+            height: 25px;
+            line-height: 25px;
+            margin: 0px 0px 0px 2px;
+            font-weight: normal; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 30px auto; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish .btnConfirm {
+        width: 292px;
+        height: 53px;
+        text-align: center;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        background: #76939e;
+        padding: 10px 10px 10px 10px;
+        font-size: 21.85px;
+        color: #FFFFFF; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish p {
+        font-size: 14px;
+        color: #76939e;
+        padding: 10px 0px 0px 0px;
+        letter-spacing: 0px; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .payment-form {
+    padding: 20px 0px 0px 0px; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress {
+    -webkit-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.4);
+    -moz-box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.4);
+    box-shadow:  0px 15px 30px 0px rgba(173, 173, 173, 0.4);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    padding: 0px 0px 30px 0px;
+    margin: 0px 0px 0px 0px;
+    background: #f3fcfe; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table thead tr {
+      background: #43C9E1; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table thead tr th {
+        border: 0px solid transparent;
+        color: #FFFFFF;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 16px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td {
+      vertical-align: middle;
+      text-align: center;
+      border-bottom: 1px solid #c7cccd; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip {
+        font-family: 'Tw Cen MT';
+        font-size: 14px;
+        opacity: 1; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner {
+          color: #686969;
+          position: relative;
+          background: #FFFFFF;
+          text-align: left;
+          padding: 15px 10px 15px 10px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          border: 1px solid #898989; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner button {
+            float: right;
+            clear: both;
+            background: #43C9E1;
+            color: #FFFFFF;
+            width: 40px;
+            line-height: 16px;
+            padding: 2px 5px 2px 5px;
+            border: 0px solid transparent;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            border-radius: 0px; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner p {
+            font-weight: normal; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after, .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
+          bottom: 100%;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after {
+          border-color: rgba(137, 137, 137, 0);
+          border-bottom-color: #FFFFFF;
+          border-width: 15px;
+          margin-left: -15px; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
+          border-color: rgba(137, 137, 137, 0);
+          border-bottom-color: #898989;
+          border-width: 16px;
+          margin-left: -16px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.tooltipErrandService {
+        background: transparent;
+        border: 1px solid transparent; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.tooltipDescription {
+        background: transparent;
+        border: 1px solid transparent; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td:nth-child(4) button.tooltipDescription {
+        margin: 0px auto 0px auto;
+        text-align: center;
+        width: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td:nth-child(5) {
+        text-align: left; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.btnOrderAgain {
+        background: #43C9E1;
+        border: 0px solid transparent;
+        padding: 5px 5px 5px 5px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        border-radius: 25px;
+        margin: 0px 0px 10px 0px;
+        color: #FFFFFF;
+        width: 100px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td button.btnEditOrder {
+        background: #FFFFFF;
+        color: #43C9E1;
+        border: 1px solid #43C9E1;
+        padding: 2px 5px 2px 5px;
+        width: 100px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .image {
+        width: 40px;
+        height: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        border-radius: 40px;
+        overflow: hidden;
+        text-align: center;
+        margin: 0px auto 0px auto; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tableErrandsProgress table tbody tr td .image img {
+          text-align: center;
+          margin: 0px auto 0px auto; }
+  .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours {
+    background: #f3fcfe;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-bottomright: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-bottom-left-radius: 20px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours h1,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds h1 {
+      margin: 0px 0px 0px 0px;
+      padding: 20px 20px 20px 20px;
+      font-size: 24px;
+      color: #FFFFFF; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonHours,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonFunds,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonHours,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonFunds {
+      margin: 32px 0px 32px 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonHours button,
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonFunds button,
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonHours button,
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonFunds button {
+        width: 200px;
+        height: 60px;
+        border: 0px solid transparent;
+        font-size: 22px;
+        color: #FFFFFF;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        border-radius: 20px; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonHours button,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonHours button {
+      background: #43C9E1; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .buttonFunds button,
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .buttonFunds button {
+      background: #76939e; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours {
+      padding: 0px 0px 0px 15px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours h1 {
+        -webkit-border-top-left-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        border-top-left-radius: 10px;
+        background: #43C9E1; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row {
+        vertical-align: middle;
+        margin: 0px 0px 0px 0px; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .available-hours {
+          height: 240px;
+          background: #d0f2f8;
+          border-bottom: 1px solid #959595; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .available-hours h4 {
+            font-size: 22px;
+            margin: 27px 0px 60px 0px;
+            color: #525353; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .available-hours h2 {
+            font-size: 43px;
+            color: #757677; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .used-hours {
+          height: 240px;
+          border-bottom: 1px solid #959595; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .used-hours h4 {
+            font-size: 22px;
+            margin: 27px 0px 60px 0px;
+            color: #525353; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.hours .row .used-hours h2 {
+            font-size: 43px;
+            color: #757677; }
+    .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds {
+      padding: 0px 15px 0px 0px; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds h1 {
+        -webkit-border-top-right-radius: 10px;
+        -moz-border-radius-topright: 10px;
+        border-top-right-radius: 10px;
+        background: #76939e; }
+      .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row {
+        vertical-align: middle;
+        margin: 0px 0px 0px 0px; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .available-funds {
+          height: 240px;
+          background: #dae7eb;
+          border-left: 1px solid #959595;
+          border-bottom: 1px solid #959595; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .available-funds h4 {
+            font-size: 22px;
+            margin: 27px 0px 60px 0px;
+            color: #525353; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .available-funds h2 {
+            font-size: 43px;
+            color: #757677; }
+        .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .used-funds {
+          height: 240px;
+          border-bottom: 1px solid #959595; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .used-funds h4 {
+            font-size: 22px;
+            margin: 27px 0px 60px 0px;
+            color: #525353; }
+          .zoom section .row aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours .row div.funds .row .used-funds h2 {
+            font-size: 43px;
+            color: #757677; }
+  .zoom article {
+    background: #f6f6f6; }
+    .zoom article h3 {
+      padding: 50px 0px 50px 0px;
+      margin: 0px 0px 0px 0px;
+      font-size: 30px; }
+    .zoom article .containerImage {
+      margin: 0px 0px 40px 0px; }
+      .zoom article .containerImage img {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        margin: 0px auto 0px auto; }
+      .zoom article .containerImage h4 {
+        font-weight: normal;
+        color: #6E6E6E; }
+  .zoom footer h3, .zoom footer h4 {
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 20px; }
+  .zoom footer button {
+    width: 200px;
+    background: transparent;
+    font-size: 16px;
+    background: transparent;
+    color: #43C9E1;
+    font-weight: normal;
+    height: 40px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #43C9E1;
+    text-align: center;
+    margin: 50px auto 0px auto; }
+    .zoom footer button:hover {
+      background: #43C9E1;
+      color: #FFFFFF; }
+  .zoom footer button.active {
     background: #43C9E1;
     color: #FFFFFF; }
-.zoom footer button.active {
-  background: #43C9E1;
-  color: #FFFFFF; }
-.zoom footer .subfooter {
-  background: #43C9E1;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  margin: 50px 0px 0px 0px;
-  color: #FFFFFF;
-  font-size: 18px; }
-.zoom div.errandsProgressDetail h3 {
-  background: #43C9E1;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 10px 10px 10px 10px;
-  margin: 20px 0px 0px 0px;
-  font-size: 17px; }
-.zoom div.errandsProgressDetail .panel-group {
-  margin: 0px 0px 0px 0px; }
-  .zoom div.errandsProgressDetail .panel-group .panel {
-    border: 0px solid transparent;
+  .zoom footer .subfooter {
+    background: #43C9E1;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin: 50px 0px 0px 0px;
+    color: #FFFFFF;
+    font-size: 18px; }
+  .zoom div.errandsProgressDetail h3 {
+    background: #43C9E1;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 0px 0px 0px;
+    font-size: 17px; }
+  .zoom div.errandsProgressDetail .panel-group {
+    margin: 0px 0px 0px 0px; }
+    .zoom div.errandsProgressDetail .panel-group .panel {
+      border: 0px solid transparent;
+      -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
+      -moz-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
+      box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6); }
+      .zoom div.errandsProgressDetail .panel-group .panel .panel-heading {
+        background: #76939e;
+        color: #FFFFFF; }
+        .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title {
+          margin: 0px auto 0px auto;
+          width: 100%;
+          max-width: 686px; }
+          .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a {
+            text-decoration: none; }
+            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.number {
+              border: 2px solid #FFFFFF;
+              -webkit-border-radius: 20px;
+              -moz-border-radius: 20px;
+              -ms-border-radius: 20px;
+              border-radius: 20px;
+              padding: 0px 5px 0px 5px;
+              font-weight: bold;
+              display: inline-block;
+              background: #FFFFFF;
+              color: #76939e; }
+            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
+              display: inline-block;
+              padding: 0px 19px 0px 19px;
+              text-align: left; }
+            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a:after {
+              font-family: 'Glyphicons Halflings';
+              content: "\e252";
+              display: inline-block; }
+            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a.collapsed:after {
+              content: "\e250"; }
+      .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body {
+        padding: 10px 0px 10px 0px;
+        border: 0px solid transparent;
+        margin: 0px auto 0px auto;
+        width: 100%;
+        max-width: 686px; }
+        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider {
+          background: #d4dee2;
+          width: 100%;
+          padding: 10px 10px 10px 10px; }
+          .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row .image {
+            width: 70px;
+            height: 70px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            border-radius: 40px;
+            overflow: hidden;
+            text-align: center;
+            margin: 0px auto 0px auto; }
+            .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row .image img {
+              text-align: center;
+              margin: 0px auto 0px auto; }
+          .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row p {
+            color: #575656;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            font-size: 16px; }
+          .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row hr {
+            margin: 7px 0px 7px 0px;
+            border: 0px solid transparent;
+            border-bottom: 1px solid #636363; }
+        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .details {
+          background: #e2e9ec;
+          width: 100%;
+          margin: 10px 0px 0px 0px;
+          padding: 10px 10px 10px 10px; }
+          .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .details p {
+            font-size: 16px;
+            color: #575656;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            font-size: 16px; }
+          .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .details button.btnEditErrand {
+            background: #43C9E1;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            border-radius: 10px;
+            color: #FFFFFF;
+            padding: 2px 10px 2px 10px;
+            border: 0px solid transparent; }
+        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body a.contactZoom {
+          border: 2px solid #43C9E1;
+          color: #43C9E1;
+          width: 100%;
+          padding: 5px 5px 5px 5px;
+          display: block;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          text-align: center;
+          margin: 20px 0px 0px 0px; }
+  .zoom .myErrands {
+    position: relative; }
+    .zoom .myErrands h2 {
+      color: #76939e;
+      font-size: 25px;
+      margin: 30px 0px 0px 0px;
+      padding: 0px 0px 20px 0px;
+      border-bottom: 1px solid #76939e; }
+    .zoom .myErrands h3 {
+      color: #464646;
+      font-size: 25px;
+      margin: 30px 0px 0px 0px;
+      padding: 0px 0px 20px 0px; }
+    .zoom .myErrands .bgHead {
+      background: #43C9E1;
+      position: absolute;
+      top: 170px;
+      left: 0px;
+      height: 38px;
+      width: 100%; }
+    .zoom .myErrands .filters {
+      clear: both;
+      margin: 20px 0px 0px 0px; }
+      .zoom .myErrands .filters p {
+        float: left;
+        line-height: 24px;
+        height: 24px;
+        font-size: 20px;
+        color: #76939e;
+        margin: 0px 50px 0px 0px; }
+        .zoom .myErrands .filters p span.circle {
+          -webkit-border-radius: 40px;
+          -moz-border-radius: 40px;
+          -ms-border-radius: 40px;
+          border-radius: 40px;
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          text-align: center;
+          margin: 0px 20px 0px 0px;
+          display: inline-block;
+          background-color: #76939e;
+          color: #FFFFFF;
+          font-size: 15px; }
+    .zoom .myErrands .tableErrandsProgress {
+      padding: 0px 0px 30px 0px;
+      margin: 0px 0px 0px 0px; }
+      .zoom .myErrands .tableErrandsProgress table thead {
+        background: #43C9E1;
+        width: 90%;
+        margin: 0 auto; }
+        .zoom .myErrands .tableErrandsProgress table thead tr {
+          width: 500px; }
+          .zoom .myErrands .tableErrandsProgress table thead tr th {
+            border: 0px solid transparent;
+            text-align: center;
+            color: #FFFFFF;
+            font-weight: normal;
+            vertical-align: middle;
+            font-size: 16px; }
+            .zoom .myErrands .tableErrandsProgress table thead tr th:nth-child(5) {
+              text-align: left; }
+      .zoom .myErrands .tableErrandsProgress table tbody {
+        width: 500px;
+        max-width: 20px; }
+        .zoom .myErrands .tableErrandsProgress table tbody tr td {
+          vertical-align: middle;
+          text-align: center;
+          border-bottom: 1px solid #c7cccd; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip {
+            font-family: 'Tw Cen MT';
+            font-size: 14px;
+            opacity: 1; }
+            .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner {
+              color: #686969;
+              position: relative;
+              background: #FFFFFF;
+              text-align: left;
+              padding: 15px 10px 15px 10px;
+              -webkit-border-radius: 20px;
+              -moz-border-radius: 20px;
+              -ms-border-radius: 20px;
+              border-radius: 20px;
+              border: 1px solid #959595; }
+              .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner button {
+                float: right;
+                clear: both;
+                background: #43C9E1;
+                color: #FFFFFF;
+                width: 40px;
+                line-height: 16px;
+                padding: 2px 5px 2px 5px;
+                border: 0px solid transparent;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                -ms-border-radius: 0px;
+                border-radius: 0px; }
+              .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner p {
+                font-weight: normal; }
+            .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after, .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
+              bottom: 100%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none; }
+            .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after {
+              border-color: rgba(137, 137, 137, 0);
+              border-bottom-color: #FFFFFF;
+              border-width: 15px;
+              margin-left: -15px; }
+            .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
+              border-color: rgba(137, 137, 137, 0);
+              border-bottom-color: #898989;
+              border-width: 16px;
+              margin-left: -16px; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td button.tooltipErrandService {
+            background: transparent;
+            border: 1px solid transparent; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td button.tooltipDescription {
+            background: transparent;
+            border: 1px solid transparent; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td:nth-child(4) button.tooltipDescription {
+            margin: 0px auto 0px auto;
+            text-align: center;
+            width: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td:nth-child(5) {
+            text-align: left; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td button.btnOrderAgain {
+            background: #43C9E1;
+            border: 0px solid transparent;
+            padding: 5px 5px 5px 5px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            border-radius: 25px;
+            margin: 0px 0px 10px 0px;
+            color: #FFFFFF;
+            width: 100px; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td button.btnEditOrder {
+            background: #FFFFFF;
+            color: #43C9E1;
+            border: 1px solid #43C9E1;
+            padding: 2px 5px 2px 5px;
+            width: 100px; }
+          .zoom .myErrands .tableErrandsProgress table tbody tr td .image {
+            width: 40px;
+            height: 40px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            border-radius: 40px;
+            overflow: hidden;
+            text-align: center;
+            margin: 0px auto 0px auto; }
+            .zoom .myErrands .tableErrandsProgress table tbody tr td .image img {
+              text-align: center;
+              margin: 0px auto 0px auto; }
+  .zoom .no-margin {
+    margin: 0px 0px 0px 0px; }
+  .zoom .no-border-radius {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px; }
+  .zoom .form-control {
+    -webkit-box-shadow:  0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:  0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:  0px 0px 0px 0px rgba(50, 50, 50, 0.75); }
+  .zoom .form-control:focus {
+    border: 1px solid #CCCCCC;
     -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
     -moz-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
     box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6); }
-    .zoom div.errandsProgressDetail .panel-group .panel .panel-heading {
-      background: #76939e;
-      color: #FFFFFF; }
-      .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title {
-        margin: 0px auto 0px auto;
-        width: 100%;
-        max-width: 686px; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a {
-          text-decoration: none; }
-          .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.number {
-            border: 2px solid #FFFFFF;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            border-radius: 20px;
-            padding: 0px 5px 0px 5px;
-            font-weight: bold;
-            display: inline-block;
-            background: #FFFFFF;
-            color: #76939e; }
-          .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
-            display: inline-block;
-            padding: 0px 19px 0px 19px;
-            text-align: left; }
-          .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a:after {
-            font-family: 'Glyphicons Halflings';
-            content: "\e252";
-            display: inline-block; }
-          .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a.collapsed:after {
-            content: "\e250"; }
-    .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body {
-      padding: 10px 0px 10px 0px;
-      border: 0px solid transparent;
-      margin: 0px auto 0px auto;
-      width: 100%;
-      max-width: 686px; }
-      .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider {
-        background: #d4dee2;
-        width: 100%;
-        padding: 10px 10px 10px 10px; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row .image {
-          width: 70px;
-          height: 70px;
-          -webkit-border-radius: 40px;
-          -moz-border-radius: 40px;
-          -ms-border-radius: 40px;
-          border-radius: 40px;
-          overflow: hidden;
-          text-align: center;
-          margin: 0px auto 0px auto; }
-          .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row .image img {
-            text-align: center;
-            margin: 0px auto 0px auto; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row p {
-          color: #575656;
-          margin: 0px 0px 0px 0px;
-          padding: 0px 0px 0px 0px;
-          font-size: 16px; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .provider .row hr {
-          margin: 7px 0px 7px 0px;
-          border: 0px solid transparent;
-          border-bottom: 1px solid #636363; }
-      .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .details {
-        background: #e2e9ec;
-        width: 100%;
-        margin: 10px 0px 0px 0px;
-        padding: 10px 10px 10px 10px; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .details p {
-          font-size: 16px;
-          color: #575656;
-          margin: 0px 0px 0px 0px;
-          padding: 0px 0px 0px 0px;
-          font-size: 16px; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .row .details button.btnEditErrand {
-          background: #43C9E1;
-          -webkit-border-radius: 10px;
-          -moz-border-radius: 10px;
-          -ms-border-radius: 10px;
-          border-radius: 10px;
-          color: #FFFFFF;
-          padding: 2px 10px 2px 10px;
-          border: 0px solid transparent; }
-      .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body a.contactZoom {
-        border: 2px solid #43C9E1;
-        color: #43C9E1;
-        width: 100%;
-        padding: 5px 5px 5px 5px;
-        display: block;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        border-radius: 20px;
-        text-align: center;
-        margin: 20px 0px 0px 0px; }
-.zoom .myErrands {
-  position: relative; }
-  .zoom .myErrands h2 {
-    color: #76939e;
-    font-size: 25px;
-    margin: 30px 0px 0px 0px;
-    padding: 0px 0px 20px 0px;
-    border-bottom: 1px solid #76939e; }
-  .zoom .myErrands h3 {
-    color: #464646;
-    font-size: 25px;
-    margin: 30px 0px 0px 0px;
-    padding: 0px 0px 20px 0px; }
-  .zoom .myErrands .bgHead {
-    background: #43C9E1;
-    position: absolute;
-    top: 170px;
-    left: 0px;
-    height: 38px;
-    width: 100%; }
-  .zoom .myErrands .filters {
-    clear: both;
-    margin: 20px 0px 0px 0px; }
-    .zoom .myErrands .filters p {
-      float: left;
-      line-height: 24px;
-      height: 24px;
-      font-size: 20px;
-      color: #76939e;
-      margin: 0px 50px 0px 0px; }
-      .zoom .myErrands .filters p span.circle {
-        -webkit-border-radius: 40px;
-        -moz-border-radius: 40px;
-        -ms-border-radius: 40px;
-        border-radius: 40px;
-        width: 24px;
-        height: 24px;
-        line-height: 24px;
-        text-align: center;
-        margin: 0px 20px 0px 0px;
-        display: inline-block;
-        background-color: #76939e;
-        color: #FFFFFF;
-        font-size: 15px; }
-  .zoom .myErrands .tableErrandsProgress {
-    padding: 0px 0px 30px 0px;
+  .zoom .btn:hover,
+  .zoom .btn:focus,
+  .zoom .btn:visited,
+  .zoom .btn:active,
+  .zoom .btn.active {
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.125); }
+  .zoom .dropdown,
+  .zoom #dropdown1,
+  .zoom #dropdown2 {
+    float: left; }
+  .zoom .datetimepicker {
+    width: 290px;
+    padding: 10px 10px 10px 10px; }
+  .zoom .open > .dropdown-menu {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px; }
+  .zoom .datetimepicker .table tbody {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    border: 2px solid #76939e; }
+  .zoom .datetimepicker .table td,
+  .zoom .datetimepicker .table td span {
+    border: 1px solid #CCCCCC;
+    padding: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
     margin: 0px 0px 0px 0px; }
-    .zoom .myErrands .tableErrandsProgress table thead {
-      background: #43C9E1;
-      width: 90%;
-      margin: 0 auto; }
-      .zoom .myErrands .tableErrandsProgress table thead tr {
-        width: 500px; }
-        .zoom .myErrands .tableErrandsProgress table thead tr th {
-          border: 0px solid transparent;
-          text-align: center;
-          color: #FFFFFF;
-          font-weight: normal;
-          vertical-align: middle;
-          font-size: 16px; }
-          .zoom .myErrands .tableErrandsProgress table thead tr th:nth-child(5) {
-            text-align: left; }
-    .zoom .myErrands .tableErrandsProgress table tbody {
-      width: 500px;
-      max-width: 20px; }
-      .zoom .myErrands .tableErrandsProgress table tbody tr td {
-        vertical-align: middle;
-        text-align: center;
-        border-bottom: 1px solid #c7cccd; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip {
-          font-family: 'Tw Cen MT';
-          font-size: 14px;
-          opacity: 1; }
-          .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner {
-            color: #686969;
-            position: relative;
-            background: #FFFFFF;
-            text-align: left;
-            padding: 15px 10px 15px 10px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            border-radius: 20px;
-            border: 1px solid #959595; }
-            .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner button {
-              float: right;
-              clear: both;
-              background: #43C9E1;
-              color: #FFFFFF;
-              width: 40px;
-              line-height: 16px;
-              padding: 2px 5px 2px 5px;
-              border: 0px solid transparent;
-              -webkit-border-radius: 0px;
-              -moz-border-radius: 0px;
-              -ms-border-radius: 0px;
-              border-radius: 0px; }
-            .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner p {
-              font-weight: normal; }
-          .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after, .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
-            bottom: 100%;
-            left: 50%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none; }
-          .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:after {
-            border-color: rgba(137, 137, 137, 0);
-            border-bottom-color: #FFFFFF;
-            border-width: 15px;
-            margin-left: -15px; }
-          .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip .tooltip-inner:before {
-            border-color: rgba(137, 137, 137, 0);
-            border-bottom-color: #898989;
-            border-width: 16px;
-            margin-left: -16px; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td button.tooltipErrandService {
-          background: transparent;
-          border: 1px solid transparent; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td button.tooltipDescription {
-          background: transparent;
-          border: 1px solid transparent; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td:nth-child(4) button.tooltipDescription {
-          margin: 0px auto 0px auto;
-          text-align: center;
-          width: 80px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td:nth-child(5) {
-          text-align: left; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td button.btnOrderAgain {
-          background: #43C9E1;
-          border: 0px solid transparent;
-          padding: 5px 5px 5px 5px;
-          -webkit-border-radius: 25px;
-          -moz-border-radius: 25px;
-          -ms-border-radius: 25px;
-          border-radius: 25px;
-          margin: 0px 0px 10px 0px;
-          color: #FFFFFF;
-          width: 100px; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td button.btnEditOrder {
-          background: #FFFFFF;
-          color: #43C9E1;
-          border: 1px solid #43C9E1;
-          padding: 2px 5px 2px 5px;
-          width: 100px; }
-        .zoom .myErrands .tableErrandsProgress table tbody tr td .image {
-          width: 40px;
-          height: 40px;
-          -webkit-border-radius: 40px;
-          -moz-border-radius: 40px;
-          -ms-border-radius: 40px;
-          border-radius: 40px;
-          overflow: hidden;
-          text-align: center;
-          margin: 0px auto 0px auto; }
-          .zoom .myErrands .tableErrandsProgress table tbody tr td .image img {
-            text-align: center;
-            margin: 0px auto 0px auto; }
-.zoom .no-margin {
-  margin: 0px 0px 0px 0px; }
-.zoom .no-border-radius {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px; }
-.zoom .form-control {
-  -webkit-box-shadow:  0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:  0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:  0px 0px 0px 0px rgba(50, 50, 50, 0.75); }
-.zoom .form-control:focus {
-  border: 1px solid #CCCCCC;
-  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
-  -moz-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
-  box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6); }
-.zoom .btn:hover,
-.zoom .btn:focus,
-.zoom .btn:visited,
-.zoom .btn:active,
-.zoom .btn.active {
-  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.125);
-  -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.125); }
-.zoom .dropdown,
-.zoom #dropdown1,
-.zoom #dropdown2 {
-  float: left; }
-.zoom .datetimepicker {
-  width: 290px;
-  padding: 10px 10px 10px 10px; }
-.zoom .open > .dropdown-menu {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px; }
-.zoom .datetimepicker .table tbody {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px;
-  border: 2px solid #76939e; }
-.zoom .datetimepicker .table td,
-.zoom .datetimepicker .table td span {
-  border: 1px solid #CCCCCC;
-  padding: 0px 0px 0px 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px;
-  margin: 0px 0px 0px 0px; }
 
 /* 
 .switch {

@@ -16,8 +16,8 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
-    <link rel="stylesheet" href="styles/zoom.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/zoom.css">
     <!-- endbuild -->
   </head>
   <body ng-app="zoomApp">
@@ -27,16 +27,16 @@
     <![endif]-->
 
 <!--class="container zoom"-->
-    <div class="container zoom">
+    <div class="zoom">
 
-      <header ng-include="'scripts/static/header.html'">
-      </header>
+      <!-- <header ng-include="'scripts/static/header.html'">
+      </header> -->
 
       <!-- Add your site or application content here -->
       <div ui-view=""></div>
 
-      <footer ng-include="'scripts/static/footer.html'">
-      </footer>
+      <!-- <footer ng-include="'scripts/static/footer.html'">
+      </footer> -->
 
     </div>
     <script>
@@ -77,8 +77,6 @@ ga('send', 'pageview');
     <script src="scripts/main/main.routes.js"></script>
     <script src="scripts/main/main.controller.js"></script>
     <script src="scripts/main/main.service.js"></script>
-    
-    <script type="text/javascript" src="actions.js"></script>
     <!-- endbuild -->
   </body>
 </html>
