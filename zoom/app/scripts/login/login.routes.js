@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('zoomApp').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
  $urlRouterProvider.otherwise('/login');
   $stateProvider
