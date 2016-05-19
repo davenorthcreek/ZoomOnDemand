@@ -1,6 +1,10 @@
 {
   "name": "zoom",
   "private": true,
+  "dependencies": {
+      "express": "^4.13.1",
+      "compression": "^1.5.2"
+  },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "connect-modrewrite": "^0.9.0",
@@ -42,9 +46,5 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js"
-  },
-  "dependencies": {
-    "grunt-contrib-connect": "^0.9.0",
-    "grunt-contrib-watch": "^0.6.1"
   }
 }
