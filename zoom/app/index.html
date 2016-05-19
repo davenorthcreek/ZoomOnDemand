@@ -22,12 +22,12 @@
     <!-- endbuild -->
   </head>
   <body ng-app="zoomApp">
-     
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-<!--class="container zoom"-->
+    <!--class="container zoom"-->
     <div class="container zoom">
 
       <header ng-include="'scripts/static/header.html'">
@@ -80,7 +80,33 @@ ga('send', 'pageview');
     <script src="scripts/main/main.routes.js"></script>
     <script src="scripts/main/main.controller.js"></script>
     <script src="scripts/main/main.service.js"></script>
-    
+
+    <script src="scripts/client/customer/customer.routes.js"></script>
+    <script src="scripts/client/customer/customer.controller.js"></script>
+    <script src="scripts/client/customer/customer.service.js"></script>
+
+    <script src="scripts/client/customer/myaccount/myaccount.routes.js"></script>
+    <script src="scripts/client/customer/myaccount/myaccount.controller.js"></script>
+    <script src="scripts/client/customer/myaccount/myaccount.service.js"></script>
+
+    <script src="scripts/client/customer/myaccount/resetPassword/resetpassword.routes.js"></script>
+    <script src="scripts/client/customer/myaccount/resetPassword/resetpassword.controller.js"></script>
+
+    <script src="scripts/client/customer/myaccount/deactivate/deactivate.routes.js"></script>
+    <script src="scripts/client/customer/myaccount/deactivate/deactivate.controller.js"></script>
+
+    <script src="scripts/client/customer/myaccount/notifications/notifications.routes.js"></script>
+    <script src="scripts/client/customer/myaccount/notifications/notifications.controller.js"></script>
+
+    <script src="scripts/client/customer/myaccount/paymentHistory/paymentHistory.routes.js"></script>
+    <script src="scripts/client/customer/myaccount/paymentHistory/paymentHistory.controller.js"></script>
+
+    <script src="scripts/client/customer/profile/profile.routes.js"></script>
+    <script src="scripts/client/customer/profile/profile.controller.js"></script>
+
+    <script src="scripts/client/customer/payment/payment.routes.js"></script>
+    <script src="scripts/client/customer/payment/payment.controller.js"></script>
+
     <script type="text/javascript" src="actions.js"></script>
     <!-- endbuild -->
   </body>
