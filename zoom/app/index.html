@@ -28,14 +28,18 @@
     <![endif]-->
 
 <!--class="container zoom"-->
-      <div class="container zoom">
-          <!--<header ng-include="'scripts/static/header.html'"> </header>-->
-          <!-- Add your site or application content here -->
-          <div ui-view="" ></div>
+    <div class="container zoom">
 
-          <!--<footer ng-include="'scripts/static/footer.html'"> </footer>-->
-          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-      </div>
+      <header ng-include="'scripts/static/header.html'">
+      </header>
+
+      <!-- Add your site or application content here -->
+      <div ui-view=""></div>
+
+      <footer ng-include="'scripts/static/footer.html'">
+      </footer>
+
+    </div>
     <script>
 !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
   (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -76,32 +80,8 @@ ga('send', 'pageview');
     <script src="scripts/main/main.routes.js"></script>
     <script src="scripts/main/main.controller.js"></script>
     <script src="scripts/main/main.service.js"></script>
-
-      <script src="scripts/client/customer/customer.routes.js"></script>
-      <script src="scripts/client/customer/customer.controller.js"></script>
-      <script src="scripts/client/customer/customer.service.js"></script>
-
-      <script src="scripts/client/customer/myaccount/myaccount.routes.js"></script>
-      <script src="scripts/client/customer/myaccount/myaccount.controller.js"></script>
-      <script src="scripts/client/customer/myaccount/myaccount.service.js"></script>
-
-      <script src="scripts/client/customer/myaccount/resetPassword/resetpassword.routes.js"></script>
-      <script src="scripts/client/customer/myaccount/resetPassword/resetpassword.controller.js"></script>
-
-      <script src="scripts/client/customer/myaccount/deactivate/deactivate.routes.js"></script>
-      <script src="scripts/client/customer/myaccount/deactivate/deactivate.controller.js"></script>
-
-      <script src="scripts/client/customer/myaccount/notifications/notifications.routes.js"></script>
-      <script src="scripts/client/customer/myaccount/notifications/notifications.controller.js"></script>
-
-      <script src="scripts/client/customer/myaccount/paymentHistory/paymentHistory.routes.js"></script>
-      <script src="scripts/client/customer/myaccount/paymentHistory/paymentHistory.controller.js"></script>
-
-      <script src="scripts/client/customer/profile/profile.routes.js"></script>
-      <script src="scripts/client/customer/profile/profile.controller.js"></script>
-
-      <script src="scripts/client/customer/payment/payment.routes.js"></script>
-      <script src="scripts/client/customer/payment/payment.controller.js"></script>
+    
+    <script type="text/javascript" src="actions.js"></script>
     <!-- endbuild -->
   </body>
 </html>

@@ -46,6 +46,25 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	header{
 		nav.navbar{
+			// Laptop/Tablet (1024px)
+			@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+				background:$blueZoom;
+			}
+
+			// Tablet Portrait (768px)
+			@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
+				background:$blueZoom;
+			}
+
+			// Phone Landscape (480px)
+			@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+				background:$blueZoom;
+			}
+
+			// Phone Portrait (320px)
+			@media only screen and (max-width: 320px) {
+				background:$blueZoom;
+			}
 			background:$blueZoom;
 		    @include border(0px);
 		    @include margin(0px,0px,0px,0px);
@@ -60,9 +79,31 @@ textarea:-ms-input-placeholder,
 									background:$blueZoom;						    	
 							    }
 							}
+							&.dropdown{
+		    					@include padding(0px,0px,0px,0px);
+								a{
+		    						background:$blueZoom;	
+		    						@include padding(0px,0px,0px,0px);
+		    						@include margin(5px,0px,0px,0px);
+		    						&:hover,:focus,:active,:visited{
+		    							background:$blueZoom;	
+		    						}									
+								}
+								ul.dropdown-menu{
+									@include border(1px,solid,$borderHoursFunds);
+									@include padding(5px,20px,5px,20px);
+									li{
+										@include margin(20px,0px,20px,0px);
+										a{
+											font-size:20px;
+											background:$white;
+											color:$textMenuHeaderNav;
+										}
+									}
+								}
+							}
 		    			}
 		    			img{
-		    				@include margin(5px,10px,5px,10px);
 		    			}
 		    		}
 		    	}
@@ -272,7 +313,7 @@ textarea:-ms-input-placeholder,
 													-webkit-box-sizing: border-box;
 													-moz-box-sizing: border-box;
 													box-sizing: border-box;
-													background:#fff;
+													background:$white;
 												}
 												.form-group{
 													input, textarea{
@@ -493,14 +534,14 @@ textarea:-ms-input-placeholder,
 											}
 											.buttonFinish{
 												width:100%;
-												text-align: center;
+												@include text-align(center);
 												@include margin(0,auto,30px,auto);
 												.btnConfirm{
 													width:292px;
 													height:53px;
 													@include text-align(center);
 													@include border-radius(10px);
-													background:#76939e;
+													background:$graySideBarIzq;
 													@include padding(10px,10px,10px,10px);
 													font-size:21.85px;
 													color:$white;
@@ -519,10 +560,10 @@ textarea:-ms-input-placeholder,
 									}
 								}
 							}
-							div.table-responsive{
+							.tableErrandsProgress{
 								@include box-shadow(0px,15px,30px,0px,173,173,173,0.40);
 								@include border-radius(20px);
-								@include border(1px, solid, $blueZoom);
+								// @include border(1px, solid, $blueZoom);
 								@include padding(0px,0px,30px,0px);
 								@include margin(0px,0px,0px,0px);
 								background:$bgFormTab;
@@ -543,14 +584,73 @@ textarea:-ms-input-placeholder,
 									tbody{
 										tr{
 											td{
+												.tooltip{
+													font-family: 'Tw Cen MT';
+													font-size:14px;
+													opacity: 1;
+													.tooltip-inner {
+														color:$textTooltip;
+														position: relative;
+														background: $white;
+														text-align:left;
+														@include padding(15px,10px,15px,10px);
+														@include border-radius(20px);
+														@include border(1px,solid,$borderTooltip);
+														button{
+													    	float:right;
+													    	clear: both;
+													    	background:$blueZoom;
+													    	color:$white;
+													    	width:40px;
+													    	line-height:16px;
+													    	@include padding(2px,5px,2px,5px);
+													    	@include border(0px,solid,transparent);
+													    	@include border-radius(0px);
+													    }
+													    p{
+													    	font-weight:normal;
+													    }
+													}
+													.tooltip-inner:after, .tooltip-inner:before {
+														bottom: 100%;
+														left: 50%;
+														border: solid transparent;
+														content: " ";
+														height: 0;
+														width: 0;
+														position: absolute;
+														pointer-events: none;
+													}
+
+													.tooltip-inner:after {
+														border-color: rgba(137, 137, 137, 0);
+														border-bottom-color: $white;
+														border-width: 15px;
+														margin-left: -15px;
+													}
+													.tooltip-inner:before {
+														border-color: rgba(137, 137, 137, 0);
+														border-bottom-color: $borderTooltip;
+														border-width: 16px;
+														margin-left: -16px;
+													}
+												}
 												vertical-align:middle;
 												// width:calc(100% / 6);
 												@include text-align(center);
 												@include border-bottom(1px,solid,$borderTable);
+												button.tooltipErrandService{
+													background:transparent;
+													@include border(1px,solid,transparent);
+												}
+												button.tooltipDescription{
+													background:transparent;
+													@include border(1px,solid,transparent);
+												}
 												&:nth-child(4){
-													p{
+													button.tooltipDescription{
 														@include margin(0px,auto,0px,auto);
-														text-align: center;
+														@include text-align(center);
 														width:80px;
 														white-space: nowrap;
 														overflow: hidden;
@@ -558,7 +658,7 @@ textarea:-ms-input-placeholder,
 													}
 												}
 												&:nth-child(5){
-													text-align: left;
+													@include text-align(left);
 												}
 												button.btnOrderAgain{
 													background:$blueZoom;
@@ -593,6 +693,121 @@ textarea:-ms-input-placeholder,
 									}
 								}
 							}
+							.tab-content-hours{
+								background:$bgFormTab;
+								@include border-radius-bottom-right(20px);
+								@include border-radius-bottom-left(20px);
+								.row{
+									div.hours,
+									div.funds{
+										h1{
+											@include margin(0px,0px,0px,0px);
+											@include padding(20px,20px,20px,20px);
+											font-size:24px;
+											color:$white;
+										}
+										.buttonHours,
+										.buttonFunds{
+											@include margin(32px,0px,32px,0px);
+											button{
+												width:200px;
+												height:60px;
+												@include border(0px,solid,transparent);
+												font-size:22px;
+												color:$white;
+												@include border-radius(20px);
+											}
+										}
+										.buttonHours{
+											button{
+												background:$blueZoom;
+											}
+										}
+										.buttonFunds{
+											button{
+												background:$graySideBarIzq;
+											}
+										}
+									}
+									div.hours{
+										@include padding(0px,0px,0px,15px);
+										h1{
+											@include border-radius-top-left(10px);
+											background:$blueZoom;
+										}
+										.row{
+											vertical-align:middle;
+											@include margin(0px,0px,0px,0px);
+											.available-hours{
+												height:240px;
+												background:$bgAvailableHours;
+												@include border-bottom(1px,solid,$borderHoursFunds);
+												h4{
+													font-size:22px;
+													@include margin(27px,0px,60px,0px);
+													color:$colorTextHeadHF;
+												}
+												h2{
+													font-size:43px;
+													color:$colorTextBodyHF;
+												}
+											}
+											.used-hours{
+												height:240px;
+												@include border-bottom(1px,solid,$borderHoursFunds);
+												h4{
+													font-size:22px;
+													@include margin(27px,0px,60px,0px);
+													color:$colorTextHeadHF;
+												}
+												h2{
+													font-size:43px;
+													color:$colorTextBodyHF;
+												}
+											}
+										}
+									}
+									div.funds{
+										@include padding(0px,15px,0px,0px);
+										h1{
+											@include border-radius-top-right(10px);
+											background:$graySideBarIzq;
+										}
+										.row{
+											vertical-align:middle;
+											@include margin(0px,0px,0px,0px);
+											.available-funds{
+												height:240px;
+												background:$colorFundsBg;
+												@include border-left(1px,solid,$borderHoursFunds);
+												@include border-bottom(1px,solid,$borderHoursFunds);
+												h4{
+													font-size:22px;
+													@include margin(27px,0px,60px,0px);
+													color:$colorTextHeadHF;
+												}
+												h2{
+													font-size:43px;
+													color:$colorTextBodyHF;
+												}
+											}
+											.used-funds{
+												height:240px;
+												@include border-bottom(1px,solid,$borderHoursFunds);
+												h4{
+													font-size:22px;
+													@include margin(27px,0px,60px,0px);
+													color:$colorTextHeadHF;
+												}
+												h2{
+													font-size:43px;
+													color:$colorTextBodyHF;
+												}
+											}
+										}
+									}
+								}
+							}							
 						}
 					}
 				}
@@ -672,6 +887,494 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	// -----------------------FOOTER-----------------------
 	// ----------------------------------------------------
+	
+	// ----------------------------------------------------------------------
+	// -----------------------ERRANDS PROGRESS DETAILS-----------------------
+	// ----------------------------------------------------------------------	
+	div.errandsProgressDetail{
+		h3{
+			background:$blueZoom;
+			color:$white;
+			@include text-align(center);
+			@include padding(10px,10px,10px,10px);
+			@include margin(20px,0px,0px,0px);			
+			font-size:17px;
+		}
+		.panel-group{
+			@include margin(0px,0px,0px,0px);			
+			.panel{
+				@include border(0px,solid,transparent);
+				@include box-shadow(0px,0px,0px,0px,0,0,0,0.75,inset);
+				@include box-shadow(0px,0px,0px,0px,255,0,0,0.6);
+				.panel-heading{
+					background:$graySideBarIzq;
+					color:$white;
+					.panel-title{
+						a{
+							text-decoration:none;
+							span.number{
+								@include border(2px,solid,$white);
+								@include border-radius(20px);
+								@include padding(0px,5px,0px,5px);
+								font-weight:bold;
+								display:inline-block;
+								background:$white;
+								color:$graySideBarIzq;
+							}
+							span.text{
+								display:inline-block;
+								@include padding(0px,19px,0px,19px);
+								@include text-align(left);
+							}
+							&:after {					
+								font-family: 'Glyphicons Halflings';
+								// content: "\e114"; 
+								content:"\e252";
+								display:inline-block;
+							}
+							&.collapsed:after {
+								content:"\e250";
+								// content: "\e080";   
+							}
+						}
+						@include margin(0px,auto,0px,auto);
+						width:100%;
+						max-width:686px;
+					}
+				}
+				.panel-collapse{					
+					.panel-body{
+						.row{
+							.provider{
+								background:$errandDetailBox1;
+								width:100%;
+								@include padding(10px,10px,10px,10px);
+								.row{
+									.image{
+										width:70px;
+										height:70px;
+										@include border-radius(40px);  
+										overflow:hidden;
+										@include text-align(center);
+										@include margin(0px,auto,0px,auto);
+										img{
+											@include text-align(center);
+											@include margin(0px,auto,0px,auto);
+										}
+									}
+									p{
+										color:$errandDetailColor;
+										@include margin(0px,0px,0px,0px);
+										@include padding(0px,0px,0px,0px);
+										font-size:16px;
+									}
+									hr{
+										@include margin(7px,0px,7px,0px);
+										@include border(0px,solid,transparent);
+										@include border-bottom(1px,solid,$errandDetailHr);
+									}
+								}
+							}
+							.details{
+								background:$errandDetailBox2;
+								width:100%;
+								@include margin(10px,0px,0px,0px);
+								@include padding(10px,10px,10px,10px);
+								p{
+									font-size:16px;
+									color:$errandDetailColor;
+									@include margin(0px,0px,0px,0px);
+									@include padding(0px,0px,0px,0px);
+									font-size:16px;
+								}
+								button.btnEditErrand{
+									background:$blueZoom;
+									@include border-radius(10px);
+									color:$white;
+									@include padding(2px,10px,2px,10px);
+									@include border(0px,solid,transparent);
+								}
+							}
+						}
+						a.contactZoom{
+							@include border(2px,solid,$blueZoom);
+							color:$blueZoom;
+							width:100%;
+							@include padding(5px,5px,5px,5px);
+							display:block;
+							@include border-radius(20px);
+							@include text-align(center);
+							@include margin(20px,0px,0px,0px);
+						}
+						@include padding(10px,0px,10px,0px);
+						@include border(0px,solid,transparent);
+						@include margin(0px,auto,0px,auto);
+						width:100%;
+						max-width:686px;
+					}
+				}
+			}
+		}
+	}
+	// ----------------------------------------------------------------------
+	// -----------------------ERRANDS PROGRESS DETAILS-----------------------
+	// ----------------------------------------------------------------------
+	
+	// --------------------------------------------------------
+	// -----------------------MY ERRANDS-----------------------
+	// --------------------------------------------------------
+	.myErrands{
+		position: relative;
+		h2{
+			color:$graySideBarIzq;
+			font-size:25px;
+			@include margin(30px,0px,0px,0px);
+			@include padding(0px,0px,20px,0px);
+			@include border-bottom(1px,solid,$graySideBarIzq);
+		}
+		h3{
+			color:$titleCompletedOrders;
+			font-size:25px;
+			@include margin(30px,0px,0px,0px);
+			@include padding(0px,0px,20px,0px);
+		}
+		.bgHead{
+			background:$blueZoom;
+			position: absolute;
+			top:170px;
+			left:0px;
+			height:38px;
+			width:100%;
+		}
+		.filters{
+			clear: both;
+			@include margin(20px,0px,0px,0px);
+			p{
+				float: left;
+				line-height:24px;
+				height:24px;
+				font-size:20px;
+				color:$graySideBarIzq;
+				@include margin(0px,50px,0px,0px);
+				span.circle{
+					@include border-radius(40px);
+					width:24px;
+					height:24px;
+					line-height:24px;
+					@include text-align(center);
+					@include margin(0px,20px,0px,0px);
+					display:inline-block;
+					background-color:$graySideBarIzq;
+					color:$white;
+					font-size:15px;
+				}
+			}
+		}
+		.tableErrandsProgress{
+			// @include box-shadow(0px,15px,30px,0px,173,173,173,0.40);
+			// @include border-radius(20px);
+			// @include border(1px, solid, $blueZoom);
+			@include padding(0px,0px,30px,0px);
+			@include margin(0px,0px,0px,0px);
+			// background:$bgFormTab;
+			table{
+		
+				thead{
+					background:$blueZoom;
+					width: 90%;
+					margin: 0 auto;
+					tr{
+						width:500px;
+						th{
+							@include border(0px, solid, transparent);
+							@include text-align(center);
+							color:$white;
+							font-weight:normal;
+							vertical-align:middle;
+							font-size:16px;
+							&:nth-child(5){
+								@include text-align(left);
+							}
+						}
+					}
+				}
+				tbody{
+					width:500px;
+					max-width: 20px;
+		
+					tr{
+						td{
+							.tooltip{
+								font-family: 'Tw Cen MT';
+								font-size:14px;
+								opacity: 1;
+								.tooltip-inner {
+									color:$textTooltip;
+									position: relative;
+									background: $white;
+									text-align:left;
+									@include padding(15px,10px,15px,10px);
+									@include border-radius(20px);
+									@include border(1px,solid,$borderHoursFunds);
+									button{
+								    	float:right;
+								    	clear: both;
+								    	background:$blueZoom;
+								    	color:$white;
+								    	width:40px;
+								    	line-height:16px;
+								    	@include padding(2px,5px,2px,5px);
+								    	@include border(0px,solid,transparent);
+								    	@include border-radius(0px);
+								    }
+								    p{
+								    	font-weight:normal;
+								    }
+								}
+								.tooltip-inner:after, .tooltip-inner:before {
+									bottom: 100%;
+									left: 50%;
+									border: solid transparent;
+									content: " ";
+									height: 0;
+									width: 0;
+									position: absolute;
+									pointer-events: none;
+								}
+		
+								.tooltip-inner:after {
+									border-color: rgba(137, 137, 137, 0);
+									border-bottom-color: $white;
+									border-width: 15px;
+									margin-left: -15px;
+								}
+								.tooltip-inner:before {
+									border-color: rgba(137, 137, 137, 0);
+									border-bottom-color: $borderTooltip;
+									border-width: 16px;
+									margin-left: -16px;
+								}
+							}
+							vertical-align:middle;
+							// width:calc(100% / 6);
+							@include text-align(center);
+							@include border-bottom(1px,solid,$borderTable);
+							button.tooltipErrandService{
+								background:transparent;
+								@include border(1px,solid,transparent);
+							}
+							button.tooltipDescription{
+								background:transparent;
+								@include border(1px,solid,transparent);
+							}
+							&:nth-child(4){
+								button.tooltipDescription{
+									@include margin(0px,auto,0px,auto);
+									@include text-align(center);
+									width:80px;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+								}
+							}
+							&:nth-child(5){
+								@include text-align(left);
+							}
+							button.btnOrderAgain{
+								background:$blueZoom;
+								@include border(0px, solid, transparent);
+								@include padding(5px,5px,5px,5px);
+								@include border-radius(25px);
+								@include margin(0px,0px,10px,0px);
+								color:$white;
+								width:100px;
+							}
+							button.btnEditOrder{
+								background:$white;
+								color:$blueZoom;
+								@include border(1px, solid, $blueZoom);
+								@include padding(2px,5px,2px,5px);
+								width:100px;
+							}
+							.image{
+								width:40px;
+								height:40px;
+								@include border-radius(40px);
+								overflow:hidden;
+								@include text-align(center);
+								@include margin(0px,auto,0px,auto);
+								img{
+									@include text-align(center);
+									@include margin(0px,auto,0px,auto);
+								}
+							}
+						}
+					}
+				}
+			}
+			// .table{
+			// 	display: flex;
+			// 	flex-wrap:wrap;
+			// 	justify-content: center;
+			// 	.headerTabla{
+			// 		background:$blueZoom;
+			// 		width: 100%;
+			// 		margin: 0 auto;
+			// 		display: flex;
+			// 		justify-content: center;
+			// 		margin: 0;
+			// 		ul{
+			// 			flex-basis: 70%;
+			// 			flex-wrap:wrap;
+			// 			display: flex;
+			// 			align-items: center;
+			// 			list-style-type: none;
+			// 			padding: 8px 0;
+			// 			margin: 0;
+			// 			li{
+			// 				flex-basis:calc(100%/3);
+			// 				@include border(0px, solid, transparent);
+			// 				@include text-align(center);
+			// 				color:$white;
+			// 				font-weight:normal;
+			// 				vertical-align:middle;
+			// 				font-size:16px;
+			// 				&:nth-child(5){
+			// 					@include text-align(left);
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// 	.contTable{
+			// 		width: 100%;
+			// 		display: flex;
+			// 		flex-wrap: wrap;
+			// 		justify-content: center;
+			// 		align-items: center;
+			// 		ul{
+			// 			flex-basis: 70%;
+			// 			flex-wrap:wrap;
+			// 			display: flex;
+			// 			align-items: center;
+			// 			list-style-type: none;
+			// 			padding: 8px;
+			// 			margin: 0;
+			// 			@include border-bottom(1px,solid,$borderHoursFunds);
+			// 			li{
+			// 				flex-basis:calc(100%/3);
+							
+			// 				.tooltip{
+			// 					font-family: 'Tw Cen MT';
+			// 					font-size:14px;
+			// 					opacity: 1;
+			// 					.tooltip-inner {
+			// 						color:$textTooltip;
+			// 						position: relative;
+			// 						background: $white;
+			// 						text-align:left;
+			// 						@include padding(15px,10px,15px,10px);
+			// 						@include border-radius(20px);
+			// 						button{
+			// 					    	float:right;
+			// 					    	clear: both;
+			// 					    	background:$blueZoom;
+			// 					    	color:$white;
+			// 					    	width:40px;
+			// 					    	line-height:16px;
+			// 					    	@include padding(2px,5px,2px,5px);
+			// 					    	@include border(0px,solid,transparent);
+			// 					    	@include border-radius(0px);
+			// 					    }
+			// 					    p{
+			// 					    	font-weight:normal;
+			// 					    }
+			// 					}
+			// 					.tooltip-inner:after, .tooltip-inner:before {
+			// 						bottom: 100%;
+			// 						left: 50%;
+			// 						border: solid transparent;
+			// 						content: " ";
+			// 						height: 0;
+			// 						width: 0;
+			// 						position: absolute;
+			// 						pointer-events: none;
+			// 					}
+		
+			// 					.tooltip-inner:after {
+			// 						border-color: rgba(137, 137, 137, 0);
+			// 						border-bottom-color: $white;
+			// 						border-width: 15px;
+			// 						margin-left: -15px;
+			// 					}
+			// 					.tooltip-inner:before {
+			// 						border-color: rgba(137, 137, 137, 0);
+			// 						border-bottom-color: $borderTooltip;
+			// 						border-width: 16px;
+			// 						margin-left: -16px;
+			// 					}
+			// 				}
+			// 				vertical-align:middle;
+			// 				// width:calc(100% / 6);
+			// 				@include text-align(center);
+			// 				//@include border-bottom(1px,solid,$borderTable);
+			// 				button.tooltipErrandService{
+			// 					background:transparent;
+			// 					@include border(1px,solid,transparent);
+			// 				}
+			// 				button.tooltipDescription{
+			// 					background:transparent;
+			// 					@include border(1px,solid,transparent);
+			// 				}
+			// 				&:nth-child(4){
+			// 					button.tooltipDescription{
+			// 						@include margin(0px,auto,0px,auto);
+			// 						@include text-align(center);
+			// 						width:80px;
+			// 						white-space: nowrap;
+			// 						overflow: hidden;
+			// 						text-overflow: ellipsis;
+			// 					}
+			// 				}
+			// 				&:nth-child(5){
+			// 					@include text-align(left);
+			// 				}
+			// 				button.btnOrderAgain{
+			// 					background:$blueZoom;
+			// 					@include border(0px, solid, transparent);
+			// 					@include padding(5px,5px,5px,5px);
+			// 					@include border-radius(25px);
+			// 					@include margin(0px,0px,10px,0px);
+			// 					color:$white;
+			// 					width:100px;
+			// 				}
+			// 				button.btnEditOrder{
+			// 					background:$white;
+			// 					color:$blueZoom;
+			// 					@include border(1px, solid, $blueZoom);
+			// 					@include padding(2px,5px,2px,5px);
+			// 					width:100px;
+			// 				}
+			// 				.image{
+			// 					width:40px;
+			// 					height:40px;
+			// 					@include border-radius(40px);
+			// 					overflow:hidden;
+			// 					@include text-align(center);
+			// 					@include margin(0px,auto,0px,auto);
+			// 					img{
+			// 						@include text-align(center);
+			// 						@include margin(0px,auto,0px,auto);
+			// 					}
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
+		}
+	}
+	// --------------------------------------------------------
+	// -----------------------MY ERRANDS-----------------------
+	// --------------------------------------------------------
 
 	// -------------------------------------------------------
 	// -----------------------GENERALES-----------------------
@@ -708,16 +1411,16 @@ textarea:-ms-input-placeholder,
 
 	.datetimepicker{
 		width: 290px;
+		@include padding(10px,10px,10px,10px);
 	}
 
 	.open > .dropdown-menu{
-		@include padding(10px,10px,10px,10px);
-		@include border-radius(10px);
-		@include border(1px,solid,$graySideBarIzq);
+		@include border-radius(0px);
 
 	}
 
 	.datetimepicker .table tbody{
+		@include border-radius(0px);
 		@include border(2px,solid,$graySideBarIzq);
 	}
 
