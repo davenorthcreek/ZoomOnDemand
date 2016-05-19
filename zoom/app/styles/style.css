@@ -12,6 +12,9 @@ body{
     font-weight: 300;
 
 }
+.table > thead > tr > th{
+    text-align:center;
+}
 .navbar{
         background: #52C9E0;
         border-radius: 0px;
@@ -24,6 +27,20 @@ body{
 }
 .float-right{
     float: right;
+}
+@media (max-width:767px){
+.mobile-0{
+    padding:0px;
+}
+button.again-btn{
+    margin-right: 0px;
+    font-size: 11px;
+    width: 76px;
+}
+button.reverse-btn,button.registration-btn {
+    font-size: 20px;
+    padding: 3px 15px;
+}
 }
 .navbar-brand {
 overflow: auto;
@@ -49,13 +66,12 @@ padding: 10px 15px;
     margin: 5vw 0;
 }
 .contact{
-        color: #fff;
-    font-size: 22px;
+    color: #fff;
+    font-size: 19px;
     font-weight: 300;
-    padding: 5px;
+    padding: 10px 5px;
 }
 .popup{
-    display: none;
     position: absolute;
     z-index: 1;
     top: -22px;
@@ -74,6 +90,7 @@ padding: 10px 15px;
 }
 .shutter{
     cursor:pointer;
+    text-transform:uppercase;
 }
 .shutter.yes{
     background: #1BA852;
@@ -101,8 +118,8 @@ padding: 10px 15px;
 }
 .button-in{
     background: #D7D7D7;
-    height: 21px;
-    width: 21px;
+    height: 24px;
+    width: 24px;
     border-radius: 50%;
     display: block;
 }
@@ -112,11 +129,11 @@ padding: 10px 15px;
     border-radius: 50%;
     background: -webkit-linear-gradient(left top, #eee 60%, #666); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right,  #eee,  #666); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom  #eee,  #666); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom  #eee,  #666); /* Standard syntax */
+  background: -moz-linear-gradient(bottom,  #eee,  #666); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom,  #eee,  #666); /* Standard syntax */
         position: relative;
     left: 18px;
-    bottom: 24px;
+    bottom: 25px;
     -webkit-transition: all 0.5s; /* Safari */
     transition: all 0.5s;
 }
@@ -126,19 +143,19 @@ padding: 10px 15px;
     border-radius: 50%;
     background: -webkit-linear-gradient(left top, #eee 60%, #666); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right,  #eee,  #666); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom  #eee,  #666); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom  #eee,  #666); /* Standard syntax */
+  background: -moz-linear-gradient(bottom,  #eee,  #666); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom,  #eee,  #666); /* Standard syntax */
         position: relative;
     left: -18px;
-    bottom: 24px;
+    bottom: 25px;
     -webkit-transition: all 0.5s; /* Safari */
     transition: all 0.5s;
 }
 .navbar-nav li a{
         color: #fff;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
-    padding: 20px;
+    padding: 20px 10px;
 }
 .bottom-bordered{
     padding-bottom: 10px;
@@ -150,11 +167,30 @@ padding: 10px 15px;
 .inputs{
 width: 100%;
     height: 45px;
-    border: 2px solid #ccc;
+    border: 1px solid #555555;
     margin-bottom: 30px;
     font-size: 22px;
     padding: 10px;
     letter-spacing: 1px;
+}
+.inputs::-webkit-input-placeholder { /* Chrome */
+  color:#929090 !important;
+}
+.inputs:-ms-input-placeholder { /* IE 10+ */
+  color:#929090 !important;
+}
+.inputs::-moz-placeholder { /* Firefox 19+ */
+  color:#929090 !important;
+  opacity: 1;
+}
+.inputs:-moz-placeholder { /* Firefox 4 - 18 */
+  color:#929090 !important;
+  opacity: 1;
+}
+@media (min-width:768px){
+    .section-head{
+        margin-top:0px;
+    }
 }
 .registration-btn{
     color: #fff;
@@ -182,8 +218,8 @@ width: 100%;
     padding: 5px 20px;
 }
 .profile-img{
-    width: 100%;
-    max-width: 155px;
+    height:155px;
+    width: 155px;
     padding: 0px;
     border: 1px solid #78939E;
 }
@@ -210,6 +246,7 @@ width: 100%;
     background: #fff;
 }
 .reverse-btn{
+    margin-bottom:10px;
         color: #52C9E0;
     background: #fff;
     border: 2px solid #52C9E0;
@@ -372,6 +409,7 @@ color: #EAF5FA;
 }
 .setting-list{
     list-style: none;
+        padding-left: 20px;
 }
 .setting-list h3{
     color: #718E99;
@@ -433,6 +471,9 @@ table.table>tbody>tr>td{
     overflow: hidden;
     background: #F0F7F8;
 }
+.table-body{
+    overflow-x: auto;
+}
  .gray-box{
     border: 2px solid #657177;
     border-radius: 15px;
@@ -482,6 +523,9 @@ table.table>tbody>tr>td{
 .bottom-space-20{
     padding-bottom: 20px;
 }
+.top-space-0{
+    margin-top: 0px;
+}
 span.chat{
         padding: 10px;
     background: #78939E;
@@ -490,9 +534,43 @@ span.chat{
     box-shadow: 5px 5px 10px #ddd;
     cursor: pointer;
 }
+.table.line-table td {
+    border: none;
+    /* border-collapse: collapse; */
+    color: #5B5B5B;
+    border-top: 1px solid #ddd;
+    padding-left:0px;
+    padding-right:0px;
+}
+.table.line-table th {
+    font-family: fantasy;
+}
+.table.line-table th h4 {
+    font-size:16px;
+}
+.table.line-table{
+max-width:99%;
+}
+
+@media (max-width:340px){
+    span.chat{
+   margin-top:20px;
+}
+}
+@media (max-width:365px){
+    .unit{
+            top: 103px;
+    }
+}
+@media (min-width:366px) and (max-width:767px){
+    .unit{
+            top: 70px;
+    }
+}
 span.chat img{
     width: 50px;
 }
+
 .bottom-offset-20{
     margin-bottom: 20px;
 }
@@ -503,26 +581,27 @@ span.chat img{
     margin-bottom: 0px;
 }
 .selection{
-        -webkit-appearance: none;
-    height: 35px;
-    width: 65px;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 70px;
     border-radius: 0px;
     background-image: url(../images/dn-arrow.png);
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: center right;
-    background-size: 25px 44px;
-    padding-left: 5px
+    background-size: 31px 40px;
+    padding-left: 5px;
+    margin: 15px 0px;
 }
 .again-btn{
-        color: #52C9E0;
+    color: #52C9E0;
     background: #fff;
     border: 2px solid #52C9E0;
     font-size: 16px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 0px;
+    padding: 2px 0px;
     margin-right: 30px;
-    width: 120px;
+    width: 110px;
 }
 .again-btn:hover{
         color: #fff;
@@ -575,6 +654,7 @@ span.chat img{
 @media (min-width:768px){
 .section-block{
     border-left: 2px solid #718E99;
+    margin-top:10px;
 }
 .for-mobile{
     display: none;
@@ -595,8 +675,18 @@ span.chat img{
 }
 }
 .minimum{
+    min-height:80vh;
     min-height:calc(100vh - 153px);
+     min-height:-webkit-calc(100vh - 153px);
  }
 .pointer{
     cursor:pointer;
+}
+@media (max-width:768px){
+    .mobile-none{
+        padding:0px;
+    }
+    .reverse-btn{
+        margin-right:0px;
+    }
 }
