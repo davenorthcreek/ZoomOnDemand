@@ -90,6 +90,7 @@ padding: 10px 15px;
 }
 .shutter{
     cursor:pointer;
+    text-transform:uppercase;
 }
 .shutter.yes{
     background: #1BA852;
@@ -117,8 +118,8 @@ padding: 10px 15px;
 }
 .button-in{
     background: #D7D7D7;
-    height: 21px;
-    width: 21px;
+    height: 24px;
+    width: 24px;
     border-radius: 50%;
     display: block;
 }
@@ -132,7 +133,7 @@ padding: 10px 15px;
   background: linear-gradient(to bottom,  #eee,  #666); /* Standard syntax */
         position: relative;
     left: 18px;
-    bottom: 24px;
+    bottom: 25px;
     -webkit-transition: all 0.5s; /* Safari */
     transition: all 0.5s;
 }
@@ -146,7 +147,7 @@ padding: 10px 15px;
   background: linear-gradient(to bottom,  #eee,  #666); /* Standard syntax */
         position: relative;
     left: -18px;
-    bottom: 24px;
+    bottom: 25px;
     -webkit-transition: all 0.5s; /* Safari */
     transition: all 0.5s;
 }
@@ -166,11 +167,30 @@ padding: 10px 15px;
 .inputs{
 width: 100%;
     height: 45px;
-    border: 2px solid #ccc;
+    border: 1px solid #555555;
     margin-bottom: 30px;
     font-size: 22px;
     padding: 10px;
     letter-spacing: 1px;
+}
+.inputs::-webkit-input-placeholder { /* Chrome */
+  color:#929090 !important;
+}
+.inputs:-ms-input-placeholder { /* IE 10+ */
+  color:#929090 !important;
+}
+.inputs::-moz-placeholder { /* Firefox 19+ */
+  color:#929090 !important;
+  opacity: 1;
+}
+.inputs:-moz-placeholder { /* Firefox 4 - 18 */
+  color:#929090 !important;
+  opacity: 1;
+}
+@media (min-width:768px){
+    .section-head{
+        margin-top:0px;
+    }
 }
 .registration-btn{
     color: #fff;
@@ -523,7 +543,7 @@ span.chat{
     padding-right:0px;
 }
 .table.line-table th {
-    font-family:sans-serif;
+    font-family: fantasy;
 }
 .table.line-table th h4 {
     font-size:16px;
@@ -531,6 +551,7 @@ span.chat{
 .table.line-table{
 max-width:99%;
 }
+
 @media (max-width:340px){
     span.chat{
    margin-top:20px;
@@ -560,15 +581,16 @@ span.chat img{
     margin-bottom: 0px;
 }
 .selection{
-        -webkit-appearance: none;
-    height: 35px;
-    width: 65px;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 70px;
     border-radius: 0px;
     background-image: url(../images/dn-arrow.png);
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: center right;
-    background-size: 25px 44px;
-    padding-left: 5px
+    background-size: 31px 40px;
+    padding-left: 5px;
+    margin: 15px 0px;
 }
 .again-btn{
     color: #52C9E0;
@@ -632,6 +654,7 @@ span.chat img{
 @media (min-width:768px){
 .section-block{
     border-left: 2px solid #718E99;
+    margin-top:10px;
 }
 .for-mobile{
     display: none;
