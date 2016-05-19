@@ -46,6 +46,25 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	header{
 		nav.navbar{
+			// Laptop/Tablet (1024px)
+			@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+				background:$blueZoom;
+			}
+
+			// Tablet Portrait (768px)
+			@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
+				background:$blueZoom;
+			}
+
+			// Phone Landscape (480px)
+			@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+				background:$blueZoom;
+			}
+
+			// Phone Portrait (320px)
+			@media only screen and (max-width: 320px) {
+				background:$blueZoom;
+			}
 			background:$blueZoom;
 		    @include border(0px);
 		    @include margin(0px,0px,0px,0px);
