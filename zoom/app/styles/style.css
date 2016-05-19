@@ -18,6 +18,7 @@ body{
 .navbar{
         background: #52C9E0;
         border-radius: 0px;
+        margin-bottom:0px;
 }
 .logo100{
         width: 100px;

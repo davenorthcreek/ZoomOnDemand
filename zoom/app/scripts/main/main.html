@@ -1,7 +1,7 @@
-<header ng-include="'scripts/static/header.html'"></header>
+<!-- <header ng-include="'scripts/static/header.html'"></header> -->
 <section>
     <div>
-        <aside id="latIzq" class="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-left">
+        <aside id="latIzq" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-left">
             <div class="textContainer">
                 <div class="sub-textContainer">
                     <p class="descriptionTextSteps">It just takes 3 easy steps to post an errand . . . </p>
@@ -27,7 +27,7 @@
                 <p class="toMakeText">To make an errand booking or if you have any questions.</p>
             </div>
         </aside>          
-        <aside id="latDer" class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+        <aside id="latDer" class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
             <div class="tabParent">
                 <div role="tabpanel">
                     <ul class="nav nav-tabs tab-parent-header" role="tablist">
@@ -42,6 +42,7 @@
                         </li>
                     </ul>
                     <div class="tab-content tab-parent-content">
+                        <!-- TAB PARENT POST NEW ERRAND -->
                         <div role="tabpanel" class="tab-pane active" id="tab-post-new-errand">
                             <div role="tabpanel">
                                 <div class="titleTabErrand">POST ERRAND</div>
@@ -57,6 +58,7 @@
                                     </li>
                                 </ul>
                                 <div class="tab-content tab-content-post-errand">
+                                    <!-- TAB POST NEW ERRAND SUBTAB SELECT ERRAND -->
                                     <div role="tabpanel" class="tab-pane active" id="selectErrandTab">
                                         <div class="containerForm">
                                             <form>
@@ -79,10 +81,10 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                         <div class="form-group">
-                                                            <br><label for="">When do you need this service?</label><br><br>
+                                                            <label for="">When do you need this service?</label>
                                                             <div class="containerTimepicker">
-                                                                <div class="dropdown">
-                                                                    <span class="textTimepicker">I need this on </span>
+                                                                <div class="dropdown date">
+                                                                    I need this on
                                                                     <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
                                                                         <div class="input-group date">
                                                                             <input type="text" class="form-control" data-ng-model="form.date">
@@ -93,9 +95,9 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="dropdown">
-                                                                    <span class="textTimepicker"> , </span> 
+                                                                    ,
                                                                     <input type="text" readonly="readonly" id="dayZoom" class="form-control input-sm no-border-radius" ng-model="form.day" placeholder="day"> 
-                                                                    <span class="textTimepicker"> at </span>
+                                                                    at
                                                                     <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
                                                                         <div class="input-group date">
                                                                             <input type="text" class="form-control" data-ng-model="form.time">
@@ -117,24 +119,25 @@
                                                     <div class="col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 col-sm-9 col-md-9 col-lg-9">
                                                         <div class="form-group containerRecurring text-center">
                                                             recurring
+                                                            <!-- <img src="images/recurring.png" alt="" class="img-responsive"> -->
                                                         </div>
                                                     </div>
-                                                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                                         <div class="form-group">
                                                             <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1) }" ng-click="setFrequency(1)">This one time</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                                         <div class="form-group">
                                                             <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 4) }" ng-click="setFrequency(4)">Weekly</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                                         <div class="form-group">
                                                             <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 12) }" ng-click="setFrequency(12)">Monthly</button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                                         <div class="form-group">
                                                             <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1000) }" ng-click="setFrequency(1000)">Other</button>
                                                         </div>
@@ -147,6 +150,9 @@
                                             </form>
                                         </div>
                                     </div>
+                                    <!-- TAB POST NEW ERRAND SUBTAB SELECT ERRAND -->
+
+                                    <!-- TAB POST NEW ERRAND SUBTAB PROVIDE ERRANT DETAILS -->
                                     <div role="tabpanel" class="tab-pane" id="provideErrantTab">
                                         <div class="containerForm">
                                             <form>
@@ -227,6 +233,9 @@
                                         </div>
                                         <br><br><br><br><br>
                                     </div>
+                                    <!-- TAB POST NEW ERRAND SUBTAB PROVIDE ERRANT DETAILS -->
+
+                                    <!-- TAB POST NEW ERRAND SUBTAB CONFIRM & POST -->
                                     <div role="tabpanel" class="tab-pane" id="confirmErrandTab">
                                         <div class="containerForm payment-form">
                                             <form>
@@ -241,6 +250,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="tab-content content-payment-container">
+                                                        <!-- TAB CONFIRM & POST SUBTAB USE HOURS IN ACCOUNT-->
                                                         <div role="tabpanel" class="tab-pane active" id="tab-use-hours">
                                                             <p>Hours Available: <span id="hours">10.5</span></p>
                                                             <p>Purchase For Me’ Available: <span id="price">$178.00</span></p>
@@ -252,6 +262,9 @@
                                                             </div>
                                                             <div class="clearfix"></div>
                                                         </div>
+                                                        <!-- TAB CONFIRM & POST SUBTAB USE HOURS IN ACCOUNT-->
+
+                                                        <!-- TAB CONFIRM & POST SUBTAB PAY WITH CREDIT CARD-->
                                                         <div role="tabpanel" class="tab-pane" id="tab-pay">
                                                             <div>
                                                                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
@@ -288,6 +301,7 @@
                                                                 <div class="clearfix"></div>
                                                             </div>
                                                         </div>
+                                                        <!-- TAB CONFIRM & POST SUBTAB PAY WITH CREDIT CARD-->
                                                     </div>
                                                 </div>
                                                 <div class="order">
@@ -321,9 +335,13 @@
                                         </div>
                                         <br><br><br><br><br>
                                     </div>
-                                </div> 
+                                    <!-- TAB POST NEW ERRAND SUBTAB CONFIRM & POST -->
+                                </div>
                             </div>
                         </div>
+                        <!-- TAB PARENT POST NEW ERRAND -->
+
+                        <!-- TAB PARENT ERRANDS IN PROGRESS -->
                         <div role="tabpanel" class="tab-pane" id="tab-errants-in-progress">
                             <div class="table-responsive tableErrandsProgress">
                                 <table class="table">
@@ -487,6 +505,9 @@
                             </div>
                             <br><br>
                         </div>
+                        <!-- TAB PARENT ERRANDS IN PROGRESS -->
+
+                        <!-- TAB PARENT MY HOURS -->
                         <div role="tabpanel" class="tab-pane" id="tab-my-hours">
                             <div class="tab-content-hours text-center">
                                 <div>
@@ -528,6 +549,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- TAB PARENT MY HOURS -->
                     </div>
                 </div>
             </div>           
@@ -535,8 +557,8 @@
         <div class="clearfix"></div>
     </div>            
 </section>
-<div class="contentDetailsErrandsProgress hide">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="contentDetailsErrandsProgress">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
         <div class="errandsProgressDetail">
             <h3>ERRANDS IN PROGRESS</h3>
             <div class="panel-group" id="accordion">
@@ -1199,8 +1221,18 @@
     </div>
     <div class="clearfix"></div>
 </div>
-
-<footer ng-include="'scripts/static/footer.html'"></footer>
+<div class="supportZoom text-center">
+    <h3>GOT QUESTIONS?</h3>
+    <h4>Give us a call at (310) 425 6425</h4>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+        <button class="btn active pull-right">HELP CENTER</button>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+        <button class="btn pull-left">OPEN LIVE CHAT</button>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- <footer ng-include="'scripts/static/footer.html'"></footer> -->
 <div id="contentTooltip" class="hidden">
     <p>Take document to the pick up location and mail it at the post office on Steiner street. Call me if there are any problems.</p>
     <button>Edit</button>
