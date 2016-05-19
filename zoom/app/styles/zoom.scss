@@ -1,16 +1,24 @@
 @import '_functions.scss';
 @import '_colors.scss';
 
-@font-face{
-	font-family: 'Tw Cen MT';
-	font-style: normal;
-	font-weight: normal;
-	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
+// @font-face{
+// 	font-family: 'Tw Cen MT';
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
+// }
+
+@font-face {
+    font-family: tw-cem;
+    src: url(../fonts/tw-cen-mt.ttf);
 }
 
 body{
 	font-family: 'Tw Cen MT';
+	font-family: tw-cem;
 	font-size:14px;
+	margin:0px;
+	padding:0px;
 }
  
 *{
@@ -44,95 +52,79 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	// -----------------------HEADER-----------------------
 	// ----------------------------------------------------
-	header{
-		nav.navbar{
-			// Laptop/Tablet (1024px)
-			@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
-				background:$blueZoom;
-			}
-
-			// Tablet Portrait (768px)
-			@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
-				background:$blueZoom;
-			}
-
-			// Phone Landscape (480px)
-			@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
-				background:$blueZoom;
-			}
-
-			// Phone Portrait (320px)
-			@media only screen and (max-width: 320px) {
-				background:$blueZoom;
-			}
-			background:$blueZoom;
-		    @include border(0px);
-		    @include margin(0px,0px,0px,0px);
-		    .container-fluid{
-		    	.navbar-collapse{
-		    		.navbar-nav{
-		    			li{
-		    				a{
-								color: $white;
-							    font-size:18px;
-							    &:hover{
-									background:$blueZoom;						    	
-							    }
-							}
-							&.dropdown{
-		    					@include padding(0px,0px,0px,0px);
-								a{
-		    						background:$blueZoom;	
-		    						@include padding(0px,0px,0px,0px);
-		    						@include margin(5px,0px,0px,0px);
-		    						&:hover,:focus,:active,:visited{
-		    							background:$blueZoom;	
-		    						}									
-								}
-								ul.dropdown-menu{
-									@include border(1px,solid,$borderHoursFunds);
-									@include padding(5px,20px,5px,20px);
-									li{
-										@include margin(20px,0px,20px,0px);
-										a{
-											font-size:20px;
-											background:$white;
-											color:$textMenuHeaderNav;
-										}
-									}
-								}
-							}
-		    			}
-		    			img{
-		    			}
-		    		}
-		    	}
-		    	.navbar-header{
-		    		.navbar-brand{
-						@include padding(5px,15px,5px,15px);
-					}
-					.navbar-toggle{
-					    @include border(0px,solid,$white);
-					    background:transparent;
-						&:hover{
-							@include border(0px,solid,$white);
-					    	background:transparent;						    	
-					    }
-					    .icon-bar{
-						    background-color: $white;
-						}
-					}
-		    	}
-			}
-		}
-		span#msjSubHeader{
-			background-color: $greenBarSafety;
-			color:$white;
-			display:block;
-			width:100%;
-			@include text-align(center);
-			@include padding(10px,10px,10px,10px);
-		}
+	// header{
+	// 	width:100%;
+	// 	padding:0px;
+	// 	margin:0px;
+	// 	nav.navbar{
+	// 		background:$blueZoom;
+	// 	    @include border(0px);
+	// 	    @include margin(0px,0px,0px,0px);
+	// 	    .container-fluid{
+	// 	    	.navbar-collapse{
+	// 	    		.navbar-nav{
+	// 	    			li{
+	// 	    				a{
+	// 							color: $white;
+	// 						    font-size:18px;
+	// 						    &:hover{
+	// 								background:$blueZoom;						    	
+	// 						    }
+	// 						}
+	// 						&.dropdown{
+	// 	    					@include padding(0px,0px,0px,0px);
+	// 							a{
+	// 	    						background:$blueZoom;	
+	// 	    						@include padding(0px,0px,0px,0px);
+	// 	    						@include margin(5px,0px,0px,0px);
+	// 	    						&:hover,:focus,:active,:visited{
+	// 	    							background:$blueZoom;	
+	// 	    						}									
+	// 							}
+	// 							ul.dropdown-menu{
+	// 								@include border(1px,solid,$borderHoursFunds);
+	// 								@include padding(5px,20px,5px,20px);
+	// 								li{
+	// 									@include margin(20px,0px,20px,0px);
+	// 									a{
+	// 										font-size:20px;
+	// 										background:$white;
+	// 										color:$textMenuHeaderNav;
+	// 									}
+	// 								}
+	// 							}
+	// 						}
+	// 	    			}
+	// 	    			img{
+	// 	    			}
+	// 	    		}
+	// 	    	}
+	// 	    	.navbar-header{
+	// 	    		.navbar-brand{
+	// 					@include padding(5px,15px,5px,15px);
+	// 				}
+	// 				.navbar-toggle{
+	// 				    @include border(0px,solid,$white);
+	// 				    background:transparent;
+	// 					&:hover{
+	// 						@include border(0px,solid,$white);
+	// 				    	background:transparent;						    	
+	// 				    }
+	// 				    .icon-bar{
+	// 					    background-color: $white;
+	// 					}
+	// 				}
+	// 	    	}
+	// 		}
+	// 	}
+	// }
+	span#msjSubHeader{
+		background-color: $greenBarSafety;
+		color:$white;
+		display:block;
+		width:100%;
+		@include text-align(center);
+		@include padding(10px,10px,10px,10px);
 	}
 	// ----------------------------------------------------
 	// -----------------------HEADER-----------------------
@@ -140,20 +132,18 @@ textarea:-ms-input-placeholder,
 
 	
 	section{
-		.row{
 			// ---------------------------------------------------------------
 			// -----------------------SIDEBAR IZQUIERDA-----------------------
 			// ---------------------------------------------------------------
 			aside#latIzq{
+				@include padding(0px,0px,0px,0px);
 				.textContainer{
 					@include padding(0px,10px,0px,10px);
 					background:$graySideBarIzq;
 					color:$white;
 					font-size:18px;
 					.sub-textContainer{
-						@include padding(36px,25px,0px,25px);
-						.row{
-							@include margin(56px,0px,0px,0px);
+							@include padding(56px,0px,0px,0px);
 							.step{
 								@include margin(0px,0px,38px,0px);
 								span{
@@ -164,7 +154,7 @@ textarea:-ms-input-placeholder,
 									@include border-radius(80px);
 									background-color:$white;
 									color:$graySideBarIzq;
-									font-size:16px;
+									font-size:18px;
 									font-weight:bold;
 									@include margin(0px,auto,18px,auto);
 								}
@@ -172,7 +162,7 @@ textarea:-ms-input-placeholder,
 									line-height:1em;
 								}
 							}
-						}
+						
 						.orText{
 							@include margin(0px,0px,33px,0px);
 						}
@@ -202,6 +192,7 @@ textarea:-ms-input-placeholder,
 			// -----------------------SIDEBAR DERECHO-----------------------
 			// -------------------------------------------------------------
 			aside#latDer{
+				@include padding(0px,45px,0px,53px);
 				.tabParent{
 					.tab-parent-header{
 						@include margin(50px,0px,36px,0px);
@@ -209,7 +200,7 @@ textarea:-ms-input-placeholder,
 							width:calc(100% / 3);
 							@include text-align(center);
 							@include border-bottom(0px);
-							font-size:16px;
+							font-size:18px;
 							a{	
 								@include padding(0px,0px,10px,0px);
 								@include margin(0px,0px,0px,0px);
@@ -252,7 +243,7 @@ textarea:-ms-input-placeholder,
 								li{
 									width:calc(100% / 3);
 									@include border(1px,solid,$grayBorder);
-									font-size:16px;
+									font-size:18px;
 									&:nth-child(2){
 										@include border-left(0px,solid,transparent);
 										@include border-right(0px,solid,transparent);
@@ -295,88 +286,87 @@ textarea:-ms-input-placeholder,
 										@include border-radius-bottom-left(10px);
 										@include border-radius-bottom-right(10px);
 										@include padding(20px,20px,20px,20px);
-										color:$colorTextForm;
-										font-size:16px;
+										color:$tabParentHeader;
+										font-size:17.81px;
 										letter-spacing:0.7px;
 										.tabPayment{
 											@include margin(20px,20px,20px,20px);
 										}
 										form{
-											.row{
-												span.spanBalance{
-													@include border(1px,solid,$gray);
-													@include border-radius(40px);
-													display:block;
-													width:220px;
-													letter-spacing:0px;
-													@include padding(5px,10px,5px,10px);
-													-webkit-box-sizing: border-box;
-													-moz-box-sizing: border-box;
-													box-sizing: border-box;
-													background:$white;
+											label{
+												font-weight:normal
+											}
+											span.spanBalance{
+												@include border(1px,solid,$gray);
+												@include border-radius(40px);
+												display:block;
+												width:250px;
+												@include text-align(center);
+												letter-spacing:0px;
+												@include padding(5px,10px,5px,10px);
+												-webkit-box-sizing: border-box;
+												-moz-box-sizing: border-box;
+												box-sizing: border-box;
+												background:$white;
+											}
+											.form-group{
+												input, textarea{
+													font-size:17.93px;
 												}
-												.form-group{
-													input, textarea{
-														font-size:17.93px;
+												.textarea{
+													position: relative;
+													textarea{
+														@include padding(10px,20px,10px,20px);
+														letter-spacing:1.4px;
+														font-weight:normal;
+														resize:none;
 													}
-													.textarea{
-														position: relative;
-														textarea{
-															@include padding(10px,20px,10px,20px);
-															letter-spacing:1.4px;
-															font-weight:normal;
-															resize:none;
-														}
-														.imageClip{
-															position: absolute;
-															bottom:10px;
-															right:10px;
-															background:url('../images/clip.png');
-															width:14px;
-															height:18px;
-														}
+													.imageClip{
+														position: absolute;
+														bottom:10px;
+														right:10px;
+														background:url('../images/clip.png');
+														width:14px;
+														height:18px;
 													}
-													.input-group{
-														input.searchZoom{
-															@include border-left(0px,solid,transparent);
-														}
-														.input-group-addon{
-														    background-color: $white;
-														    @include border-right(0px,solid,transparent);
-														    @include border-radius(0px);
-														}
+												}
+												.input-group{
+													input.searchZoom{
+														@include border-left(0px,solid,transparent);
 													}
-													.containerTimepicker{
-														.dropdown{
-															.textTimepicker{
-																float:left;
-																font-weight:bold;
-															}
-															input[type="text"]{
-																color:$colorTextForm;
-																@include margin(6px,0px,6px,0px);
-																width:206px;
-																background:transparent;
-																@include border(0px,solid,transparent);
-																@include border-bottom(1px,solid,$colorTextForm);
-																@include padding(0px,0px,0px,0px);
-																@include text-align(center);
-																font-size:16px;
-																height: 20px;
-																float:left;
-																font-weight:bold;
-															}
+													.input-group-addon{
+													    background-color: $white;
+													    @include border-right(0px,solid,transparent);
+													    @include border-radius(0px);
+													}
+												}
+												.containerTimepicker{
+													.dropdown{
+														display: inline-flex;
+														input[type="text"]{
+															color:$tabParentHeader;
+															@include margin(6px,0px,6px,0px);
+															width:264px;
+															background:transparent;
+															@include border(0px,solid,transparent);
+															@include border-bottom(1px,solid,$colorTextForm);
+															@include padding(0px,0px,0px,0px);
+															@include text-align(center);
+															font-size:18px;
+															height: 20px;
+															float:left;
 														}
 													}
 												}
 											}
+											
 											button.btnBottomForm{
 												width:100%;
-												background:transparent;
+												background:$white;
 												@include border(2px,solid,$graySideBarIzq);
 												color:$graySideBarIzq;
 												@include border-radius(10px);
-												font-size:16px;
+												font-size:18px;
 											}
 											button.btnBottomForm.active,
 											button.btnBottomForm:hover{
@@ -392,7 +382,7 @@ textarea:-ms-input-placeholder,
 												width:170px;
 												color:$graySideBarIzq;
 												@include border-radius(10px);
-												font-size:16px;
+												font-size:18px;
 												background:$blueZoom;
 												color:$white;
 												@include margin(40px,0px,0px,0px);
@@ -457,32 +447,30 @@ textarea:-ms-input-placeholder,
 													}
 												}
 												#tab-pay{
-													.row{
-														.form-group{
-															label{
-																color:$labelPay;
-																font-size:19px;
-																font-weight:normal;
+													.form-group{
+														label{
+															color:$labelPay;
+															font-size:19px;
+															font-weight:normal;
+														}
+														.input-group{
+															input[type="text"]{
+																@include border-right(0px,solid,transparent);
 															}
-															.input-group{
-																input[type="text"]{
-																	@include border-right(0px,solid,transparent);
+															span.input-group-addon{
+																background-color:$white;
+																@include border-left(0px,solid,transparent);
+																@include border-right(1px,solid,$grayBorder	);
+																i{
+																	font-size:20px;
+																	color:$securePay;
 																}
-																span.input-group-addon{
-																	background-color:$white;
-																	@include border-left(0px,solid,transparent);
-																	@include border-right(1px,solid,$grayBorder	);
-																	i{
-																		font-size:20px;
-																		color:$securePay;
-																	}
-																}
-															}
-															img{
-																@include margin(32px,0px,0px,0px);
 															}
 														}
-													}
+														img{
+															@include margin(32px,0px,0px,0px);
+														}
+													}													
 												}
 											}
 											.order{
@@ -512,7 +500,7 @@ textarea:-ms-input-placeholder,
 															color:$blueZoom;
 															line-height:15px;
 															float:left;
-															font-size:16px;
+															font-size:18px;
 															height:15px;
 															margin-top:5px;
 															font-weight:normal;
@@ -577,22 +565,23 @@ textarea:-ms-input-placeholder,
 												font-weight:normal;
 												@include text-align(center);
 												vertical-align:middle;
-												font-size:16px;
+												font-size:18px;
 											}
 										}
 									}
 									tbody{
 										tr{
 											td{
+												@include border(0px,solid,transparent);
 												.tooltip{
-													font-family: 'Tw Cen MT';
-													font-size:14px;
+													font-family: tw-cem;
+													font-size:16px;
 													opacity: 1;
 													.tooltip-inner {
 														color:$textTooltip;
 														position: relative;
 														background: $white;
-														text-align:left;
+														@include text-align(left);
 														@include padding(15px,10px,15px,10px);
 														@include border-radius(20px);
 														@include border(1px,solid,$borderTooltip);
@@ -697,7 +686,7 @@ textarea:-ms-input-placeholder,
 								background:$bgFormTab;
 								@include border-radius-bottom-right(20px);
 								@include border-radius-bottom-left(20px);
-								.row{
+								
 									div.hours,
 									div.funds{
 										h1{
@@ -735,7 +724,7 @@ textarea:-ms-input-placeholder,
 											@include border-radius-top-left(10px);
 											background:$blueZoom;
 										}
-										.row{
+										
 											vertical-align:middle;
 											@include margin(0px,0px,0px,0px);
 											.available-hours{
@@ -765,7 +754,7 @@ textarea:-ms-input-placeholder,
 													color:$colorTextBodyHF;
 												}
 											}
-										}
+										
 									}
 									div.funds{
 										@include padding(0px,15px,0px,0px);
@@ -773,7 +762,7 @@ textarea:-ms-input-placeholder,
 											@include border-radius-top-right(10px);
 											background:$graySideBarIzq;
 										}
-										.row{
+										
 											vertical-align:middle;
 											@include margin(0px,0px,0px,0px);
 											.available-funds{
@@ -804,9 +793,9 @@ textarea:-ms-input-placeholder,
 													color:$colorTextBodyHF;
 												}
 											}
-										}
+										
 									}
-								}
+								
 							}							
 						}
 					}
@@ -814,8 +803,7 @@ textarea:-ms-input-placeholder,
 			}
 			// -------------------------------------------------------------
 			// -----------------------SIDEBAR DERECHO-----------------------
-			// -------------------------------------------------------------
-		}
+			// -------------------------------------------------------------		
 	}
 	// -----------------------------------------------------
 	// -----------------------ARTICLE-----------------------
@@ -846,7 +834,7 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	// -----------------------FOOTER-----------------------
 	// ----------------------------------------------------
-	footer{
+	.supportZoom{
 		h3,h4{
 			color:$titlesFooter;
 			font-weight:bold;
@@ -856,11 +844,11 @@ textarea:-ms-input-placeholder,
 		button{
 			width:200px;
 			background:transparent;
-			font-size:16px;
+			font-size:20px;
 			background:transparent;
 			color:$blueZoom;
 			font-weight:normal;
-			height:40px;
+			height:45px;
 			@include border-radius(10px);
 			@include border(2px,solid,$blueZoom);
 			@include text-align(center);
@@ -939,17 +927,17 @@ textarea:-ms-input-placeholder,
 						}
 						@include margin(0px,auto,0px,auto);
 						width:100%;
-						max-width:686px;
+						max-width:723px;
 					}
 				}
 				.panel-collapse{					
 					.panel-body{
-						.row{
+						
 							.provider{
 								background:$errandDetailBox1;
 								width:100%;
 								@include padding(10px,10px,10px,10px);
-								.row{
+								
 									.image{
 										width:70px;
 										height:70px;
@@ -966,14 +954,14 @@ textarea:-ms-input-placeholder,
 										color:$errandDetailColor;
 										@include margin(0px,0px,0px,0px);
 										@include padding(0px,0px,0px,0px);
-										font-size:16px;
+										font-size:18px;
 									}
 									hr{
 										@include margin(7px,0px,7px,0px);
 										@include border(0px,solid,transparent);
 										@include border-bottom(1px,solid,$errandDetailHr);
 									}
-								}
+								
 							}
 							.details{
 								background:$errandDetailBox2;
@@ -981,11 +969,11 @@ textarea:-ms-input-placeholder,
 								@include margin(10px,0px,0px,0px);
 								@include padding(10px,10px,10px,10px);
 								p{
-									font-size:16px;
+									font-size:18px;
 									color:$errandDetailColor;
 									@include margin(0px,0px,0px,0px);
 									@include padding(0px,0px,0px,0px);
-									font-size:16px;
+									font-size:18px;
 								}
 								button.btnEditErrand{
 									background:$blueZoom;
@@ -995,7 +983,7 @@ textarea:-ms-input-placeholder,
 									@include border(0px,solid,transparent);
 								}
 							}
-						}
+						
 						a.contactZoom{
 							@include border(2px,solid,$blueZoom);
 							color:$blueZoom;
@@ -1071,48 +1059,38 @@ textarea:-ms-input-placeholder,
 			}
 		}
 		.tableErrandsProgress{
-			// @include box-shadow(0px,15px,30px,0px,173,173,173,0.40);
-			// @include border-radius(20px);
-			// @include border(1px, solid, $blueZoom);
-			@include padding(0px,0px,30px,0px);
+			@include padding(0px,0px,0px,0px);
 			@include margin(0px,0px,0px,0px);
-			// background:$bgFormTab;
 			table{
-		
 				thead{
 					background:$blueZoom;
-					width: 90%;
-					margin: 0 auto;
 					tr{
-						width:500px;
 						th{
 							@include border(0px, solid, transparent);
 							@include text-align(center);
 							color:$white;
 							font-weight:normal;
 							vertical-align:middle;
-							font-size:16px;
+							font-size:18px;
 							&:nth-child(5){
 								@include text-align(left);
 							}
 						}
 					}
 				}
-				tbody{
-					width:500px;
-					max-width: 20px;
-		
+				tbody{		
 					tr{
 						td{
+							@include border(0px,solid,transparent);
 							.tooltip{
-								font-family: 'Tw Cen MT';
+								font-family: tw-cem;
 								font-size:14px;
 								opacity: 1;
 								.tooltip-inner {
 									color:$textTooltip;
 									position: relative;
 									background: $white;
-									text-align:left;
+									@include text-align(left);
 									@include padding(15px,10px,15px,10px);
 									@include border-radius(20px);
 									@include border(1px,solid,$borderHoursFunds);
@@ -1156,7 +1134,7 @@ textarea:-ms-input-placeholder,
 								}
 							}
 							vertical-align:middle;
-							// width:calc(100% / 6);
+							width:calc(100% / 6);
 							@include text-align(center);
 							@include border-bottom(1px,solid,$borderTable);
 							button.tooltipErrandService{
@@ -1238,7 +1216,7 @@ textarea:-ms-input-placeholder,
 			// 				color:$white;
 			// 				font-weight:normal;
 			// 				vertical-align:middle;
-			// 				font-size:16px;
+			// 				font-size:18px;
 			// 				&:nth-child(5){
 			// 					@include text-align(left);
 			// 				}
@@ -1264,14 +1242,14 @@ textarea:-ms-input-placeholder,
 			// 				flex-basis:calc(100%/3);
 							
 			// 				.tooltip{
-			// 					font-family: 'Tw Cen MT';
+			// 					font-family: tw-cem;
 			// 					font-size:14px;
 			// 					opacity: 1;
 			// 					.tooltip-inner {
 			// 						color:$textTooltip;
 			// 						position: relative;
 			// 						background: $white;
-			// 						text-align:left;
+			// 						@include text-align(left);
 			// 						@include padding(15px,10px,15px,10px);
 			// 						@include border-radius(20px);
 			// 						button{
@@ -1379,6 +1357,9 @@ textarea:-ms-input-placeholder,
 	// -------------------------------------------------------
 	// -----------------------GENERALES-----------------------
 	// -------------------------------------------------------
+	.no-padding{
+		@include padding(0px,0px,0px,0px);
+	}
 	.no-margin{
 		@include margin(0px,0px,0px,0px);
 	}

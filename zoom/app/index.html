@@ -18,25 +18,26 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/zoom.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/zoom.css">
     <!-- endbuild -->
   </head>
   <body ng-app="zoomApp">
-
+     
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!--class="container zoom"-->
-    <div class="container zoom">
+<!--class="container zoom"-->
+    <div class="zoom">
 
-      <header ng-include="'scripts/static/header.html'">
-      </header>
+      <!-- <header ng-include="'scripts/static/header.html'">
+      </header> -->
 
       <!-- Add your site or application content here -->
       <div ui-view=""></div>
 
-      <footer ng-include="'scripts/static/footer.html'">
-      </footer>
+      <!-- <footer ng-include="'scripts/static/footer.html'">
+      </footer> -->
 
     </div>
     <script>
@@ -106,8 +107,6 @@ ga('send', 'pageview');
 
     <script src="scripts/client/customer/payment/payment.routes.js"></script>
     <script src="scripts/client/customer/payment/payment.controller.js"></script>
-
-    <script type="text/javascript" src="actions.js"></script>
     <!-- endbuild -->
   </body>
 </html>

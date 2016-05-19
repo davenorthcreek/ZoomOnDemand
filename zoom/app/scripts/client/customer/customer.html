@@ -1,34 +1,36 @@
-
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="images/zoomlogo.png" class="logo100" /></a>
-                <h5 class="float-left contact">Customer Service: (310) 425 6425</h5>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Post Errand</a></li>
-                    <li><a href="#">My Errands</a></li>
-                    <li ><a ng-class="uistate == 'app.payment' ? 'active':'notactive'" ui-sref="app.payment">Payment</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li class="dropdown pointer">
-                        <a class="dropdown-toggle image-circle" data-toggle="dropdown"><img src="images/user.jpg" /> <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li ><a ui-sref="app.profile" ng-class="uistate == 'app.profile' ? 'active':'notactive'">Profile</a></li>
-                            <li><a ui-sref="app.myaccount" ng-class="uistate == 'app.myaccount' ? 'active':'notactive'">My Account</a></li>
-                            <li class="pointer"><a ng-click="signOut()">Logoout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/zoomlogo.png" class="logo100" /></a>
+            <h5 class="float-left contact">Customer Service: (310) 425 6425</h5>
         </div>
-    </nav>
-   <div ui-view class="minimum"></div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Post Errand</a></li>
+                <li><a href="#">My Errands</a></li>
+                <li><a ui-sref="app.payment">Payment</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="dropdown pointer">
+                    <a class="dropdown-toggle image-circle" data-toggle="dropdown"><img src="images/user.jpg" /> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li ><a ui-sref="app.profile">Profile</a></li>
+                        <li><a ui-sref="app.myaccount">My Account</a></li>
+                        <li class="pointer"><a ng-click="signOut()">Logoout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<span id="msjSubHeader"><img src="images/shield.png" alt=""> 100% Trust & Safety Guarantee</span>
+
+<div ui-view class="minimum"></div>
+
 <div class="container-fluid padding0 footer">
     <div class="container">
         <h4>Zoom Errands, Inc. Copyright 2016</h4>
