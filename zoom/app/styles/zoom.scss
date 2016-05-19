@@ -148,11 +148,12 @@ textarea:-ms-input-placeholder,
 
 	
 	section{
-		.row{
+
 			// ---------------------------------------------------------------
 			// -----------------------SIDEBAR IZQUIERDA-----------------------
 			// ---------------------------------------------------------------
 			aside#latIzq{
+				@include padding(0px,0px,0px,0px);
 				.textContainer{
 					@include padding(0px,10px,0px,10px);
 					background:$graySideBarIzq;
@@ -160,7 +161,7 @@ textarea:-ms-input-placeholder,
 					font-size:18px;
 					.sub-textContainer{
 						@include padding(36px,25px,0px,25px);
-						.row{
+						
 							@include margin(56px,0px,0px,0px);
 							.step{
 								@include margin(0px,0px,38px,0px);
@@ -180,7 +181,7 @@ textarea:-ms-input-placeholder,
 									line-height:1em;
 								}
 							}
-						}
+						
 						.orText{
 							@include margin(0px,0px,33px,0px);
 						}
@@ -310,7 +311,7 @@ textarea:-ms-input-placeholder,
 											@include margin(20px,20px,20px,20px);
 										}
 										form{
-											.row{
+											
 												span.spanBalance{
 													@include border(1px,solid,$gray);
 													@include border-radius(40px);
@@ -377,7 +378,7 @@ textarea:-ms-input-placeholder,
 														}
 													}
 												}
-											}
+											
 											button.btnBottomForm{
 												width:100%;
 												background:transparent;
@@ -465,7 +466,7 @@ textarea:-ms-input-placeholder,
 													}
 												}
 												#tab-pay{
-													.row{
+													
 														.form-group{
 															label{
 																color:$labelPay;
@@ -490,7 +491,7 @@ textarea:-ms-input-placeholder,
 																@include margin(32px,0px,0px,0px);
 															}
 														}
-													}
+													
 												}
 											}
 											.order{
@@ -705,7 +706,7 @@ textarea:-ms-input-placeholder,
 								background:$bgFormTab;
 								@include border-radius-bottom-right(20px);
 								@include border-radius-bottom-left(20px);
-								.row{
+								
 									div.hours,
 									div.funds{
 										h1{
@@ -743,7 +744,7 @@ textarea:-ms-input-placeholder,
 											@include border-radius-top-left(10px);
 											background:$blueZoom;
 										}
-										.row{
+										
 											vertical-align:middle;
 											@include margin(0px,0px,0px,0px);
 											.available-hours{
@@ -773,7 +774,7 @@ textarea:-ms-input-placeholder,
 													color:$colorTextBodyHF;
 												}
 											}
-										}
+										
 									}
 									div.funds{
 										@include padding(0px,15px,0px,0px);
@@ -781,7 +782,7 @@ textarea:-ms-input-placeholder,
 											@include border-radius-top-right(10px);
 											background:$graySideBarIzq;
 										}
-										.row{
+										
 											vertical-align:middle;
 											@include margin(0px,0px,0px,0px);
 											.available-funds{
@@ -812,9 +813,9 @@ textarea:-ms-input-placeholder,
 													color:$colorTextBodyHF;
 												}
 											}
-										}
+										
 									}
-								}
+								
 							}							
 						}
 					}
@@ -822,8 +823,7 @@ textarea:-ms-input-placeholder,
 			}
 			// -------------------------------------------------------------
 			// -----------------------SIDEBAR DERECHO-----------------------
-			// -------------------------------------------------------------
-		}
+			// -------------------------------------------------------------		
 	}
 	// -----------------------------------------------------
 	// -----------------------ARTICLE-----------------------
@@ -952,12 +952,12 @@ textarea:-ms-input-placeholder,
 				}
 				.panel-collapse{					
 					.panel-body{
-						.row{
+						
 							.provider{
 								background:$errandDetailBox1;
 								width:100%;
 								@include padding(10px,10px,10px,10px);
-								.row{
+								
 									.image{
 										width:70px;
 										height:70px;
@@ -981,7 +981,7 @@ textarea:-ms-input-placeholder,
 										@include border(0px,solid,transparent);
 										@include border-bottom(1px,solid,$errandDetailHr);
 									}
-								}
+								
 							}
 							.details{
 								background:$errandDetailBox2;
@@ -1003,7 +1003,7 @@ textarea:-ms-input-placeholder,
 									@include border(0px,solid,transparent);
 								}
 							}
-						}
+						
 						a.contactZoom{
 							@include border(2px,solid,$blueZoom);
 							color:$blueZoom;
