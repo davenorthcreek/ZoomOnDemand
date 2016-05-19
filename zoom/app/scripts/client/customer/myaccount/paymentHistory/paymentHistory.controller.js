@@ -7,9 +7,10 @@
         .controller('PaymentHistoryController', PaymentHistoryController);
 
     /** @ngInject */
-    PaymentHistoryController.$inject = ['$state', '$scope'];
-    function PaymentHistoryController($state, $scope) {
-        // var vm = this;        
+    PaymentHistoryController.$inject = ['$state', '$scope', 'toastr', 'Restangular'];
+    function PaymentHistoryController($state, $scope, toastr, Restangular) {
+        var vm = this;
+
        
     }
 })();
