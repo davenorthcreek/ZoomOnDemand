@@ -10,7 +10,5 @@
     MyAcoountController.$inject = ['$state'];
     function MyAcoountController($state) {
          var vm = this;        
-         vm.state = $state.current.name;
-      
-    }
+         }
 })();
