@@ -65,13 +65,6 @@
                         <h3 class="bottom-space-0 top-space-0 left">
                             When Errand is complete
                         </h3>
-                        <select class="selection">
-                            <option>1 Hr</option>
-                            <option>2 Hrs</option>
-                            <option>3 Hrs</option>
-                            <option>4 Hrs</option>
-                            <option>5 Hrs</option>
-                        </select>
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile">Email</h3>
@@ -122,6 +115,37 @@
                    </div>
                 </div>
                 <!--4 select-->
+                <div class="col-md-12 col-sm-12 left bottom-space-20">
+                    <div class="col-md-6 col-sm-6">
+                        <h3 class="bottom-space-0 top-space-0 left">
+                            When 'Purchase For Me' Funds are below
+                        </h3>
+                        <select class="selection">
+                            <option>1 Hr</option>
+                            <option>2 Hrs</option>
+                            <option>3 Hrs</option>
+                            <option>4 Hrs</option>
+                            <option>5 Hrs</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-3 center">
+                        <h3 class="bottom-space-0 for-mobile">Email</h3>
+                        <div class="shutter" ng-class="vm.form.PurchaseFundsEmail == true ? 'yes' : 'no' " ng-click="vm.form.PurchaseFundsEmail = !vm.form.PurchaseFundsEmail" ng-model="vm.form.PurchaseFundsEmail" ng-init="vm.form.PurchaseFundsEmail=true">
+                            <span class="float-left">Yes</span>
+                            <span class="float-right">No</span>
+                            <span class="button"><span class="button-in"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 center">
+                        <h3 class="bottom-space-0 for-mobile">SMS</h3>
+                        <div class="shutter" ng-class="vm.form.PurchaseFundsSms == true ? 'yes' : 'no' " ng-click="vm.form.PurchaseFundsSms = !vm.form.PurchaseFundsSms" ng-model="vm.form.PurchaseFundsSms" ng-init="vm.form.PurchaseFundsSms=true">
+                            <span class="float-left">Yes</span>
+                            <span class="float-right">No</span>
+                            <span class="button"><span class="button-in"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <!--5 select-->
                 <div class="col-md-12 col-sm-12 right bottom-space-20">
                     <button type="button" class="registration-btn">Save Changes</button>
                 </div>

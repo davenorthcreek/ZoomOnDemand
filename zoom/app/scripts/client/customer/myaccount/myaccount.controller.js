@@ -9,8 +9,6 @@
     /** @ngInject */
     MyAcoountController.$inject = ['$state'];
     function MyAcoountController($state) {
-        // var vm = this;        
-
-      
-    }
+         var vm = this;        
+         }
 })();

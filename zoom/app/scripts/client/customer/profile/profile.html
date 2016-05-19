@@ -304,7 +304,8 @@
                 </div>
                 <!-- Location -->
                 <div class="col-md-12 col-sm-12 right bottom-space-20 top-offset-30">
-                    <button type="button" class="reverse-btn">Edit Profile</button><button type="button" class="registration-btn">Save Changes</button>
+                    <button type="button" class="reverse-btn" ng-show="!vm.save" ng-click="vm.save=true" ng-init="vm.save=false">Edit Profile</button>
+                    <button type="button" class="registration-btn" ng-show="vm.save" ng-click="vm.save=false">Save Changes</button>
                 </div>
             </div>
         </div>
