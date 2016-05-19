@@ -7,7 +7,7 @@ zoomApp.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app.home', {
       url: '/home',
-      controller: 'MainController',
-      templateUrl: 'scripts/main/main.html'
+      controller: 'PostErrandController',
+      templateUrl: 'scripts/client/customer/posterrand/posterrand.html'
     })
 });

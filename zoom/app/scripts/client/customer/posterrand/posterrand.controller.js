@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name zoomApp.controller:MainController
+ * @name zoomApp.controller:PostErrandController
  * @description
- * # MainController
- * MainController of the zoomApp
+ * # PostErrandController
+ * PostErrandController of the zoomApp
  */
-zoomApp.controller('MainController', MainController);
-MainController.$inject = ['$scope', 'moment'];
+zoomApp.controller('PostErrandController', PostErrandController);
+PostErrandController.$inject = ['$scope', 'moment'];
 
-function MainController($scope, moment) {
+function PostErrandController($scope, moment) {
 
   var main = $scope;
   main.locations = ['Los Angeles', 'Option 1', 'Option 2', 'Option n'];
