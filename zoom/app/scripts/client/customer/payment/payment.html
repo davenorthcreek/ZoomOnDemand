@@ -11,7 +11,7 @@
                 <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 table-body">
                     <table class="table">
                         <tbody>
-                            <tr>
+                            <tr ng-class="vm.hour == 1 ? 'back-pink':''">
                                 <td>
                                     <h2 class="offset-20">1 Hour</h2>
                                 </td>
@@ -19,10 +19,10 @@
                                     <h2 class="offset-20">$32.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(1)" class="reverse-btn">Select</button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr ng-class="vm.hour == 2 ? 'back-pink':''">
                                 <td>
                                     <h2 class="offset-20">2 Hours</h2>
                                 </td>
@@ -30,10 +30,10 @@
                                     <h2 class="offset-20">$64.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(2)" class="reverse-btn">Select</button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr ng-class="vm.hour == 3 ? 'back-pink':''">
                                 <td>
                                     <h2 class="offset-20">3 Hours</h2>
                                 </td>
@@ -41,10 +41,10 @@
                                     <h2 class="offset-20">$96.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(3)" class="reverse-btn">Select</button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr ng-class="vm.hour == 4 ? 'back-pink':''">
                                 <td>
                                     <h2 class="offset-20">4 Hours</h2>
                                 </td>
@@ -52,7 +52,7 @@
                                     <h2 class="offset-20">$128.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(4)" class="reverse-btn">Select</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -63,32 +63,32 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4 center">
-                        <div class="pack-box">
+                        <div class="pack-box" ng-class="vm.hour == 5 ? 'border-pink':''">
                             <h2 class="pack-duration">5 Hours</h2>
                             <h2 class="sub-text">$145.00</h2>
                             <h5 class="sub-text">Price per hour</h5>
                             <h2 class="sub-text">($29.00 per hour)</h2>
-                            <button type="button" class="select-btn">Select</button>
+                            <button type="button" ng-click="vm.setHours(5)" class="select-btn">Select</button>
                         </div>
                     </div>
                     <!-- 5 hours -->
                     <div class="col-md-4 col-sm-4 center">
-                        <div class="pack-box">
+                        <div class="pack-box" ng-class="vm.hour == 10 ? 'border-pink':''">
                             <h2 class="pack-duration">10 Hours</h2>
                             <h2 class="sub-text">$275.00</h2>
                             <h5 class="sub-text">Price per hour</h5>
                             <h2 class="sub-text">($27.50 per hour)</h2>
-                            <button type="button" class="select-btn">Select</button>
+                            <button type="button" ng-click="vm.setHours(10)" class="select-btn">Select</button>
                         </div>
                     </div>
                     <!-- 10 hours -->
                     <div class="col-md-4 col-sm-4 center">
-                        <div class="pack-box">
+                        <div class="pack-box" ng-class="vm.hour == 20 ? 'border-pink':''">
                             <h2 class="pack-duration">20 Hours</h2>
                             <h2 class="sub-text">$535.00</h2>
                             <h5 class="sub-text">Price per hour</h5>
                             <h2 class="sub-text">($26.75 per hour)</h2>
-                            <button type="button" class="select-btn">Select</button>
+                            <button type="button" ng-click="vm.setHours(20)" class="select-btn">Select</button>
                         </div>
                     </div>
                     <!-- 20 hours -->
@@ -96,22 +96,22 @@
                 <!-- blue box -->
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2 center">
-                        <div class="gray-box">
+                        <div class="gray-box" ng-class="vm.hour == 30 ? 'border-pink':''">
                             <h2 class="pack-duration">30 Hours</h2>
                             <h2 class="sub-text">$780.00</h2>
                             <h5 class="sub-text">Price per hour</h5>
                             <h2 class="sub-text">($26.00 per hour)</h2>
-                            <button type="button" class="gray-select-btn">Select</button>
+                            <button type="button" ng-click="vm.setHours(30)" class="gray-select-btn">Select</button>
                         </div>
                     </div>
                     <!-- 30 hours -->
                     <div class="col-md-4 col-sm-4 center">
-                        <div class="gray-box">
+                        <div class="gray-box" ng-class="vm.hour == 40 ? 'border-pink':''">
                             <h2 class="pack-duration">40 Hours</h2>
                             <h2 class="sub-text">$1000.00</h2>
                             <h5 class="sub-text">Price per hour</h5>
                             <h2 class="sub-text">($25.00 per hour)</h2>
-                            <button type="button" class="gray-select-btn">Select</button>
+                            <button type="button" ng-click="vm.setHours(40)" class="gray-select-btn">Select</button>
                         </div>
                     </div>
                     <!-- 40 hours -->
@@ -126,85 +126,90 @@
             </div>
         </div>
         <!-- Option title -->
-        <div class="container">
-                <h2 class="credit-head">Credit Card Number</h2>
-                <div class="col-md-7 col-sm-7">
-                    <input type="text" class="inputs">
-                </div>
-                <div class="col-md-5 col-sm-5">
-                    <img src="images/cards.jpg" class="cards"/>
-                </div>
+<form  stripe-form="stripeCallback"  name="checkoutForm">
+    <div class="container">
+        <h2 class="credit-head">Credit Card Number</h2>
+        <div class="col-md-7 col-sm-7">
+            <input ng-model="number" placeholder="Credit card number" payments-format="card"  name="card" class="inputs">
         </div>
-        <!-- card numbar-->
-        <div class="container">
-                <div class="col-md-3 col-sm-3">
-                    <h2 class="credit-head">Expiration</h2>
-                    <input type="date" class="inputs date">
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <h2 class="credit-head">Security Code</h2>
-                    <input type="text" class="inputs">
-                </div>
+        <div class="col-md-5 col-sm-5">
+            <img src="images/cards.jpg" class="cards" />
         </div>
-        <!-- card details-->
-        <div class="container">
-            <div class="col-md-12 center bottom-offset-20">
-                <div class="line-2"></div>
-                <h2 class="purchase-head">Need us to purchase anything for you?</h2>
-            </div>
-            <div class="col-md-6 col-sm-6 right top-offset-20">
-                <button type="button" class="fund-btn">Use 'Purchase For Me' Funds</button>
-            </div>
-            <div class="col-md-6 col-sm-6" >
-                <h2 class="credit-head pointer" ng-click="vm.shownote = !vm.shownote">What Is This?</h2>
-            </div>
-            <div class="col-md-12 col-sm-12">
-                <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 center popup" ng-show="vm.shownote" ng-init="vm.shownote = false">
-                    <div class="gray-box">
-                        <h2 class="pack-duration">'Purchase For Me' Funds<span class="close pointer" ng-click="vm.shownote = !vm.shownote">X</span></h2>
-                        <h3 class="sub-text">
-                            This payment option allows us to make purchases on your behalf, for example for groceries, cleaning supplies and other items, in addition to our standard services.
-                            <br>
-                            *Make sure to add enough funds to cover your specific purchases. Funds not used for purchases can be refunded at anytime by contacting us.
-                        </h3>
-                    </div>
+    </div>
+    <!-- card numbar-->
+    <div class="container">
+        <div class="col-md-3 col-sm-3">
+            <h2 class="credit-head">Expiration</h2>
+            <input ng-model="expiry" placeholder="MM/YY" payments-format="expiry" name="expiry"  class="inputs date">
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <h2 class="credit-head">Security Code</h2>
+            <input type="text" class="inputs" ng-model="cvc" placeholder="CVC" payments-format="cvc" name="cvc" >
+        </div>
+    </div>
+    <!-- card details-->
+    <div class="container">
+        <div class="col-md-12 center bottom-offset-20">
+            <div class="line-2"></div>
+            <h2 class="purchase-head">Need us to purchase anything for you?</h2>
+        </div>
+        <div class="col-md-6 col-sm-6 right top-offset-20">
+            <button type="button" class="fund-btn">Use 'Purchase For Me' Funds</button>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <h2 class="credit-head pointer" ng-click="vm.shownote = !vm.shownote">What Is This?</h2>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 center popup" ng-show="vm.shownote" ng-init="vm.shownote = false">
+                <div class="gray-box">
+                    <h2 class="pack-duration">'Purchase For Me' Funds<span class="close pointer" ng-click="vm.shownote = !vm.shownote">X</span></h2>
+                    <h3 class="sub-text">
+                        This payment option allows us to make purchases on your behalf, for example for groceries, cleaning supplies and other items, in addition to our standard services.
+                        <br>
+                        *Make sure to add enough funds to cover your specific purchases. Funds not used for purchases can be refunded at anytime by contacting us.
+                    </h3>
                 </div>
             </div>
-            <!-- popup -->
+        </div>
+        <!-- popup -->
+        <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">
+            <h2 class="credit-head">Enter Your Amount</h2>
+            <input ng-model="vm.escrow" name="Amount" type="Number" step="0.01" min="0" max="50000" placeholder="00.00" class="amount" ng-class="checkoutForm.Amount.$invalid? 'red':''" />
+            <span class="unit">$</span>
+            <button type="button" class="amount-btn">Add</button>
+        </div>
+        <div class="col-md-12 col-sm-12 padding0">
             <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">
-                <h2 class="credit-head">Enter Your Amount</h2>
-                <input type="number" placeholder="00.00" class="amount"/>
-                <span class="unit">$</span>
-                <button type="button" class="amount-btn">Add</button>
+                <button type="button" ng-click="vm.escrow=0" class="clear-btn">Clear Payment</button>
             </div>
-            <div class="col-md-12 col-sm-12 padding0">
-                <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">
-                    <button type="button" class="clear-btn">Clear Payment</button>
-                </div>
-                <div class="col-md-5 col-sm-5 col-md-offset-2 col-sm-offset-2 top-offset-30 bottom-offset-20">
-                    <input type="text" placeholder="Promocode" class="promo"/>
-                    <button type="button" class="amount-btn">Apply</button>
-                </div>
+            <div class="col-md-5 col-sm-5 col-md-offset-2 col-sm-offset-2 top-offset-30 bottom-offset-20">
+                <input type="text" placeholder="Promocode" class="promo" ng-model="vm.tmpcoupon" />
+                <button type="button" class="amount-btn" ng-click="vm.couponApply()">Apply</button>
             </div>
         </div>
-        <!-- purchase for me -->
-        <div class="container-fluid padding0 check-title">
-            <div class="container">
-                <h2>3. Check Out</h2>
-            </div>
-        </div>
-        <!-- checkout title -->
+    </div>
+    <!-- purchase for me -->
+    <div class="container-fluid padding0 check-title">
         <div class="container">
-                <h2 class="inline-block">Cart: 3 Hours / $96.00</h2><button type="button" class="reverse-btn float-right top-offset-20">Clear Cart</button>
-                <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20">
-                    <h2 class="bottom-bordered">Subtotal</h2>
-                    <h2 class="right">$96.00</h2>
-                </div>
-                <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20 right">
-                    <button type="button" class="registration-btn top-offset-20">Make Payment</button>
-                    <span  class="chat">
-                        <img src="images/comments.png"/>
-                    </span>
-                </div>
+            <h2>3. Check Out</h2>
         </div>
-       
+    </div>
+    <!-- checkout title -->
+    <div class="container">
+        <h2 class="inline-block">Cart: {{vm.hrsText}} / {{vm.subtotal|currency}}</h2><button type="button" ng-click="vm.cancelSubmit()" class="reverse-btn float-right top-offset-20">Clear Cart</button>
+        <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20">
+            <h2 class="bottom-bordered">Subtotal</h2>
+            <h2 class="right" ng-bind="vm.subtotal | currency"></h2>
+
+        </div>
+        <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20 right">
+         
+            <button ng-disabled="vm.payDisabled" ng-click="vm.payDisabled = true" type="submit" class="registration-btn top-offset-20">Make Payment</button>
+            <!--ng-bind="'Pay ' + ((vm.total)|currency) "-->
+            <span class="chat">
+                <img src="images/comments.png" />
+            </span>
+        </div>
+
+    </div>
+</form>
