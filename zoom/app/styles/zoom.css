@@ -179,6 +179,24 @@ input:-ms-input-placeholder {
     letter-spacing: 0.7px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .tabPayment {
       margin: 20px 20px 20px 20px; }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus {
+      width: 150px; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus span {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        border-radius: 0px;
+        cursor: pointer;
+        background: #76939e;
+        padding: 0px;
+        width: 30px;
+        color: #FFFFFF;
+        font-weight: normal;
+        font-size: 8px;
+        border: 2px solid #76939e; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus input {
+        font-size: 20px;
+        border: 2px solid #76939e; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form label {
       font-weight: normal; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
@@ -195,7 +213,8 @@ input:-ms-input-placeholder {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      background: #FFFFFF; }
+      background: #FFFFFF;
+      line-height: 37px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group input, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group textarea {
       font-size: 17.93px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea {
@@ -218,6 +237,16 @@ input:-ms-input-placeholder {
       background-position: 8px 8px;
       background-repeat: no-repeat;
       padding-left: 40px; }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group select {
+      -webkit-appearance: none;
+      height: 35px;
+      width: 100%;
+      border-radius: 0px;
+      background: #fff url(../images/dn-arrow.png);
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: 25px 44px;
+      padding-left: 5px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
       border-left: 0px solid transparent; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
@@ -1094,7 +1123,7 @@ input:-ms-input-placeholder {
 */
 .zoomswitch {
   position: relative;
-  width: 90px;
+  width: 70px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none; }
@@ -1106,7 +1135,7 @@ input:-ms-input-placeholder {
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid #999999;
+  border: 2px solid transparent;
   border-radius: 20px; }
 
 .zoomswitch-inner {
@@ -1131,17 +1160,18 @@ input:-ms-input-placeholder {
 .zoomswitch-inner:before {
   content: "NO";
   padding-left: 10px;
-  background-color: #76939E;
+  background-color: #76939e;
   color: #FFFFFF; }
 
 .zoomswitch-inner:after {
   content: "YES";
   padding-right: 10px;
-  background-color: #76939E;
+  background-color: #76939e;
   color: #FFFFFF;
   text-align: right; }
 
 .zoomswitch-switch {
+  height: 30px;
   display: block;
   width: 30px;
   margin: 2px;
@@ -1149,7 +1179,7 @@ input:-ms-input-placeholder {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 56px;
+  right: 40px;
   border: 2px solid #999999;
   border-radius: 20px;
   transition: all 0.3s ease-in 0s; }
