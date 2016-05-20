@@ -2,11 +2,12 @@
 
 zoomApp.config(function ($stateProvider, $urlRouterProvider) {
 
- // $urlRouterProvider.otherwise('/home');
+$urlRouterProvider.when('/app/home/postnewerrand/confirm','/app/home/postnewerrand/confirm/usehours');
+$urlRouterProvider.when('/app/home/postnewerrand/confirm/','/app/home/postnewerrand/confirm/usehours');
 
   $stateProvider
     .state('app.home.postnewerrand.select', {
-        url: '',
+        url: '/select',
         controller: 'ConfirmErrandController as vm',
         templateUrl: 'scripts/client/customer/home/postnewerrand/select/selecterrand.html'
     })
@@ -17,7 +18,6 @@ zoomApp.config(function ($stateProvider, $urlRouterProvider) {
     })
     .state('app.home.postnewerrand.confirm', {
         url: '/confirm',
-        abstract: true,
         controller: 'ConfirmErrandController as vm',
         templateUrl: 'scripts/client/customer/home/postnewerrand/confirm/confirmerrand.html'
     })

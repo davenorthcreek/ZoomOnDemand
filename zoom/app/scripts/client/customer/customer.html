@@ -11,23 +11,23 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Post Errand</a></li>
-                <li><a href="#">My Errands</a></li>
-                <li><a ui-sref="app.payment">Payment</a></li>
-                <li><a href="#">Help</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.home.postnewerrand.select">Post Errand</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.myerrands">My Errands</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.payment">Payment</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.help">Help</a></li>
                 <li class="dropdown pointer">
                     <a class="dropdown-toggle image-circle" data-toggle="dropdown"><img src="images/user.jpg" /> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li ><a ui-sref="app.profile">Profile</a></li>
                         <li><a ui-sref="app.myaccount">My Account</a></li>
-                        <li class="pointer"><a ng-click="signOut()">Logoout</a></li>
+                        <li class="pointer"><a ng-click="signOut()">Logout</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<span id="msjSubHeader"><img src="images/shield.png" alt=""> 100% Trust & Safety Guarantee</span>
+<span id="msjSubHeader" ng-show="uistate.includes('app.home')"><img src="images/shield.png" alt=""> 100% Trust & Safety Guarantee</span>
 
 <div ui-view class="minimum"></div>
 

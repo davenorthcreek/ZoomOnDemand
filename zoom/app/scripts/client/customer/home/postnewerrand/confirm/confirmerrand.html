@@ -6,10 +6,10 @@
             <div role="tabpanel" class="tabPayment">
                 <ul class="nav nav-tabs header-payment-container" role="tablist">
                     <li role="presentation" ui-sref-active="active">
-                        <a ui-sref="app.home.postnewerrand.confirm.usehours" aria-controls="tab-use-hours" role="tab" data-toggle="tab">Use Hours in Account</a>
+                        <a ui-sref=".usehours" aria-controls="tab-use-hours" role="tab" data-toggle="tab">Use Hours in Account</a>
                     </li>
                     <li role="presentation" ui-sref-active="active">
-                        <a ui-sref="app.home.postnewerrand.confirm.creditcard" aria-controls="tab-pay" role="tab" data-toggle="tab">Pay with Credit Card</a>
+                        <a ui-sref=".creditcard" aria-controls="tab-pay" role="tab" data-toggle="tab">Pay with Credit Card</a>
                     </li>
                 </ul>
                 <div class="tab-content content-payment-container">
@@ -32,7 +32,7 @@
                     <hr>
                     <p>*Satisfaction guaranteed with every order.</p>
                     <div class="return">
-                        <i class="fa fa-caret-left" aria-hidden="true"></i> <a href="#">Return to last step</a>
+                        <i class="fa fa-caret-left" aria-hidden="true"></i> <a ui-sref="app.home.postnewerrand.details">Return to last step</a>
                     </div>
                 </div>
             </div>
