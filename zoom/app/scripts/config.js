@@ -9,8 +9,9 @@
    
 
     // @ngInject
-    config.$inject = ['API_URL', '$authProvider', '$windowProvider', '$locationProvider'];
-    function config(API_URL, $authProvider, $windowProvider, $locationProvider) {
+    config.$inject = ['API_URL', '$authProvider', '$windowProvider', '$locationProvider', 'RestangularProvider'];
+    function config(API_URL, $authProvider, $windowProvider, $locationProvider, RestangularProvider) {
+        RestangularProvider.setBaseUrl(API_URL);
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
        var $window = $windowProvider.$get();

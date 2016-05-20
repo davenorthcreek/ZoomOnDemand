@@ -12,7 +12,8 @@
     "ng-token-auth": "^0.0.29",
     "angular-bootstrap-datetimepicker": "^1.0.1",
     "angular-toastr": "~1.7.0",
-    "restangular": "~1.5.2"
+    "restangular": "~1.5.2",
+    "angular-payments": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
@@ -28,9 +29,9 @@
       ]
     },
     "angular-bootstrap-datetimepicker": {
-      "main": [ 
-        "src/js/datetimepicker.js", 
-        "src/css/datetimepicker.css" 
+      "main": [
+        "src/js/datetimepicker.js",
+        "src/css/datetimepicker.css"
       ]
     }
   }

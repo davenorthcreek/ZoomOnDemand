@@ -64,15 +64,23 @@ ga('send', 'pageview');
     <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-payments/lib/angular-payments.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
+      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+      <script>
+          Stripe.setPublishableKey('pk_test_9MLCt7tfGDELF03VZN7u4b7h');
+          
+      </script>
     <script src="scripts/app.js"></script>
     <script src="scripts/constants.js"></script>
     <script src="scripts/config.js"></script>
     <script src="scripts/run.js"></script>
+
+      <script src="scripts/filters/basic.filter.js"></script>
+      <script src="scripts/filters/tag.filter.js"></script>
 
     <script src="scripts/login/login.routes.js"></script>
     <script src="scripts/login/login.controller.js"></script>

@@ -588,6 +588,7 @@ span.chat img{
 }
 .selection{
     -webkit-appearance: none;
+    -moz-appearance: none;
     height: 30px;
     width: 70px;
     border-radius: 0px;
@@ -597,6 +598,19 @@ span.chat img{
     background-size: 31px 40px;
     padding-left: 5px;
     margin: 15px 0px;
+}
+.selection2{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px;
+    width: 80px;
+    border-radius: 0px;
+    padding-left: 15px;
+    margin: 15px 0px;
+        border: 1px solid #A9A9A9;
+}
+.selection2dolar{
+margin-left: -80px;
 }
 .again-btn{
     color: #52C9E0;
@@ -695,4 +709,13 @@ span.chat img{
     .reverse-btn{
         margin-right:0px;
     }
+}
+tr.back-pink{
+     background:pink;
+ }
+.gray-box.border-pink,.pack-box.border-pink{
+     border:5px solid pink;
+ }
+.red {
+color:red;
 }
