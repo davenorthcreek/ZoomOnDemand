@@ -25,7 +25,7 @@
                 <p class="toMakeText">To make an errand booking or if you have any questions.</p>
             </div>
         </aside>          
-        <aside id="latDer" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <aside id="latDer" class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
             <div class="tabParent">
                 <div role="tabpanel">
                     <ul class="nav nav-tabs tab-parent-header" role="tablist">
@@ -319,7 +319,7 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab-errants-in-progress">
-                            <div class="table-responsive">
+                            <div class="table-responsive tableErrandsProgress">
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -339,9 +339,11 @@
                                                     <img src="images/photo1.png" alt="" class="img-responsive">
                                                 </div>
                                             </td>
-                                            <td>Courier Service</td>
                                             <td>
-                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                                <button class="tooltipErrandService">Courier Service</button>
+                                            </td>
+                                            <td>
+                                                <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
                                             </td>
                                             <td>
                                                 Hours Used:  In Progress
@@ -361,9 +363,11 @@
                                                     <img src="images/photo2.png" alt="" class="img-responsive">
                                                 </div>
                                             </td>
-                                            <td>Courier Service</td>
                                             <td>
-                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                                <button class="tooltipErrandService">Courier Service</button>
+                                            </td>
+                                            <td>
+                                                <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
                                             </td>
                                             <td>
                                                 Hours Used:  In Progress
@@ -383,9 +387,11 @@
                                                     <img src="images/photo3.png" alt="" class="img-responsive">
                                                 </div>
                                             </td>
-                                            <td>Courier Service</td>
                                             <td>
-                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                                <button class="tooltipErrandService">Courier Service</button>
+                                            </td>
+                                            <td>
+                                                <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
                                             </td>
                                             <td>
                                                 Hours Used:  In Progress
@@ -405,9 +411,11 @@
                                                     <img src="images/photo4.png" alt="" class="img-responsive">
                                                 </div>
                                             </td>
-                                            <td>Courier Service</td>
                                             <td>
-                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                                <button class="tooltipErrandService">Courier Service</button>
+                                            </td>
+                                            <td>
+                                                <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
                                             </td>
                                             <td>
                                                 Hours Used:  In Progress
@@ -427,9 +435,11 @@
                                                     <img src="images/photo5.png" alt="" class="img-responsive">
                                                 </div>
                                             </td>
-                                            <td>Courier Service</td>
                                             <td>
-                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                                <button class="tooltipErrandService">Courier Service</button>
+                                            </td>
+                                            <td>
+                                                <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
                                             </td>
                                             <td>
                                                 Hours Used:  In Progress
@@ -449,9 +459,11 @@
                                                     <img src="images/photo6.png" alt="" class="img-responsive">
                                                 </div>
                                             </td>
-                                            <td>Courier Service</td>
                                             <td>
-                                                <p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p>
+                                                <button class="tooltipErrandService">Courier Service</button>
+                                            </td>
+                                            <td>
+                                                <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
                                             </td>
                                             <td>
                                                 Hours Used:  In Progress
@@ -467,10 +479,45 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <br><br><br><br><br>
+                            <br><br>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab-my-hours">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, aspernatur.
+                            <div class="tab-content-hours text-center">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hours">
+                                        <h1>HOURS</h1>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 available-hours">
+                                                <h4>+ AVAILABLE</h4>
+                                                <h2>10.5</h2>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 used-hours">
+                                                <h4>- USED</h4>
+                                                <h2>4</h2>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buttonHours">
+                                                <button class="btn">ADD HOURS</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 funds">
+                                        <h1>‘Purchase For Me’ FUNDS</h1>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 available-funds">
+                                                <h4>+ AVAILABLE</h4>
+                                                <h2>$200</h2>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 used-funds">
+                                                <h4>- USED</h4>
+                                                <h2>$60</h2>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buttonFunds">
+                                                <button class="btn">ADD FUNDS</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -478,6 +525,279 @@
         </aside>
     </div>            
 </section>
+<div class="row contentDetailsErrandsProgress hide">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="errandsProgressDetail">
+            <h3>ERRANDS IN PROGRESS</h3>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <span class="number">1</span>
+                                <span class="text">Errand Date: 04/08/16</span>
+                                <span class="text">Delivery</span>
+                                <span class="text">Time Posted: 11:00 AM</span>
+                                <span class="text">Status: In Progress</span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="provider no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="image">
+                                                    <img src="images/face-errands.png" alt="" class="img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Your service provider is Judith.</p>
+                                                <hr>
+                                                <p>Good news, she is scheduled to arrive on time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <p>DELIVERY SERVICE</p>
+                                                <p>ETA: 11:00AM</p>
+                                                <p>Item: Documents</p>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <button class="pull-right btnEditErrand">Edit Errand</button>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p>Pick up Location: </p>
+                                                <p>1667 Divisdero Street, Room 1285.</p>
+                                                <p>San Francisco CA, 94115.</p>
+                                                <p>Drop off Location: </p>
+                                                <p>535 Mission Street, 19th Floor, Suite 16.</p>
+                                                <p>San Francisco CA, 94100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <img src="images/image-maps.png" alt="" class="img-responsive pull-right">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <a class="contactZoom" href="#">Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                <span class="number">2</span>
+                                <span class="text">Errand Date: 04/08/16</span>
+                                <span class="text">Delivery</span>
+                                <span class="text">Time Posted: 11:00 AM</span>
+                                <span class="text">Status: In Progress</span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="provider no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="image">
+                                                    <img src="images/face-errands.png" alt="" class="img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Your service provider is Judith.</p>
+                                                <hr>
+                                                <p>Good news, she is scheduled to arrive on time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <p>DELIVERY SERVICE</p>
+                                                <p>ETA: 11:00AM</p>
+                                                <p>Item: Documents</p>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <button class="pull-right btnEditErrand">Edit Errand</button>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p>Pick up Location: </p>
+                                                <p>1667 Divisdero Street, Room 1285.</p>
+                                                <p>San Francisco CA, 94115.</p>
+                                                <p>Drop off Location: </p>
+                                                <p>535 Mission Street, 19th Floor, Suite 16.</p>
+                                                <p>San Francisco CA, 94100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <img src="images/image-maps.png" alt="" class="img-responsive pull-right">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <a class="contactZoom" href="#">Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                <span class="number">3</span>
+                                <span class="text">Errand Date: 04/08/16</span>
+                                <span class="text">Delivery</span>
+                                <span class="text">Time Posted: 11:00 AM</span>
+                                <span class="text">Status: In Progress</span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="provider no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="image">
+                                                    <img src="images/face-errands.png" alt="" class="img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Your service provider is Judith.</p>
+                                                <hr>
+                                                <p>Good news, she is scheduled to arrive on time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <p>DELIVERY SERVICE</p>
+                                                <p>ETA: 11:00AM</p>
+                                                <p>Item: Documents</p>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <button class="pull-right btnEditErrand">Edit Errand</button>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p>Pick up Location: </p>
+                                                <p>1667 Divisdero Street, Room 1285.</p>
+                                                <p>San Francisco CA, 94115.</p>
+                                                <p>Drop off Location: </p>
+                                                <p>535 Mission Street, 19th Floor, Suite 16.</p>
+                                                <p>San Francisco CA, 94100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <img src="images/image-maps.png" alt="" class="img-responsive pull-right">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <a class="contactZoom" href="#">Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                <span class="number">4</span>
+                                <span class="text">Errand Date: 04/08/16</span>
+                                <span class="text">Delivery</span>
+                                <span class="text">Time Posted: 11:00 AM</span>
+                                <span class="text">Status: In Progress</span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="provider no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="image">
+                                                    <img src="images/face-errands.png" alt="" class="img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Your service provider is Judith.</p>
+                                                <hr>
+                                                <p>Good news, she is scheduled to arrive on time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details no-border-radius">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <p>DELIVERY SERVICE</p>
+                                                <p>ETA: 11:00AM</p>
+                                                <p>Item: Documents</p>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                <button class="pull-right btnEditErrand">Edit Errand</button>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p>Pick up Location: </p>
+                                                <p>1667 Divisdero Street, Room 1285.</p>
+                                                <p>San Francisco CA, 94115.</p>
+                                                <p>Drop off Location: </p>
+                                                <p>535 Mission Street, 19th Floor, Suite 16.</p>
+                                                <p>San Francisco CA, 94100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <img src="images/image-maps.png" alt="" class="img-responsive pull-right">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <a class="contactZoom" href="#">Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <article>
     <h3 class="text-center">ERRANDS POPULAR IN YOUR AREA</h3>
     <div class="row">
@@ -519,3 +839,362 @@
         </div>
     </div>				
 </article>
+<div class="myErrands">
+    <h2>My Errands</h2>
+    <div class="filters">
+        <p>Active</p>
+        <p>Completed <span class="circle">18</span></p>
+        <p>Cancelled <span class="circle">5</span></p>
+        <p>All <span class="circle">23</span></p>
+        <p>Awaiting review</p>
+        <div class="clearfix"></div>
+    </div>
+    <h3>Completed Orders</h3>
+    <!-- <div class="bgHead"></div> -->
+    <div class="table-responsive tableErrandsProgress">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Errand Date</th>
+                    <th>Service Provider</th>
+                    <th>Errand Type</th>
+                    <th>Description</th>
+                    <th>Hours/Funds Used</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>04/04/16</td>
+                    <td>
+                        <div class="image">
+                            <img src="images/photo1.png" alt="" class="img-responsive">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </td>
+                    <td>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </td>
+                    <td>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </td>
+                    <td>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/04/16</td>
+                    <td>
+                        <div class="image">
+                            <img src="images/photo2.png" alt="" class="img-responsive">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </td>
+                    <td>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </td>
+                    <td>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </td>
+                    <td>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/04/16</td>
+                    <td>
+                        <div class="image">
+                            <img src="images/photo3.png" alt="" class="img-responsive">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </td>
+                    <td>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </td>
+                    <td>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </td>
+                    <td>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/04/16</td>
+                    <td>
+                        <div class="image">
+                            <img src="images/photo4.png" alt="" class="img-responsive">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </td>
+                    <td>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </td>
+                    <td>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </td>
+                    <td>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/04/16</td>
+                    <td>
+                        <div class="image">
+                            <img src="images/photo5.png" alt="" class="img-responsive">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </td>
+                    <td>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </td>
+                    <td>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </td>
+                    <td>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04/04/16</td>
+                    <td>
+                        <div class="image">
+                            <img src="images/photo6.png" alt="" class="img-responsive">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </td>
+                    <td>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </td>
+                    <td>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </td>
+                    <td>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div class="table">
+            <div class="headerTabla">
+                <ul>
+                    <li>Errand Date</li>
+                    <li>Service Provider</li>
+                    <li>Errand Type</li>
+                    <li>Description</li>
+                    <li>Hours/Funds Used</li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="contTable">
+                <ul>
+                    <li>04/04/16</li>
+                    <li>
+                        <div class="image">
+                            <img src="images/photo1.png" alt="" class="img-responsive">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </li>
+                    <li>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </li>
+                    <li>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </li>
+                    <li>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>04/04/16</li>
+                    <li>
+                        <div class="image">
+                            <img src="images/photo2.png" alt="" class="img-responsive">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </li>
+                    <li>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </li>
+                    <li>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </li>
+                    <li>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>04/04/16</li>
+                    <li>
+                        <div class="image">
+                            <img src="images/photo3.png" alt="" class="img-responsive">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </li>
+                    <li>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </li>
+                    <li>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </li>
+                    <li>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>04/04/16</li>
+                    <li>
+                        <div class="image">
+                            <img src="images/photo4.png" alt="" class="img-responsive">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </li>
+                    <li>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </li>
+                    <li>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </li>
+                    <li>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>04/04/16</li>
+                    <li>
+                        <div class="image">
+                            <img src="images/photo5.png" alt="" class="img-responsive">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </li>
+                    <li>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </li>
+                    <li>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </li>
+                    <li>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>04/04/16</li>
+                    <li>
+                        <div class="image">
+                            <img src="images/photo6.png" alt="" class="img-responsive">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="tooltipErrandService">Courier Service</button>
+                    </li>
+                    <li>
+                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                    </li>
+                    <li>
+                        Hours Used:  3
+                        <br>
+                        Funds Used:  None
+                    </li>
+                    <li>
+                        <button class="btnOrderAgain">Order Again</button>
+                        <br>
+                        <button class="btnEditOrder">Edit Order</button>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div id="contentTooltip" class="hidden">
+    <p>Take document to the pick up location and mail it at the post office on Steiner street. Call me if there are any problems.</p>
+    <button>Edit</button>
+    <div class="clearfix"></div>
+</div>
+<script type="text/javascript">
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = $(e.target).attr("href");
+        if ((target == '#tab-errants-in-progress')) {
+            $('.contentDetailsErrandsProgress').removeClass('hide').addClass('show');
+        }
+        else{
+            $('.contentDetailsErrandsProgress').removeClass('show').addClass('hide');
+        }
+    });
+    
+    $('.tooltipErrandService, .tooltipDescription').each(function(){
+        $(this).tooltip({
+            html: true,
+            title: $('#contentTooltip').html(),
+            placement:'bottom',
+            trigger:'focus',
+            // trigger:'click',
+            template:'<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
+        });
+    });
+</script>

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# git remote add -f prod ubuntu@app.zoomerrands.com:zoomerrand_frontend.git
+
+GIT_DIR=/home/ubuntu/git_center/zoomerrands_frontend.git
+WORK_TREE=/home/ubuntu/zoomerrands_frontend
+# export APPNAME_DATABASE_USER='appname'
+# export APPNAME_DATABASE_PASSWORD='appname_password'
+
+# export RAILS_ENV=production
+. ~/.bash_profile
+
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/master$ ]];
+    then
+        echo "master ref received.  Deploying master branch to production..."
+        mkdir -p $WORK_TREE
+        git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f master
+
+        # start deploy tasks
+        cd $WORK_TREE/zoom
+        npm install
+        bower install
+        grunt build
+        sleep 30s
+
+        sudo service nginx stop
+        sleep 5s
+
+        sudo service nginx start
+        # end deploy tasks
+        echo "deploy complete"
+    else
+        echo "Ref $ref successfully received.  Doing nothing: only the master branch may be deployed on this server."
+    fi
+done

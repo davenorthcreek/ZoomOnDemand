@@ -1,3 +1,5 @@
+'use strict';
+
 zoomApp.config(function ($stateProvider, $urlRouterProvider) {
 
  // $urlRouterProvider.otherwise('/home');
