@@ -32,6 +32,11 @@
         "src/js/datetimepicker.js", 
         "src/css/datetimepicker.css" 
       ]
+    },
+    "fontawesome": {
+      "main": [ 
+        "css/font-awesome.min.css"
+      ]
     }
   }
 }

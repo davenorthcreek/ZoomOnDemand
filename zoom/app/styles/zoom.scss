@@ -1,21 +1,21 @@
 @import '_functions.scss';
 @import '_colors.scss';
 
-// @font-face{
-// 	font-family: 'Tw Cen MT';
-// 	font-style: normal;
-// 	font-weight: normal;
-// 	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
-// }
-
-@font-face {
-    font-family: tw-cem;
-    src: url(../fonts/tw-cen-mt.ttf);
+@font-face{
+	font-family: 'Tw Cen MT';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
 }
+
+// @font-face {
+//     font-family: tw-cem;
+//     src: url(../fonts/tw-cen-mt.ttf);
+// }
 
 body{
 	font-family: 'Tw Cen MT';
-	font-family: tw-cem;
+	// font-family: tw-cem;
 	font-size:14px;
 	margin:0px;
 	padding:0px;
@@ -514,7 +514,7 @@ textarea:-ms-input-placeholder,
 															@include padding(0px,0px,0px,0px);
 															height:25px;
 															line-height:25px;
-															@include margin(0px,0px,0px,2px);
+															@include margin(0px,0px,0px,10px);
 															font-weight:normal;
 														}
 													}													
@@ -835,6 +835,7 @@ textarea:-ms-input-placeholder,
 	// -----------------------FOOTER-----------------------
 	// ----------------------------------------------------
 	.supportZoom{
+		@include margin(0px,0px,80px,0px);
 		h3,h4{
 			color:$titlesFooter;
 			font-weight:bold;
@@ -898,6 +899,9 @@ textarea:-ms-input-placeholder,
 					background:$graySideBarIzq;
 					color:$white;
 					.panel-title{
+						@include margin(0px,auto,0px,auto);
+						width:100%;
+						max-width:715px;
 						a{
 							text-decoration:none;
 							span.number{
@@ -919,49 +923,50 @@ textarea:-ms-input-placeholder,
 								// content: "\e114"; 
 								content:"\e252";
 								display:inline-block;
+								font-size:8px;
 							}
 							&.collapsed:after {
 								content:"\e250";
 								// content: "\e080";   
 							}
 						}
-						@include margin(0px,auto,0px,auto);
-						width:100%;
-						max-width:723px;
 					}
 				}
 				.panel-collapse{					
-					.panel-body{
-						
-							.provider{
-								background:$errandDetailBox1;
-								width:100%;
-								@include padding(10px,10px,10px,10px);
-								
-									.image{
-										width:70px;
-										height:70px;
-										@include border-radius(40px);  
-										overflow:hidden;
+					.panel-body{	
+						@include padding(10px,0px,10px,0px);
+						@include border(0px,solid,transparent);
+						@include margin(0px,auto,0px,auto);
+						width:100%;
+						max-width:730px;					
+						.provider{
+							background:$errandDetailBox1;
+							width:100%;
+							@include padding(10px,10px,10px,10px);
+								.image{
+									width:70px;
+									height:70px;
+									@include border-radius(40px);  
+									overflow:hidden;
+									@include text-align(center);
+									@include margin(0px,auto,0px,auto);
+									img{
 										@include text-align(center);
 										@include margin(0px,auto,0px,auto);
-										img{
-											@include text-align(center);
-											@include margin(0px,auto,0px,auto);
-										}
 									}
-									p{
-										color:$errandDetailColor;
-										@include margin(0px,0px,0px,0px);
-										@include padding(0px,0px,0px,0px);
-										font-size:18px;
-									}
-									hr{
-										@include margin(7px,0px,7px,0px);
-										@include border(0px,solid,transparent);
-										@include border-bottom(1px,solid,$errandDetailHr);
-									}
-								
+								}
+								p{
+									color:$errandDetailColor;
+									@include margin(0px,0px,0px,0px);
+									@include padding(0px,0px,0px,0px);
+									font-size:16px;
+									letter-spacing:0px;
+								}
+								hr{
+									@include margin(7px,0px,7px,0px);
+									@include border(0px,solid,transparent);
+									@include border-bottom(1px,solid,$errandDetailHr);
+								}								
 							}
 							.details{
 								background:$errandDetailBox2;
@@ -969,11 +974,10 @@ textarea:-ms-input-placeholder,
 								@include margin(10px,0px,0px,0px);
 								@include padding(10px,10px,10px,10px);
 								p{
-									font-size:18px;
 									color:$errandDetailColor;
 									@include margin(0px,0px,0px,0px);
 									@include padding(0px,0px,0px,0px);
-									font-size:18px;
+									font-size:16.5px;
 								}
 								button.btnEditErrand{
 									background:$blueZoom;
@@ -994,11 +998,6 @@ textarea:-ms-input-placeholder,
 							@include text-align(center);
 							@include margin(20px,0px,0px,0px);
 						}
-						@include padding(10px,0px,10px,0px);
-						@include border(0px,solid,transparent);
-						@include margin(0px,auto,0px,auto);
-						width:100%;
-						max-width:686px;
 					}
 				}
 			}
@@ -1016,15 +1015,15 @@ textarea:-ms-input-placeholder,
 		h2{
 			color:$graySideBarIzq;
 			font-size:25px;
-			@include margin(30px,0px,0px,0px);
+			@include margin(80px,80px,70px,80px);
 			@include padding(0px,0px,20px,0px);
 			@include border-bottom(1px,solid,$graySideBarIzq);
 		}
 		h3{
 			color:$titleCompletedOrders;
 			font-size:25px;
-			@include margin(30px,0px,0px,0px);
-			@include padding(0px,0px,20px,0px);
+			@include margin(0px,120px,30px,120px);
+			@include padding(0px,0px,0px,0px);
 		}
 		.bgHead{
 			background:$blueZoom;
@@ -1036,7 +1035,7 @@ textarea:-ms-input-placeholder,
 		}
 		.filters{
 			clear: both;
-			@include margin(20px,0px,0px,0px);
+			@include margin(0px,120px,60px,120px);
 			p{
 				float: left;
 				line-height:24px;
@@ -1046,11 +1045,11 @@ textarea:-ms-input-placeholder,
 				@include margin(0px,50px,0px,0px);
 				span.circle{
 					@include border-radius(40px);
+					@include text-align(center);
+					@include margin(0px,20px,0px,0px);
 					width:24px;
 					height:24px;
 					line-height:24px;
-					@include text-align(center);
-					@include margin(0px,20px,0px,0px);
 					display:inline-block;
 					background-color:$graySideBarIzq;
 					color:$white;
