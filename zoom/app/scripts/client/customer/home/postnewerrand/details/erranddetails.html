@@ -26,7 +26,7 @@
                         <div class="form-group margin-bottom-sm">
                             <div class="textarea">
                                 <textarea name="" id="" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops."></textarea>
-                                <div class="imageClip"></div>
+                                <div class="imageClip" ngf-select ngf-multiple="false" ng-model="firstFile" ngf-change="uploadFirstFile(firstFile)"></div>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                         <div class="form-group margin-bottom-sm">
                             <div class="textarea">
                                 <textarea name="" id="" class="form-control no-border-radius" rows="3" placeholder="For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner."></textarea>
-                                <div class="imageClip"></div>
+                                <div class="imageClip" ngf-select ngf-multiple="false" ng-model="secondFile" ngf-change="uploadSecondFile(secondFile)"></div>
                             </div>
                         </div>
                     </div>
