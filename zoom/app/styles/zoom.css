@@ -1,9 +1,10 @@
 @font-face {
-  font-family: tw-cem;
-  src: url(../fonts/tw-cen-mt.ttf); }
+  font-family: 'Tw Cen MT';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Tw Cen MT"), url("../fonts/tw-cent-mt/Tw Cen MT.woff") format("woff"); }
 body {
   font-family: 'Tw Cen MT';
-  font-family: tw-cem;
   font-size: 14px;
   margin: 0px;
   padding: 0px; }
@@ -361,7 +362,7 @@ input:-ms-input-placeholder {
             padding: 0px 0px 0px 0px;
             height: 25px;
             line-height: 25px;
-            margin: 0px 0px 0px 2px;
+            margin: 0px 0px 0px 10px;
             font-weight: normal; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish {
       width: 100%;
@@ -621,39 +622,41 @@ input:-ms-input-placeholder {
     .zoom article .containerImage h4 {
       font-weight: normal;
       color: #6E6E6E; }
-.zoom .supportZoom h3, .zoom .supportZoom h4 {
-  color: #4F4F4F;
-  font-weight: bold;
-  font-size: 20px; }
-.zoom .supportZoom button {
-  width: 200px;
-  background: transparent;
-  font-size: 20px;
-  background: transparent;
-  color: #43C9E1;
-  font-weight: normal;
-  height: 45px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  border: 2px solid #43C9E1;
-  text-align: center;
-  margin: 50px auto 0px auto; }
-  .zoom .supportZoom button:hover {
+.zoom .supportZoom {
+  margin: 0px 0px 80px 0px; }
+  .zoom .supportZoom h3, .zoom .supportZoom h4 {
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 20px; }
+  .zoom .supportZoom button {
+    width: 200px;
+    background: transparent;
+    font-size: 20px;
+    background: transparent;
+    color: #43C9E1;
+    font-weight: normal;
+    height: 45px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #43C9E1;
+    text-align: center;
+    margin: 50px auto 0px auto; }
+    .zoom .supportZoom button:hover {
+      background: #43C9E1;
+      color: #FFFFFF; }
+  .zoom .supportZoom button.active {
     background: #43C9E1;
     color: #FFFFFF; }
-.zoom .supportZoom button.active {
-  background: #43C9E1;
-  color: #FFFFFF; }
-.zoom .supportZoom .subfooter {
-  background: #43C9E1;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  margin: 50px 0px 0px 0px;
-  color: #FFFFFF;
-  font-size: 18px; }
+  .zoom .supportZoom .subfooter {
+    background: #43C9E1;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin: 50px 0px 0px 0px;
+    color: #FFFFFF;
+    font-size: 18px; }
 .zoom div.errandsProgressDetail h3 {
   background: #43C9E1;
   color: #FFFFFF;
@@ -677,7 +680,7 @@ input:-ms-input-placeholder {
       .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title {
         margin: 0px auto 0px auto;
         width: 100%;
-        max-width: 723px; }
+        max-width: 715px; }
         .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a {
           text-decoration: none; }
           .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.number {
@@ -698,7 +701,8 @@ input:-ms-input-placeholder {
           .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a:after {
             font-family: 'Glyphicons Halflings';
             content: "\e252";
-            display: inline-block; }
+            display: inline-block;
+            font-size: 8px; }
           .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a.collapsed:after {
             content: "\e250"; }
     .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body {
@@ -706,7 +710,7 @@ input:-ms-input-placeholder {
       border: 0px solid transparent;
       margin: 0px auto 0px auto;
       width: 100%;
-      max-width: 686px; }
+      max-width: 730px; }
       .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .provider {
         background: #d4dee2;
         width: 100%;
@@ -728,7 +732,8 @@ input:-ms-input-placeholder {
           color: #575656;
           margin: 0px 0px 0px 0px;
           padding: 0px 0px 0px 0px;
-          font-size: 18px; }
+          font-size: 16px;
+          letter-spacing: 0px; }
         .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .provider hr {
           margin: 7px 0px 7px 0px;
           border: 0px solid transparent;
@@ -739,11 +744,10 @@ input:-ms-input-placeholder {
         margin: 10px 0px 0px 0px;
         padding: 10px 10px 10px 10px; }
         .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .details p {
-          font-size: 18px;
           color: #575656;
           margin: 0px 0px 0px 0px;
           padding: 0px 0px 0px 0px;
-          font-size: 18px; }
+          font-size: 16.5px; }
         .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .details button.btnEditErrand {
           background: #43C9E1;
           -webkit-border-radius: 10px;
@@ -770,14 +774,14 @@ input:-ms-input-placeholder {
   .zoom .myErrands h2 {
     color: #76939e;
     font-size: 25px;
-    margin: 30px 0px 0px 0px;
+    margin: 80px 80px 70px 80px;
     padding: 0px 0px 20px 0px;
     border-bottom: 1px solid #76939e; }
   .zoom .myErrands h3 {
     color: #464646;
     font-size: 25px;
-    margin: 30px 0px 0px 0px;
-    padding: 0px 0px 20px 0px; }
+    margin: 0px 120px 30px 120px;
+    padding: 0px 0px 0px 0px; }
   .zoom .myErrands .bgHead {
     background: #43C9E1;
     position: absolute;
@@ -787,7 +791,7 @@ input:-ms-input-placeholder {
     width: 100%; }
   .zoom .myErrands .filters {
     clear: both;
-    margin: 20px 0px 0px 0px; }
+    margin: 0px 120px 60px 120px; }
     .zoom .myErrands .filters p {
       float: left;
       line-height: 24px;
@@ -800,11 +804,11 @@ input:-ms-input-placeholder {
         -moz-border-radius: 40px;
         -ms-border-radius: 40px;
         border-radius: 40px;
+        text-align: center;
+        margin: 0px 20px 0px 0px;
         width: 24px;
         height: 24px;
         line-height: 24px;
-        text-align: center;
-        margin: 0px 20px 0px 0px;
         display: inline-block;
         background-color: #76939e;
         color: #FFFFFF;
