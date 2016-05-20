@@ -11,12 +11,13 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" />
     <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/angucomplete-alt/angucomplete-alt.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/zoom.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/zoom.css">
     <!-- endbuild -->
@@ -66,6 +67,8 @@ ga('send', 'pageview');
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
     <script src="bower_components/angular-payments/lib/angular-payments.js"></script>
+    <script src="bower_components/angucomplete-alt/angucomplete-alt.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -86,9 +89,30 @@ ga('send', 'pageview');
     <script src="scripts/login/login.routes.js"></script>
     <script src="scripts/login/login.controller.js"></script>
 
-    <script src="scripts/main/main.routes.js"></script>
-    <script src="scripts/main/main.controller.js"></script>
-    <script src="scripts/main/main.service.js"></script>
+    <!-- POST ERRAND START -->
+    <script src="scripts/client/customer/home/home.routes.js"></script>
+    <script src="scripts/client/customer/home/home.controller.js"></script>
+    
+    <script src="scripts/client/customer/home/postnewerrand/postnewerrand.routes.js"></script>
+    <script src="scripts/client/customer/home/postnewerrand/postnewerrand.controller.js"></script>
+    
+    <script src="scripts/client/customer/home/postnewerrand/select/selecterrand.controller.js"></script>
+    <script src="scripts/client/customer/home/postnewerrand/details/erranddetails.controller.js"></script>
+
+    <script src="scripts/client/customer/home/postnewerrand/confirm/confirmerrand.routes.js"></script>
+    <script src="scripts/client/customer/home/postnewerrand/confirm/confirmerrand.controller.js"></script>
+    <script src="scripts/client/customer/home/postnewerrand/confirm/creditcard/creditcard.controller.js"></script>
+    <script src="scripts/client/customer/home/postnewerrand/confirm/usehours/usehours.controller.js"></script>
+    
+    <script type="text/javascript" src="scripts/client/customer/home/errandsprogress/errandsprogress.controller.js"></script>
+    <script type="text/javascript" src="scripts/client/customer/home/myhours/myhours.controller.js"></script>
+
+    <!-- POST ERRAND END -->
+
+    <!-- MY ERRANDS PAGE START -->
+    <script src="scripts/client/customer/myerrands/myerrands.routes.js"></script>
+    <script src="scripts/client/customer/myerrands/myerrands.controller.js"></script>
+    <!-- MY ERRANDS PAGE END -->
 
     <script src="scripts/client/customer/customer.routes.js"></script>
     <script src="scripts/client/customer/customer.controller.js"></script>

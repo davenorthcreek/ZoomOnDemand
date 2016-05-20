@@ -16,7 +16,9 @@ var zoomApp = angular.module('zoomApp', [
   'ng-token-auth',
   'toastr',
   'restangular',
-  'angularPayments'
+  'angularPayments',
+  'angucomplete-alt',
+  'ngFileUpload'
 ]);
 
 zoomApp.constant('moment', moment);

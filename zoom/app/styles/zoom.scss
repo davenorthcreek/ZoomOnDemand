@@ -1,21 +1,21 @@
 @import '_functions.scss';
 @import '_colors.scss';
 
-// @font-face{
-// 	font-family: 'Tw Cen MT';
-// 	font-style: normal;
-// 	font-weight: normal;
-// 	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
-// }
-
-@font-face {
-    font-family: tw-cem;
-    src: url(../fonts/tw-cen-mt.ttf);
+@font-face{
+	font-family: 'Tw Cen MT';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
 }
+
+// @font-face {
+//     font-family: tw-cem;
+//     src: url(../fonts/tw-cen-mt.ttf);
+// }
 
 body{
 	font-family: 'Tw Cen MT';
-	font-family: tw-cem;
+	// font-family: tw-cem;
 	font-size:14px;
 	margin:0px;
 	padding:0px;
@@ -293,6 +293,24 @@ textarea:-ms-input-placeholder,
 											@include margin(20px,20px,20px,20px);
 										}
 										form{
+											.componentMinusPlus{
+												width:150px;
+												span{
+													@include border-radius(0px);
+													cursor:pointer;
+													background:$graySideBarIzq;
+													padding:0px;
+													width:30px;
+													color:$white;
+													font-weight:normal;
+													font-size:8px;
+													@include border(2px,solid,$graySideBarIzq);
+												}
+												input{
+													font-size:20px;
+													@include border(2px,solid,$graySideBarIzq);
+												}
+											}
 											label{
 												font-weight:normal
 											}
@@ -308,6 +326,7 @@ textarea:-ms-input-placeholder,
 												-moz-box-sizing: border-box;
 												box-sizing: border-box;
 												background:$white;
+												line-height:37px;
 											}
 											.form-group{
 												input, textarea{
@@ -328,10 +347,31 @@ textarea:-ms-input-placeholder,
 														background:url('../images/clip.png');
 														width:14px;
 														height:18px;
+														cursor:pointer;
 													}
 												}
+												.searchZoom{
+													background-image: url(../images/search.png);
+													background-position: 8px 8px;
+													background-repeat: no-repeat;
+													padding-left: 40px;
+												}
+												select{
+													-webkit-appearance: none;
+												    height: 35px;
+												    width: 100%;
+												    border-radius: 0px;
+												    background: #fff url(../images/dn-arrow.png);
+												    background-repeat: no-repeat;
+												    background-position: center right;
+												    // background-position: 8px 8px;
+												    background-size: 25px 44px;
+												    padding-left: 5px;
+												}
 												.input-group{
-													input.searchZoom{
+													.searchZoom{
+														@include border-left(0px,solid,transparent);
+													}.searchZoom{
 														@include border-left(0px,solid,transparent);
 													}
 													.input-group-addon{
@@ -514,7 +554,7 @@ textarea:-ms-input-placeholder,
 															@include padding(0px,0px,0px,0px);
 															height:25px;
 															line-height:25px;
-															@include margin(0px,0px,0px,2px);
+															@include margin(0px,0px,0px,10px);
 															font-weight:normal;
 														}
 													}													
@@ -835,6 +875,7 @@ textarea:-ms-input-placeholder,
 	// -----------------------FOOTER-----------------------
 	// ----------------------------------------------------
 	.supportZoom{
+		@include margin(0px,0px,80px,0px);
 		h3,h4{
 			color:$titlesFooter;
 			font-weight:bold;
@@ -898,6 +939,9 @@ textarea:-ms-input-placeholder,
 					background:$graySideBarIzq;
 					color:$white;
 					.panel-title{
+						@include margin(0px,auto,0px,auto);
+						width:100%;
+						max-width:715px;
 						a{
 							text-decoration:none;
 							span.number{
@@ -919,49 +963,50 @@ textarea:-ms-input-placeholder,
 								// content: "\e114"; 
 								content:"\e252";
 								display:inline-block;
+								font-size:8px;
 							}
 							&.collapsed:after {
 								content:"\e250";
 								// content: "\e080";   
 							}
 						}
-						@include margin(0px,auto,0px,auto);
-						width:100%;
-						max-width:723px;
 					}
 				}
 				.panel-collapse{					
-					.panel-body{
-						
-							.provider{
-								background:$errandDetailBox1;
-								width:100%;
-								@include padding(10px,10px,10px,10px);
-								
-									.image{
-										width:70px;
-										height:70px;
-										@include border-radius(40px);  
-										overflow:hidden;
+					.panel-body{	
+						@include padding(10px,0px,10px,0px);
+						@include border(0px,solid,transparent);
+						@include margin(0px,auto,0px,auto);
+						width:100%;
+						max-width:730px;					
+						.provider{
+							background:$errandDetailBox1;
+							width:100%;
+							@include padding(10px,10px,10px,10px);
+								.image{
+									width:70px;
+									height:70px;
+									@include border-radius(40px);  
+									overflow:hidden;
+									@include text-align(center);
+									@include margin(0px,auto,0px,auto);
+									img{
 										@include text-align(center);
 										@include margin(0px,auto,0px,auto);
-										img{
-											@include text-align(center);
-											@include margin(0px,auto,0px,auto);
-										}
 									}
-									p{
-										color:$errandDetailColor;
-										@include margin(0px,0px,0px,0px);
-										@include padding(0px,0px,0px,0px);
-										font-size:18px;
-									}
-									hr{
-										@include margin(7px,0px,7px,0px);
-										@include border(0px,solid,transparent);
-										@include border-bottom(1px,solid,$errandDetailHr);
-									}
-								
+								}
+								p{
+									color:$errandDetailColor;
+									@include margin(0px,0px,0px,0px);
+									@include padding(0px,0px,0px,0px);
+									font-size:16px;
+									letter-spacing:0px;
+								}
+								hr{
+									@include margin(7px,0px,7px,0px);
+									@include border(0px,solid,transparent);
+									@include border-bottom(1px,solid,$errandDetailHr);
+								}								
 							}
 							.details{
 								background:$errandDetailBox2;
@@ -969,11 +1014,10 @@ textarea:-ms-input-placeholder,
 								@include margin(10px,0px,0px,0px);
 								@include padding(10px,10px,10px,10px);
 								p{
-									font-size:18px;
 									color:$errandDetailColor;
 									@include margin(0px,0px,0px,0px);
 									@include padding(0px,0px,0px,0px);
-									font-size:18px;
+									font-size:16.5px;
 								}
 								button.btnEditErrand{
 									background:$blueZoom;
@@ -994,11 +1038,6 @@ textarea:-ms-input-placeholder,
 							@include text-align(center);
 							@include margin(20px,0px,0px,0px);
 						}
-						@include padding(10px,0px,10px,0px);
-						@include border(0px,solid,transparent);
-						@include margin(0px,auto,0px,auto);
-						width:100%;
-						max-width:686px;
 					}
 				}
 			}
@@ -1016,15 +1055,15 @@ textarea:-ms-input-placeholder,
 		h2{
 			color:$graySideBarIzq;
 			font-size:25px;
-			@include margin(30px,0px,0px,0px);
+			@include margin(80px,80px,70px,80px);
 			@include padding(0px,0px,20px,0px);
 			@include border-bottom(1px,solid,$graySideBarIzq);
 		}
 		h3{
 			color:$titleCompletedOrders;
 			font-size:25px;
-			@include margin(30px,0px,0px,0px);
-			@include padding(0px,0px,20px,0px);
+			@include margin(0px,120px,30px,120px);
+			@include padding(0px,0px,0px,0px);
 		}
 		.bgHead{
 			background:$blueZoom;
@@ -1036,7 +1075,7 @@ textarea:-ms-input-placeholder,
 		}
 		.filters{
 			clear: both;
-			@include margin(20px,0px,0px,0px);
+			@include margin(0px,120px,60px,120px);
 			p{
 				float: left;
 				line-height:24px;
@@ -1046,11 +1085,11 @@ textarea:-ms-input-placeholder,
 				@include margin(0px,50px,0px,0px);
 				span.circle{
 					@include border-radius(40px);
+					@include text-align(center);
+					@include margin(0px,20px,0px,0px);
 					width:24px;
 					height:24px;
 					line-height:24px;
-					@include text-align(center);
-					@include margin(0px,20px,0px,0px);
 					display:inline-block;
 					background-color:$graySideBarIzq;
 					color:$white;
@@ -1519,3 +1558,51 @@ textarea:-ms-input-placeholder,
 	-o-transition: All 0.3s ease;
 }
 */
+
+.zoomswitch {
+    position: relative; width: 70px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.zoomswitch-checkbox {
+    display: none;
+}
+.zoomswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid transparent; border-radius: 20px;
+}
+.zoomswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.zoomswitch-inner:before, .zoomswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.zoomswitch-inner:before {
+    content: "NO";
+    padding-left: 10px;
+    background-color: $graySideBarIzq; color: #FFFFFF;
+}
+.zoomswitch-inner:after {
+    content: "YES";
+    padding-right: 10px;
+    background-color: $graySideBarIzq; color: #FFFFFF;
+    text-align: right;
+}
+.zoomswitch-switch {
+	height: 30px;
+    display: block; width: 30px; margin: 2px;
+    background: #EBEBEB;
+    position: absolute; top: 0; bottom: 0;
+    right: 40px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.zoomswitch-checkbox:checked + .zoomswitch-label .zoomswitch-inner {
+    margin-left: 0;
+}
+.zoomswitch-checkbox:checked + .zoomswitch-label .zoomswitch-switch {
+    right: 0px; 
+    background-color: #EBEBEB; 
+}
