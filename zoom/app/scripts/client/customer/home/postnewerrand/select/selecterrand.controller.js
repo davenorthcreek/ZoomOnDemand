@@ -9,7 +9,6 @@
     /** @ngInject */
     SelectErrandController.$inject = ['$state', '$scope'];
     function SelectErrandController($state, $scope) {
-        // var vm = this;        
-     
+      // var vm = $scope;
     }
 })();

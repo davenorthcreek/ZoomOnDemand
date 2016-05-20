@@ -15,7 +15,8 @@ var zoomApp = angular.module('zoomApp', [
   'ui.bootstrap.datetimepicker',
   'ng-token-auth',
   'toastr',
-  'restangular'
+  'restangular',
+  "angucomplete-alt"
 ]);
 
 zoomApp.constant('moment', moment);

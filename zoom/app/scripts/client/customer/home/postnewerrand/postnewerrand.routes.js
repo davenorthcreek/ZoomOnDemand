@@ -8,7 +8,7 @@ $urlRouterProvider.when('/app/home/postnewerrand/confirm/','/app/home/postnewerr
   $stateProvider
     .state('app.home.postnewerrand.select', {
         url: '/select',
-        controller: 'ConfirmErrandController as vm',
+        controller: 'SelectErrandController as vm',
         templateUrl: 'scripts/client/customer/home/postnewerrand/select/selecterrand.html'
     })
     .state('app.home.postnewerrand.details', {
