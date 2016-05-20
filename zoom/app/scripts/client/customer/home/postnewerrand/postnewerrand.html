@@ -1,0 +1,19 @@
+<div role="tabpanel" class="tab-pane active" id="tab-post-new-errand">
+    <div role="tabpanel">
+        <div class="titleTabErrand">POST ERRAND</div>
+        <ul class="nav nav-tabs tab-header-post-errand" role="tablist">
+            <li role="presentation" class="no-border-radius text-center" ui-sref-active="active">
+                <a ui-sref="app.home.postnewerrand.select" aria-controls="selectErrandTab" role="tab" data-toggle="tab" class="no-margin">1. Select Errant</a>
+            </li>
+            <li role="presentation" class="no-border-radius text-center" ui-sref-active="active">
+                <a ui-sref="app.home.postnewerrand.details" aria-controls="provideErrantTab" role="tab" data-toggle="tab" class="no-margin">2. Provide Errant Details</a>
+            </li>
+            <li role="presentation" class="no-border-radius text-center" ui-sref-active="active">
+                <a ui-sref="app.home.postnewerrand.confirm.usehours" aria-controls="confirmErrandTab" role="tab" data-toggle="tab" class="no-margin">3. Confirm & Post</a>
+            </li>
+        </ul>
+        <div class="tab-content tab-content-post-errand">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

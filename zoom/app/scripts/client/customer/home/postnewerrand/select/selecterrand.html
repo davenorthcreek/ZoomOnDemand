@@ -1,0 +1,93 @@
+<!-- TAB POST NEW ERRAND SUBTAB SELECT ERRAND -->
+<div role="tabpanel" class="tab-pane active" id="selectErrandTab">
+    <div class="containerForm">
+        <form>
+            <div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div class="form-group">
+                        <label for="">What errand do you need help with?</label>
+                        <div class="input-group margin-bottom-sm">
+                            <span class="input-group-addon"><i class="fa fa-search fa-fw" aria-hidden="true"></i></span>
+                            <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" ng-model="form.whatDoYouNeed">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <div class="form-group">
+                        <label for="">Your Service Location</label>
+                        <select class="form-control no-border-radius input-md" ng-options="location for location in locations" ng-model="form.serviceLocation">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                        <label for="">When do you need this service?</label>
+                        <div class="containerTimepicker">
+                            <div class="dropdown date">
+                                I need this on
+                                <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                    <div class="input-group date">
+                                        <input type="text" class="form-control" data-ng-model="form.date">
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <datetimepicker data-ng-model="form.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day', modelType: 'DD/MM/YYYY' }" data-on-set-time="setDate(newDate, oldDate)" />
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                ,
+                                <input type="text" readonly="readonly" id="dayZoom" class="form-control input-sm no-border-radius" ng-model="form.day" placeholder="day"> 
+                                at
+                                <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                    <div class="input-group date">
+                                        <input type="text" class="form-control" data-ng-model="form.time">
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <datetimepicker data-ng-model="form.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute', modelType: 'LT Z' }" data-on-set-time="setTime(newDate, oldDate)" />
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                        <label for="">How frequently do you need our service? So we can set a reminder.</label>
+                    </div>
+                </div>
+                <div class="col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <div class="form-group containerRecurring text-center">
+                        recurring
+                        <!-- <img src="images/recurring.png" alt="" class="img-responsive"> -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="form-group">
+                        <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1) }" ng-click="setFrequency(1)">This one time</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="form-group">
+                        <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 4) }" ng-click="setFrequency(4)">Weekly</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="form-group">
+                        <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 12) }" ng-click="setFrequency(12)">Monthly</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="form-group">
+                        <button class="btn btn-md btnBottomForm" ng-class="{ active: (form.frequencyNumber == 1000) }" ng-click="setFrequency(1000)">Other</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
+                    <button class="btn btnNext pull-right" ng-click="next()">NEXT</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- TAB POST NEW ERRAND SUBTAB SELECT ERRAND -->
