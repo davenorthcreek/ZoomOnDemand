@@ -211,8 +211,16 @@ input:-ms-input-placeholder {
         right: 10px;
         background: url("../images/clip.png");
         width: 14px;
-        height: 18px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group input.searchZoom {
+        height: 18px;
+        cursor: pointer; }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .searchZoom {
+      background-image: url(../images/search.png);
+      background-position: 8px 8px;
+      background-repeat: no-repeat;
+      padding-left: 40px; }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
+      border-left: 0px solid transparent; }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
       border-left: 0px solid transparent; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .input-group-addon {
       background-color: #FFFFFF;
@@ -1084,5 +1092,73 @@ input:-ms-input-placeholder {
 	-o-transition: All 0.3s ease;
 }
 */
+.zoomswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+.zoomswitch-checkbox {
+  display: none; }
+
+.zoomswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px; }
+
+.zoomswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+.zoomswitch-inner:before, .zoomswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box; }
+
+.zoomswitch-inner:before {
+  content: "NO";
+  padding-left: 10px;
+  background-color: #76939E;
+  color: #FFFFFF; }
+
+.zoomswitch-inner:after {
+  content: "YES";
+  padding-right: 10px;
+  background-color: #76939E;
+  color: #FFFFFF;
+  text-align: right; }
+
+.zoomswitch-switch {
+  display: block;
+  width: 30px;
+  margin: 2px;
+  background: #EBEBEB;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s; }
+
+.zoomswitch-checkbox:checked + .zoomswitch-label .zoomswitch-inner {
+  margin-left: 0; }
+
+.zoomswitch-checkbox:checked + .zoomswitch-label .zoomswitch-switch {
+  right: 0px;
+  background-color: #EBEBEB; }
 
 /*# sourceMappingURL=zoom.css.map */
