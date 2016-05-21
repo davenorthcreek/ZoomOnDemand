@@ -98,6 +98,7 @@
 
 
         vm.couponApply = function () {
+            vm.waiting = true;
             if (vm.tmpcoupon) {
                 Restangular.one('client/escrowhours/coupon_check').get({ 'couponCode': vm.tmpcoupon })
                 .then(function (resp) {
@@ -118,6 +119,7 @@
             }
             // vm.total = (vm.subtotal + vm.proFee) * (1 - vm.couponPercent*0.01);  
             vm.coupon = vm.tmpcoupon;
+            vm.waiting = false;
         };
 
         vm.couponCancel = function () {

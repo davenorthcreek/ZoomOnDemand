@@ -183,7 +183,7 @@
             </div>
             <div class="col-md-5 col-sm-5 col-md-offset-2 col-sm-offset-2 top-offset-30 bottom-offset-20">
                 <input type="text" placeholder="Promocode" class="promo" ng-model="vm.tmpcoupon" />
-                <button type="button" class="amount-btn" ng-click="vm.couponApply()">Apply</button>
+                <button type="button" ng-disabled="vm.waiting" class="amount-btn" ng-click="vm.couponApply()">Apply</button>
             </div>
         </div>
     </div>
