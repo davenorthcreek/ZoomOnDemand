@@ -50,7 +50,10 @@
 ga('create', 'UA-XXXXX-X');
 ga('send', 'pageview');
     </script>
-
+      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+      <script>
+    Stripe.setPublishableKey('pk_test_9MLCt7tfGDELF03VZN7u4b7h');
+      </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -73,11 +76,7 @@ ga('send', 'pageview');
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-      <script>
-          Stripe.setPublishableKey('pk_test_9MLCt7tfGDELF03VZN7u4b7h');
-          
-      </script>
+     
     <script src="scripts/app.js"></script>
     <script src="scripts/constants.js"></script>
     <script src="scripts/config.js"></script>
@@ -140,5 +139,7 @@ ga('send', 'pageview');
     <script src="scripts/client/customer/payment/payment.routes.js"></script>
     <script src="scripts/client/customer/payment/payment.controller.js"></script>
     <!-- endbuild -->
+     
+
   </body>
 </html>
