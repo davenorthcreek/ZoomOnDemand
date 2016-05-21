@@ -12,6 +12,12 @@ body{
     font-weight: 300;
 
 }
+.registration-btn:disabled{
+    cursor:not-allowed;
+    background:#ddd;
+    border-color:#999;
+    color:#666;
+}
 .table > thead > tr > th{
     text-align:center;
 }

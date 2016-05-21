@@ -126,11 +126,11 @@
             </div>
         </div>
         <!-- Option title -->
-<form  stripe-form="stripeCallback"  name="checkoutForm">
+<form stripe-form="stripeCallback" ng-submit="vm.payDisabled = true" name="checkoutForm">
     <div class="container">
         <h2 class="credit-head">Credit Card Number</h2>
         <div class="col-md-7 col-sm-7">
-            <input ng-model="number" placeholder="Credit card number" payments-format="card"  name="card" class="inputs">
+            <input ng-model="number" placeholder="Credit card number" payments-format="card" name="card" class="inputs">
         </div>
         <div class="col-md-5 col-sm-5">
             <img src="images/cards.jpg" class="cards" />
@@ -140,11 +140,11 @@
     <div class="container">
         <div class="col-md-3 col-sm-3">
             <h2 class="credit-head">Expiration</h2>
-            <input ng-model="expiry" placeholder="MM/YY" payments-format="expiry" name="expiry"  class="inputs date">
+            <input ng-model="expiry" placeholder="MM/YY" payments-format="expiry" name="expiry" class="inputs date">
         </div>
         <div class="col-md-3 col-sm-4">
             <h2 class="credit-head">Security Code</h2>
-            <input type="text" class="inputs" ng-model="cvc" placeholder="CVC" payments-format="cvc" name="cvc" >
+            <input type="text" class="inputs" ng-model="cvc" placeholder="CVC" payments-format="cvc" name="cvc">
         </div>
     </div>
     <!-- card details-->
@@ -203,8 +203,7 @@
 
         </div>
         <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20 right">
-         
-            <button ng-disabled="vm.payDisabled" ng-click="vm.payDisabled = true" type="submit" class="registration-btn top-offset-20">Make Payment</button>
+            <input ng-disabled="vm.payDisabled" type="submit" value="Make Payment" class="registration-btn top-offset-20" />
             <!--ng-bind="'Pay ' + ((vm.total)|currency) "-->
             <span class="chat">
                 <img src="images/comments.png" />
