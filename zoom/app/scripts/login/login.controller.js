@@ -7,20 +7,22 @@
         .controller('LoginController', LoginController);
 
     /** @ngInject */
-    LoginController.$inject = ['$state', '$scope', 'toastr'];
-    function LoginController($state, $scope, toastr) {
-        // var vm = this;        
-
-        // event handlers
-        // event 'auth:login-success'
-        $scope.$on('auth:login-success', function () {
-            // toastr.success('Welcome ' + user.email);
+    LoginController.$inject = ['$state', '$scope', 'toastr', '$rootScope'];
+    function LoginController($state, $scope, toastr, $rootScope) {
+        var vm = this;
+        $rootScope.home = false;
+       $scope.$on('auth:login-success', function (ev, data) {
+           $rootScope.user = data;
+           $rootScope.home = true;
             //  $state.go('app');
             $state.go('app.home');
-            
         });
-
-        // event 'auth:login-error'
+       $rootScope.$on('auth:validation-success', function (ev, reason) {
+           $rootScope.home = true;
+            $rootScope.user = reason;
+            //  $state.go('app');
+            $state.go('app.home');
+        });
         $scope.$on('auth:login-error', function (ev, data) {
            return toastr.error(data.errors[0], 'Authentication failure', { timeOut: 7000 });
         });
