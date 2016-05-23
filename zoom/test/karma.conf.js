@@ -36,6 +36,7 @@ module.exports = function(config) {
       'bower_components/angular-payments/lib/angular-payments.js',
       'bower_components/angucomplete-alt/angucomplete-alt.js',
       'bower_components/ng-file-upload/ng-file-upload.js',
+      'bower_components/numeral/numeral.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
