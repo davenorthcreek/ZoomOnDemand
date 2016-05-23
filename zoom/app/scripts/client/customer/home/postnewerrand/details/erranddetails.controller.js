@@ -8,9 +8,11 @@
 
     /** @ngInject */
     ErrandDetailsController.$inject = ['$state', '$scope'];
+
     function ErrandDetailsController($state, $scope) {
 		var vm      = $scope;
 		vm.funds    = 0;
+		vm.purshaseOnYourBehalf = false;
 		vm.add      = add;
 		vm.subtract = subtract;
 		vm.dolar    = numeral(vm.funds).format('$0,0.00');
