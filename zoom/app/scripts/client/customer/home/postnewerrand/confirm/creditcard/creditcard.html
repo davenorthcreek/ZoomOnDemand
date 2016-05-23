@@ -1,6 +1,67 @@
 <!-- TAB CONFIRM & POST SUBTAB PAY WITH CREDIT CARD-->
 <div role="tabpanel" class="tab-pane" id="tab-pay">
     <div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+                <label for="">
+                    <strong>Select the hours you would like to purchase:</strong>
+                </label> <br><br>
+                <div class="ContainerBtnHoursOnly">
+                    <button class="btn btn-block btnHoursOnly">1 Hour - $32.00</button>
+                    <button class="btn btn-block btnHoursOnly">2 Hours - $64.00</button>
+                    <button class="btn btn-block btnHoursOnly">3 Hours - $96.00</button>
+                    <button class="btn btn-block btnHoursOnly">4 Hours - $128.00</button>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="optionPay">
+            <span class="line"></span>
+            <h2>OR</h2>
+            <span class="line"></span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+                <label for="">
+                    <strong>Purchase Packaged Deals</strong>
+                </label> <br><br>
+                <div class="containerBtnHoursPackage">
+                    <button class="btn btn-block btnHoursPackage">
+                        <span class="hours"><span>5</span> Hours</span>
+                        <span class="priceTotalHours">$145.00</span>
+                        <small>Price per hour</small>
+                        <span class="priceHour">($29.00/Hour)</span>
+                    </button>
+                    <button class="btn btn-block btnHoursPackage">
+                        <span class="hours"><span>10</span> Hours</span>
+                        <span class="priceTotalHours">$275.00</span>
+                        <small>Price per hour</small>
+                        <span class="priceHour">($27.50/Hour)</span>
+                    </button>
+                    <button class="btn btn-block btnHoursPackage">
+                        <span class="hours"><span>20</span> Hours</span>
+                        <span class="priceTotalHours">$535.00</span>
+                        <small>Price per hour</small>
+                        <span class="priceHour">($26.75/Hour)</span>
+                    </button>
+                    <button class="btn btn-block btnHoursPackage">
+                        <span class="hours"><span>30</span> Hours</span>
+                        <span class="priceTotalHours">$780.00</span>
+                        <small>Price per hour</small>
+                        <span class="priceHour">($26.00/Hour)</span>
+                    </button>
+                    <button class="btn btn-block btnHoursPackage">
+                        <span class="hours"><span>40</span> Hours</span>
+                        <span class="priceTotalHours">$1000.00</span>
+                        <small>Price per hour</small>
+                        <span class="priceHour">($25.00/Hour)</span>
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <hr class="separator">
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
             <div class="form-group">
                 <label for="">Credit Card</label>
@@ -31,6 +92,18 @@
                 <label for="">CVV</label>
                 <input type="text" class="form-control no-border-radius" placeholder="_ _ _">
             </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-sm-offset-4 col-md-2 col-sm-offset-4 col-lg-2">
+            <div class="form-group">
+                <label for="">&nbsp;</label>
+                <input type="text" class="form-control no-border-radius" placeholder="Promocode">
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button class="btn btnNext pull-left" ui-sref="app.home.postnewerrand.details">BACK</button>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button class="btn btnBack pull-right btnClearOrder">Clear Order</button>
         </div>
         <div class="clearfix"></div>
     </div>
