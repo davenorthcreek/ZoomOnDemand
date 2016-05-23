@@ -143,25 +143,25 @@ textarea:-ms-input-placeholder,
 					color:$white;
 					font-size:18px;
 					.sub-textContainer{
-							@include padding(56px,0px,0px,0px);
-							.step{
-								@include margin(0px,0px,38px,0px);
-								span{
-									display:block;
-									width:25px;
-									height:25px;
-									line-height:25px;
-									@include border-radius(80px);
-									background-color:$white;
-									color:$graySideBarIzq;
-									font-size:18px;
-									font-weight:bold;
-									@include margin(0px,auto,18px,auto);
-								}
-								p{
-									line-height:1em;
-								}
+						@include padding(56px,0px,0px,0px);
+						.step{
+							@include margin(0px,0px,38px,0px);
+							span{
+								display:block;
+								width:25px;
+								height:25px;
+								line-height:25px;
+								@include border-radius(80px);
+								background-color:$white;
+								color:$graySideBarIzq;
+								font-size:18px;
+								font-weight:bold;
+								@include margin(0px,auto,18px,auto);
 							}
+							p{
+								line-height:1em;
+							}
+						}
 						
 						.orText{
 							@include margin(0px,0px,33px,0px);
@@ -175,6 +175,27 @@ textarea:-ms-input-placeholder,
 							@include padding(0px,0px,0px,0px);
 							@include margin(0px,auto,15px,auto);
 							width:140px;
+							height:40px;
+							line-height:40px;
+						}
+					}
+					@media (max-width: 991px){
+						.sub-textContainer{
+							@include padding(0px,0px,0px,0px);
+							.step{
+								@include padding(0px,0px,0px,0px);								
+								@include margin(0px,0px,10px,0px);								
+							}
+							.orText{
+								@include margin(0px,0px,10px,0px);
+							}
+							.callText{
+								@include margin(0px,0px,10px,0px);
+							}
+							.number{
+								@include margin(0px,auto,10px,auto);
+								@include padding(0px,0px,10px,0px);
+							}
 						}
 					}
 					p.toMakeText{
@@ -192,7 +213,10 @@ textarea:-ms-input-placeholder,
 			// -----------------------SIDEBAR DERECHO-----------------------
 			// -------------------------------------------------------------
 			aside#latDer{
-				@include padding(0px,45px,0px,53px);
+				@media (max-width: 992px){
+					@include padding(0px,10px,0px,10px);
+				}
+				@include padding(0px,50px,0px,50px);
 				.tabParent{
 					.tab-parent-header{
 						@include margin(50px,0px,36px,0px);
@@ -201,6 +225,10 @@ textarea:-ms-input-placeholder,
 							@include text-align(center);
 							@include border-bottom(0px);
 							font-size:18px;
+							@media (max-width: 590px){
+								height:80px;
+								line-height:80px;
+							}
 							a{	
 								@include padding(0px,0px,10px,0px);
 								@include margin(0px,0px,0px,0px);
@@ -209,17 +237,20 @@ textarea:-ms-input-placeholder,
 								cursor: pointer;
 								font-weight:600;
 								display:block;
+								@media (max-width: 590px){
+									height:80px;
+								}
 								&:hover{
 									background:transparent;
 								}
 							}
 							&:hover{
-								@include border-bottom(5px,solid,$graySideBarIzq);		
+								@include border-bottom(5px,inset,$graySideBarIzq);		
 							}
 						}
 						li.active{
 							a{
-								@include border-bottom(5px,solid,$graySideBarIzq);								
+								@include border-bottom(5px,inset,$graySideBarIzq);								
 							}
 							&:hover{
 								@include border-bottom(0px,solid,transparent);		
@@ -241,6 +272,13 @@ textarea:-ms-input-placeholder,
 							.tab-header-post-errand{
 								@include border(0px);
 								li{
+									@media (max-width: 458px){
+										height:90px;
+									}
+									@media (max-width: 368px){
+										height:120px;
+									}
+
 									width:calc(100% / 3);
 									@include border(1px,solid,$grayBorder);
 									font-size:18px;
@@ -249,6 +287,13 @@ textarea:-ms-input-placeholder,
 										@include border-right(0px,solid,transparent);
 									}
 									a{
+										@media (max-width: 458px){
+											height:90px;
+										}
+										@media (max-width: 368px){
+											height:120px;
+										}
+
 										&:hover{
 											@include margin(0px,0px,0px,0px);
 											color:$white;
@@ -314,7 +359,33 @@ textarea:-ms-input-placeholder,
 											label{
 												font-weight:normal
 											}
+											.textDetails{
+												@media (max-width: 768px){
+													text-align:center !important;
+												}
+											}
+											.componentSwitch{
+												@media (max-width: 768px){
+													float:none !important;
+													.zoomswitch{
+														@include margin(0px,auto,0px,auto);
+													}
+												}
+											}
+											.componentMinusPlus {
+												@include margin(0px,0px,20px,0px);
+												@media (max-width: 768px){
+													float:none !important;
+													@include margin(0px,auto,20px,auto);
+												}
+											}
 											span.spanBalance{
+												@media (max-width: 768px){
+													width:100%;
+												}
+												@media (max-width: 350px){
+													font-size:14px;
+												}
 												@include border(1px,solid,$gray);
 												@include border-radius(40px);
 												display:block;
@@ -342,8 +413,8 @@ textarea:-ms-input-placeholder,
 													}
 													.imageClip{
 														position: absolute;
-														bottom:10px;
-														right:10px;
+														bottom: 5px;
+														right: 20px;
 														background:url('../images/clip.png');
 														width:14px;
 														height:18px;
@@ -382,10 +453,16 @@ textarea:-ms-input-placeholder,
 												}
 												.containerTimepicker{
 													.dropdown{
+														@media (max-width: 650px){
+															display:block;	
+														}
 														display: inline-flex;
 														input[type="text"]{
 															color:$tabParentHeader;
 															@include margin(6px,0px,6px,0px);
+															@media (max-width: 400px){
+																width:100%;
+															}
 															width:264px;
 															background:transparent;
 															@include border(0px,solid,transparent);
@@ -396,6 +473,24 @@ textarea:-ms-input-placeholder,
 															height: 20px;
 															float:left;
 														}
+													}
+												}
+											}
+
+											.containerRecurring{
+												.optionPay{
+													display:flex;
+													justify-content:space-between;
+													align-items: center;
+													@include margin(20px,0px,20px,0px);
+													span.line{
+														width:30%;
+														height:1px;
+													}
+													span.line,
+													h2{
+														font-size:14px;
+														@include margin(0px,0px,0px,0px);
 													}
 												}
 											}
@@ -427,6 +522,15 @@ textarea:-ms-input-placeholder,
 												color:$white;
 												@include margin(40px,0px,0px,0px);
 												height:40px;
+											}
+											button.btnClearOrder{
+												background:$graySideBarIzq;
+											}
+											@media (max-width: 768px){
+												button.btnNext,
+												button.btnBack{
+													width:100%;
+												}
 											}
 											h3{
 												color:$white;
@@ -473,6 +577,9 @@ textarea:-ms-input-placeholder,
 											div.content-payment-container{
 												@include padding(39px,0px,0px,0px);
 												#tab-use-hours{
+													.containerBtnBack{
+														@include padding(0px,0px,0px,0px);
+													}
 													p{
 														font-size:19.77px;
 														color:$colorTextSubmission3;
@@ -487,6 +594,130 @@ textarea:-ms-input-placeholder,
 													}
 												}
 												#tab-pay{
+													.separator{
+														@include margin(30px,0px,30px,0px);
+														@include border-bottom(1px,solid,$colorLine);
+													}
+													.ContainerBtnHoursOnly{
+														display:flex;
+														justify-content:space-between;
+														@media (max-width: 768px){
+															flex-wrap:wrap;
+														}
+														button.btnHoursOnly{
+															// width:calc(100% / 3.8);
+															// float: left;
+															@include border(2px,solid,$graySideBarIzq);
+															@include border-radius(5px);
+															background:$white;
+															color:$graySideBarIzq;
+															font-size:19px;
+															@include margin(0px,0px,0px,20px);
+															&:first-child{
+																@include margin(0px,0px,0px,0px);
+															}
+															&.active,
+															&:active,
+															&:hover,
+															&:focus,
+															&:visited,{
+																background:$graySideBarIzq;
+																color:$white;
+															}
+															@media (max-width: 768px){
+																@include padding(0px,0px,0px,0px);
+																@include margin(0px,0px,20px,0px);
+																width:100%;
+																&:nth-child(2n+1){
+																	@include margin(0px,0px,20px,0px);
+																}
+															}
+														}
+													}
+													.containerBtnHoursPackage{
+														display:flex;
+														justify-content:space-between;
+														@media (max-width: 768px){
+															flex-wrap:wrap;
+														}
+														button.btnHoursPackage{
+															// width:calc(100% / 5);
+															// float: left;
+															@include border(2px,solid,$blueZoom);
+															background:$white;
+															@include margin(0px,0px,0px,20px);
+															@include border-radius(20px);
+															@include padding(10px,0px,0px,0px);
+															&:first-child{
+																@include margin(0px,0px,0px,0px);
+															}
+															.hours,
+															.priceTotalHours,
+															small,
+															.priceHour{
+																display:block;
+																width:100%;
+																color:$buttonsPayWhitCC;
+															}
+															.hours{
+																span{
+																	font-size:25px;
+																}
+																font-size:20px;
+																color:$blueZoom;
+																@include margin(0px,0px,10px,0px);
+															}
+															.priceTotalHours{
+																font-size:16px;
+																@include margin(0px,0px,20px,0px);
+															}
+															small{
+																font-size:12px;
+																@include margin(0px,0px,10px,0px);
+															}
+															.priceHour{
+																font-size:16px;
+																@include margin(0px,0px,10px,0px);
+															}
+															&.active,
+															&:active,
+															&:hover,
+															&:focus,
+															&:visited{
+																.hours,
+																.priceTotalHours,
+																small,
+																.priceHour{
+																	color:$white;
+																}
+																background:$blueZoom;
+																color:$white;
+															}
+															@media (max-width: 768px){
+																@include padding(0px,0px,0px,0px);
+																@include margin(0px,0px,20px,0px);
+																width:45%;
+																&:nth-child(2n+1){
+																	@include margin(0px,5px,20px,0px);
+																}
+															}
+														}
+													}
+													.optionPay{
+														display:flex;
+														justify-content:space-between;
+														align-items: center;
+														@include margin(20px,0px,20px,0px);
+														span.line{
+															width:42%;
+															height:1px;
+														}
+														span.line,
+														h2{
+															font-size:20px;
+															@include margin(0px,0px,0px,0px);
+														}
+													}
 													.form-group{
 														label{
 															color:$labelPay;
@@ -727,115 +958,130 @@ textarea:-ms-input-placeholder,
 								@include border-radius-bottom-right(20px);
 								@include border-radius-bottom-left(20px);
 								
-									div.hours,
-									div.funds{
-										h1{
-											@include margin(0px,0px,0px,0px);
-											@include padding(20px,20px,20px,20px);
-											font-size:24px;
+								div.hours,
+								div.funds{
+									h1{
+										@include margin(0px,0px,0px,0px);
+										@include padding(20px,20px,20px,20px);
+										font-size:24px;
+										color:$white;
+									}
+									.buttonHours,
+									.buttonFunds{
+										@include margin(32px,0px,32px,0px);
+										button{
+											width:200px;
+											height:60px;
+											@include border(0px,solid,transparent);
+											font-size:22px;
 											color:$white;
-										}
-										.buttonHours,
-										.buttonFunds{
-											@include margin(32px,0px,32px,0px);
-											button{
-												width:200px;
-												height:60px;
-												@include border(0px,solid,transparent);
-												font-size:22px;
-												color:$white;
-												@include border-radius(20px);
-											}
-										}
-										.buttonHours{
-											button{
-												background:$blueZoom;
-											}
-										}
-										.buttonFunds{
-											button{
-												background:$graySideBarIzq;
-											}
+											@include border-radius(20px);
 										}
 									}
-									div.hours{
-										@include padding(0px,0px,0px,15px);
-										h1{
-											@include border-radius-top-left(10px);
+									.buttonHours{
+										button{
 											background:$blueZoom;
 										}
-										
-											vertical-align:middle;
-											@include margin(0px,0px,0px,0px);
-											.available-hours{
-												height:240px;
-												background:$bgAvailableHours;
-												@include border-bottom(1px,solid,$borderHoursFunds);
-												h4{
-													font-size:22px;
-													@include margin(27px,0px,60px,0px);
-													color:$colorTextHeadHF;
-												}
-												h2{
-													font-size:43px;
-													color:$colorTextBodyHF;
-												}
-											}
-											.used-hours{
-												height:240px;
-												@include border-bottom(1px,solid,$borderHoursFunds);
-												h4{
-													font-size:22px;
-													@include margin(27px,0px,60px,0px);
-													color:$colorTextHeadHF;
-												}
-												h2{
-													font-size:43px;
-													color:$colorTextBodyHF;
-												}
-											}
-										
 									}
-									div.funds{
-										@include padding(0px,15px,0px,0px);
-										h1{
-											@include border-radius-top-right(10px);
+									.buttonFunds{
+										button{
 											background:$graySideBarIzq;
 										}
-										
-											vertical-align:middle;
-											@include margin(0px,0px,0px,0px);
-											.available-funds{
-												height:240px;
-												background:$colorFundsBg;
-												@include border-left(1px,solid,$borderHoursFunds);
-												@include border-bottom(1px,solid,$borderHoursFunds);
-												h4{
-													font-size:22px;
-													@include margin(27px,0px,60px,0px);
-													color:$colorTextHeadHF;
-												}
-												h2{
-													font-size:43px;
-													color:$colorTextBodyHF;
-												}
-											}
-											.used-funds{
-												height:240px;
-												@include border-bottom(1px,solid,$borderHoursFunds);
-												h4{
-													font-size:22px;
-													@include margin(27px,0px,60px,0px);
-													color:$colorTextHeadHF;
-												}
-												h2{
-													font-size:43px;
-													color:$colorTextBodyHF;
-												}
-											}
-										
 									}
-								
+								}
+								div.hours{
+									@include padding(0px,0px,0px,15px);
+									@media (max-width: 768px){
+										@include padding(0px,0px,0px,0px);
+									}
+									h1{
+										@media (max-width: 768px){
+											@include border-radius-top-left(10px);
+											@include border-radius-top-right(10px);
+										}
+										@include border-radius-top-left(10px);
+										background:$blueZoom;
+									}
+									
+									vertical-align:middle;
+									@include margin(0px,0px,0px,0px);
+									.available-hours{
+										height:240px;
+										background:$bgAvailableHours;
+										@include border-bottom(1px,solid,$borderHoursFunds);
+										h4{
+											font-size:22px;
+											@include margin(27px,0px,60px,0px);
+											color:$colorTextHeadHF;
+										}
+										h2{
+											font-size:43px;
+											color:$colorTextBodyHF;
+										}
+									}
+									.used-hours{
+										height:240px;
+										@include border-bottom(1px,solid,$borderHoursFunds);
+										h4{
+											font-size:22px;
+											@include margin(27px,0px,60px,0px);
+											color:$colorTextHeadHF;
+										}
+										h2{
+											font-size:43px;
+											color:$colorTextBodyHF;
+										}
+									}
+									
+								}
+								div.funds{
+									@include padding(0px,15px,0px,0px);
+									@media (max-width: 768px){
+										@include padding(0px,0px,0px,0px);
+									}
+									h1{
+										@media (max-width: 768px){
+											@include border-radius-top-left(10px);
+											@include border-radius-top-right(10px);
+										}
+										@include border-radius-top-right(10px);
+										background:$graySideBarIzq;
+									}
+									
+									vertical-align:middle;
+									@include margin(0px,0px,0px,0px);
+									.available-funds{
+										height:240px;
+										background:$colorFundsBg;
+										@media (max-width: 768px){
+											@include border-left(0px,solid,$borderHoursFunds);
+										}
+										@include border-left(1px,solid,$borderHoursFunds);
+										@include border-bottom(1px,solid,$borderHoursFunds);
+										h4{
+											font-size:22px;
+											@include margin(27px,0px,60px,0px);
+											color:$colorTextHeadHF;
+										}
+										h2{
+											font-size:43px;
+											color:$colorTextBodyHF;
+										}
+									}
+									.used-funds{
+										height:240px;
+										@include border-bottom(1px,solid,$borderHoursFunds);
+										h4{
+											font-size:22px;
+											@include margin(27px,0px,60px,0px);
+											color:$colorTextHeadHF;
+										}
+										h2{
+											font-size:43px;
+											color:$colorTextBodyHF;
+										}
+									}									
+								}							
 							}							
 						}
 					}
@@ -876,12 +1122,14 @@ textarea:-ms-input-placeholder,
 	// ----------------------------------------------------
 	.supportZoom{
 		@include margin(0px,0px,80px,0px);
+		@media (max-width: 768px){
+			@include margin(0px,0px,10px,0px);
+		}
 		h3,h4{
 			color:$titlesFooter;
 			font-weight:bold;
 			font-size:20px;
 		}
-
 		button{
 			width:200px;
 			background:transparent;
@@ -897,6 +1145,17 @@ textarea:-ms-input-placeholder,
 			&:hover{
 				background:$blueZoom;
 				color:$white;
+			}
+		}
+
+		@media (max-width: 768px){
+			div.helpCenter button{
+				float:none !important;
+				@include margin(0px,auto,10px,auto);
+			}
+			div.liveChat button{
+				float:none !important;
+				@include margin(0px,auto,0px,auto);
 			}
 		}
 		button.active{
@@ -954,6 +1213,10 @@ textarea:-ms-input-placeholder,
 								color:$graySideBarIzq;
 							}
 							span.text{
+								@media (max-width: 762px){
+									display:block;
+									@include padding(0px,0px,0px,50px);
+								}
 								display:inline-block;
 								@include padding(0px,19px,0px,19px);
 								@include text-align(left);
@@ -1020,6 +1283,10 @@ textarea:-ms-input-placeholder,
 									font-size:16.5px;
 								}
 								button.btnEditErrand{
+									@media (max-width: 768px){
+										float:none !important;
+										@include margin(0px,auto,0px,auto);
+									}
 									background:$blueZoom;
 									@include border-radius(10px);
 									color:$white;
@@ -1058,12 +1325,18 @@ textarea:-ms-input-placeholder,
 			@include margin(80px,80px,70px,80px);
 			@include padding(0px,0px,20px,0px);
 			@include border-bottom(1px,solid,$graySideBarIzq);
+			@media (max-width: 1043px){
+				@include margin(80px,50px,10px,50px);
+			}
 		}
 		h3{
 			color:$titleCompletedOrders;
 			font-size:25px;
 			@include margin(0px,120px,30px,120px);
 			@include padding(0px,0px,0px,0px);
+			@media (max-width: 1043px){
+				@include margin(0px,50px,30px,50px);
+			}
 		}
 		.bgHead{
 			background:$blueZoom;
@@ -1076,7 +1349,13 @@ textarea:-ms-input-placeholder,
 		.filters{
 			clear: both;
 			@include margin(0px,120px,60px,120px);
+			@media (max-width: 1043px){
+				@include margin(0px,50px,10px,50px);
+			}
 			p{
+				@media (max-width: 1043px){
+					float: none !important;
+				}
 				float: left;
 				line-height:24px;
 				height:24px;
@@ -1094,6 +1373,10 @@ textarea:-ms-input-placeholder,
 					background-color:$graySideBarIzq;
 					color:$white;
 					font-size:15px;
+				}
+				&:hover{
+					cursor:pointer;
+					text-decoration: underline;
 				}
 			}
 		}
