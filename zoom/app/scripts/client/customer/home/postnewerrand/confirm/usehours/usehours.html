@@ -6,13 +6,16 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group pull-right">
             <p>Pay with Purchased Hours</p>
-            <div class="zoomswitch pull-right">
+            <!-- <div class="zoomswitch pull-right">
                 <input type="checkbox" name="zoomswitch" class="zoomswitch-checkbox" id="myzoomswitch">
                 <label class="zoomswitch-label" for="myzoomswitch">
                     <span class="zoomswitch-inner"></span>
                     <span class="zoomswitch-switch"></span>
                 </label>
-            </div>
+            </div> -->
+            <switch id="enabled" name="enabled" ng-model="purchaseOnYourBehalf" on="No" off="Yes" class="pull-right green"></switch>
+            <br>
+            {{purchaseOnYourBehalf}}
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 containerBtnBack">

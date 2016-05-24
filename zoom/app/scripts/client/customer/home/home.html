@@ -1,4 +1,5 @@
-<!-- <header ng-include="'scripts/static/header.html'"></header> -->
+<div class="containerZoom">
+    <!-- <header ng-include="'scripts/static/header.html'"></header> -->
 <section>
     <div>
         <aside id="latIzq" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-left">
@@ -402,25 +403,5 @@
     <button>Edit</button>
     <div class="clearfix"></div>
 </div>
-<script type="text/javascript">
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        var target = $(e.target).attr("href");
-        if ((target == '#tab-errants-in-progress')) {
-            $('.contentDetailsErrandsProgress').removeClass('hide').addClass('show');
-        }
-        else{
-            $('.contentDetailsErrandsProgress').removeClass('show').addClass('hide');
-        }
-    });
-    
-    $('.tooltipErrandService, .tooltipDescription').each(function(){
-        $(this).tooltip({
-            html: true,
-            title: $('#contentTooltip').html(),
-            placement:'bottom',
-            trigger:'focus',
-            // trigger:'click',
-            template:'<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
-        });
-    });
-</script>
+
+</div>

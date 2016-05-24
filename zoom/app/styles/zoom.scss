@@ -49,6 +49,9 @@ textarea:-ms-input-placeholder,
 } /* IE 10+ */
 
 .zoom{
+	.container{
+		@include padding(0px,0px,0px,0px);
+	}
 	// ----------------------------------------------------
 	// -----------------------HEADER-----------------------
 	// ----------------------------------------------------
@@ -463,7 +466,8 @@ textarea:-ms-input-placeholder,
 															@media (max-width: 400px){
 																width:100%;
 															}
-															width:264px;
+															// width:264px;
+															width:227px;
 															background:transparent;
 															@include border(0px,solid,transparent);
 															@include border-bottom(1px,solid,$colorTextForm);
@@ -484,7 +488,7 @@ textarea:-ms-input-placeholder,
 													align-items: center;
 													@include margin(20px,0px,20px,0px);
 													span.line{
-														width:30%;
+														width:40%;
 														height:1px;
 													}
 													span.line,
@@ -1738,6 +1742,120 @@ textarea:-ms-input-placeholder,
 	// -------------------------------------------------------
 	// -----------------------GENERALES-----------------------
 	// -------------------------------------------------------
+	.tooltipErrandService{
+		resize:none;
+	}
+	.containerZoom{
+		width:100%;
+		max-width:1300px;
+		@include margin(0px,auto,0px,auto);
+	}
+	@media (max-width: 1400px){
+		.containerZoom{
+			width:100%;
+			max-width:100%;
+		}
+	}
+	.switch {
+	  background:$graySideBarIzq;
+	  border: 1px solid #dfdfdf;
+	  position: relative;
+	  display: inline-block;
+	  box-sizing: content-box;
+	  overflow: visible;
+	  width: 70px;
+	  height: 30px;
+	  padding: 0px;
+	  margin: 0px;
+	  border-radius: 20px;
+	  cursor: pointer;
+	  box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px;
+	  transition: 0.3s ease-out all;
+	  -webkit-transition: 0.3s ease-out all;
+	  top: -1px;
+	}
+	/*adding a wide width for larger switch text*/
+	.switch.wide {
+	  width:80px;
+	}
+	.switch small {
+	  background: $buttonSwitch;
+	  border-radius: 100%;
+	  box-shadow: 0 0px 0px rgba(0,0,0,0.4);
+	  width: 24px;
+	  height: 24px;
+	  position: absolute;
+	  top: 2px;
+	  left: 2px;
+	  transition: 0.3s ease-out all;
+	  -webkit-transition: 0.3s ease-out all;
+	}
+	.switch.checked {
+	  background: rgb(100, 189, 99);
+	  border-color: rgb(100, 189, 99);
+	}
+	.switch.checked small {
+	  left: 42px;
+	}
+	/*wider switch text moves small further to the right*/
+	.switch.wide.checked small {
+	  left:40px;
+	}
+	/*styles for switch-text*/
+	.switch .switch-text {
+	  font-size:16px;
+	  font-weight:bold;
+	}
+
+	.switch .off {
+	  display:block;
+	  position: absolute;
+	  right: 13%;
+	  top: 16%;
+	  z-index: 0;
+	  color:$white;
+	}
+
+	.switch .on {
+	  display:none;
+	   z-index: 0;
+	  color:#fff;
+	  position: absolute;
+	  top: 16%;
+	  left: 15%;
+	}
+
+	.switch.checked .off {
+	  display:none;
+	}
+
+	.switch.checked .on {
+	  display:block;
+
+	}
+
+	.switch.disabled {
+	  opacity: .50;
+	  cursor: not-allowed;
+	}
+
+	.contentPopoverZoom{
+		font-family: 'Tw Cen MT';
+		p{
+			text-align:justify;
+			font-size:16px;
+		}
+		button{
+			background:$blueZoom;
+			color:$white;
+			float:right;
+			@include padding(0px,0px,0px,0px);
+			@include border-radius(0px);
+			width:47px;
+			height:19px;
+		}
+	}
+
 }
 
 

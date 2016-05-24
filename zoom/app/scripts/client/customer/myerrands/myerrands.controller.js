@@ -16,7 +16,7 @@ function MyErrandsController($scope, moment, $sce) {
 	vm.orderAgain = orderAgain;
 	vm.editOrder = editOrder;
 	vm.saveOrder = saveOrder;
-	vm.getPopoverTemplate = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
+	vm.getPopoverTemplate = $sce.trustAsHtml('<div class="contentPopoverZoom"><p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p><button class="btn btn-sm">EDIT</button><div class="clearfix"></div></div>');
 
 	init();
 
@@ -84,9 +84,9 @@ function MyErrandsController($scope, moment, $sce) {
 	}
 
 	function getPopoverTemplate(string) {
-		var html = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
-		console.log(html);
-		return html;
+		// var html = $sce.trustAsHtml('<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>');
+		// console.log(html);
+		// return html;
 	}
 
 	/*

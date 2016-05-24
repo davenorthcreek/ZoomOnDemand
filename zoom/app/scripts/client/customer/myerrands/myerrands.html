@@ -34,12 +34,12 @@
                         <select class="form-control no-border-radius input-md" ng-show="editErrand.index == $index" ng-model="errand.type"
                             ng-options="errandType for errandType in errandTypes" ng-model="form.serviceLocation">
                         </select>
-                        <button class="tooltipErrandService" ng-show="editErrand.index != $index" tooltips tooltip-template="tooltip">{{errand.type}}</button>
+                        <button class="tooltipErrandService" ng-show="editErrand.index != $index" popover-placement="bottom" popover-trigger="focus" uib-popover-html="getPopoverTemplate" uib-popover-html="getPopoverContent(input)">{{errand.type}}</button>
                     </td>
                     <td>
-                        <textarea class="tooltipErrandService" ng-show="editErrand.index == $index" rows="3" cols="40" 
+                        <textarea class="tooltipErrandService" ng-show="editErrand.index == $index" rows="3" cols="20" 
                             ng-model="errand.description">{{errand.description}}</textarea>
-                        <button class="tooltipDescription" ng-show="editErrand.index != $index" uib-popover-html="getPopoverTemplate">
+                        <button class="tooltipDescription" ng-show="editErrand.index != $index" popover-placement="bottom" popover-trigger="focus" uib-popover-html="getPopoverTemplate" uib-popover-html="getPopoverContent(input)">
                             {{errand.description}}
                         </button>
                     </td>
@@ -57,6 +57,21 @@
                 </tr>
             </tbody>
         </table>
+        <!-- <div id="contentTooltip" class="hidden">
+            <p>Take document to the pick up location and mail it at the post office on Steiner street. Call me if there are any problems.</p>
+            <button>Edit</button>
+            <div class="clearfix"></div>
+        </div> -->
+        <!-- $('.tooltipErrandService, .tooltipDescription').each(function(){
+            $(this).tooltip({
+                html: true,
+                title: $('#contentTooltip').html(),
+                placement:'bottom',
+                trigger:'focus',
+                // trigger:'click',
+                template:'<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
+            });
+        }); -->
         <!-- <div class="table">
             <div class="headerTabla">
                 <ul>
