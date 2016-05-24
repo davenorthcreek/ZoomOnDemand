@@ -36,13 +36,7 @@ angular.module('zoomApp').run(function ($state, $rootScope, toastr) {
     });
     $rootScope.$on('$destroy', cleanupfunc3);
 
-    var cleanupfunc5 = $rootScope.$on('auth:validation-error', function () {
-        toastr.wanning('You should log in.')
-        $state.go('login');
-
-    });
-    $rootScope.$on('$destroy', cleanupfunc5);
-
+   
     var cleanupfunc6 = $rootScope.$on('auth:session-expired', function () {
         toastr.wanning('Session has expired. Please log in.');
         $state.go('login');
