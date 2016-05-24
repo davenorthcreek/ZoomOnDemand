@@ -16,7 +16,6 @@ function MyErrandsController($scope, moment, $sce) {
 	vm.orderAgain = orderAgain;
 	vm.editOrder = editOrder;
 	vm.saveOrder = saveOrder;
-	vm.getPopoverTemplate = $sce.trustAsHtml('<div class="contentPopoverZoom"><p>Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</p><button class="btn btn-sm">EDIT</button><div class="clearfix"></div></div>');
 
 	init();
 
@@ -82,23 +81,4 @@ function MyErrandsController($scope, moment, $sce) {
 	function saveOrder(index, errand) {
 		vm.editErrand.index = -1;
 	}
-
-	function getPopoverTemplate(string) {
-		// var html = $sce.trustAsHtml('<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>');
-		// console.log(html);
-		// return html;
-	}
-
-	/*
-	$('.tooltipErrandService, .tooltipDescription').each(function(){
-        $(this).tooltip({
-            html: true,
-            title: $('#contentTooltip').html(),
-            placement:'bottom',
-            trigger:'focus',
-            // trigger:'click',
-            template:'<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
-        });
-    });
-    */
 };
