@@ -34,12 +34,14 @@
                         <select class="form-control no-border-radius input-md" ng-show="editErrand.index == $index" ng-model="errand.type"
                             ng-options="errandType for errandType in errandTypes" ng-model="form.serviceLocation">
                         </select>
-                        <button class="tooltipErrandService" ng-show="editErrand.index != $index">{{errand.type}}</button>
+                        <button class="tooltipErrandService" ng-show="editErrand.index != $index" tooltips tooltip-template="tooltip">{{errand.type}}</button>
                     </td>
                     <td>
                         <textarea class="tooltipErrandService" ng-show="editErrand.index == $index" rows="3" cols="40" 
                             ng-model="errand.description">{{errand.description}}</textarea>
-                        <button class="tooltipDescription" ng-show="editErrand.index != $index">{{errand.description}}</button>
+                        <button class="tooltipDescription" ng-show="editErrand.index != $index" uib-popover-html="getPopoverTemplate">
+                            {{errand.description}}
+                        </button>
                     </td>
                     <td>
                         Hours Used:  {{errand.hoursUsed}}

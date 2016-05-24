@@ -19,7 +19,8 @@ var zoomApp = angular.module('zoomApp', [
   'angularPayments',
   'angucomplete-alt',
   'ngFileUpload',
-  'uiSwitch'
+  'uiSwitch',
+  'ui.bootstrap'
 ]);
 
 zoomApp.constant('moment', moment);

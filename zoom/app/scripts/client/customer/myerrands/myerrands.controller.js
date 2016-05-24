@@ -8,14 +8,16 @@
  * MyErrandsController of the zoomApp
  */
 zoomApp.controller('MyErrandsController', MyErrandsController);
-MyErrandsController.$inject = ['$scope', 'moment'];
+MyErrandsController.$inject = ['$scope', 'moment', '$sce'];
 
-function MyErrandsController($scope, moment) {
+function MyErrandsController($scope, moment, $sce) {
 	
 	var vm = $scope;
 	vm.orderAgain = orderAgain;
 	vm.editOrder = editOrder;
 	vm.saveOrder = saveOrder;
+	vm.getPopoverTemplate = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
+
 	init();
 
 	function init() {
@@ -79,6 +81,12 @@ function MyErrandsController($scope, moment) {
 
 	function saveOrder(index, errand) {
 		vm.editErrand.index = -1;
+	}
+
+	function getPopoverTemplate(string) {
+		var html = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
+		console.log(html);
+		return html;
 	}
 
 	/*
