@@ -10,7 +10,7 @@
     CustomerController.$inject = ['$state', '$rootScope', '$scope', 'toastr', 'Restangular'];
     function CustomerController($state, $rootScope, $scope, toastr, Restangular) {
         var vm = this;
-       
+      
        $rootScope.$on('auth:logout-success', function (ev) {
            $state.go('login');
            $rootScope.home = false;

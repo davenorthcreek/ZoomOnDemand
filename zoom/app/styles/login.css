@@ -1,0 +1,188 @@
+@font-face {
+    font-family: tw-cem;
+    src: url(../fonts/tw-cen-mt.ttf);
+}
+body{
+    font-family: tw-cem;
+        letter-spacing: 0.5px;
+    font-weight: 300;
+}
+.back-login{
+        background-image: url(../images/Forgotbg.jpg);
+        background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+}
+.back-sign{
+        background-image: url(../images/SignUpbg.jpg);
+        background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+}
+.login-btn:hover {
+    color: #52C9E0;
+    background: #fff;
+}
+.sign-btn {
+    color: #fff;
+    border: 2px solid #52C9E0;
+    background: #52c9e0;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: 80%;
+    margin-bottom: 10px;
+        height: 50px;
+            display: block;
+    margin: auto;
+}
+.login-btn {
+    color: #fff;
+    border: 2px solid #52C9E0;
+    background: #52c9e0;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: 80%;
+    margin-bottom: 30px;
+        height: 50px;
+            display: block;
+    margin: auto;
+}
+.small-login{
+        padding: 0px 10px;
+    border-right: 1px solid;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.small-signup{
+        padding: 0px 10px;
+    border-left: 1px solid;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.top-offset-20{
+    margin-top: 20px;
+}
+.center{
+    text-align: center;
+}
+.container-fluid{
+    width: 100%;
+}
+.login-block{
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+        text-align: center;
+}
+.width150p{
+    width: 180px;
+    margin: 20px auto;
+
+}
+.logo-fixed{
+        height: 40px;
+        margin-right: 15px;
+}
+.google-login{
+    background: #B82D21;
+    color: #fff;
+    border: none;
+    padding:7px 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+width: 100%;
+margin: 10px 0px 20px;
+}
+.facebook-login{
+    background: #2C42B5;
+    color: #fff;
+    border: none;
+    padding:7px 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+width: 100%;
+margin: 10px 0px 20px;
+}
+.padding0{
+    padding: 0px;
+}
+.width100{
+    width: 100%;
+}
+.margin-20{
+    margin: 20px 0px;
+}
+.right{
+    text-align: right;
+}
+.login-inputs{
+        width: 100%;
+    border: 1px solid #7E9096;
+    font-size: 20px;
+    padding: 5px;
+    height: 40px;
+    margin: 10px 0px 20px;
+        letter-spacing: 0.5px;
+    padding-left: 10px;
+}
+.bottom-offset-30{
+    margin-bottom:30px;
+}
+.blue-head{
+        color: #5BCFE4;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #5BCFE4;
+}
+.blue-text{
+        color: #5BCFE4;
+        padding-bottom: 15px;
+        font-weight: 300;
+}
+.sign-text{
+        color: #5BCFE4;
+        margin-bottom: 0px;
+        font-weight: 300;
+}
+.forgot-shift{
+    margin-bottom: 30px;
+    margin-top: -10px;
+    font-size: 16px;
+}
+.terms-click{
+    color: #666;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.terms-click:hover{
+    color: #666;
+}
+.terms-policy{
+    margin-bottom: 30px;
+}
+.offset-40{
+        margin: 40px 0px;
+}
+.left{
+    text-align: left;
+}
+.login-inputs::-webkit-input-placeholder {
+    color:    #777;
+}
+.login-inputs:-moz-placeholder {
+    color:    #777;
+}
+.login-inputs::-moz-placeholder {
+    color:    #777;
+}
+.login-inputs:-ms-input-placeholder {
+    color:    #777;
+}

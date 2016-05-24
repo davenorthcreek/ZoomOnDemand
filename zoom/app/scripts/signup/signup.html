@@ -1,0 +1,76 @@
+<!--<header ng-include="'scripts/static/loginheader.html'"> </header>-->
+<div class="container-fluid back-sign">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-12 login-block">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12 padding0">
+            <img src="images/zoomlogo.png" class="width150p" />
+            <div class="col-sm-12 col-xs-12 center padding0">
+                <button type="button" class="google-login" ng-click="authenticate('google', {config: 'default'})">
+                    <img src="images/google-plus.png" alt="google" class="logo-fixed" /> Sign up with Google
+                </button>
+                <button type="button" class="facebook-login" ng-click="authenticate('facebook', {config: 'default'})">
+                    <img src="images/facebook.png" alt="google" class="logo-fixed" /> Sign up with Facebook
+                </button>
+                <img src="images/or.png" class="width100 margin-20" />
+
+
+                <form ng-submit="submitRegistration(vm.form, {config: 'default'})" role="form">
+
+                    <input type="email" placeholder="Enter Email Address" ng-model="vm.form.email" class="login-inputs">
+                    <input type="password" placeholder="Create Password" ng-model="vm.form.password" class="login-inputs">
+                    <input type="password" placeholder="Confirm Password" class="login-inputs" ng-model="vm.form.password_confirmation">
+                    <button type="submit" class="sign-btn">Sign Up</button>
+
+                </form> 
+
+
+                    <img src="images/or.png" class="width100 margin-20" />
+                    <button  class="sign-btn" ui-sref="login">Log In</button>
+                    <div class="terms-policy">
+                        <p class="sign-text">Signing up means you agree with Zoom Errand's</p>
+                        <p class="sign-text"><a class="terms-click" data-toggle="modal" data-target="#myModal">Terms & Conditions</a> and <a class="terms-click" data-toggle="modal" data-target="#myModal2">Privacy Policy</a></p>
+                    </div>
+</div>
+        </div>
+    </div>
+</div>
+<!-- Terms -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Terms content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Terms & Conditions</h4>
+            </div>
+            <div class="modal-body">
+                <p>Terms & Conditions here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Privacy -->
+<div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Privacy content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Privacy Policy</h4>
+            </div>
+            <div class="modal-body">
+                <p>Privacy Policy here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--<footer ng-include="'scripts/static/loginfooter.html'"></footer>-->

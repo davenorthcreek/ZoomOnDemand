@@ -1,44 +1,30 @@
-
-
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+  <!--<header ng-include="'scripts/static/loginheader.html'"> </header>-->
+<div class="container-fluid back-login">
+    <div class="col-sm-6 col-sm-offset-3 col-xs-12 login-block">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12 padding0">
+            <img src="images/zoomlogo.png" class="width150p" />
+            <div class="col-sm-12 col-xs-12 center padding0">
+                <button type="button" class="google-login" ng-click="authenticate('google', {config: 'default'})">
+                    <img src="images/google-plus.png" alt="google" class="logo-fixed" /> Login with Google
                 </button>
-                <a class="navbar-brand" href="#"><img src="images/zoomlogo.png" class="logo100" /></a>
-                <h5 class="float-left contact">Customer Service: (310) 425 6425</h5>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Log In</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-            </div>
+                <button type="button" class="facebook-login" ng-click="authenticate('facebook', {config: 'default'})">
+                    <img src="images/facebook.png" alt="google" class="logo-fixed" /> Login with Facebook
+                </button>
+                <img src="images/or.png" class="width100 margin-20" />
+                 <form name="loginform" ng-submit="submitLogin(vm.form, {config: 'default'})" role="form">
+                    <input type="email" placeholder="Enter Email Address" name="user" ng-model="vm.form.email" class="login-inputs">
+                    <input type="password" placeholder="Enter Password" name="password" ng-model="vm.form.password" class="login-inputs">
+                    <div class="forgot-shift right">
+                        <a ui-sref="forgotPassword">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="login-btn">Log In</button>
+                     <img src="images/or.png" class="width100 margin-20" />
+                  </form>
+                <button class="login-btn bottom-offset-30" ui-sref="signup">Sign Up</button>
+               </div>
         </div>
-    </nav>
-    <div class="container-fluid minimum">
-    <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-12 content-block">
-        <h2 class="center-head center">Log In</h2>
-        <form name="loginform" ng-submit="submitLogin(vm.form, {config: 'default'})" role="form" >
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 left">
-                <input placeholder="E-mail address" name="user" ng-model="vm.form.email" type="email" class="inputs">
-
-                <input type="password" name="password" placeholder="Password" ng-model="vm.form.password" class="inputs">
-
-                <button type="submit" class="registration-btn">Log In</button>
-               
-            </div>
-
-        </form>
-      
-       
     </div>
 </div>
-   <div class="container-fluid padding0 footer">
-    <div class="container">
-        <h4>Zoom Errands, Inc. Copyright 2016</h4>
-    </div>
-</div>
+<!--<footer ng-include="'scripts/static/loginfooter.html'"></footer>-->
+
+  

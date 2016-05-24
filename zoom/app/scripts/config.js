@@ -41,8 +41,8 @@
                   passwordResetPath: '/provider_auth/password',
                   passwordUpdatePath: '/provider_auth/password',
                   tokenValidationPath: '/provider_auth/validate_token',
-                 // forceValidateToken: true,
-                 // validateOnPageLoad: true,
+                  forceValidateToken: true,
+                   validateOnPageLoad: true,
                   authProviderPaths: {
                       github: '/provider_auth/github',
                       facebook: '/provider_auth/facebook',

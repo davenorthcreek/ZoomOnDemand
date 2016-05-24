@@ -10,8 +10,17 @@ body{
     font-family: tw-cem;
         letter-spacing: 0.5px;
     font-weight: 300;
-
+    padding-bottom:40px !important;
+    position:relative;
 }
+.footer{
+ 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 .registration-btn:disabled{
     cursor:not-allowed;
     background:#ddd;
