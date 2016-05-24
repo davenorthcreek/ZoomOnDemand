@@ -944,37 +944,39 @@ input:-ms-input-placeholder {
       -webkit-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
       -moz-box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6);
       box-shadow:  0px 0px 0px 0px rgba(255, 0, 0, 0.6); }
-      .zoom div.errandsProgressDetail .panel-group .panel .panel-heading {
-        background: #76939e;
-        color: #FFFFFF; }
-        .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title {
-          margin: 0px auto 0px auto;
-          width: 100%; }
-          .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a {
-            text-decoration: none; }
-            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.number {
-              border: 2px solid #FFFFFF;
-              -webkit-border-radius: 20px;
-              -moz-border-radius: 20px;
-              -ms-border-radius: 20px;
-              border-radius: 20px;
-              padding: 0px 0px 0px 0px;
-              font-weight: bold;
-              display: inline-block;
-              background: #FFFFFF;
-              color: #76939e;
-              width: 30px;
-              height: 30px;
-              line-height: 27px;
-              text-align: center; }
-            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
-              display: inline-block;
-              padding: 0px 19px 0px 19px;
-              text-align: left; }
-              @media (max-width: 762px) {
-                .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
-                  display: block;
-                  padding: 0px 0px 0px 50px; } }
+      .zoom div.errandsProgressDetail .panel-group .panel a {
+        text-decoration: none; }
+        .zoom div.errandsProgressDetail .panel-group .panel a i {
+          margin: 8px 0px 0px 0px; }
+        .zoom div.errandsProgressDetail .panel-group .panel a .panel-heading {
+          background: #76939e;
+          color: #FFFFFF; }
+          .zoom div.errandsProgressDetail .panel-group .panel a .panel-heading .panel-title {
+            margin: 0px auto 0px auto;
+            width: 100%; }
+        .zoom div.errandsProgressDetail .panel-group .panel a span.number {
+          border: 2px solid #FFFFFF;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          padding: 0px 0px 0px 0px;
+          font-weight: bold;
+          display: inline-block;
+          background: #FFFFFF;
+          color: #76939e;
+          width: 30px;
+          height: 30px;
+          line-height: 27px;
+          text-align: center; }
+        .zoom div.errandsProgressDetail .panel-group .panel a span.text {
+          display: inline-block;
+          padding: 0px 19px 0px 19px;
+          text-align: left; }
+          @media (max-width: 762px) {
+            .zoom div.errandsProgressDetail .panel-group .panel a span.text {
+              display: block;
+              padding: 0px 0px 0px 50px; } }
       .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body {
         padding: 10px 0px 10px 0px;
         border: 0px solid transparent;
