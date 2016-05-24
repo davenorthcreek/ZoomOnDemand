@@ -949,8 +949,7 @@ input:-ms-input-placeholder {
         color: #FFFFFF; }
         .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title {
           margin: 0px auto 0px auto;
-          width: 100%;
-          max-width: 715px; }
+          width: 100%; }
           .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a {
             text-decoration: none; }
             .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.number {
@@ -959,11 +958,15 @@ input:-ms-input-placeholder {
               -moz-border-radius: 20px;
               -ms-border-radius: 20px;
               border-radius: 20px;
-              padding: 0px 5px 0px 5px;
+              padding: 0px 0px 0px 0px;
               font-weight: bold;
               display: inline-block;
               background: #FFFFFF;
-              color: #76939e; }
+              color: #76939e;
+              width: 30px;
+              height: 30px;
+              line-height: 27px;
+              text-align: center; }
             .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
               display: inline-block;
               padding: 0px 19px 0px 19px;
@@ -972,13 +975,6 @@ input:-ms-input-placeholder {
                 .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
                   display: block;
                   padding: 0px 0px 0px 50px; } }
-            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a:after {
-              font-family: 'Glyphicons Halflings';
-              content: "\e252";
-              display: inline-block;
-              font-size: 8px; }
-            .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a.collapsed:after {
-              content: "\e250"; }
       .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body {
         padding: 10px 0px 10px 0px;
         border: 0px solid transparent;
@@ -1356,13 +1352,11 @@ input:-ms-input-placeholder {
       background: #43C9E1;
       color: #FFFFFF;
       float: right;
-      padding: 0px 0px 0px 0px;
+      padding: 2px 5px 0px 5px;
       -webkit-border-radius: 0px;
       -moz-border-radius: 0px;
       -ms-border-radius: 0px;
-      border-radius: 0px;
-      width: 47px;
-      height: 19px; }
+      border-radius: 0px; }
 
 /* 
 .switch {

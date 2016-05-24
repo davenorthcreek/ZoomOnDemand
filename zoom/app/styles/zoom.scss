@@ -1204,17 +1204,22 @@ textarea:-ms-input-placeholder,
 					.panel-title{
 						@include margin(0px,auto,0px,auto);
 						width:100%;
-						max-width:715px;
+						// max-width:720px;|
 						a{
 							text-decoration:none;
 							span.number{
 								@include border(2px,solid,$white);
 								@include border-radius(20px);
-								@include padding(0px,5px,0px,5px);
+								@include padding(0px,0px,0px,0px);
 								font-weight:bold;
 								display:inline-block;
 								background:$white;
 								color:$graySideBarIzq;
+
+							    width: 30px;
+							    height: 30px;
+							    line-height: 27px;
+							    text-align: center;
 							}
 							span.text{
 								@media (max-width: 762px){
@@ -1226,14 +1231,14 @@ textarea:-ms-input-placeholder,
 								@include text-align(left);
 							}
 							&:after {					
-								font-family: 'Glyphicons Halflings';
+								// font-family: 'Glyphicons Halflings';
 								// content: "\e114"; 
-								content:"\e252";
-								display:inline-block;
-								font-size:8px;
+								// content:"\e252";
+								// display:inline-block;
+								// font-size:8px;
 							}
 							&.collapsed:after {
-								content:"\e250";
+								// content:"\e250";
 								// content: "\e080";   
 							}
 						}
@@ -1849,10 +1854,8 @@ textarea:-ms-input-placeholder,
 			background:$blueZoom;
 			color:$white;
 			float:right;
-			@include padding(0px,0px,0px,0px);
+			@include padding(2px,5px,0px,5px);
 			@include border-radius(0px);
-			width:47px;
-			height:19px;
 		}
 	}
 
