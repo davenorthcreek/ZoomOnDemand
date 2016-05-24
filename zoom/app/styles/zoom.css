@@ -81,12 +81,30 @@ input:-ms-input-placeholder {
         border-radius: 20px;
         padding: 0px 0px 0px 0px;
         margin: 0px auto 15px auto;
-        width: 140px; }
+        width: 140px;
+        height: 40px;
+        line-height: 40px; }
+    @media (max-width: 991px) {
+      .zoom section aside#latIzq .textContainer .sub-textContainer {
+        padding: 0px 0px 0px 0px; }
+        .zoom section aside#latIzq .textContainer .sub-textContainer .step {
+          padding: 0px 0px 0px 0px;
+          margin: 0px 0px 10px 0px; }
+        .zoom section aside#latIzq .textContainer .sub-textContainer .orText {
+          margin: 0px 0px 10px 0px; }
+        .zoom section aside#latIzq .textContainer .sub-textContainer .callText {
+          margin: 0px 0px 10px 0px; }
+        .zoom section aside#latIzq .textContainer .sub-textContainer .number {
+          margin: 0px auto 10px auto;
+          padding: 0px 0px 10px 0px; } }
     .zoom section aside#latIzq .textContainer p.toMakeText {
       margin: 0px 0px 0px 0px;
       padding: 0px 0px 40px 0px; }
 .zoom section aside#latDer {
-  padding: 0px 45px 0px 53px; }
+  padding: 0px 50px 0px 50px; }
+  @media (max-width: 992px) {
+    .zoom section aside#latDer {
+      padding: 0px 10px 0px 10px; } }
   .zoom section aside#latDer .tabParent .tab-parent-header {
     margin: 50px 0px 36px 0px; }
     .zoom section aside#latDer .tabParent .tab-parent-header li {
@@ -94,6 +112,10 @@ input:-ms-input-placeholder {
       text-align: center;
       border-bottom: 0px "" "";
       font-size: 18px; }
+      @media (max-width: 590px) {
+        .zoom section aside#latDer .tabParent .tab-parent-header li {
+          height: 80px;
+          line-height: 80px; } }
       .zoom section aside#latDer .tabParent .tab-parent-header li a {
         padding: 0px 0px 10px 0px;
         margin: 0px 0px 0px 0px;
@@ -102,12 +124,15 @@ input:-ms-input-placeholder {
         cursor: pointer;
         font-weight: 600;
         display: block; }
+        @media (max-width: 590px) {
+          .zoom section aside#latDer .tabParent .tab-parent-header li a {
+            height: 80px; } }
         .zoom section aside#latDer .tabParent .tab-parent-header li a:hover {
           background: transparent; }
       .zoom section aside#latDer .tabParent .tab-parent-header li:hover {
-        border-bottom: 5px solid #76939e; }
+        border-bottom: 5px inset #76939e; }
     .zoom section aside#latDer .tabParent .tab-parent-header li.active a {
-      border-bottom: 5px solid #76939e; }
+      border-bottom: 5px inset #76939e; }
     .zoom section aside#latDer .tabParent .tab-parent-header li.active:hover {
       border-bottom: 0px solid transparent; }
   .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .titleTabErrand {
@@ -129,9 +154,21 @@ input:-ms-input-placeholder {
       width: calc(100% / 3);
       border: 1px solid #CCCCCC;
       font-size: 18px; }
+      @media (max-width: 458px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li {
+          height: 90px; } }
+      @media (max-width: 368px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li {
+          height: 120px; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li:nth-child(2) {
         border-left: 0px solid transparent;
         border-right: 0px solid transparent; }
+      @media (max-width: 458px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li a {
+          height: 90px; } }
+      @media (max-width: 368px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li a {
+          height: 120px; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-header-post-errand li a:hover {
         margin: 0px 0px 0px 0px;
         color: #FFFFFF;
@@ -199,6 +236,20 @@ input:-ms-input-placeholder {
         border: 2px solid #76939e; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form label {
       font-weight: normal; }
+    @media (max-width: 768px) {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .textDetails {
+        text-align: center !important; } }
+    @media (max-width: 768px) {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentSwitch {
+        float: none !important; }
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentSwitch .zoomswitch {
+          margin: 0px auto 0px auto; } }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus {
+      margin: 0px 0px 20px 0px; }
+      @media (max-width: 768px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus {
+          float: none !important;
+          margin: 0px auto 20px auto; } }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
       border: 1px solid #AAAAAA;
       -webkit-border-radius: 40px;
@@ -215,6 +266,12 @@ input:-ms-input-placeholder {
       box-sizing: border-box;
       background: #FFFFFF;
       line-height: 37px; }
+      @media (max-width: 768px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
+          width: 100%; } }
+      @media (max-width: 350px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
+          font-size: 14px; } }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group input, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group textarea {
       font-size: 17.93px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea {
@@ -226,8 +283,8 @@ input:-ms-input-placeholder {
         resize: none; }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea .imageClip {
         position: absolute;
-        bottom: 10px;
-        right: 10px;
+        bottom: 5px;
+        right: 20px;
         background: url("../images/clip.png");
         width: 14px;
         height: 18px;
@@ -260,6 +317,9 @@ input:-ms-input-placeholder {
       border-radius: 0px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown {
       display: inline-flex; }
+      @media (max-width: 650px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown {
+          display: block; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown input[type="text"] {
         color: #545353;
         margin: 6px 0px 6px 0px;
@@ -272,6 +332,21 @@ input:-ms-input-placeholder {
         font-size: 18px;
         height: 20px;
         float: left; }
+        @media (max-width: 400px) {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown input[type="text"] {
+            width: 100%; } }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0px 20px 0px; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay span.line {
+        width: 30%;
+        height: 1px; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay span.line,
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay h2 {
+        font-size: 14px;
+        margin: 0px 0px 0px 0px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm {
       width: 100%;
       background: #FFFFFF;
@@ -303,6 +378,12 @@ input:-ms-input-placeholder {
       color: #FFFFFF;
       margin: 40px 0px 0px 0px;
       height: 40px; }
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnClearOrder {
+      background: #76939e; }
+    @media (max-width: 768px) {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnNext,
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBack {
+        width: 100%; } }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form h3 {
       color: #FFFFFF;
       background: #43C9E1;
@@ -337,6 +418,8 @@ input:-ms-input-placeholder {
         border-bottom: 0px solid transparent; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container {
       padding: 39px 0px 0px 0px; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours .containerBtnBack {
+        padding: 0px 0px 0px 0px; }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p {
         font-size: 19.77px;
         color: #777676; }
@@ -346,6 +429,115 @@ input:-ms-input-placeholder {
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours hr {
         margin: 17px 0px 30px 0px;
         border-bottom: 1px solid #b9cbd1; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .separator {
+        margin: 30px 0px 30px 0px;
+        border-bottom: 1px solid #b9cbd1; }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly {
+        display: flex;
+        justify-content: space-between; }
+        @media (max-width: 768px) {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly {
+            flex-wrap: wrap; } }
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly {
+          border: 2px solid #76939e;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          border-radius: 5px;
+          background: #FFFFFF;
+          color: #76939e;
+          font-size: 19px;
+          margin: 0px 0px 0px 20px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:first-child {
+            margin: 0px 0px 0px 0px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly.active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:hover, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:focus, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:visited {
+            background: #76939e;
+            color: #FFFFFF; }
+          @media (max-width: 768px) {
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly {
+              padding: 0px 0px 0px 0px;
+              margin: 0px 0px 20px 0px;
+              width: 100%; }
+              .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:nth-child(2n+1) {
+                margin: 0px 0px 20px 0px; } }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage {
+        display: flex;
+        justify-content: space-between; }
+        @media (max-width: 768px) {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage {
+            flex-wrap: wrap; } }
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage {
+          border: 2px solid #43C9E1;
+          background: #FFFFFF;
+          margin: 0px 0px 0px 20px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          padding: 10px 0px 0px 0px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:first-child {
+            margin: 0px 0px 0px 0px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours,
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceTotalHours,
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage small,
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceHour {
+            display: block;
+            width: 100%;
+            color: #5b5b5b; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours {
+            font-size: 20px;
+            color: #43C9E1;
+            margin: 0px 0px 10px 0px; }
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours span {
+              font-size: 25px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceTotalHours {
+            font-size: 16px;
+            margin: 0px 0px 20px 0px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage small {
+            font-size: 12px;
+            margin: 0px 0px 10px 0px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceHour {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px; }
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited {
+            background: #43C9E1;
+            color: #FFFFFF; }
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .priceHour {
+              color: #FFFFFF; }
+          @media (max-width: 768px) {
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage {
+              padding: 0px 0px 0px 0px;
+              margin: 0px 0px 20px 0px;
+              width: 45%; }
+              .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:nth-child(2n+1) {
+                margin: 0px 5px 20px 0px; } }
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0px 20px 0px; }
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay span.line {
+          width: 42%;
+          height: 1px; }
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay span.line,
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay h2 {
+          font-size: 20px;
+          margin: 0px 0px 0px 0px; }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .form-group label {
         color: #8c8a8a;
         font-size: 19px;
@@ -585,11 +777,22 @@ input:-ms-input-placeholder {
       padding: 0px 0px 0px 15px;
       vertical-align: middle;
       margin: 0px 0px 0px 0px; }
+      @media (max-width: 768px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours {
+          padding: 0px 0px 0px 0px; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours h1 {
         -webkit-border-top-left-radius: 10px;
         -moz-border-radius-topleft: 10px;
         border-top-left-radius: 10px;
         background: #43C9E1; }
+        @media (max-width: 768px) {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours h1 {
+            -webkit-border-top-left-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            border-top-right-radius: 10px; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .available-hours {
         height: 240px;
         background: #d0f2f8;
@@ -615,16 +818,30 @@ input:-ms-input-placeholder {
       padding: 0px 15px 0px 0px;
       vertical-align: middle;
       margin: 0px 0px 0px 0px; }
+      @media (max-width: 768px) {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds {
+          padding: 0px 0px 0px 0px; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds h1 {
         -webkit-border-top-right-radius: 10px;
         -moz-border-radius-topright: 10px;
         border-top-right-radius: 10px;
         background: #76939e; }
+        @media (max-width: 768px) {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds h1 {
+            -webkit-border-top-left-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            border-top-right-radius: 10px; } }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .available-funds {
         height: 240px;
         background: #dae7eb;
         border-left: 1px solid #959595;
         border-bottom: 1px solid #959595; }
+        @media (max-width: 768px) {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .available-funds {
+            border-left: 0px solid #959595; } }
         .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .available-funds h4 {
           font-size: 22px;
           margin: 27px 0px 60px 0px;
@@ -661,6 +878,9 @@ input:-ms-input-placeholder {
       color: #6E6E6E; }
 .zoom .supportZoom {
   margin: 0px 0px 80px 0px; }
+  @media (max-width: 768px) {
+    .zoom .supportZoom {
+      margin: 0px 0px 10px 0px; } }
   .zoom .supportZoom h3, .zoom .supportZoom h4 {
     color: #4F4F4F;
     font-weight: bold;
@@ -683,6 +903,13 @@ input:-ms-input-placeholder {
     .zoom .supportZoom button:hover {
       background: #43C9E1;
       color: #FFFFFF; }
+  @media (max-width: 768px) {
+    .zoom .supportZoom div.helpCenter button {
+      float: none !important;
+      margin: 0px auto 10px auto; }
+    .zoom .supportZoom div.liveChat button {
+      float: none !important;
+      margin: 0px auto 0px auto; } }
   .zoom .supportZoom button.active {
     background: #43C9E1;
     color: #FFFFFF; }
@@ -735,6 +962,10 @@ input:-ms-input-placeholder {
             display: inline-block;
             padding: 0px 19px 0px 19px;
             text-align: left; }
+            @media (max-width: 762px) {
+              .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a span.text {
+                display: block;
+                padding: 0px 0px 0px 50px; } }
           .zoom div.errandsProgressDetail .panel-group .panel .panel-heading .panel-title a:after {
             font-family: 'Glyphicons Halflings';
             content: "\e252";
@@ -794,6 +1025,10 @@ input:-ms-input-placeholder {
           color: #FFFFFF;
           padding: 2px 10px 2px 10px;
           border: 0px solid transparent; }
+          @media (max-width: 768px) {
+            .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body .details button.btnEditErrand {
+              float: none !important;
+              margin: 0px auto 0px auto; } }
       .zoom div.errandsProgressDetail .panel-group .panel .panel-collapse .panel-body a.contactZoom {
         border: 2px solid #43C9E1;
         color: #43C9E1;
@@ -814,11 +1049,17 @@ input:-ms-input-placeholder {
     margin: 80px 80px 70px 80px;
     padding: 0px 0px 20px 0px;
     border-bottom: 1px solid #76939e; }
+    @media (max-width: 1043px) {
+      .zoom .myErrands h2 {
+        margin: 80px 50px 10px 50px; } }
   .zoom .myErrands h3 {
     color: #464646;
     font-size: 25px;
     margin: 0px 120px 30px 120px;
     padding: 0px 0px 0px 0px; }
+    @media (max-width: 1043px) {
+      .zoom .myErrands h3 {
+        margin: 0px 50px 30px 50px; } }
   .zoom .myErrands .bgHead {
     background: #43C9E1;
     position: absolute;
@@ -829,6 +1070,9 @@ input:-ms-input-placeholder {
   .zoom .myErrands .filters {
     clear: both;
     margin: 0px 120px 60px 120px; }
+    @media (max-width: 1043px) {
+      .zoom .myErrands .filters {
+        margin: 0px 50px 10px 50px; } }
     .zoom .myErrands .filters p {
       float: left;
       line-height: 24px;
@@ -836,6 +1080,9 @@ input:-ms-input-placeholder {
       font-size: 20px;
       color: #76939e;
       margin: 0px 50px 0px 0px; }
+      @media (max-width: 1043px) {
+        .zoom .myErrands .filters p {
+          float: none !important; } }
       .zoom .myErrands .filters p span.circle {
         -webkit-border-radius: 40px;
         -moz-border-radius: 40px;
@@ -850,6 +1097,9 @@ input:-ms-input-placeholder {
         background-color: #76939e;
         color: #FFFFFF;
         font-size: 15px; }
+      .zoom .myErrands .filters p:hover {
+        cursor: pointer;
+        text-decoration: underline; }
   .zoom .myErrands .tableErrandsProgress {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px; }

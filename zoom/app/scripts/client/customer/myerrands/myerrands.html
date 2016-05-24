@@ -23,148 +23,36 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>04/04/16</td>
+                <tr ng-repeat="errand in errands">
+                    <td>{{errand.date}}</td>
                     <td>
                         <div class="image">
-                            <img src="images/photo1.png" alt="" class="img-responsive">
+                            <img ng-src="{{errand.image}}" alt="" class="img-responsive">
                         </div>
                     </td>
                     <td>
-                        <button class="tooltipErrandService">Courier Service</button>
+                        <select class="form-control no-border-radius input-md" ng-show="editErrand.index == $index" ng-model="errand.type"
+                            ng-options="errandType for errandType in errandTypes" ng-model="form.serviceLocation">
+                        </select>
+                        <button class="tooltipErrandService" ng-show="editErrand.index != $index" tooltips tooltip-template="tooltip">{{errand.type}}</button>
                     </td>
                     <td>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
+                        <textarea class="tooltipErrandService" ng-show="editErrand.index == $index" rows="3" cols="40" 
+                            ng-model="errand.description">{{errand.description}}</textarea>
+                        <button class="tooltipDescription" ng-show="editErrand.index != $index" uib-popover-html="getPopoverTemplate">
+                            {{errand.description}}
+                        </button>
                     </td>
                     <td>
-                        Hours Used:  3
+                        Hours Used:  {{errand.hoursUsed}}
                         <br>
-                        Funds Used:  None
+                        Funds Used:  {{errand.fundsUsed}}
                     </td>
                     <td>
-                        <button class="btnOrderAgain">Order Again</button>
+                        <button class="btnOrderAgain" ng-click=orderAgain(errand)>Order Again</button>
                         <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>04/04/16</td>
-                    <td>
-                        <div class="image">
-                            <img src="images/photo2.png" alt="" class="img-responsive">
-                        </div>
-                    </td>
-                    <td>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </td>
-                    <td>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </td>
-                    <td>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </td>
-                    <td>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>04/04/16</td>
-                    <td>
-                        <div class="image">
-                            <img src="images/photo3.png" alt="" class="img-responsive">
-                        </div>
-                    </td>
-                    <td>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </td>
-                    <td>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </td>
-                    <td>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </td>
-                    <td>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>04/04/16</td>
-                    <td>
-                        <div class="image">
-                            <img src="images/photo4.png" alt="" class="img-responsive">
-                        </div>
-                    </td>
-                    <td>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </td>
-                    <td>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </td>
-                    <td>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </td>
-                    <td>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>04/04/16</td>
-                    <td>
-                        <div class="image">
-                            <img src="images/photo5.png" alt="" class="img-responsive">
-                        </div>
-                    </td>
-                    <td>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </td>
-                    <td>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </td>
-                    <td>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </td>
-                    <td>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>04/04/16</td>
-                    <td>
-                        <div class="image">
-                            <img src="images/photo6.png" alt="" class="img-responsive">
-                        </div>
-                    </td>
-                    <td>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </td>
-                    <td>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </td>
-                    <td>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </td>
-                    <td>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
+                        <button class="btnEditOrder" ng-show="editErrand.index == $index" ng-click="saveOrder($index, errand)">Save Order</button>
+                        <button class="btnEditOrder" ng-show="editErrand.index != $index" ng-click="editOrder($index, errand)">Edit Order</button>
                     </td>
                 </tr>
             </tbody>
@@ -329,5 +217,4 @@
         </div> -->
     </div>
     <div class="clearfix"></div>
-    <br><br><br><br><br><br>
 </div>
