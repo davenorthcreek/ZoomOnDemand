@@ -31,17 +31,17 @@
                         </div>
                     </td>
                     <td>
-                        <select class="form-control no-border-radius input-md" ng-show="editErrand.index == $index" ng-model="errand.type"
+                        <select class="form-control no-border-radius input-md" ng-show="editErrand.type == $index" ng-model="errand.type"
                             ng-options="errandType for errandType in errandTypes" ng-model="form.serviceLocation">
                         </select>
-                        <button class="tooltipErrandService" ng-show="editErrand.index != $index" popover-placement="bottom" popover-trigger="focus" 
-                            uib-popover-html="getPopoverContent(errand.type)">{{errand.type}}</button>
+                        <button class="tooltipErrandService" ng-show="editErrand.type != $index" popover-placement="bottom" popover-trigger="focus" 
+                            uib-popover-template="'editErrandType.html'">{{errand.type}}</button>
                     </td>
                     <td>
-                        <textarea class="tooltipErrandService" ng-show="editErrand.index == $index" rows="3" cols="20" 
+                        <textarea class="tooltipErrandService" ng-show="editErrand.description == $index" rows="3" cols="20" 
                             ng-model="errand.description">{{errand.description}}</textarea>
-                        <button class="tooltipDescription" ng-show="editErrand.index != $index" popover-placement="bottom" popover-trigger="focus" 
-                            uib-popover-template="'edit.html'">
+                        <button class="tooltipDescription" ng-show="editErrand.description != $index" popover-placement="bottom" popover-trigger="focus" 
+                            uib-popover-template="'editErrandDescription.html'">
                             {{errand.description}}
                         </button>
                     </td>
@@ -53,16 +53,26 @@
                     <td>
                         <button class="btnOrderAgain" ng-click=orderAgain(errand)>Order Again</button>
                         <br>
-                        <button class="btnEditOrder" ng-show="editErrand.index == $index" ng-click="saveOrder($index, errand)">Save Order</button>
-                        <button class="btnEditOrder" ng-show="editErrand.index != $index" ng-click="editOrder($index, errand)">Edit Order</button>
+                        <button class="btnEditOrder" ng-show="editErrand.type == $index || editErrand.description == $index" 
+                            ng-click="saveOrder($index, errand)">Save Order</button>
+                        <button class="btnEditOrder" ng-show="editErrand.type != $index && editErrand.description != $index" 
+                            ng-click="editErrandRow($index, errand)">Edit Order</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <script type="text/ng-template" id="edit.html">
+
+        <script type="text/ng-template" id="editErrandType.html">
+            <div class="contentPopoverZoom">
+                <p>{{errand.type}}</p>
+                <button class="btn btn-sm" ng-show="editErrand.index != $index" ng-click="editErrandType($index, errand)">Edit</button>
+                <div class="clearfix"></div>
+            </div>
+        </script>
+        <script type="text/ng-template" id="editErrandDescription.html">
             <div class="contentPopoverZoom">
                 <p>{{errand.description}}</p>
-                <button class="btn btn-sm" ng-show="editErrand.index != $index" ng-click="editOrder($index, errand)">Edit Order</button>
+                <button class="btn btn-sm" ng-show="editErrand.index != $index" ng-click="editErrandDescription($index, errand)">Edit</button>
                 <div class="clearfix"></div>
             </div>
         </script>

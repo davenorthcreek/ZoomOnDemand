@@ -14,13 +14,15 @@ function MyErrandsController($scope, moment, $sce) {
 	
 	var vm = $scope;
 	vm.orderAgain = orderAgain;
-	vm.editOrder = editOrder;
+	vm.editErrandRow = editErrandRow;
+	vm.editErrandType = editErrandType;
+	vm.editErrandDescription = editErrandDescription;
 	vm.saveOrder = saveOrder;
 
 	init();
 
 	function init() {
-		vm.editErrand = { index: -1 };
+		vm.editErrand = { index: -1, type: -1, description: -1 };
 	}
 
 	vm.errandTypes =  ['Courier service', 'Delivery', 'Grocery shopping', 'House sitting', 'Dog walking', 'Garage sale', 'Pet sitting'];
@@ -74,11 +76,23 @@ function MyErrandsController($scope, moment, $sce) {
 		console.log(errand);
 	}
 
-	function editOrder(index, errand) {
+	function editErrandRow(index, errand) {
 		vm.editErrand.index = index;
+		vm.editErrand.type = index;
+		vm.editErrand.description = index;
+	}
+
+	function editErrandType(index, errand) {
+		vm.editErrand.type = index;
+	}
+
+	function editErrandDescription(index, errand) {
+		vm.editErrand.description = index;
 	}
 
 	function saveOrder(index, errand) {
 		vm.editErrand.index = -1;
+		vm.editErrand.type = -1;
+		vm.editErrand.description = -1;
 	}
 };
