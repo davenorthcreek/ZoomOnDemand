@@ -166,13 +166,13 @@
         <h3>ERRANDS IN PROGRESS</h3>
         <script type="text/ng-template" id="group-template.html">
             <div class="panel {{panelClass || 'panel-default'}}">
+                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
                             <span uib-accordion-header></span>
-                        </a>
                     </h4>
                 </div>
+                        </a>
                 <div class="panel-collapse collapse" uib-collapse="!isOpen">
                     <div class="panel-body" ng-transclude></div>
                 </div>
