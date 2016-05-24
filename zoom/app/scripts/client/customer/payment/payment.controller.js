@@ -11,7 +11,7 @@
     function PaymentController($rootScope, $log, $window, $scope, Restangular, toastr, $filter) {
        
         var vm = this;
-        $scope.user.email = 'calimike444@aol.com';
+        $scope.user.email = $rootScope.user.email;
         init();
 
         function init() {

@@ -11,13 +11,13 @@
                     <img src="images/facebook.png" alt="google" class="logo-fixed" /> Login with Facebook
                 </button>
                 <img src="images/or.png" class="width100 margin-20" />
-                 <form name="loginform" ng-submit="submitLogin(vm.form, {config: 'default'})" role="form">
+                 <form name="loginform" ng-submit="submitLogin(vm.form, {config: 'default'});vm.waiting=true" role="form">
                     <input type="email" placeholder="Enter Email Address" name="user" ng-model="vm.form.email" class="login-inputs">
                     <input type="password" placeholder="Enter Password" name="password" ng-model="vm.form.password" class="login-inputs">
                     <div class="forgot-shift right">
                         <a ui-sref="forgotPassword">Forgot Password?</a>
                     </div>
-                    <button type="submit" class="login-btn">Log In</button>
+                     <button type="submit" ng-disabled="vm.waiting" class="login-btn">Log In</button>
                      <img src="images/or.png" class="width100 margin-20" />
                   </form>
                 <button class="login-btn bottom-offset-30" ui-sref="signup">Sign Up</button>
