@@ -12,7 +12,7 @@
         var vm = this;
       
         $scope.$on('auth:registration-email-success', function (ev, data) {
-            toastr.success('Your account has been successfully created.', 'Welcome ' + user.email);
+            toastr.success('Your account has been successfully created.', 'Welcome ' + data.email);
           //  $rootScope.user = user;
           //  $rootScope.home = true;
             $state.go('login');
