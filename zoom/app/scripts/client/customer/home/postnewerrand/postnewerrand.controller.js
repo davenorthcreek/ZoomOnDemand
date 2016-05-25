@@ -14,7 +14,7 @@ function PostNewErrandController($scope, moment) {
 
   var vm = $scope;
   vm.locations = ['Los Angeles', 'San Diego'];
-  var momentFormat = 'DD/MM/YYYY';
+  var momentFormat = 'MM/DD/YYYY';
   var date = new moment();
   vm.form = {
     whatDoYouNeed: '',

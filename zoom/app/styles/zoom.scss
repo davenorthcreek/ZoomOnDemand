@@ -8,6 +8,14 @@
 	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
 }
 
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 // @font-face {
 //     font-family: tw-cem;
 //     src: url(../fonts/tw-cen-mt.ttf);
@@ -1765,87 +1773,104 @@ textarea:-ms-input-placeholder,
 			max-width:100%;
 		}
 	}
-	.switch {
-	  background:$graySideBarIzq;
-	  border: 1px solid #dfdfdf;
-	  position: relative;
-	  display: inline-block;
-	  box-sizing: content-box;
-	  overflow: visible;
-	  width: 70px;
-	  height: 30px;
-	  padding: 0px;
-	  margin: 0px;
-	  border-radius: 20px;
-	  cursor: pointer;
-	  box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px;
-	  transition: 0.3s ease-out all;
-	  -webkit-transition: 0.3s ease-out all;
-	  top: -1px;
+	.datetimepicker .active:hover, .datetimepicker .active:hover:hover, .datetimepicker .active.disabled:hover, .datetimepicker .active.disabled:hover:hover, .datetimepicker .active:active, .datetimepicker .active:hover:active, .datetimepicker .active.disabled:active, .datetimepicker .active.disabled:hover:active, .datetimepicker .active.active, .datetimepicker .active:hover.active, .datetimepicker .active.disabled.active, .datetimepicker .active.disabled:hover.active, .datetimepicker .active.disabled, .datetimepicker .active:hover.disabled, .datetimepicker .active.disabled.disabled, .datetimepicker .active.disabled:hover.disabled, .datetimepicker td.active[disabled], .datetimepicker td.active:hover[disabled], .datetimepicker td.active.disabled[disabled], .datetimepicker td.active.disabled:hover[disabled], .datetimepicker span.active[disabled], .datetimepicker span.active:hover[disabled], .datetimepicker span.active.disabled[disabled], .datetimepicker span.active.disabled:hover[disabled] {
+		background-color: #76939e;
 	}
-	/*adding a wide width for larger switch text*/
-	.switch.wide {
-	  width:80px;
+	.datetimepicker .active, .datetimepicker .active:hover, .datetimepicker .active.disabled, .datetimepicker .active.disabled:hover {
+	    background-color: #0044cc;
+	    background-image: linear-gradient(to bottom, #76939e, #76939e);
+	    background-repeat: repeat-x;
+	    border-color: #76939e;
+	    color: #ffffff;
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='#04c', GradientType=0);
+	    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	}
-	.switch small {
-	  background: $buttonSwitch;
-	  border-radius: 100%;
-	  box-shadow: 0 0px 0px rgba(0,0,0,0.4);
-	  width: 24px;
-	  height: 24px;
-	  position: absolute;
-	  top: 2px;
-	  left: 2px;
-	  transition: 0.3s ease-out all;
-	  -webkit-transition: 0.3s ease-out all;
+	th.switch{
+		display:table-cell;
 	}
-	.switch.checked {
-	  background: rgb(100, 189, 99);
-	  border-color: rgb(100, 189, 99);
-	}
-	.switch.checked small {
-	  left: 42px;
-	}
-	/*wider switch text moves small further to the right*/
-	.switch.wide.checked small {
-	  left:40px;
-	}
-	/*styles for switch-text*/
-	.switch .switch-text {
-	  font-size:16px;
-	  font-weight:bold;
-	}
+	.zoomSwitchFinal{
+		.switch {
+		  background:$graySideBarIzq;
+		  border: 1px solid #dfdfdf;
+		  position: relative;
+		  display: inline-block;
+		  box-sizing: content-box;
+		  overflow: visible;
+		  width: 70px;
+		  height: 30px;
+		  padding: 0px;
+		  margin: 0px;
+		  border-radius: 20px;
+		  cursor: pointer;
+		  box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px;
+		  transition: 0.3s ease-out all;
+		  -webkit-transition: 0.3s ease-out all;
+		  top: -1px;
+		}
+		/*adding a wide width for larger switch text*/
+		.switch.wide {
+		  width:80px;
+		}
+		.switch small {
+		  background: $buttonSwitch;
+		  border-radius: 100%;
+		  box-shadow: 0 0px 0px rgba(0,0,0,0.4);
+		  width: 24px;
+		  height: 24px;
+		  position: absolute;
+		  top: 2px;
+		  left: 2px;
+		  transition: 0.3s ease-out all;
+		  -webkit-transition: 0.3s ease-out all;
+		}
+		.switch.checked {
+		  // background: rgb(100, 189, 99);
+		  // border-color: rgb(100, 189, 99);
+		}
+		.switch.checked small {
+		  left: 42px;
+		}
+		/*wider switch text moves small further to the right*/
+		.switch.wide.checked small {
+		  left:40px;
+		}
+		/*styles for switch-text*/
+		.switch .switch-text {
+		  font-size:16px;
+		  font-weight:bold;
+		}
 
-	.switch .off {
-	  display:block;
-	  position: absolute;
-	  right: 13%;
-	  top: 16%;
-	  z-index: 0;
-	  color:$white;
-	}
+		.switch .off {
+		  display:block;
+		  position: absolute;
+		  right: 13%;
+		  top: 16%;
+		  z-index: 0;
+		  color:$white;
+		}
 
-	.switch .on {
-	  display:none;
-	   z-index: 0;
-	  color:#fff;
-	  position: absolute;
-	  top: 16%;
-	  left: 15%;
-	}
+		.switch .on {
+		  display:none;
+		   z-index: 0;
+		  color:#fff;
+		  position: absolute;
+		  top: 16%;
+		  left: 15%;
+		}
 
-	.switch.checked .off {
-	  display:none;
-	}
+		.switch.checked .off {
+		  display:none;
+		}
 
-	.switch.checked .on {
-	  display:block;
+		.switch.checked .on {
+		  display:block;
 
-	}
+		}
 
-	.switch.disabled {
-	  opacity: .50;
-	  cursor: not-allowed;
+		.switch.disabled {
+		  opacity: .50;
+		  cursor: not-allowed;
+		}
 	}
 
 	.contentPopoverZoom{
