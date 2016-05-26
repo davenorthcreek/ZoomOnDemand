@@ -18,7 +18,7 @@ function PostNewErrandController($scope, moment) {
   var date = new moment();
   vm.form = {
     whatDoYouNeed: '',
-    serviceLocation: '',
+    serviceLocation: vm.locations[0],
     date: getFormatedDate(date), 
     day: getWeekDayName(date),
     time: getTimeWithTimeZone(date),

@@ -31,8 +31,11 @@
                         </div>
                     </td>
                     <td>
-                        <select class="form-control no-border-radius input-md" ng-show="editErrand.type == $index" ng-model="errand.type"
-                            ng-options="errandType for errandType in errandTypes" ng-model="form.serviceLocation">
+                        <select class="form-control no-border-radius input-md"
+                                ng-show="editErrand.type == $index"
+                                ng-model="errand.type"
+                                ng-options="errandType for errandType in errandTypes"
+                                ng-model="form.serviceLocation">
                         </select>
                         <button class="tooltipErrandService" ng-show="editErrand.type != $index" popover-placement="bottom" popover-trigger="focus" 
                             uib-popover-template="'editErrandType.html'">{{errand.type}}</button>

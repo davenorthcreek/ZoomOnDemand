@@ -12,20 +12,20 @@ MyErrandsController.$inject = ['$scope', 'moment', '$sce'];
 
 function MyErrandsController($scope, moment, $sce) {
 	
-	var vm = $scope;
-	vm.orderAgain = orderAgain;
-	vm.editErrandRow = editErrandRow;
-	vm.editErrandType = editErrandType;
+	var vm                   = $scope;
+	vm.orderAgain            = orderAgain;
+	vm.editErrandRow         = editErrandRow;
+	vm.editErrandType        = editErrandType;
 	vm.editErrandDescription = editErrandDescription;
-	vm.saveOrder = saveOrder;
+	vm.saveOrder             = saveOrder;
 
 	init();
 
 	function init() {
 		vm.editErrand = { index: -1, type: -1, description: -1 };
 	}
-
-	vm.errandTypes =  ['Courier service', 'Delivery', 'Grocery shopping', 'House sitting', 'Dog walking', 'Garage sale', 'Pet sitting'];
+	
+	vm.errandTypes =  ['Courier Service', 'Delivery', 'Grocery shopping', 'House sitting', 'Dog walking', 'Garage sale', 'Pet sitting'];
 
 	vm.errands = [
 		{ date: '2016-05-01',

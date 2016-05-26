@@ -179,7 +179,7 @@
             </div>
         </script>
         <uib-accordion close-others="vm.oneAtATime">
-            <uib-accordion-group template-url="group-template.html" ng-repeat="group in vm.groups" is-open="status.open">
+            <uib-accordion-group template-url="group-template.html" ng-repeat="group in vm.groups" is-open="group.content.status">
                 <uib-accordion-heading>
                     <!-- {{group.title}} -->
                     <span class="number">{{group.heading.number}}</span>

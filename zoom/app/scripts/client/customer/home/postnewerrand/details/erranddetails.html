@@ -23,7 +23,7 @@
                         <div class="form-group margin-bottom-sm">
                             <div class="textarea">
                                 <textarea name="" id="" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops."></textarea>
-                                <div class="imageClip" ngf-select ngf-multiple="false" ng-model="firstFile" ngf-change="uploadFirstFile(firstFile)"></div>
+                                <div class="imageClip" ngf-select ngf-multiple="false" ng-model="firstFile" ngf-change="uploadFirstFile(firstFile)" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
                             </div>
                         </div>
                     </div>
@@ -46,44 +46,44 @@
                                 </label>
                             </div> -->
                             <div class="zoomSwitchFinal">
-                                <switch id="enabled" name="enabled" ng-model="purchaseOnYourBehalf" on="No" off="Yes" class="green"></switch>                                
+                                <switch id="enabled" name="enabled" ng-model="purshase" on="Yes" off="No" class="green"></switch>                                
                             </div>
-                            <br>
-                            {{purchaseOnYourBehalf}}
                         </span>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="form-group">
-                        <span class="spanBalance">Your current balance: $200.00</span>
+                <div class="contentDependSwitch" ng-hide="purshase == false">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <span class="spanBalance">Your current balance: $200.00</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right textDetails">
-                    <div class="form-group">
-                        <p class="no-margin">Top up your funds for future purchases:</p>
-                        <p class="no-margin">
-                            <small>Amount will automatically be included at check out.</small>
-                        </p>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right textDetails">
+                        <div class="form-group">
+                            <p class="no-margin">Top up your funds for future purchases:</p>
+                            <p class="no-margin">
+                                <small>Amount will automatically be included at check out.</small>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="input-group margin-bottom-sm componentMinusPlus pull-right">
-                        <span class="input-group-addon" ng-click="subtract()">
-                            <i class=" no-border-radius fa fa-minus" aria-hidden="true"></i>
-                        </span>
-                        <input class="form-control no-border-radius input-sm" type="text" placeholder="$0.00" ng-model="dolar" readonly="readonly">
-                        <span class="input-group-addon" ng-click="add()">
-                            <i class=" no-border-radius fa fa-plus" aria-hidden="true"></i>
-                        </span>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="input-group margin-bottom-sm componentMinusPlus pull-right">
+                            <span class="input-group-addon" ng-click="subtract()">
+                                <i class=" no-border-radius fa fa-minus" aria-hidden="true"></i>
+                            </span>
+                            <input class="form-control no-border-radius input-sm" type="text" placeholder="$0.00" ng-model="dolar" readonly="readonly">
+                            <span class="input-group-addon" ng-click="add()">
+                                <i class=" no-border-radius fa fa-plus" aria-hidden="true"></i>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group">
-                        <div class="form-group margin-bottom-sm">
-                            <div class="textarea">
-                                <textarea name="" id="" class="form-control no-border-radius" rows="3" placeholder="For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner."></textarea>
-                                <div class="imageClip" ngf-select ngf-multiple="false" ng-model="secondFile" ngf-change="uploadSecondFile(secondFile)"></div>
+                    <div class="clearfix"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <div class="form-group margin-bottom-sm">
+                                <div class="textarea">
+                                    <textarea name="" id="" class="form-control no-border-radius" rows="3" placeholder="For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner."></textarea>
+                                    <div class="imageClip" ngf-select ngf-multiple="false" ng-model="secondFile" ngf-change="uploadSecondFile(secondFile)" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,4 +99,10 @@
         </form>
     </div>
 </div>
+<script type="text/ng-template" id="editErrandDescription.html">
+    <div class="contentPopoverClip">
+        <p>Attach File</p>
+        <div class="clearfix"></div>
+    </div>
+</script>
 <!-- TAB POST NEW ERRAND SUBTAB PROVIDE ERRANT DETAILS -->
