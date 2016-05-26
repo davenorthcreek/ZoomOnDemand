@@ -8,11 +8,11 @@
 	src: local('Tw Cen MT'), url('../fonts/tw-cent-mt/Tw Cen MT.woff') format('woff');
 }
 
-.dropdown-menu li:hover .sub-menu {
+.menuProfile li:hover .sub-menu {
     visibility: visible;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .menuProfile {
     display: block;
 }
 
@@ -38,22 +38,26 @@ body{
 
 textarea::-webkit-input-placeholder, 
    input::-webkit-input-placeholder {
-   color: $placeholder !important;
+   // color: $placeholder !important;
+   color:$tabParentHeader !important;
 } /* WebKit */
 
 textarea:-moz-placeholder, 
    input:-moz-placeholder {
-   color: $placeholder !important;
+   // color: $placeholder !important;
+   color:$tabParentHeader !important;
 } /* Firefox 18- */
 
 textarea::-moz-placeholder, 
    input::-moz-placeholder {
-   color: $placeholder !important;
+   // color: $placeholder !important;
+   color:$tabParentHeader !important;
 } /* Firefox 19+ */
 
 textarea:-ms-input-placeholder, 
    input:-ms-input-placeholder {
-   color: $placeholder !important;
+   // color: $placeholder !important;
+   color:$tabParentHeader !important;
 } /* IE 10+ */
 
 .zoom{
@@ -413,6 +417,7 @@ textarea:-ms-input-placeholder,
 											.form-group{
 												input, textarea{
 													font-size:17.93px;
+													@include border(1px,solid,$borderHoursFunds);
 												}
 												.textarea{
 													position: relative;
@@ -440,14 +445,15 @@ textarea:-ms-input-placeholder,
 												}
 												select{
 													-webkit-appearance: none;
+													@include border(1px,solid,$borderHoursFunds);
 												    height: 35px;
 												    width: 100%;
 												    border-radius: 0px;
-												    background: #fff url(../images/dn-arrow.png);
+												    background: #fff url(../images/arrow-select-errand.png);
 												    background-repeat: no-repeat;
 												    background-position: center right;
 												    // background-position: 8px 8px;
-												    background-size: 25px 44px;
+												    background-size: 40px 38px;
 												    padding-left: 5px;
 												}
 												.input-group{
@@ -974,20 +980,22 @@ textarea:-ms-input-placeholder,
 								div.funds{
 									h1{
 										@include margin(0px,0px,0px,0px);
-										@include padding(20px,20px,20px,20px);
-										font-size:24px;
+										@include padding(0px,0px,0px,0px);
+										height:47px;
+										line-height:47px;
+										font-size:20px;
 										color:$white;
 									}
 									.buttonHours,
 									.buttonFunds{
 										@include margin(32px,0px,32px,0px);
 										button{
-											width:200px;
-											height:60px;
+											width:150px;
+											height:40px;
 											@include border(0px,solid,transparent);
-											font-size:22px;
+											font-size:18px;
 											color:$white;
-											@include border-radius(20px);
+											@include border-radius(10px);
 										}
 									}
 									.buttonHours{
@@ -1002,7 +1010,7 @@ textarea:-ms-input-placeholder,
 									}
 								}
 								div.hours{
-									@include padding(0px,0px,0px,15px);
+									@include padding(0px,0px,0px,0px);
 									@media (max-width: 768px){
 										@include padding(0px,0px,0px,0px);
 									}
@@ -1027,7 +1035,7 @@ textarea:-ms-input-placeholder,
 											color:$colorTextHeadHF;
 										}
 										h2{
-											font-size:43px;
+											font-size:30px;
 											color:$colorTextBodyHF;
 										}
 									}
@@ -1040,14 +1048,14 @@ textarea:-ms-input-placeholder,
 											color:$colorTextHeadHF;
 										}
 										h2{
-											font-size:43px;
+											font-size:30px;
 											color:$colorTextBodyHF;
 										}
 									}
 									
 								}
 								div.funds{
-									@include padding(0px,15px,0px,0px);
+									@include padding(0px,0px,0px,0px);
 									@media (max-width: 768px){
 										@include padding(0px,0px,0px,0px);
 									}
@@ -1076,7 +1084,7 @@ textarea:-ms-input-placeholder,
 											color:$colorTextHeadHF;
 										}
 										h2{
-											font-size:43px;
+											font-size:30px;
 											color:$colorTextBodyHF;
 										}
 									}
@@ -1089,7 +1097,7 @@ textarea:-ms-input-placeholder,
 											color:$colorTextHeadHF;
 										}
 										h2{
-											font-size:43px;
+											font-size:30px;
 											color:$colorTextBodyHF;
 										}
 									}									
@@ -1198,7 +1206,7 @@ textarea:-ms-input-placeholder,
 			@include text-align(center);
 			@include padding(10px,10px,10px,10px);
 			@include margin(20px,0px,0px,0px);			
-			font-size:17px;
+			font-size:20px;
 		}
 		.panel-group{
 			@include margin(0px,0px,0px,0px);			
@@ -1342,7 +1350,7 @@ textarea:-ms-input-placeholder,
 		position: relative;
 		h2{
 			color:$graySideBarIzq;
-			font-size:25px;
+			font-size:30px;
 			@include margin(80px,80px,70px,80px);
 			@include padding(0px,0px,20px,0px);
 			@include border-bottom(1px,solid,$graySideBarIzq);
@@ -1478,6 +1486,7 @@ textarea:-ms-input-placeholder,
 							}
 							vertical-align:middle;
 							width:calc(100% / 6);
+							font-size:18px;
 							@include text-align(center);
 							@include border-bottom(1px,solid,$borderTable);
 							button.tooltipErrandService{
@@ -1884,6 +1893,22 @@ textarea:-ms-input-placeholder,
 			color:$white;
 			float:right;
 			@include padding(2px,5px,0px,5px);
+			@include border-radius(0px);
+		}
+	}
+
+	.contentPopoverClip{
+		font-family: 'Tw Cen MT';
+		p{
+			width:67px;
+			margin:0px 0px 0px 0px;
+			text-align:justify;
+			font-size:16px;
+		}
+		button{
+			background:$blueZoom;
+			color:$white;
+			float:right;
 			@include border-radius(0px);
 		}
 	}

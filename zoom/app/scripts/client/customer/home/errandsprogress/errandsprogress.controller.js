@@ -22,6 +22,7 @@
 					status	: 'In Progress'
 				},
 				content:{
+					status			: 'true',
 					image			: '/images/face-errands.png',
 					provider		: 'Your service provider is Judith.',
 					goodNews		: 'Good news, she is scheduled to arrive on time.',
@@ -42,6 +43,7 @@
 					status	: 'In Progress'
 				},
 				content:{
+					status			: 'false',
 					image			: '/images/face-errands.png',
 					provider		: 'Your service provider is Judith.',
 					goodNews		: 'Good news, she is scheduled to arrive on time.',
@@ -62,6 +64,7 @@
 					status	: 'In Progress'
 				},
 				content:{
+					status			: 'false',
 					image			: '/images/face-errands.png',
 					provider		: 'Your service provider is Judith.',
 					goodNews		: 'Good news, she is scheduled to arrive on time.',
@@ -82,6 +85,7 @@
 					status	: 'In Progress'
 				},
 				content:{
+					status			: 'false',
 					image			: '/images/face-errands.png',
 					provider		: 'Your service provider is Judith.',
 					goodNews		: 'Good news, she is scheduled to arrive on time.',
@@ -102,6 +106,7 @@
 					status	: 'In Progress'
 				},
 				content:{
+					status			: 'false',
 					image			: '/images/face-errands.png',
 					provider		: 'Your service provider is Judith.',
 					goodNews		: 'Good news, she is scheduled to arrive on time.',

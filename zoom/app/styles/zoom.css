@@ -3,10 +3,10 @@
   font-style: normal;
   font-weight: normal;
   src: local("Tw Cen MT"), url("../fonts/tw-cent-mt/Tw Cen MT.woff") format("woff"); }
-.dropdown-menu li:hover .sub-menu {
+.menuProfile li:hover .sub-menu {
   visibility: visible; }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .menuProfile {
   display: block; }
 
 body {
@@ -23,22 +23,22 @@ body {
 
 textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
-  color: #b5b3b3 !important; }
+  color: #545353 !important; }
 
 /* WebKit */
 textarea:-moz-placeholder,
 input:-moz-placeholder {
-  color: #b5b3b3 !important; }
+  color: #545353 !important; }
 
 /* Firefox 18- */
 textarea::-moz-placeholder,
 input::-moz-placeholder {
-  color: #b5b3b3 !important; }
+  color: #545353 !important; }
 
 /* Firefox 19+ */
 textarea:-ms-input-placeholder,
 input:-ms-input-placeholder {
-  color: #b5b3b3 !important; }
+  color: #545353 !important; }
 
 /* IE 10+ */
 .zoom .container {
@@ -281,7 +281,8 @@ input:-ms-input-placeholder {
         .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
           font-size: 14px; } }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group input, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group textarea {
-      font-size: 17.93px; }
+      font-size: 17.93px;
+      border: 1px solid #959595; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea {
       position: relative; }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea textarea {
@@ -304,13 +305,14 @@ input:-ms-input-placeholder {
       padding-left: 40px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group select {
       -webkit-appearance: none;
+      border: 1px solid #959595;
       height: 35px;
       width: 100%;
       border-radius: 0px;
-      background: #fff url(../images/dn-arrow.png);
+      background: #fff url(../images/arrow-select-errand.png);
       background-repeat: no-repeat;
       background-position: center right;
-      background-size: 25px 44px;
+      background-size: 40px 38px;
       padding-left: 5px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
       border-left: 0px solid transparent; }
@@ -754,8 +756,10 @@ input:-ms-input-placeholder {
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours h1,
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds h1 {
       margin: 0px 0px 0px 0px;
-      padding: 20px 20px 20px 20px;
-      font-size: 24px;
+      padding: 0px 0px 0px 0px;
+      height: 47px;
+      line-height: 47px;
+      font-size: 20px;
       color: #FFFFFF; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .buttonHours,
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .buttonFunds,
@@ -766,15 +770,15 @@ input:-ms-input-placeholder {
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .buttonFunds button,
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .buttonHours button,
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .buttonFunds button {
-        width: 200px;
-        height: 60px;
+        width: 150px;
+        height: 40px;
         border: 0px solid transparent;
-        font-size: 22px;
+        font-size: 18px;
         color: #FFFFFF;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        border-radius: 20px; }
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .buttonHours button,
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .buttonHours button {
       background: #43C9E1; }
@@ -782,7 +786,7 @@ input:-ms-input-placeholder {
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .buttonFunds button {
       background: #76939e; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours {
-      padding: 0px 0px 0px 15px;
+      padding: 0px 0px 0px 0px;
       vertical-align: middle;
       margin: 0px 0px 0px 0px; }
       @media (max-width: 768px) {
@@ -810,7 +814,7 @@ input:-ms-input-placeholder {
           margin: 27px 0px 60px 0px;
           color: #525353; }
         .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .available-hours h2 {
-          font-size: 43px;
+          font-size: 30px;
           color: #757677; }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .used-hours {
         height: 240px;
@@ -820,10 +824,10 @@ input:-ms-input-placeholder {
           margin: 27px 0px 60px 0px;
           color: #525353; }
         .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.hours .used-hours h2 {
-          font-size: 43px;
+          font-size: 30px;
           color: #757677; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds {
-      padding: 0px 15px 0px 0px;
+      padding: 0px 0px 0px 0px;
       vertical-align: middle;
       margin: 0px 0px 0px 0px; }
       @media (max-width: 768px) {
@@ -855,7 +859,7 @@ input:-ms-input-placeholder {
           margin: 27px 0px 60px 0px;
           color: #525353; }
         .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .available-funds h2 {
-          font-size: 43px;
+          font-size: 30px;
           color: #757677; }
       .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .used-funds {
         height: 240px;
@@ -865,7 +869,7 @@ input:-ms-input-placeholder {
           margin: 27px 0px 60px 0px;
           color: #525353; }
         .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-hours div.funds .used-funds h2 {
-          font-size: 43px;
+          font-size: 30px;
           color: #757677; }
 .zoom article {
   background: #f6f6f6; }
@@ -935,7 +939,7 @@ input:-ms-input-placeholder {
   text-align: center;
   padding: 10px 10px 10px 10px;
   margin: 20px 0px 0px 0px;
-  font-size: 17px; }
+  font-size: 20px; }
 .zoom div.errandsProgressDetail .panel-group {
   margin: 0px 0px 0px 0px; }
   .zoom div.errandsProgressDetail .panel-group .panel {
@@ -1051,7 +1055,7 @@ input:-ms-input-placeholder {
   position: relative; }
   .zoom .myErrands h2 {
     color: #76939e;
-    font-size: 25px;
+    font-size: 30px;
     margin: 80px 80px 70px 80px;
     padding: 0px 0px 20px 0px;
     border-bottom: 1px solid #76939e; }
@@ -1124,6 +1128,7 @@ input:-ms-input-placeholder {
       border: 0px solid transparent;
       vertical-align: middle;
       width: calc(100% / 6);
+      font-size: 18px;
       text-align: center;
       border-bottom: 1px solid #c7cccd; }
       .zoom .myErrands .tableErrandsProgress table tbody tr td .tooltip {
@@ -1370,6 +1375,21 @@ input:-ms-input-placeholder {
     color: #FFFFFF;
     float: right;
     padding: 2px 5px 0px 5px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px; }
+.zoom .contentPopoverClip {
+  font-family: 'Tw Cen MT'; }
+  .zoom .contentPopoverClip p {
+    width: 67px;
+    margin: 0px 0px 0px 0px;
+    text-align: justify;
+    font-size: 16px; }
+  .zoom .contentPopoverClip button {
+    background: #43C9E1;
+    color: #FFFFFF;
+    float: right;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
