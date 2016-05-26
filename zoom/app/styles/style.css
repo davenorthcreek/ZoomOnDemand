@@ -75,7 +75,7 @@ overflow: auto;
 height: auto;
 padding: 10px 15px;
 }
-.pay-title h2,.check-title h2{
+.pay-title h2,.check-title h2,.pay-title h3,.check-title h3{
     margin: 5px;
     color: #fff;
 }

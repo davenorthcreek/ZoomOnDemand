@@ -6,7 +6,6 @@ body{
     font-family: tw-cem;
         letter-spacing: 0.5px;
     font-weight: 300;
-    padding-bottom:0px !important;
 }
 .back-login{
         background-image: url(../images/Forgotbg.jpg);
@@ -15,6 +14,7 @@ body{
     min-height: 100vh;
     display: flex;
     align-items:center;
+        margin-bottom: -40px;
 }
 .back-sign{
         background-image: url(../images/SignUpbg.jpg);
@@ -23,6 +23,7 @@ body{
     min-height: 100vh;
     display: flex;
     align-items:center;
+        margin-bottom: -40px;
 }
 .login-btn:hover {
     color: #52C9E0;
