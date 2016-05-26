@@ -6,6 +6,7 @@ body{
     font-family: tw-cem;
         letter-spacing: 0.5px;
     font-weight: 300;
+    padding-bottom:0px !important;
 }
 .back-login{
         background-image: url(../images/Forgotbg.jpg);
@@ -31,13 +32,13 @@ body{
     color: #fff;
     border: 2px solid #52C9E0;
     background: #52c9e0;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
+    padding: 0px 20px;
     width: 80%;
     margin-bottom: 10px;
-        height: 50px;
+        height: 40px;
             display: block;
     margin: auto;
 }
@@ -45,14 +46,14 @@ body{
     color: #fff;
     border: 2px solid #52C9E0;
     background: #52c9e0;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
+    padding: 0px 20px;
     width: 80%;
-    margin-bottom: 30px;
-        height: 50px;
-            display: block;
+    margin-bottom: 20px;
+    height: 40px;
+    display: block;
     margin: auto;
 }
 .small-login{
@@ -87,30 +88,30 @@ body{
 
 }
 .logo-fixed{
-        height: 40px;
+        height: 34px;
         margin-right: 15px;
 }
 .google-login{
     background: #B82D21;
     color: #fff;
     border: none;
-    padding:7px 5px;
+    padding:5px 5px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.5px;
 width: 100%;
-margin: 10px 0px 20px;
+margin: 10px 0px 10px;
 }
 .facebook-login{
     background: #2C42B5;
     color: #fff;
     border: none;
-    padding:7px 5px;
+    padding:5px 5px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.5px;
 width: 100%;
-margin: 10px 0px 20px;
+margin: 10px 0px 10px;
 }
 .padding0{
     padding: 0px;
@@ -121,17 +122,20 @@ margin: 10px 0px 20px;
 .margin-20{
     margin: 20px 0px;
 }
+.margin-10{
+    margin: 10px 0px;
+}
 .right{
     text-align: right;
 }
 .login-inputs{
-        width: 100%;
+width: 100%;
     border: 1px solid #7E9096;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px;
-    height: 40px;
-    margin: 10px 0px 20px;
-        letter-spacing: 0.5px;
+    height: 36px;
+    margin: 10px 0px 10px;
+    letter-spacing: 0.5px;
     padding-left: 10px;
 }
 .bottom-offset-30{
@@ -144,7 +148,6 @@ margin: 10px 0px 20px;
 }
 .blue-text{
         color: #5BCFE4;
-        padding-bottom: 15px;
         font-weight: 300;
 }
 .sign-text{
@@ -153,9 +156,9 @@ margin: 10px 0px 20px;
         font-weight: 300;
 }
 .forgot-shift{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: -10px;
-    font-size: 16px;
+    font-size: 15px;
 }
 .terms-click{
     color: #666;
@@ -171,18 +174,21 @@ margin: 10px 0px 20px;
 .offset-40{
         margin: 40px 0px;
 }
+.offset-30{
+        margin:30px 0px;
+}
 .left{
     text-align: left;
 }
 .login-inputs::-webkit-input-placeholder {
-    color:    #777;
+    color:    #777 !important;
 }
 .login-inputs:-moz-placeholder {
-    color:    #777;
+    color:    #777 !important;
 }
 .login-inputs::-moz-placeholder {
-    color:    #777;
+    color:    #777 !important;
 }
 .login-inputs:-ms-input-placeholder {
-    color:    #777;
+    color:    #777 !important;
 }
