@@ -81,7 +81,7 @@ padding: 10px 15px;
 }
 .pay-title{
     background: #78939E;
-    margin: 5vw 0;
+    margin: 3vw 0;
 }
 .footer{
     background: #52c9e0;
@@ -91,7 +91,7 @@ padding: 10px 15px;
 }
 .check-title{
     background: #52C9E0;
-    margin: 5vw 0;
+    margin: 3vw 0;
 }
 .contact{
     color: #fff;
@@ -194,10 +194,10 @@ padding: 10px 15px;
 }
 .inputs{
 width: 100%;
-    height: 45px;
+    height: 34px;
     border: 1px solid #555555;
-    margin-bottom: 30px;
-    font-size: 22px;
+    margin-bottom: 20px;
+    font-size: 20px;
     padding: 10px;
     letter-spacing: 1px;
 }
@@ -224,10 +224,10 @@ width: 100%;
     color: #fff;
     border: 2px solid #52C9E0;
     background: #52c9e0;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
+    padding: 3px 20px;
 }
 .registration-btn:hover{
     color: #52C9E0;
@@ -278,23 +278,50 @@ width: 100%;
         color: #52C9E0;
     background: #fff;
     border: 2px solid #52C9E0;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
+    padding: 3px 20px;
     margin-right: 30px;
+}
+.reverse-btn-3{
+        color: #52C9E0;
+    background: #fff;
+    border: 2px solid #52C9E0;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 3px 20px;
+    margin-right: 20px;
+}
+.reverse-btn-2{
+        color: #52C9E0;
+    background: #fff;
+    border: 2px solid #52C9E0;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 3px 20px;
+}
+tr.back-pink .reverse-btn-2,.pack-box.border-pink .select-btn{
+    color:#fff;
+    background: #52c9e0;
+}
+.gray-box.border-pink .gray-select-btn{
+    color: #fff;
+    background: #60727A;
 }
 .select-btn{
         color: #52C9E0;
     background: #fff;
     border: 2px solid #52C9E0;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
-    margin: 30px 0px;
+    padding: 3px 20px;
+    margin: 20px 0px;
 }
-.reverse-btn:hover,.select-btn:hover{
+.reverse-btn:hover,.select-btn:hover,.reverse-btn-2:hover,.reverse-btn-3:hover{
 color: #fff;
     background: #52c9e0;
 }
@@ -302,24 +329,27 @@ color: #fff;
         color: #60727A;
     background: #fff;
     border: 2px solid #60727A;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
-    margin: 30px 0px;
+    padding: 3px 20px;
+    margin: 20px 0px;
 }
 .gray-select-btn:hover{
 color: #fff;
     background: #60727A;
 }
+.clearfix{
+    clear:both;
+}
 .clear-btn{
         color: #60727A;
     background: #EAF5FA;
     border: 2px solid #60727A;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     border-radius: 10px;
-    padding: 5px 20px;
+    padding: 3px 20px;
     margin: 30px 0px;
 }
 .clear-btn:hover{
@@ -385,23 +415,23 @@ color: #EAF5FA;
 .credit-head{
         color: #718E99;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .amount{
         border: 2px solid #718E99;
-    padding: 6px 20px;
+    padding: 3px 20px;
     width: -webkit-calc(100% - 100px);
     width: -o-calc(100% - 100px);
     width: calc(100% - 100px);
-    font-size: 24px;
+    font-size: 20px;
 }
 .promo{
         border: 2px solid #718E99;
-    padding: 6px 20px;
+    padding: 3px 20px;
     width: -webkit-calc(100% - 100px);
     width: -o-calc(100% - 100px);
     width: calc(100% - 100px);
-    font-size: 24px;
+    font-size: 20px;
     margin:30px 0px;
 }
 .amount-btn{
@@ -409,20 +439,20 @@ color: #EAF5FA;
     background: #78939E;
     position: relative;
     left: -4px;
-    font-size: 25px;
+    font-size: 20px;
     border: none;
-    width: 95px;
-    height: 50px;
+    width: 80px;
+    height: 38px;
 }
 .cards{
-        max-height: 40px;
+        max-height: 35px;
     max-width: 100%;
 }
 .unit{
         position: absolute;
     font-size: 24px;
     left: 20px;
-    top: 91px;
+    top: 68px;
 }
 .padding0{
     padding: 0px;
@@ -439,14 +469,18 @@ color: #EAF5FA;
     list-style: none;
         padding-left: 20px;
 }
+h3.small{
+    font-size:21px;
+}
 .setting-list h3{
     color: #718E99;
+    font-size:22px;
 }
 .fund-btn{
     background: #78939E;
     color: #fff;
     border: 2px solid #78939E;
-    font-size: 24px;
+    font-size: 20px;
     padding: 3px 15px;
     border-radius: 30px;
 
@@ -455,9 +489,6 @@ color: #EAF5FA;
     background: #fff;
     color: #78939E;
     border: 2px solid #78939E;
-    font-size: 24px;
-    padding: 3px 15px;
-    border-radius: 30px;
 
 }
 .purchase-head{
@@ -539,7 +570,7 @@ table.table>tbody>tr>td{
      background: #52C9E0;
     color: #fff;
     padding: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
 }
 .line{
@@ -587,12 +618,12 @@ max-width:99%;
 }
 @media (max-width:365px){
     .unit{
-            top: 103px;
+            top: 48px;
     }
 }
 @media (min-width:366px) and (max-width:767px){
     .unit{
-            top: 70px;
+            top: 48px;
     }
 }
 span.chat img{
@@ -602,8 +633,14 @@ span.chat img{
 .bottom-offset-20{
     margin-bottom: 20px;
 }
+.bottom-offset-10{
+    margin-bottom: 10px;
+}
 .top-offset-20{
     margin-top: 20px;
+}
+.top-offset-10{
+    margin-top: 10px;
 }
 .bottom-space-0{
     margin-bottom: 0px;
@@ -659,8 +696,8 @@ margin-left: -80px;
 }
 .rich-text{
         border: 2px solid #EE6B51;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 15px;
+    margin-top: 20px;
 }
 .rich-text h3{
     color: #EE6B51;
@@ -736,7 +773,7 @@ tr.back-pink{
      background:pink;
  }
 .gray-box.border-pink,.pack-box.border-pink{
-     border:5px solid pink;
+     border:2px solid pink;
  }
 .red {
 color:red;
