@@ -81,7 +81,7 @@ padding: 10px 15px;
 }
 .pay-title{
     background: #78939E;
-    margin: 5vw 0;
+    margin: 3vw 0;
 }
 .footer{
     background: #52c9e0;
@@ -91,7 +91,7 @@ padding: 10px 15px;
 }
 .check-title{
     background: #52C9E0;
-    margin: 5vw 0;
+    margin: 3vw 0;
 }
 .contact{
     color: #fff;
@@ -303,6 +303,17 @@ width: 100%;
     border-radius: 10px;
     padding: 3px 20px;
 }
+<<<<<<< HEAD
+=======
+tr.back-pink .reverse-btn-2,.pack-box.border-pink .select-btn{
+    color:#fff;
+    background: #52c9e0;
+}
+.gray-box.border-pink .gray-select-btn{
+    color: #fff;
+    background: #60727A;
+}
+>>>>>>> 51769055ec36c6ef5f1630f9f4ad7a534aa65d8e
 .select-btn{
         color: #52C9E0;
     background: #fff;
@@ -330,6 +341,9 @@ color: #fff;
 .gray-select-btn:hover{
 color: #fff;
     background: #60727A;
+}
+.clearfix{
+    clear:both;
 }
 .clear-btn{
         color: #60727A;
@@ -434,7 +448,7 @@ color: #EAF5FA;
     height: 38px;
 }
 .cards{
-        max-height: 40px;
+        max-height: 35px;
     max-width: 100%;
 }
 .unit{
@@ -458,8 +472,12 @@ color: #EAF5FA;
     list-style: none;
         padding-left: 20px;
 }
+h3.small{
+    font-size:21px;
+}
 .setting-list h3{
     color: #718E99;
+    font-size:22px;
 }
 .fund-btn{
     background: #78939E;
@@ -617,6 +635,9 @@ span.chat img{
 
 .bottom-offset-20{
     margin-bottom: 20px;
+}
+.bottom-offset-10{
+    margin-bottom: 10px;
 }
 .top-offset-20{
     margin-top: 20px;

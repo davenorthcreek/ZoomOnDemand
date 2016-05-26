@@ -57,10 +57,14 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-md-12 col-sm-12 top-offset-30">
+                <div class="col-md-12 col-sm-12 top-offset-20">
                     <h3 class="check-head">Packaged Deals</h3>
                 </div>
+<<<<<<< HEAD
                 <div class="col-md-10 col-md-offset-1 col-sm-12 padding0">
+=======
+                <div class="col-md-8 col-md-offset-2 col-sm-12 padding0">
+>>>>>>> 51769055ec36c6ef5f1630f9f4ad7a534aa65d8e
                     <div class="col-md-4 col-sm-4 center">
                         <div class="pack-box" ng-class="vm.hour == 5 ? 'border-pink':''">
                             <h3 class="pack-duration">5 Hours</h3>
@@ -93,7 +97,11 @@
                     <!-- 20 hours -->
                 </div>
                 <!-- blue box -->
+<<<<<<< HEAD
                 <div class="col-md-10 col-md-offset-1 col-sm-12 padding0">
+=======
+                <div class="col-md-8 col-md-offset-2 col-sm-12 padding0">
+>>>>>>> 51769055ec36c6ef5f1630f9f4ad7a534aa65d8e
                     <div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2 center">
                         <div class="gray-box" ng-class="vm.hour == 30 ? 'border-pink':''">
                             <h3 class="pack-duration">30 Hours</h3>
@@ -132,7 +140,7 @@
             <input ng-model="number" placeholder="Credit card number" payments-format="card" name="card" class="inputs">
         </div>
         <div class="col-md-5 col-sm-5">
-            <img src="images/cards.jpg" class="cards" />
+            <img src="images/cards.png" class="cards" />
         </div>
     </div>
     <!-- card numbar-->
@@ -171,17 +179,21 @@
             </div>
         </div>
         <!-- popup -->
+<<<<<<< HEAD
         <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">
+=======
+        <div class="col-md-5 col-sm-5 top-offset-20 bottom-offset-20">
+>>>>>>> 51769055ec36c6ef5f1630f9f4ad7a534aa65d8e
             <h3 class="credit-head">Enter Your Amount</h3>
             <input ng-model="vm.escrow" name="Amount" type="Number" step="0.01" min="0" max="50000" placeholder="00.00" class="amount" ng-class="checkoutForm.Amount.$invalid? 'red':''" />
             <span class="unit">$</span>
             <button type="button" class="amount-btn">Add</button>
         </div>
         <div class="col-md-12 col-sm-12 padding0">
-            <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">
+            <div class="col-md-5 col-sm-5 top-offset-20 bottom-offset-20">
                 <button type="button" ng-click="vm.escrow=0" class="clear-btn">Clear Payment</button>
             </div>
-            <div class="col-md-5 col-sm-5 col-md-offset-2 col-sm-offset-2 top-offset-30 bottom-offset-20">
+            <div class="col-md-5 col-sm-5 col-md-offset-2 col-sm-offset-2 top-offset-20 bottom-offset-20">
                 <input type="text" placeholder="Promocode" class="promo" ng-model="vm.tmpcoupon" />
                 <button type="button" ng-disabled="vm.waiting" class="amount-btn" ng-click="vm.couponApply()">Apply</button>
             </div>
@@ -195,18 +207,20 @@
     </div>
     <!-- checkout title -->
     <div class="container">
+<<<<<<< HEAD
         <h3 class="inline-block">Cart: {{vm.hrsText}} / {{vm.subtotal|currency}}</h3><button type="button" ng-click="vm.cancelSubmit()" class="reverse-btn-3 float-right top-offset-20">Clear Cart</button>
         <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20">
+=======
+        <h3 class="inline-block">Cart: {{vm.hrsText}} / {{vm.subtotal|currency}}</h3><button type="button" ng-click="vm.cancelSubmit()" class="reverse-btn-3 float-right top-offset-20 bottom-offset-10">Clear Cart</button>
+        <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-20 bottom-offset-20 clearfix">
+>>>>>>> 51769055ec36c6ef5f1630f9f4ad7a534aa65d8e
             <h3 class="bottom-bordered">Subtotal</h3>
             <h3 class="right" ng-bind="vm.subtotal | currency"></h3>
 
         </div>
-        <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20 right">
+        <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-20 bottom-offset-20 right">
             <input ng-disabled="vm.payDisabled" type="submit" value="Make Payment" class="registration-btn top-offset-20" />
             <!--ng-bind="'Pay ' + ((vm.total)|currency) "-->
-            <span class="chat">
-                <img src="images/comments.png" />
-            </span>
         </div>
 
     </div>
