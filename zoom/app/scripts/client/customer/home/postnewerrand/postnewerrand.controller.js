@@ -42,7 +42,7 @@ function PostNewErrandController($scope, moment) {
   }
 
   function getTimeWithTimeZone(date) {
-    return moment(date).format('LT Z');
+    return moment(date).format('LT');
   }
 
   function setDate(newDate, oldDate) {
