@@ -683,6 +683,7 @@ margin-left: -80px;
 }
 .selection-country{
         -webkit-appearance: none;
+        -moz-appearance: none;
     height: 35px;
     width: 100%;
     border-radius: 0px;
