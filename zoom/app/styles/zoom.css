@@ -1261,6 +1261,9 @@ input:-ms-input-placeholder {
 .zoom .datetimepicker {
   width: 290px;
   padding: 10px 10px 10px 10px; }
+  .zoom .datetimepicker table.hour-view thead,
+  .zoom .datetimepicker table.minute-view thead {
+    display: none !important; }
 .zoom .open > .dropdown-menu {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;

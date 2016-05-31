@@ -1743,6 +1743,10 @@ textarea:-ms-input-placeholder,
 	}
 
 	.datetimepicker{
+		table.hour-view thead,
+		table.minute-view thead{
+			display:none !important;
+		}
 		width: 290px;
 		@include padding(10px,10px,10px,10px);
 	}
