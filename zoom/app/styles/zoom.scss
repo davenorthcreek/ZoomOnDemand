@@ -945,14 +945,14 @@ textarea:-ms-input-placeholder,
 													@include border-radius(25px);
 													@include margin(0px,0px,10px,0px);
 													color:$white;
-													width:100px;
+													width:120px;
 												}
 												button.btnEditOrder{
 													background:$white;
 													color:$blueZoom;
 													@include border(1px, solid, $blueZoom);
 													@include padding(2px,5px,2px,5px);
-													width:100px;
+													width:120px;
 												}
 												.image{
 													width:40px;
@@ -1517,14 +1517,14 @@ textarea:-ms-input-placeholder,
 								@include border-radius(25px);
 								@include margin(0px,0px,10px,0px);
 								color:$white;
-								width:100px;
+								width:120px;
 							}
 							button.btnEditOrder{
 								background:$white;
 								color:$blueZoom;
 								@include border(1px, solid, $blueZoom);
 								@include padding(2px,5px,2px,5px);
-								width:100px;
+								width:120px;
 							}
 							.image{
 								width:40px;
