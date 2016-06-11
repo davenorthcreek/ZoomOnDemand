@@ -8,8 +8,8 @@
  * HomeController of the zoomApp
  */
 zoomApp.controller('HomeController', HomeController);
-HomeController.$inject = ['$scope', 'moment'];
+HomeController.$inject = ['$scope', 'moment', 'ipCookie'];
 
-function HomeController($scope, moment) {
+function HomeController($scope, moment, ipCookie) {
 
 };

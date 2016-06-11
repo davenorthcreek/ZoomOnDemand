@@ -13,63 +13,7 @@ PostNewErrandController.$inject = ['$scope', 'moment'];
 function PostNewErrandController($scope, moment) {
 
   var vm = $scope;
-  vm.locations = ['Los Angeles', 'San Diego'];
-  var momentFormat = 'MM/DD/YYYY';
-  var date = new moment();
-  vm.form = {
-    whatDoYouNeed: '',
-    serviceLocation: vm.locations[0],
-    date: getFormatedDate(date), 
-    day: getWeekDayName(date),
-    time: getTimeWithTimeZone(date),
-    frequencyNumber: 1,
-    frequencyWord: ''
-  };
-
-  console.log(vm.form);
-
-  vm.setDate = setDate;
-  vm.setTime = setTime;
-  vm.setFrequency = setFrequency;
-  vm.next = next;
-
-  function getFormatedDate(date) {
-    return moment(date).format(momentFormat);
-  }
-
-  function getWeekDayName(date) {
-    return moment(date, momentFormat).format('dddd');
-  }
-
-  function getTimeWithTimeZone(date) {
-    return moment(date).format('LT');
-  }
-
-  function setDate(newDate, oldDate) {
-    console.log('newDate: ' + newDate);
-    console.log('oldDate: ' + oldDate);
-    console.log('vm.form.date: ' + vm.form.date);
-    vm.form.day = getWeekDayName(vm.form.date);
-    console.log('vm.form.day: ' + vm.form.day);
-  }
-
-  function setTime(newDate, oldDate) {
-    console.log('newTime: ' + newDate);
-    console.log('vm.form.time: ' + vm.form.time)
-  }
-
-  function setFrequency(frequency) {
-    var frequencyTable = { 1: 'oneTime', 4: 'weekly', 12: 'monthly', 1000: 'other' };
-    vm.form.frequencyNumber = frequency;
-    vm.form.frequencyWord = frequencyTable[frequency];
-    console.log('vm.form.frequencyNumber: ' + vm.form.frequencyNumber);
-    console.log('vm.form.frequencyWord: ' + vm.form.frequencyWord);
-  }
-
-  function next() {
-    console.log('next');
-    console.log(vm.form);
-  }
+    
 
   // Use this list for testing purposes.
   vm.errands = [
