@@ -22,7 +22,8 @@ var zoomApp = angular.module('zoomApp', [
   'uiSwitch',
   'ui.bootstrap',
   'ipCookie',
-  'google.places'
+  'google.places',
+  'zoomAppDirectives'
 ]);
 
 zoomApp.constant('moment', moment);

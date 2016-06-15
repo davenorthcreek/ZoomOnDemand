@@ -162,7 +162,7 @@
         </table>
     </div>
     -->
-    <div ng-controller="ErrandsProgressController" class="errandsProgressDetail">
+    <div class="errandsProgressDetail">
         <h3>ERRANDS IN PROGRESS</h3>
         <script type="text/ng-template" id="group-template.html">
             <div class="panel {{panelClass || 'panel-default'}}">
@@ -179,40 +179,45 @@
             </div>
         </script>
         <uib-accordion close-others="vm.oneAtATime">
-            <uib-accordion-group template-url="group-template.html" ng-repeat="group in vm.groups" is-open="group.content.status">
+            <uib-accordion-group template-url="group-template.html" ng-repeat="errand in vm.errands" is-open="errand.is_open" ng-click="vm.toggleOpen($index, errand)" repeat-end="vm.repeatEndErrands()">
                 <uib-accordion-heading>
                     <!-- {{group.title}} -->
-                    <span class="number">{{group.heading.number}}</span>
-                    <span class="text">Errand Date: {{group.heading.date}}</span>
-                    <span class="text">Delivery</span>
-                    <span class="text">Time Posted: {{group.heading.time}}</span>
-                    <span class="text">Status: {{group.heading.status}}</span>
-                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    <span class="number">{{$index + 1}}</span>
+                    <span class="text">Errand Date: {{errand.datetime|date:'MM/dd/yyyy'}}</span>
+                    <span class="text">{{errand.type.name}}</span>
+                    <span class="text">Time Posted: {{errand.datetime|date:'shortTime'}}</span>
+                    <span class="text">Status: In Progress</span>
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': errand.is_open, 'glyphicon-chevron-right': !errand.is_open}"></i>
                     <div class="clearfix"></div>
                 </uib-accordion-heading>
                 <div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="provider no-border-radius">
-                            <div class="row">
+                            <div class="row" ng-show="errand.provider">
                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="image">
-                                        <img src="{{group.content.image}}" alt="" class="img-responsive">
+                                        <img ng-src="{{errand.provider.photoUrl}}" alt="" class="img-responsive">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                                    <p>{{group.content.provider}}</p>
+                                    <p>Your service provider is {{errand.provider.fname}}</p>
                                     <hr>
-                                    <p>{{group.content.goodNews}}</p>
+                                    <p>Good news, she is scheduled to arrive on time.</p>
                                 </div>
                                 <div class="clearfix"></div>
+                            </div>
+                            <div class="row" ng-hide="errand.provider">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <p class="text-center">Your service provider is not specified</p>
+                                </div>
                             </div>
                         </div>
                         <div class="details no-border-radius">
                             <div>
                                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                                    <p>DELIVERY SERVICE</p>
-                                    <p>ETA: {{group.content.eta}}</p>
-                                    <p>Item: {{group.content.item}}</p>
+                                    <p>{{errand.type.comment}}</p>
+                                    <p>ETA: {{errand.datetime|date:'shortTime'}}</p>
+                                    <p ng-show="errand.type.name == 'Delivery'">Item: {{errand.item}}</p>
                                 </div>
                                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                     <button class="pull-right btnEditErrand">Edit Errand</button>
@@ -221,28 +226,31 @@
                             </div>
                             <div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <p>Pick up Location: </p>
-                                    <p>{{group.content.pickUpLocation}}</p>
+                                    <p ng-show="errand.type.name == 'Delivery'">Pick up Location: </p>
+                                    <p ng-show="errand.type.name == 'Delivery'">{{errand.pick_up_address}} {{errand.pick_up_unit}}</p>
                                     <p>Drop off Location: </p>
-                                    <p>{{group.content.dropOffLocation}}</p>
+                                    <p>{{errand.address}} {{errand.unit}}</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="form-group">
-                            <img src="{{group.content.imageMaps}}" alt="" class="img-responsive pull-right">
+                        <div class="form-group map-container">
+                            
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="contactZoom" href="{{group.content.urlLinkContact}}">{{group.content.textLinkContact}}</a>
+                        <a class="contactZoom" href="">Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <!-- {{group.content}} -->
             </uib-accordion-group>
         </uib-accordion>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div id="map" style="width: 100%; height: 300px; max-width: 335px;"></div>
     </div>
 </div>
 <!-- TAB PARENT ERRANDS IN PROGRESS

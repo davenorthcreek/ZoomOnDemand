@@ -7,131 +7,63 @@
         .controller('ErrandsProgressController', ErrandsProgressController);
 
     /** @ngInject */
-    ErrandsProgressController.$inject = ['$state', '$scope'];
-    function ErrandsProgressController($state, $scope) {
-        var vm = this;   
+    ErrandsProgressController.$inject = ['$state', '$scope', '$http', 'API_URL', 'toastr'];
+    function ErrandsProgressController($state, $scope, $http, API_URL, toastr) {
+      var vm = this;   
 
-        vm.oneAtATime = true;
+      vm.oneAtATime = true;
         
-		vm.groups = [
-			{
-				heading:{
-					number	: '1',
-					date	: '04/08/16',
-					time	: '11:00 AM',
-					status	: 'In Progress'
-				},
-				content:{
-					status			: 'true',
-					image			: '/images/face-errands.png',
-					provider		: 'Your service provider is Judith.',
-					goodNews		: 'Good news, she is scheduled to arrive on time.',
-					eta				: '11:00 AM',
-					item			: 'Documents',
-					pickUpLocation	: '1667 Divisdero Street, Room 1285. San Francisco CA, 94115.',
-					dropOffLocation	: '535 Mission Street, 19th Floor, Suite 16. San Francisco CA, 94100.',
-					urlLinkContact	: '#',
-					textLinkContact	: 'Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.',
-					imageMaps		: '/images/image-maps.png'
-				}
-			},
-			{
-				heading:{
-					number	: '2',
-					date	: '04/08/16',
-					time	: '11:00 AM',
-					status	: 'In Progress'
-				},
-				content:{
-					status			: 'false',
-					image			: '/images/face-errands.png',
-					provider		: 'Your service provider is Judith.',
-					goodNews		: 'Good news, she is scheduled to arrive on time.',
-					eta				: '11:00 AM',
-					item			: 'Documents',
-					pickUpLocation	: '1667 Divisdero Street, Room 1285. San Francisco CA, 94115.',
-					dropOffLocation	: '535 Mission Street, 19th Floor, Suite 16. San Francisco CA, 94100.',
-					urlLinkContact	: '#',
-					textLinkContact	: 'Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.',
-					imageMaps		: '/images/image-maps.png'
-				}
-			},
-			{
-				heading:{
-					number	: '3',
-					date	: '04/08/16',
-					time	: '11:00 AM',
-					status	: 'In Progress'
-				},
-				content:{
-					status			: 'false',
-					image			: '/images/face-errands.png',
-					provider		: 'Your service provider is Judith.',
-					goodNews		: 'Good news, she is scheduled to arrive on time.',
-					eta				: '11:00 AM',
-					item			: 'Documents',
-					pickUpLocation	: '1667 Divisdero Street, Room 1285. San Francisco CA, 94115.',
-					dropOffLocation	: '535 Mission Street, 19th Floor, Suite 16. San Francisco CA, 94100.',
-					urlLinkContact	: '#',
-					textLinkContact	: 'Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.',
-					imageMaps		: '/images/image-maps.png'
-				}
-			},
-			{
-				heading:{
-					number	: '4',
-					date	: '04/08/16',
-					time	: '11:00 AM',
-					status	: 'In Progress'
-				},
-				content:{
-					status			: 'false',
-					image			: '/images/face-errands.png',
-					provider		: 'Your service provider is Judith.',
-					goodNews		: 'Good news, she is scheduled to arrive on time.',
-					eta				: '11:00 AM',
-					item			: 'Documents',
-					pickUpLocation	: '1667 Divisdero Street, Room 1285. San Francisco CA, 94115.',
-					dropOffLocation	: '535 Mission Street, 19th Floor, Suite 16. San Francisco CA, 94100.',
-					urlLinkContact	: '#',
-					textLinkContact	: 'Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.',
-					imageMaps		: '/images/image-maps.png'
-				}
-			},
-			{
-				heading:{
-					number	: '5',
-					date	: '04/08/16',
-					time	: '11:00 AM',
-					status	: 'In Progress'
-				},
-				content:{
-					status			: 'false',
-					image			: '/images/face-errands.png',
-					provider		: 'Your service provider is Judith.',
-					goodNews		: 'Good news, she is scheduled to arrive on time.',
-					eta				: '11:00 AM',
-					item			: 'Documents',
-					pickUpLocation	: '1667 Divisdero Street, Room 1285. San Francisco CA, 94115.',
-					dropOffLocation	: '535 Mission Street, 19th Floor, Suite 16. San Francisco CA, 94100.',
-					urlLinkContact	: '#',
-					textLinkContact	: 'Please contact Zoom Errands at (310) 425 6425 directly if you have any questions or concerns.',
-					imageMaps		: '/images/image-maps.png'
-				}
-			}
-		];
+			var directionsDisplay;
+			var directionsService = new google.maps.DirectionsService();
+			var map;
+			var marker;
 
-		vm.items = ['Item 1', 'Item 2', 'Item 3'];
+		  directionsDisplay = new google.maps.DirectionsRenderer();
+		  var mapOptions = {
+		    zoom: 14,
+		    center: new google.maps.LatLng(34.0522, 118.2437)
+		  }
+		  map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-		vm.addItem = function() {
-			var newItemNo = vm.items.length + 1;
-			vm.items.push('Item ' + newItemNo);
-		};
+      $http.get(API_URL + '/client/tasks/mytasks', { status: 'open' })
+      .then(function(resp) {   
+          vm.errands = resp.data.tasks;
+      });
 
-		vm.status = {
-			isCustomHeaderOpen: false,
-			isFirstOpen: true,
-			isFirstDisabled: false
-		};
+      vm.toggleOpen = function(index, errand) {
+      	//event.currentTarget
+      	if (marker) {
+      		marker.setMap(null);
+      	}
+      	if (errand.type.name == 'Delivery') {
+      		directionsDisplay.setMap(map);
+				  var request = {
+				      origin: new google.maps.LatLng(errand.pick_up_addrlat, errand.pick_up_addrlng),
+				      destination: new google.maps.LatLng(errand.addrlat, errand.addrlng),
+				      travelMode: google.maps.TravelMode.DRIVING
+				  };
+
+				  directionsService.route(request, function(response, status) {
+				    if (status == google.maps.DirectionsStatus.OK) {
+				      directionsDisplay.setDirections(response);
+				    }
+				  });      		
+      	} else {
+      		directionsDisplay.setMap(null);
+      		marker = new google.maps.Marker({
+				    position: new google.maps.LatLng(errand.addrlat, errand.addrlng)
+				  });
+				  marker.setMap(map);
+				  map.setCenter(marker.getPosition());
+      	}
+      	$('#map').appendTo($('.map-container').eq(index));
+      }
+
+      vm.repeatEndErrands = function() {
+        if (vm.errands.length) {
+        	vm.errands[0].is_open = true;
+        	vm.toggleOpen(0, vm.errands[0]);
+        }
+      }
     }
 })();
