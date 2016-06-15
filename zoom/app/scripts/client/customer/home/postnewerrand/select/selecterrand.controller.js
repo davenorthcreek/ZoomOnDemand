@@ -17,10 +17,10 @@
         $rootScope.errand.datetime = new Date();
       }
 
-      vm.form = {
-        frequencyNumber: 1,
-        frequencyWord: ''
-      };
+      if (!$rootScope.errand.frequency) {
+        $rootScope.errand.frequency = 0;
+      }
+
 
       console.log(vm.date);
 

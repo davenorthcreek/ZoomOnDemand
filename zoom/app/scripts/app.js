@@ -21,7 +21,8 @@ var zoomApp = angular.module('zoomApp', [
   'ngFileUpload',
   'uiSwitch',
   'ui.bootstrap',
-  'ipCookie'
+  'ipCookie',
+  'google.places'
 ]);
 
 zoomApp.constant('moment', moment);

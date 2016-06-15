@@ -6,14 +6,15 @@
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                     <div class="form-group">
                         <label for="">Where should we send help?</label>
-                        <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom">
+                        <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete  force-selection="true" options="vm.autocompleteOptions" ng-model="errand.addr" ng-class="{'warning-border':vm.invalidAddress}" autocomplete="off" ng-change="vm.blurAddress()" required>
+                        <span ng-show="vm.invalidAddress" class="text-danger">Please complete address with google autocomplete exaclty.</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class="form-group">
                         <label for="">&nbsp;</label>
                         <div class="form-group margin-bottom-sm">
-                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #">
+                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #" ng-model="errand.unit">
                         </div>
                     </div>
                 </div>
@@ -22,9 +23,10 @@
                         <label for="">Tell us more about what you need help with</label>
                         <div class="form-group margin-bottom-sm">
                             <div class="textarea">
-                                <textarea name="" id="" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops."></textarea>
-                                <div class="imageClip" ngf-select ngf-multiple="false" ng-model="firstFile" ngf-change="uploadFirstFile(firstFile)" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
+                                <textarea name="" id="" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops." ng-model="errand.details"></textarea>
+                                <div class="imageClip" ngf-multiple="true" ng-model="vm.firstFile" ngf-select="vm.uploadFiles($files, 'normal')" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
                             </div>
+                            <div class="pull-right">Count: {{errand.task_uploads['normal'].length || 0}}</div>
                         </div>
                     </div>
                 </div>
@@ -46,15 +48,15 @@
                                 </label>
                             </div> -->
                             <div class="zoomSwitchFinal">
-                                <switch id="enabled" name="enabled" ng-model="purshase" on="Yes" off="No" class="green"></switch>                                
+                                <switch id="enabled" name="enabled" ng-model="errand.escrowable" on="Yes" off="No" class="green"></switch>                                
                             </div>
                         </span>
                     </div>
                 </div>
-                <div class="contentDependSwitch" ng-hide="purshase == false">
+                <div class="contentDependSwitch" ng-show="errand.escrowable">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form-group">
-                            <span class="spanBalance">Your current balance: $200.00</span>
+                            <span class="spanBalance">Your current balance: ${{(user.escrow_hours.escrowavail || 0).toFixed(2)}}</span>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right textDetails">
@@ -67,11 +69,11 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="input-group margin-bottom-sm componentMinusPlus pull-right">
-                            <span class="input-group-addon" ng-click="subtract()">
+                            <span class="input-group-addon" ng-click="vm.subtract()">
                                 <i class=" no-border-radius fa fa-minus" aria-hidden="true"></i>
                             </span>
-                            <input class="form-control no-border-radius input-sm" type="text" placeholder="$0.00" ng-model="dolar" readonly="readonly">
-                            <span class="input-group-addon" ng-click="add()">
+                            <input class="form-control no-border-radius input-sm" type="text" placeholder="$0.00" ng-model="vm.dolar" readonly="readonly">
+                            <span class="input-group-addon" ng-click="vm.add()">
                                 <i class=" no-border-radius fa fa-plus" aria-hidden="true"></i>
                             </span>
                         </div>
@@ -81,9 +83,10 @@
                         <div class="form-group">
                             <div class="form-group margin-bottom-sm">
                                 <div class="textarea">
-                                    <textarea name="" id="" class="form-control no-border-radius" rows="3" placeholder="For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner."></textarea>
-                                    <div class="imageClip" ngf-select ngf-multiple="false" ng-model="secondFile" ngf-change="uploadSecondFile(secondFile)" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
+                                    <textarea name="" id="" class="form-control no-border-radius" rows="3" placeholder="For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner." ng-model="errand.funds_details"></textarea>
+                                    <div class="imageClip" ngf-multiple="true" ng-model="vm.secondFile" ngf-select="vm.uploadFiles($files, 'funds')" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
                                 </div>
+                                <div class="pull-right">Count: {{errand.task_uploads['funds'].length || 0}}</div>
                             </div>
                         </div>
                     </div>

@@ -39,6 +39,8 @@ module.exports = function(config) {
       'bower_components/numeral/numeral.js',
       'bower_components/angular-ui-switch/angular-ui-switch.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/angular-google-places-autocomplete/src/autocomplete.js',
+      'bower_components/angular-google-places-autocomplete/dist/autocomplete.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
