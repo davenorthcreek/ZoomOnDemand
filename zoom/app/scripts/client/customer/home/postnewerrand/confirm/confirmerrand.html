@@ -23,6 +23,12 @@
                     <p ng-show="errand.datetime">{{errand.datetime|date:'MM/dd/yyyy (EEEE)'}} at {{errand.datetime|date:'shortTime'}}</p>
                     <p>Frequency:</p>
                     <p>{{errand.frequency == 0 ? 'This one time' : (errand.frequency == 7 ? 'Weekly' : (errand.frequency == 30 ? 'Monthly' : 'Other'))}}</p>
+                    <div ng-show="errand.type.name == 'Delivery'">
+                        <p>Item:</p>
+                        <p>{{errand.item}}</p>
+                        <p>Pick up Location:</p>
+                        <p>{{errand.pick_up_address}} <span>{{errand.pick_up_unit}}</span></p>
+                    </div>
                     <p>Errand Location:</p>
                     <p>{{errand.address}} <span>{{errand.unit}}</span></p>
                     <p>Errand Detail:</p>

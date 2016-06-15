@@ -67,6 +67,31 @@
         }
       }
 
+      vm.blurPickUpAddress = function() {
+        var city;
+        if (($rootScope.errand.pick_up_addr) && ($rootScope.errand.pick_up_addr.types)) {
+          var p = $rootScope.errand.pick_up_addr;
+          for (var i = 0; i < p.address_components.length; i++) {
+            var addressType = p.address_components[i].types[0];
+            if (addressType=="locality"){
+              city = p.address_components[i]['long_name'];
+              break;              
+            }
+          }
+          if (!city) {
+              vm.invalidPickUpAddress = true;
+              return; 
+          }
+          
+          $rootScope.errand.pick_up_address = $rootScope.errand.pick_up_addr.formatted_address;
+          $rootScope.errand.pick_up_addrlat = $rootScope.errand.pick_up_addr.geometry.location.lat();
+          $rootScope.errand.pick_up_addrlng = $rootScope.errand.pick_up_addr.geometry.location.lng();
+          vm.invalidPickUpAddress = false;    
+        } else {
+          vm.invalidPickUpAddress = true;        
+        }
+      }
+
       vm.uploadFiles = function(files, category) {
         if (files && files.length) {
           Upload.upload({
