@@ -166,29 +166,31 @@
         <h3>ERRANDS IN PROGRESS</h3>
         <script type="text/ng-template" id="group-template.html">
             <div class="panel {{panelClass || 'panel-default'}}">
-                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
+                <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
                             <span uib-accordion-header></span>
-                    </h4>
-                </div>
-                        </a>
+                        </h4>
+                    </div>
+                </a>
                 <div class="panel-collapse collapse" uib-collapse="!isOpen">
                     <div class="panel-body" ng-transclude></div>
                 </div>
             </div>
         </script>
         <uib-accordion close-others="vm.oneAtATime">
-            <uib-accordion-group template-url="group-template.html" ng-repeat="errand in vm.errands" is-open="errand.is_open" ng-click="vm.toggleOpen($index, errand)" repeat-end="vm.repeatEndErrands()">
+            <uib-accordion-group template-url="group-template.html" ng-repeat="errand in vm.errands" is-open="errand.is_open" repeat-end="vm.repeatEndErrands()">
                 <uib-accordion-heading>
-                    <!-- {{group.title}} -->
-                    <span class="number">{{$index + 1}}</span>
-                    <span class="text">Errand Date: {{errand.datetime|date:'MM/dd/yyyy'}}</span>
-                    <span class="text">{{errand.type.name}}</span>
-                    <span class="text">Time Posted: {{errand.datetime|date:'shortTime'}}</span>
-                    <span class="text">Status: In Progress</span>
-                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': errand.is_open, 'glyphicon-chevron-right': !errand.is_open}"></i>
-                    <div class="clearfix"></div>
+                    <div>
+                        <!-- {{group.title}} -->
+                        <span class="number">{{$index + 1}}</span>
+                        <span class="text">Errand Date: {{errand.datetime|date:'MM/dd/yyyy'}}</span>
+                        <span class="text">{{errand.type.name}}</span>
+                        <span class="text">Time Posted: {{errand.datetime|date:'shortTime'}}</span>
+                        <span class="text">Status: In Progress</span>
+                        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': errand.is_open, 'glyphicon-chevron-right': !errand.is_open}"></i>
+                        <div class="clearfix"></div>
+                    </div>
                 </uib-accordion-heading>
                 <div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -212,7 +214,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="details no-border-radius">
+                        <div class="details no-border-radius" ng-show="!errand.editing">
                             <div>
                                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                     <p>{{errand.type.comment}}</p>
@@ -220,7 +222,7 @@
                                     <p ng-show="errand.type.name == 'Delivery'">Item: {{errand.item}}</p>
                                 </div>
                                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                                    <button class="pull-right btnEditErrand">Edit Errand</button>
+                                    <button class="pull-right btnEditErrand" ng-click="vm.editErrand(errand)">Edit Errand</button>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -230,6 +232,78 @@
                                     <p ng-show="errand.type.name == 'Delivery'">{{errand.pick_up_address}} {{errand.pick_up_unit}}</p>
                                     <p>Drop off Location: </p>
                                     <p>{{errand.address}} {{errand.unit}}</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="details no-border-radius" ng-show="errand.editing" >
+                            <div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                                    <div class="form-group">
+                                        <p>What errand do you need help with?</p>
+                                        <div angucomplete-alt 
+                                          placeholder="{{vm.all_types[vm.editing_errand.type_id-1].comment}}" 
+                                          pause="100"
+                                          selected-object="vm.selectedObject"
+                                          local-data="vm.all_types"
+                                          search-fields="comment"
+                                          title-field="comment"
+                                          minlength="1"
+                                          input-class="form-control no-border-radius input-md searchZoom"
+                                          match-class="highlight">
+                                        </div> 
+                                    </div>   
+                                    <p>ETA:</p>
+                                    <div>
+                                        <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                          <div class="input-group date">
+                                            <input type="text" class="form-control" ng-value="vm.editing_errand.datetime|date:'shortTime'">
+                                          </div>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                          <datetimepicker data-ng-model="vm.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute' }" data-on-set-time="vm.setTime(newDate, oldDate)" ></datetimepicker>
+                                        </ul>
+                                    </div>
+                                    <div ng-show="vm.editing_errand.type.name == 'Delivery'">
+                                        <p>Item:</p>
+                                        <div class="form-group margin-bottom-sm">
+                                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="" ng-model="vm.editing_errand.item">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                    <div class="form-group">
+                                        <button class="pull-right btnEditErrand" ng-click="vm.saveErrand($index, errand)">Save</button>&nbsp;
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="pull-right btnEditErrand" ng-click="vm.cancelEditingErrand(errand)">Cancel</button>&nbsp;
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <p ng-show="vm.editing_errand.type.name == 'Delivery'">Pick up Location: </p>
+                                    <div ng-show="vm.editing_errand.type.name == 'Delivery'">
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete placeholder="{{vm.editing_errand.pick_up_address}}" force-selection="true" options="vm.autocompleteOptions" ng-model="vm.editing_errand.pick_up_addr" ng-class="{'warning-border':vm.invalidPickUpAddress}" autocomplete="off" ng-change="vm.blurPickUpAddress()" required>
+                                            <span ng-show="vm.invalidPickUpAddress" class="text-danger">Please complete address with google autocomplete exaclty.</span>
+                                        </div>
+                                        <div class="form-group margin-bottom-sm">
+                                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #" ng-model="vm.editing_errand.pick_up_unit">
+                                        </div>
+                                    </div>
+
+                                    <p>Drop off Location: </p>
+                                    <div>
+                                        <div class="form-group">
+                                            <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete placeholder="{{vm.editing_errand.address}}" force-selection="true" options="vm.autocompleteOptions" ng-model="vm.editing_errand.addr" ng-class="{'warning-border':vm.invalidAddress}" autocomplete="off" ng-change="vm.blurAddress()" required>
+                                            <span ng-show="vm.invalidAddress" class="text-danger">Please complete address with google autocomplete exaclty.</span>
+                                        </div>
+                                        <div class="form-group margin-bottom-sm">
+                                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #" ng-model="vm.editing_errand.unit">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -249,7 +323,7 @@
             </uib-accordion-group>
         </uib-accordion>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6">
         <div id="map" style="width: 100%; height: 300px; max-width: 335px;"></div>
     </div>
 </div>

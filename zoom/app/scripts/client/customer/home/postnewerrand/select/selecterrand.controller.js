@@ -46,8 +46,7 @@
           $rootScope.errand.type_id = selected.originalObject.id;
           $rootScope.errand.type = selected.originalObject;
           $log.log($rootScope.errand);  
-        } 
-        
+        }         
       }
 
 
