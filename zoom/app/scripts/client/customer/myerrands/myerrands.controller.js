@@ -21,6 +21,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 
 	vm.editing_errand_status = {}
 	vm.errand_status_title = { open: 'Active', close: 'Completed', cancel: 'Cancelled'};
+	vm.busy = true;
 	
   $http.get(API_URL + '/all_types')
   .then(function(resp) {
@@ -33,15 +34,35 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
   });
 
   vm.getErrands = function(status, title) {
+  	vm.errands_status = status;
 		vm.errands_title = vm.errand_status_title[status] || 'All';	
+		vm.busy = true;
+		vm.offset = 0;
+		vm.limit = 10;
+
     $http.get(API_URL + '/client/tasks/summary')
 	  .then(function(resp) {
 	    vm.errands_counts = resp.data; 
 	  });
 	
-  	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: status }})
+  	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit }})
 	  .then(function(resp) {   
 	    vm.errands = resp.data.tasks;
+	    vm.busy = !resp.data.moredata;
+	  }, function(resp) {
+	  	vm.busy = true;
+	  });
+  }
+
+  vm.loadMoreErrands = function() {
+  	vm.busy = true;
+  	vm.offset += vm.limit;
+  	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit, offset: vm.offset }})
+	  .then(function(resp) {   
+	    vm.errands = vm.errands.concat(resp.data.tasks);
+	    vm.busy = !resp.data.moredata;
+	  }, function(resp) {
+	  	vm.busy = true;
 	  });
   }
 

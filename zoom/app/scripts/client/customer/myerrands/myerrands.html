@@ -10,7 +10,7 @@
     </div>
     <h3>{{vm.errands_title}} Orders</h3>
     <!-- <div class="bgHead"></div> -->
-    <div class="table-responsive tableErrandsProgress">
+    <div class="table-responsive tableErrandsProgress" infinite-scroll="vm.loadMoreErrands()" infinite-scroll-disabled="vm.busy" infinite-scroll-distance="1">
         <table class="table">
             <thead>
                 <tr>
@@ -53,7 +53,7 @@
                         <br>
                         Funds Used:  ${{(user.escrow_hours.funds || 0).toFixed(2)}}
                     </td>
-                    <td ng-show="vm.errands_title == 'All'">{{vm.errand_status_title[errand.status]}}</td>
+                    <td ng-show="vm.errands_status == ''">{{vm.errand_status_title[errand.status]}}</td>
                     <td>
                         <button class="btnOrderAgain" ng-click="vm.orderAgain(errand)">Order Again</button>
                         <br>

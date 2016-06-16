@@ -23,6 +23,7 @@ var zoomApp = angular.module('zoomApp', [
   'ui.bootstrap',
   'ipCookie',
   'google.places',
+  'infinite-scroll',
   'zoomAppDirectives'
 ]);
 
