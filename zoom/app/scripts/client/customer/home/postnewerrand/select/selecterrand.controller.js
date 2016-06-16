@@ -13,9 +13,11 @@
 
       vm.locations = ['Los Angeles', 'San Diego'];
 
-      if ($rootScope.errand.datetime == undefined) {
-        $rootScope.errand.datetime = new Date();
-      }
+      if ($rootScope.errand.datetime) {
+        $rootScope.errand.datetime = new Date($rootScope.errand.datetime);  
+      } else {
+        $rootScope.errand.datetime = new Date;
+      }      
 
       if (!$rootScope.errand.frequency) {
         $rootScope.errand.frequency = 0;

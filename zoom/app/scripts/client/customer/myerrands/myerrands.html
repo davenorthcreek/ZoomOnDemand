@@ -1,14 +1,14 @@
 <div class="myErrands">
     <h2>My Errands</h2>
     <div class="filters">
-        <p>Active</p>
-        <p>Completed <span class="circle">18</span></p>
-        <p>Cancelled <span class="circle">5</span></p>
-        <p>All <span class="circle">23</span></p>
+        <p ng-click="vm.getErrands('open')">Active <span class="circle">{{vm.errands_counts.open || 0}}</span></p>
+        <p ng-click="vm.getErrands('close')">Completed <span class="circle">{{vm.errands_counts.close || 0}}</span></p>
+        <p ng-click="vm.getErrands('cancel')">Cancelled <span class="circle">{{vm.errands_counts.cancel || 0}}</span></p>
+        <p ng-click="vm.getErrands('')">All <span class="circle">{{vm.errands_counts.total || 0}}</span></p>
         <p>Awaiting review</p>
         <div class="clearfix"></div>
     </div>
-    <h3>Completed Orders</h3>
+    <h3>{{vm.errands_title}} Orders</h3>
     <!-- <div class="bgHead"></div> -->
     <div class="table-responsive tableErrandsProgress">
         <table class="table">
@@ -19,47 +19,46 @@
                     <th>Errand Type</th>
                     <th>Description</th>
                     <th>Hours/Funds Used</th>
+                    <th ng-show="vm.errands_title == 'All'">Status</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="errand in errands">
-                    <td>{{errand.date}}</td>
+                <tr ng-repeat="errand in vm.errands">
+                    <td>{{errand.datetime|date:'MM/dd/yyyy'}}</td>
                     <td>
                         <div class="image">
-                            <img ng-src="{{errand.image}}" alt="" class="img-responsive">
+                            <img ng-src="{{errand.provider.photoUrl}}" alt="" class="img-responsive">
                         </div>
                     </td>
                     <td>
                         <select class="form-control no-border-radius input-md"
-                                ng-show="editErrand.type == $index"
-                                ng-model="errand.type"
-                                ng-options="errandType for errandType in errandTypes"
-                                ng-model="form.serviceLocation">
+                                ng-show="vm.editing_errand_status.type == $index"
+                                ng-model="vm.editing_errand.type_id"
+                                ng-options="type.id as type.comment for type in vm.all_types">
                         </select>
-                        <button class="tooltipErrandService" ng-show="editErrand.type != $index" popover-placement="bottom" popover-trigger="focus" 
-                            uib-popover-template="'editErrandType.html'">{{errand.type}}</button>
+                        <button class="tooltipErrandService" ng-show="vm.editing_errand_status.type != $index" popover-placement="bottom" popover-trigger="focus" 
+                            uib-popover-template="'editErrandType.html'">{{errand.type.comment}}</button>
                     </td>
                     <td>
-                        <textarea class="tooltipErrandService" ng-show="editErrand.description == $index" rows="3" cols="20" 
-                            ng-model="errand.description">{{errand.description}}</textarea>
-                        <button class="tooltipDescription" ng-show="editErrand.description != $index" popover-placement="bottom" popover-trigger="focus" 
+                        <textarea class="tooltipErrandService" ng-show="vm.editing_errand_status.details == $index" rows="3" cols="20" 
+                            ng-model="vm.editing_errand.details"></textarea>
+                        <button class="tooltipDescription" ng-show="vm.editing_errand_status.details != $index" popover-placement="bottom" popover-trigger="focus" 
                             uib-popover-template="'editErrandDescription.html'">
-                            {{errand.description}}
+                            {{errand.details}}
                         </button>
                     </td>
                     <td>
-                        Hours Used:  {{errand.hoursUsed}}
+                        Hours Used:  {{errand.usedHour}}
                         <br>
-                        Funds Used:  {{errand.fundsUsed}}
+                        Funds Used:  ${{(user.escrow_hours.funds || 0).toFixed(2)}}
                     </td>
+                    <td ng-show="vm.errands_title == 'All'">{{vm.errand_status_title[errand.status]}}</td>
                     <td>
-                        <button class="btnOrderAgain" ng-click=orderAgain(errand)>Order Again</button>
+                        <button class="btnOrderAgain" ng-click="vm.orderAgain(errand)">Order Again</button>
                         <br>
-                        <button class="btnEditOrder" ng-show="editErrand.type == $index || editErrand.description == $index" 
-                            ng-click="saveOrder($index, errand)">Save Order</button>
-                        <button class="btnEditOrder" ng-show="editErrand.type != $index && editErrand.description != $index" 
-                            ng-click="editErrandRow($index, errand)">Edit Order</button>
+                        <button class="btnEditOrder" ng-show="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index" ng-click="vm.saveOrder($index, errand)">Save Order</button>
+                        <button class="btnEditOrder" ng-hide="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index" ng-click="vm.editErrandRow($index, errand)">Edit Order</button>
                     </td>
                 </tr>
             </tbody>
@@ -67,15 +66,15 @@
 
         <script type="text/ng-template" id="editErrandType.html">
             <div class="contentPopoverZoom">
-                <p>{{errand.type}}</p>
-                <button class="btn btn-sm" ng-show="editErrand.index != $index" ng-click="editErrandType($index, errand)">Edit</button>
+                <p>{{errand.type.comment}}</p>
+                <button class="btn btn-sm" ng-show="vm.editing_errand_status.type != $index" ng-click="vm.editErrandType($index, errand)">Edit</button>
                 <div class="clearfix"></div>
             </div>
         </script>
         <script type="text/ng-template" id="editErrandDescription.html">
             <div class="contentPopoverZoom">
-                <p>{{errand.description}}</p>
-                <button class="btn btn-sm" ng-show="editErrand.index != $index" ng-click="editErrandDescription($index, errand)">Edit</button>
+                <p>{{errand.details}}</p>
+                <button class="btn btn-sm" ng-show="vm.editing_errand_status.details != $index" ng-click="vm.editErrandDetails($index, errand)">Edit</button>
                 <div class="clearfix"></div>
             </div>
         </script>

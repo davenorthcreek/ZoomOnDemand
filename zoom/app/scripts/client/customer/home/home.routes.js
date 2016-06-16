@@ -21,7 +21,8 @@ $urlRouterProvider.when('/app/home/postnewerrand/','/app/home/postnewerrand/sele
     .state('app.home.errandsprogress', {
         url: '/errandsprogress',
         controller: 'ErrandsProgressController as vm',
-        templateUrl: 'scripts/client/customer/home/errandsprogress/errandsprogress.html'
+        templateUrl: 'scripts/client/customer/home/errandsprogress/errandsprogress.html',
+        params: {errand_id: null}
     })
     .state('app.home.myhours', {
         url: '/myhours',

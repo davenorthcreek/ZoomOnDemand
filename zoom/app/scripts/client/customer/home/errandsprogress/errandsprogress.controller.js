@@ -7,8 +7,8 @@
         .controller('ErrandsProgressController', ErrandsProgressController);
 
     /** @ngInject */
-    ErrandsProgressController.$inject = ['$state', '$scope', '$http', 'API_URL', 'toastr'];
-    function ErrandsProgressController($state, $scope, $http, API_URL, toastr) {
+    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr'];
+    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr) {
       var vm = this;   
 
       vm.oneAtATime = true;
@@ -30,7 +30,7 @@
         vm.all_types = resp.data; 
       });
 
-      $http.get(API_URL + '/client/tasks/mytasks', { status: 'open' })
+      $http.get(API_URL + '/client/tasks/mytasks', {params: { status: 'open' }})
       .then(function(resp) {   
           vm.errands = resp.data.tasks;
           if (vm.errands && vm.errands.length) {
@@ -76,7 +76,15 @@
 
       vm.repeatEndErrands = function() {
         if (vm.errands && vm.errands.length) {
-        	vm.errands[0].is_open = true;
+          if ($stateParams['errand_id']) {
+            angular.forEach(vm.errands, function(errand, index) {
+              if (errand.id == $stateParams['errand_id']) {
+                errand.is_open = true;
+              }
+            });
+          } else {
+            vm.errands[0].is_open = true;  
+          }        	
         }
       }
 
