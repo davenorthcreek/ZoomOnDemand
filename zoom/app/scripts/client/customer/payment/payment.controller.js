@@ -148,13 +148,13 @@
                 .then(function (resp) {
                     vm.waiting = false;
                     init();
-                    toastr.success("Purchase Hour: " + resp.purchaseHour + "hrs" +
-                                    "<br/> Fund Escrow: " + $filter("currency")(resp.purchaseEscrow),
+                    toastr.success("Purchase Hour: " + resp.purchaseHour + "hrs\n" +
+                                    "Fund Escrow: " + $filter("currency")(resp.purchaseEscrow),
                                     "You paid " + $filter("currency")(resp.charge.amount * 0.01) + " successfully!");
                     
                     Restangular.one('client/escrowhours').get()
-                    .then(function (data) {
-                        $rootScope.eh = data.eh ? data.eh : $rootScope.eh;
+                    .then(function (data) {                        
+                        $rootScope.user.escrow_hour = data.eh ? data.eh : $rootScope.user.escrow_hour;                        
                     }, function (data) {
                         // took from other controller, I believe error will be shown same way.
                         toastr.warning(data.data.alert);

@@ -7,14 +7,14 @@
                 <div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 available-hours">
                         <h4>+ AVAILABLE</h4>
-                        <h2>10.5</h2>
+                        <h2>{{user.escrow_hour.hoursavail || 0}}</h2>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 used-hours">
                         <h4>- USED</h4>
-                        <h2>4</h2>
+                        <h2>{{user.escrow_hour.hoursused || 0}}</h2>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buttonHours">
-                        <button class="btn">ADD HOURS</button>
+                        <button class="btn" ui-sref="app.payment">ADD HOURS</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -24,14 +24,14 @@
                 <div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 available-funds">
                         <h4>+ AVAILABLE</h4>
-                        <h2>$200</h2>
+                        <h2>${{(user.escrow_hour.escrowavail || 0).toFixed(2)}}</h2>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 used-funds">
                         <h4>- USED</h4>
-                        <h2>$60</h2>
+                        <h2>${{(user.escrow_hour.escrowused || 0).toFixed(2)}}</h2>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buttonFunds">
-                        <button class="btn">ADD FUNDS</button>
+                        <button class="btn" ui-sref="app.payment">ADD FUNDS</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
