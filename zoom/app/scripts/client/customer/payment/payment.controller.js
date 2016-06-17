@@ -7,8 +7,8 @@
         .controller('PaymentController', PaymentController);
 
     /** @ngInject */
-    PaymentController.$inject = ['$rootScope', '$log', '$window', '$scope', 'Restangular', 'toastr', '$filter'];
-    function PaymentController($rootScope, $log, $window, $scope, Restangular, toastr, $filter) {
+    PaymentController.$inject = ['$rootScope', '$log', '$window', '$scope', '$http', 'API_URL', 'toastr', '$filter'];
+    function PaymentController($rootScope, $log, $window, $scope, $http, API_URL, toastr, $filter) {
        
         var vm = this;
         $scope.user.email = $rootScope.user.email;
@@ -35,20 +35,12 @@
        
 
 
-        // this is commited for temporay
-        //Restangular.one('client/escrowhours/fee').get()
-        //.then(function (data) {
-        //    vm.fee = data.fee;
-        //    vm.proFee = vm.escrow * vm.fee.percent * 0.01 + vm.fee.cent * 0.01;
-        //    vm.total = vm.subtotal + vm.proFee ;
-        //});
-
-        //delete following code after development
-        //start
-        vm.fee = 23;
-        vm.proFee =3;
-        vm.total = 43 ;
-        //end
+        $http.get(API_URL + '/client/escrowhours/fee')
+        .then(function (data) {
+            vm.fee = data.data.fee;
+            vm.proFee = vm.escrow * vm.fee.percent * 0.01 + vm.fee.cent * 0.01;
+            vm.total = vm.subtotal + vm.proFee ;
+        });
 
         $scope.$watch('vm.hour', function () {
             vm.subtotal = vm.escrow + vm.hoursPrice * (1 - vm.couponPercent * 0.01);
@@ -100,9 +92,9 @@
         vm.couponApply = function () {
             vm.waiting = true;
             if (vm.tmpcoupon) {
-                Restangular.one('client/escrowhours/coupon_check').get({ 'couponCode': vm.tmpcoupon })
+                $http.get(API_URL + '/client/escrowhours/coupon_check', { params: { couponCode: vm.tmpcoupon }})
                 .then(function (resp) {
-                    vm.couponPercent = resp.percent;
+                    vm.couponPercent = resp.data.percent;
                     vm.subtotal = vm.escrow + vm.hoursPrice * (1 - vm.couponPercent * 0.01);
                     vm.total = (vm.subtotal + vm.proFee);
                 }, function (resp) {
@@ -144,17 +136,18 @@
                     stripeEmail: $scope.user.email, stripeToken: result.id, purchaseHour: vm.hour,
                     purchaseEscrow: vm.escrow, couponCode: vm.coupon
                 };
-                Restangular.all('client/escrowhours/charge').post(payload)
+                $http.post(API_URL + '/client/escrowhours/charge', payload)
                 .then(function (resp) {
                     vm.waiting = false;
                     init();
-                    toastr.success("Purchase Hour: " + resp.purchaseHour + "hrs\n" +
-                                    "Fund Escrow: " + $filter("currency")(resp.purchaseEscrow),
-                                    "You paid " + $filter("currency")(resp.charge.amount * 0.01) + " successfully!");
+                    toastr.success("Purchase Hour: " + resp.data.purchaseHour + "hrs<br>" +
+                                    "Fund Escrow: " + $filter("currency")(resp.data.purchaseEscrow),
+                                    "You paid " + $filter("currency")(resp.data.charge.amount * 0.01) + " successfully!",
+                                    {allowHtml: true});
                     
-                    Restangular.one('client/escrowhours').get()
+                    $http.get(API_URL + '/client/escrowhours')
                     .then(function (data) {                        
-                        $rootScope.user.escrow_hour = data.eh ? data.eh : $rootScope.user.escrow_hour;                        
+                        $rootScope.user.escrow_hour = data.data.eh ? data.data.eh : $rootScope.user.escrow_hour;                        
                     }, function (data) {
                         // took from other controller, I believe error will be shown same way.
                         toastr.warning(data.data.alert);

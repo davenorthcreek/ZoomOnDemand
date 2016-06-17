@@ -197,8 +197,10 @@
     <div class="container">
         <h2 class="inline-block">Cart: {{vm.hrsText}} / {{vm.subtotal|currency}}</h2><button type="button" ng-click="vm.cancelSubmit()" class="reverse-btn float-right top-offset-20">Clear Cart</button>
         <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20">
-            <h2 class="bottom-bordered">Subtotal</h2>
-            <h2 class="right" ng-bind="vm.subtotal | currency"></h2>
+            <h2>Subtotal<span class="pull-right">{{vm.subtotal | currency}}</span></h2>
+            <h2>Fee<span class="pull-right">{{vm.proFee | currency}}</span></h2>
+            <h2 class="bottom-bordered"></h2>
+            <h2 class="right">{{vm.total | currency}}</h2>
 
         </div>
         <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20 right">
