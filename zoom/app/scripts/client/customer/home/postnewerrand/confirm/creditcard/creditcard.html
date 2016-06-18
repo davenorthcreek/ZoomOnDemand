@@ -7,10 +7,10 @@
                     <strong>Select the hours you would like to purchase:</strong>
                 </label> <br><br>
                 <div class="ContainerBtnHoursOnly">
-                    <button class="btn btn-block btnHoursOnly">1 Hour - $32.00</button>
-                    <button class="btn btn-block btnHoursOnly">2 Hours - $64.00</button>
-                    <button class="btn btn-block btnHoursOnly">3 Hours - $96.00</button>
-                    <button class="btn btn-block btnHoursOnly">4 Hours - $128.00</button>
+                    <button class="btn btn-block btnHoursOnly" ng-class="{'active': vm.hour == 1}" ng-click="vm.setHours(1)">1 Hour - $32.00</button>
+                    <button class="btn btn-block btnHoursOnly" ng-class="{'active': vm.hour == 2}" ng-click="vm.setHours(2)">2 Hours - $64.00</button>
+                    <button class="btn btn-block btnHoursOnly" ng-class="{'active': vm.hour == 3}" ng-click="vm.setHours(3)">3 Hours - $96.00</button>
+                    <button class="btn btn-block btnHoursOnly" ng-class="{'active': vm.hour == 4}" ng-click="vm.setHours(4)">4 Hours - $128.00</button>
                 </div>
             </div>
         </div>
@@ -26,31 +26,31 @@
                     <strong>Purchase Packaged Deals</strong>
                 </label> <br><br>
                 <div class="containerBtnHoursPackage">
-                    <button class="btn btn-block btnHoursPackage">
+                    <button class="btn btn-block btnHoursPackage" ng-class="{'active': vm.hour == 5}" ng-click="vm.setHours(5)">
                         <span class="hours"><span>5</span> Hours</span>
                         <span class="priceTotalHours">$145.00</span>
                         <small>Price per hour</small>
                         <span class="priceHour">($29.00/Hour)</span>
                     </button>
-                    <button class="btn btn-block btnHoursPackage">
+                    <button class="btn btn-block btnHoursPackage" ng-class="{'active': vm.hour == 10}" ng-click="vm.setHours(10)">
                         <span class="hours"><span>10</span> Hours</span>
                         <span class="priceTotalHours">$275.00</span>
                         <small>Price per hour</small>
                         <span class="priceHour">($27.50/Hour)</span>
                     </button>
-                    <button class="btn btn-block btnHoursPackage">
+                    <button class="btn btn-block btnHoursPackage" ng-class="{'active': vm.hour == 20}" ng-click="vm.setHours(20)">
                         <span class="hours"><span>20</span> Hours</span>
                         <span class="priceTotalHours">$535.00</span>
                         <small>Price per hour</small>
                         <span class="priceHour">($26.75/Hour)</span>
                     </button>
-                    <button class="btn btn-block btnHoursPackage">
+                    <button class="btn btn-block btnHoursPackage" ng-class="{'active': vm.hour == 30}" ng-click="vm.setHours(30)">
                         <span class="hours"><span>30</span> Hours</span>
                         <span class="priceTotalHours">$780.00</span>
                         <small>Price per hour</small>
                         <span class="priceHour">($26.00/Hour)</span>
                     </button>
-                    <button class="btn btn-block btnHoursPackage">
+                    <button class="btn btn-block btnHoursPackage" ng-class="{'active': vm.hour == 40}" ng-click="vm.setHours(40)">
                         <span class="hours"><span>40</span> Hours</span>
                         <span class="priceTotalHours">$1000.00</span>
                         <small>Price per hour</small>
@@ -62,11 +62,13 @@
         </div>
         <div class="clearfix"></div>
         <hr class="separator">
+    </div>
+    <form stripe-form="stripeCallback" ng-submit="vm.payDisabled = true" name="checkoutForm">
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
             <div class="form-group">
                 <label for="">Credit Card</label>
                 <div class="input-group margin-bottom-sm">
-                    <input type="text" class="form-control no-border-radius" placeholder="">
+                    <input ng-model="number" name="card" payments-format="card" type="text" class="form-control no-border-radius" placeholder="">
                     <span class="input-group-addon no-border-radius">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                     </span>
@@ -79,33 +81,44 @@
             </div>
         </div>
         <div class="clearfix"></div>
-    </div>
-    <div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <div class="form-group">
                 <label for="">Expiry Date</label>
-                <input type="text" class="form-control no-border-radius" placeholder="MM/YY">
+                <input ng-model="expiry" name="expiry" payments-format="expiry" type="text" class="form-control no-border-radius" placeholder="MM/YY">
             </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <div class="form-group">
                 <label for="">CVV</label>
-                <input type="text" class="form-control no-border-radius" placeholder="_ _ _">
+                <input ng-model="cvc" name="cvc" payments-format="cvc" type="text" class="form-control no-border-radius" placeholder="_ _ _">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-3 col-sm-offset-4 col-md-2 col-sm-offset-4 col-lg-2">
+        <div class="col-xs-12 col-sm-3 col-sm-offset-3 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4">
             <div class="form-group">
                 <label for="">&nbsp;</label>
                 <input type="text" class="form-control no-border-radius" placeholder="Promocode">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="form-group">
+                <div><label for="">Amount</label></div>
+                $<input ng-model="vm.escrow" name="Amount" type="Number" min="0" max="50000" placeholder="00.00" class="amount" ng-class="checkoutForm.Amount.$invalid? 'red':''" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5 col-md-offset-3 col-sm-offset-3 col-lg-offset-3 top-offset-30 bottom-offset-20">
+            <div>Subtotal<span class="pull-right">{{vm.subtotal | currency}}</span></div>
+            <div>Fee<span class="pull-right">{{vm.proFee | currency}}</span></div>
+            <div class="bottom-bordered"></div>
+            <div class="right">{{vm.total | currency}}</div>
+        </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <button class="btn btnNext pull-left" ui-sref="app.home.postnewerrand.details">BACK</button>
+            <input type="submit" value="Make Payment" class="registration-btn top-offset-20 hidden" />
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <button class="btn btnBack pull-right btnClearOrder">Clear Order</button>
-        </div>
-        <div class="clearfix"></div>
+    </form>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <button class="btn btnBack pull-right btnClearOrder" ng-click="vm.cancelSubmit()">Clear Order</button>
     </div>
+    <div class="clearfix"></div>
 </div>
 <!-- TAB CONFIRM & POST SUBTAB PAY WITH CREDIT CARD-->

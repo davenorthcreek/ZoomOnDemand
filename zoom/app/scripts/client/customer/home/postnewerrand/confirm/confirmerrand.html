@@ -1,55 +1,53 @@
 <!-- TAB POST NEW ERRAND SUBTAB CONFIRM & POST -->
 <div role="tabpanel" class="tab-pane" id="confirmErrandTab">
     <div class="containerForm payment-form">
-        <form>
-            <h3>Please choose your payment method:</h3>
-            <div role="tabpanel" class="tabPayment">
-                <ul class="nav nav-tabs header-payment-container" role="tablist">
-                    <li role="presentation" ui-sref-active="active">
-                        <a ui-sref=".usehours" aria-controls="tab-use-hours">Use Hours in Account</a>
-                    </li>
-                    <li role="presentation" ui-sref-active="active">
-                        <a ui-sref=".creditcard" aria-controls="tab-pay">Pay with Credit Card</a>
-                    </li>
-                </ul>
-                <div class="tab-content content-payment-container">
-                   <div ui-view></div>
+        <h3>Please choose your payment method:</h3>
+        <div role="tabpanel" class="tabPayment">
+            <ul class="nav nav-tabs header-payment-container" role="tablist">
+                <li role="presentation" ui-sref-active="active">
+                    <a ui-sref=".usehours" aria-controls="tab-use-hours">Use Hours in Account</a>
+                </li>
+                <li role="presentation" ui-sref-active="active">
+                    <a ui-sref=".creditcard" aria-controls="tab-pay">Pay with Credit Card</a>
+                </li>
+            </ul>
+            <div class="tab-content content-payment-container">
+               <div ui-view></div>
+            </div>
+        </div>
+        <div class="order">
+            <h3>Your Order Summary</h3>
+            <div class="text">
+                <p>Date & Time:</p>
+                <p ng-show="errand.datetime">{{errand.datetime|date:'MM/dd/yyyy (EEEE)'}} at {{errand.datetime|date:'shortTime'}}</p>
+                <p>Frequency:</p>
+                <p>{{errand.frequency == 0 ? 'This one time' : (errand.frequency == 7 ? 'Weekly' : (errand.frequency == 30 ? 'Monthly' : 'Other'))}}</p>
+                <div ng-show="errand.type.name == 'Delivery'">
+                    <p>Item:</p>
+                    <p>{{errand.item}}</p>
+                    <p>Pick up Location:</p>
+                    <p>{{errand.pick_up_address}} <span>{{errand.pick_up_unit}}</span></p>
+                </div>
+                <p>Errand Location:</p>
+                <p>{{errand.address}} <span>{{errand.unit}}</span></p>
+                <p>Errand Detail:</p>
+                <p ng-bind-html="errand.details.split('\n').join('<br>')"></p>
+                <p>Purchase For Me:</p>
+                <p ng-bind-html="errand.funds_details.split('\n').join('<br>')"></p>
+                <hr>
+                <p>*Satisfaction guaranteed with every order.</p>
+                <div class="return">
+                    <i class="fa fa-caret-left" aria-hidden="true"></i> <a ui-sref="app.home.postnewerrand.details">Return to last step</a>
                 </div>
             </div>
-            <div class="order">
-                <h3>Your Order Summary</h3>
-                <div class="text">
-                    <p>Date & Time:</p>
-                    <p ng-show="errand.datetime">{{errand.datetime|date:'MM/dd/yyyy (EEEE)'}} at {{errand.datetime|date:'shortTime'}}</p>
-                    <p>Frequency:</p>
-                    <p>{{errand.frequency == 0 ? 'This one time' : (errand.frequency == 7 ? 'Weekly' : (errand.frequency == 30 ? 'Monthly' : 'Other'))}}</p>
-                    <div ng-show="errand.type.name == 'Delivery'">
-                        <p>Item:</p>
-                        <p>{{errand.item}}</p>
-                        <p>Pick up Location:</p>
-                        <p>{{errand.pick_up_address}} <span>{{errand.pick_up_unit}}</span></p>
-                    </div>
-                    <p>Errand Location:</p>
-                    <p>{{errand.address}} <span>{{errand.unit}}</span></p>
-                    <p>Errand Detail:</p>
-                    <p ng-bind-html="errand.details.split('\n').join('<br>')"></p>
-                    <p>Purchase For Me:</p>
-                    <p ng-bind-html="errand.funds_details.split('\n').join('<br>')"></p>
-                    <hr>
-                    <p>*Satisfaction guaranteed with every order.</p>
-                    <div class="return">
-                        <i class="fa fa-caret-left" aria-hidden="true"></i> <a ui-sref="app.home.postnewerrand.details">Return to last step</a>
-                    </div>
-                </div>
-            </div>
-            <div class="buttonFinish">
-                <button class="btn btnConfirm" ng-disabled="vm.submitted" ng-click="vm.submitErrand()">CONFIRM & POST</button>
-                <p>
-                    By selecting this you agree to Zoom Errands <a href="#">Terms & Conditions.</a>
-                </p>
-            </div>
-            <div class="clearfix"></div>
-        </form>
+        </div>
+        <div class="buttonFinish">
+            <button class="btn btnConfirm" ng-disabled="errand.submitted" ng-click="vm.submitErrand()">CONFIRM & POST</button>
+            <p>
+                By selecting this you agree to Zoom Errands <a href="#">Terms & Conditions.</a>
+            </p>
+        </div>
+        <div class="clearfix"></div>
     </div>
 </div>
 <!-- TAB POST NEW ERRAND SUBTAB CONFIRM & POST -->

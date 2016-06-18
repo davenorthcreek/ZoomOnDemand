@@ -175,7 +175,7 @@
             <h2 class="credit-head">Enter Your Amount</h2>
             <input ng-model="vm.escrow" name="Amount" type="Number" step="0.01" min="0" max="50000" placeholder="00.00" class="amount" ng-class="checkoutForm.Amount.$invalid? 'red':''" />
             <span class="unit">$</span>
-            <button type="button" class="amount-btn">Add</button>
+            <button type="button" class="amount-btn" ng-click="vm.addEscrow()">Add</button>
         </div>
         <div class="col-md-12 col-sm-12 padding0">
             <div class="col-md-5 col-sm-5 top-offset-30 bottom-offset-20">

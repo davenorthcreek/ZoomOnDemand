@@ -125,11 +125,15 @@
             init();
         }
 
+        vm.addEscrow = function() {
+            vm.escrow += 1;
+        }
+
         // Stripe Response Handler
         $scope.stripeCallback = function (code, result) {
           
             if (result.error) {
-                $window.alert('it failed! error: ' + result.error.message);
+                toastr.warning('it failed! error: ' + result.error.message);
             } else {
                vm.waiting = true;
                 var payload = {

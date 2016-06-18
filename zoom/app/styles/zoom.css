@@ -224,9 +224,9 @@ input:-ms-input-placeholder {
     letter-spacing: 0.7px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .tabPayment {
       margin: 20px 20px 20px 20px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentMinusPlus {
       width: 150px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus span {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentMinusPlus span {
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
         -ms-border-radius: 0px;
@@ -239,26 +239,26 @@ input:-ms-input-placeholder {
         font-weight: normal;
         font-size: 8px;
         border: 2px solid #76939e; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus input {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentMinusPlus input {
         font-size: 20px;
         border: 2px solid #76939e; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form label {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm label {
       font-weight: normal; }
     @media (max-width: 768px) {
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .textDetails {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .textDetails {
         text-align: center !important; } }
     @media (max-width: 768px) {
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentSwitch {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentSwitch {
         float: none !important; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentSwitch .zoomswitch {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentSwitch .zoomswitch {
           margin: 0px auto 0px auto; } }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentMinusPlus {
       margin: 0px 0px 20px 0px; }
       @media (max-width: 768px) {
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .componentMinusPlus {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .componentMinusPlus {
           float: none !important;
           margin: 0px auto 20px auto; } }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm span.spanBalance {
       border: 1px solid #AAAAAA;
       -webkit-border-radius: 40px;
       -moz-border-radius: 40px;
@@ -275,22 +275,22 @@ input:-ms-input-placeholder {
       background: #FFFFFF;
       line-height: 37px; }
       @media (max-width: 768px) {
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm span.spanBalance {
           width: 100%; } }
       @media (max-width: 350px) {
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form span.spanBalance {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm span.spanBalance {
           font-size: 14px; } }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group input, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group textarea {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group input, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group textarea {
       font-size: 17.93px;
       border: 1px solid #959595; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .textarea {
       position: relative; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea textarea {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .textarea textarea {
         padding: 10px 20px 10px 20px;
         letter-spacing: 1.4px;
         font-weight: normal;
         resize: none; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .textarea .imageClip {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .textarea .imageClip {
         position: absolute;
         bottom: 5px;
         right: 20px;
@@ -298,12 +298,12 @@ input:-ms-input-placeholder {
         width: 14px;
         height: 18px;
         cursor: pointer; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .searchZoom {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .searchZoom {
       background-image: url(../images/search.png);
       background-position: 8px 8px;
       background-repeat: no-repeat;
       padding-left: 40px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group select {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group select {
       -webkit-appearance: none;
       border: 1px solid #959595;
       height: 35px;
@@ -314,23 +314,23 @@ input:-ms-input-placeholder {
       background-position: center right;
       background-size: 40px 38px;
       padding-left: 5px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .input-group .searchZoom {
       border-left: 0px solid transparent; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .searchZoom {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .input-group .searchZoom {
       border-left: 0px solid transparent; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .input-group .input-group-addon {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .input-group .input-group-addon {
       background-color: #FFFFFF;
       border-right: 0px solid transparent;
       -webkit-border-radius: 0px;
       -moz-border-radius: 0px;
       -ms-border-radius: 0px;
       border-radius: 0px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .containerTimepicker .dropdown {
       display: inline-flex; }
       @media (max-width: 650px) {
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .containerTimepicker .dropdown {
           display: block; } }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown input[type="text"] {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .containerTimepicker .dropdown input[type="text"] {
         color: #545353;
         margin: 6px 0px 6px 0px;
         width: 227px;
@@ -343,21 +343,21 @@ input:-ms-input-placeholder {
         height: 20px;
         float: left; }
         @media (max-width: 400px) {
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .form-group .containerTimepicker .dropdown input[type="text"] {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group .containerTimepicker .dropdown input[type="text"] {
             width: 100%; } }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .containerRecurring .optionPay {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 20px 0px 20px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay span.line {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .containerRecurring .optionPay span.line {
         width: 40%;
         height: 1px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay span.line,
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .containerRecurring .optionPay h2 {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .containerRecurring .optionPay span.line,
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .containerRecurring .optionPay h2 {
         font-size: 14px;
         margin: 0px 0px 0px 0px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBottomForm {
       width: 100%;
       background: #FFFFFF;
       border: 2px solid #76939e;
@@ -367,16 +367,16 @@ input:-ms-input-placeholder {
       -ms-border-radius: 10px;
       border-radius: 10px;
       font-size: 18px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm.active,
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm:hover {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBottomForm.active,
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBottomForm:hover {
       background: #76939e;
       color: #FFFFFF; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm.active:hover,
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBottomForm:hover:hover {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBottomForm.active:hover,
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBottomForm:hover:hover {
         background: #76939e;
         color: #FFFFFF; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnNext,
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBack {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnNext,
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBack {
       width: 170px;
       color: #76939e;
       -webkit-border-radius: 10px;
@@ -388,28 +388,28 @@ input:-ms-input-placeholder {
       color: #FFFFFF;
       margin: 40px 0px 0px 0px;
       height: 40px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnClearOrder {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnClearOrder {
       background: #76939e; }
     @media (max-width: 768px) {
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnNext,
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form button.btnBack {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnNext,
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm button.btnBack {
         width: 100%; } }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form h3 {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm h3 {
       color: #FFFFFF;
       background: #43C9E1;
       font-weight: normal;
       font-size: 20px;
       padding: 5px 10px 5px 10px;
       margin: 20px 20px 20px 20px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container {
       margin: 30px 0px 0px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container li {
         background: transparent;
         width: 50%;
         text-align: center;
         border-bottom: 0px "" "";
         font-size: 21.85px; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li a {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container li a {
           padding: 0px 0px 0px 0px;
           margin: 0px 0px 0px 0px;
           border: 0px solid transparent;
@@ -417,38 +417,38 @@ input:-ms-input-placeholder {
           cursor: pointer;
           display: block;
           font-weight: normal; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li a:hover {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container li a:hover {
             background: transparent; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li:hover {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container li:hover {
           border-bottom: 5px solid #76939e; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li.active a {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container li.active a {
         background: transparent;
         border-bottom: 5px solid #76939e; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form ul.header-payment-container li.active:hover {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm ul.header-payment-container li.active:hover {
         border-bottom: 0px solid transparent; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container {
       padding: 39px 0px 0px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours .containerBtnBack {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-use-hours .containerBtnBack {
         padding: 0px 0px 0px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-use-hours p {
         font-size: 19.77px;
         color: #777676; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours p span {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-use-hours p span {
           font-weight: bold;
           color: #43C9E1; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-use-hours hr {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-use-hours hr {
         margin: 17px 0px 30px 0px;
         border-bottom: 1px solid #b9cbd1; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .separator {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .separator {
         margin: 30px 0px 30px 0px;
         border-bottom: 1px solid #b9cbd1; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly {
         display: flex;
         justify-content: space-between; }
         @media (max-width: 768px) {
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly {
             flex-wrap: wrap; } }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly {
           border: 2px solid #76939e;
           -webkit-border-radius: 5px;
           -moz-border-radius: 5px;
@@ -458,25 +458,25 @@ input:-ms-input-placeholder {
           color: #76939e;
           font-size: 19px;
           margin: 0px 0px 0px 20px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:first-child {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:first-child {
             margin: 0px 0px 0px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly.active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:hover, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:focus, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:visited {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly.active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:hover, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:focus, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:visited {
             background: #76939e;
             color: #FFFFFF; }
           @media (max-width: 768px) {
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly {
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px 20px 0px;
               width: 100%; }
-              .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:nth-child(2n+1) {
+              .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .ContainerBtnHoursOnly button.btnHoursOnly:nth-child(2n+1) {
                 margin: 0px 0px 20px 0px; } }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage {
         display: flex;
         justify-content: space-between; }
         @media (max-width: 768px) {
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage {
             flex-wrap: wrap; } }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage {
           border: 2px solid #43C9E1;
           background: #FFFFFF;
           margin: 0px 0px 0px 20px;
@@ -485,106 +485,106 @@ input:-ms-input-placeholder {
           -ms-border-radius: 20px;
           border-radius: 20px;
           padding: 10px 0px 0px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:first-child {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:first-child {
             margin: 0px 0px 0px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours,
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceTotalHours,
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage small,
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceHour {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours,
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceTotalHours,
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage small,
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceHour {
             display: block;
             width: 100%;
             color: #5b5b5b; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours {
             font-size: 20px;
             color: #43C9E1;
             margin: 0px 0px 10px 0px; }
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours span {
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .hours span {
               font-size: 25px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceTotalHours {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceTotalHours {
             font-size: 16px;
             margin: 0px 0px 20px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage small {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage small {
             font-size: 12px;
             margin: 0px 0px 10px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceHour {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage .priceHour {
             font-size: 16px;
             margin: 0px 0px 10px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited {
             background: #43C9E1;
             color: #FFFFFF; }
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .hours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .priceTotalHours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active small,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .hours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .priceTotalHours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active small,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .hours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .priceTotalHours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover small,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .hours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .priceTotalHours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus small,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .hours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .priceTotalHours,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited small,
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .priceHour {
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage.active .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:active .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:hover .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:focus .priceHour, .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .hours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .priceTotalHours,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited small,
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:visited .priceHour {
               color: #FFFFFF; }
           @media (max-width: 768px) {
-            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage {
+            .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px 20px 0px;
               width: 45%; }
-              .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:nth-child(2n+1) {
+              .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .containerBtnHoursPackage button.btnHoursPackage:nth-child(2n+1) {
                 margin: 0px 5px 20px 0px; } }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .optionPay {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 20px 0px 20px 0px; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay span.line {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .optionPay span.line {
           width: 42%;
           height: 1px; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay span.line,
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .optionPay h2 {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .optionPay span.line,
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .optionPay h2 {
           font-size: 20px;
           margin: 0px 0px 0px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .form-group label {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .form-group label {
         color: #8c8a8a;
         font-size: 19px;
         font-weight: normal; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .form-group .input-group input[type="text"] {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .form-group .input-group input[type="text"] {
         border-right: 0px solid transparent; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .form-group .input-group span.input-group-addon {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .form-group .input-group span.input-group-addon {
         background-color: #FFFFFF;
         border-left: 0px solid transparent;
         border-right: 1px solid #CCCCCC; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .form-group .input-group span.input-group-addon i {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .form-group .input-group span.input-group-addon i {
           font-size: 20px;
           color: #abacab; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form div.content-payment-container #tab-pay .form-group img {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm div.content-payment-container #tab-pay .form-group img {
         margin: 32px 0px 0px 0px; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order {
       padding: 0px 0px 20px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order h3 {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order h3 {
         color: #FFFFFF;
         background: #43C9E1;
         font-weight: normal;
         font-size: 20px;
         padding: 10px 10px 10px 10px;
         margin: 0px 0px 0px 0px; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order .text {
         color: #545353;
         border: 1px solid #76939e;
         padding: 20px 20px 40px 20px;
         margin: 20px 20px 20px 20px;
         background: #FFFFFF;
         font-weight: bold; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text hr {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order .text hr {
           margin: 17px 0px 30px 0px;
           border-bottom: 1px solid #b9cbd1; }
-        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return {
+        .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order .text .return {
           padding: 90px 0px 0px 0px; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return i {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order .text .return i {
             color: #43C9E1;
             line-height: 15px;
             float: left;
@@ -592,7 +592,7 @@ input:-ms-input-placeholder {
             height: 15px;
             margin-top: 5px;
             font-weight: normal; }
-          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .order .text .return a {
+          .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .order .text .return a {
             font-size: 18px;
             color: #43C9E1;
             text-decoration: none;
@@ -603,11 +603,11 @@ input:-ms-input-placeholder {
             line-height: 25px;
             margin: 0px 0px 0px 10px;
             font-weight: normal; }
-    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish {
+    .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .buttonFinish {
       width: 100%;
       text-align: center;
       margin: 0 auto 30px auto; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish .btnConfirm {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .buttonFinish .btnConfirm {
         width: 292px;
         height: 53px;
         text-align: center;
@@ -619,7 +619,7 @@ input:-ms-input-placeholder {
         padding: 10px 10px 10px 10px;
         font-size: 21.85px;
         color: #FFFFFF; }
-      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm form .buttonFinish p {
+      .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .buttonFinish p {
         font-size: 14px;
         color: #76939e;
         padding: 10px 0px 0px 0px;
