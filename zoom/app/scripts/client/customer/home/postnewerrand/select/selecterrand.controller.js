@@ -23,6 +23,9 @@
         $rootScope.errand.frequency = 0;
       }
 
+      if (!$rootScope.errand.zoom_office_id) {
+        $rootScope.errand.zoom_office_id = $scope.user.zoom_office_id;
+      }
 
       console.log(vm.date);
 
