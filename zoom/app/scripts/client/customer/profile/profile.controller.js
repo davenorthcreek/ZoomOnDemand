@@ -28,7 +28,7 @@
           $rootScope.user = resp.data.data;
           toastr.success('Account setting updated successfully!');
         }, function(resp) {
-          toastr.error(resp.alert[0]);
+          toastr.error(resp.data.errors.full_messages[0]);
         });
       }
 

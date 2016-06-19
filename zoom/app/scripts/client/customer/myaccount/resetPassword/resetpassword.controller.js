@@ -11,13 +11,12 @@
     function ResetPasswordController($state, $scope, toastr) {
         var vm = this;
         vm.form = {};
-        $scope.$on('auth:password-reset-request-success', function (ev, data) {
-            toastr.success("Password reset instructions were sent to " + data.email);
+        $scope.$on('auth:password-change-success', function (ev, data) {
+            toastr.success("Password has been changed");
             vm.form = {}
         });
-        $scope.$on('auth:password-reset-request-error', function (ev, resp) {
-            toastr.error("Password reset request failed: " + resp.errors[0]);
+        $scope.$on('auth:password-change-error', function (ev, resp) {
+            toastr.error(resp.errors.full_messages[0]);      
         });
-      
     }
 })();
