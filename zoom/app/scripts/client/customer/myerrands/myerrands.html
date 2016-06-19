@@ -51,7 +51,7 @@
                     <td>
                         Hours Used:  {{errand.usedHour}}
                         <br>
-                        Funds Used:  ${{(user.escrow_hours.funds || 0).toFixed(2)}}
+                        Funds Used:  ${{(user.usedEscrow || 0).toFixed(2)}}
                     </td>
                     <td ng-show="vm.errands_status == ''">{{vm.errand_status_title[errand.status]}}</td>
                     <td>

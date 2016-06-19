@@ -11,29 +11,11 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td><h4>04/02/16</h4></td>
-                            <td><h4>10 Hours</h4></td>
-                            <td><h4>$50</h4></td>
-                            <td><button type="button" class="again-btn">Order Again</button></td>
-                          </tr>
-                          <tr>
-                            <td><h4>04/02/16</h4></td>
-                            <td><h4>10 Hours</h4></td>
-                            <td><h4>$50</h4></td>
-                            <td><button type="button" class="again-btn">Order Again</button></td>
-                          </tr>
-                          <tr>
-                            <td><h4>04/02/16</h4></td>
-                            <td><h4>10 Hours</h4></td>
-                            <td><h4>$50</h4></td>
-                            <td><button type="button" class="again-btn">Order Again</button></td>
-                          </tr>
-                          <tr>
-                            <td><h4>04/02/16</h4></td>
-                            <td><h4>10 Hours</h4></td>
-                            <td><h4>$50</h4></td>
-                            <td><button type="button" class="again-btn">Order Again</button></td>
+                          <tr ng-repeat="payment in vm.payments">
+                            <td><h4>{{payment.created_at|date:'MM/dd/yyyy'}}</h4></td>
+                            <td><h4>{{payment.purchase_hour}} Hours</h4></td>
+                            <td><h4>${{(payment.purchase_escrow || 0).toFixed(2)}}</h4></td>
+                            <td><button type="button" class="again-btn" ui-sref="app.payment">Order Again</button></td>
                           </tr>
                         </tbody>
                     </table>
