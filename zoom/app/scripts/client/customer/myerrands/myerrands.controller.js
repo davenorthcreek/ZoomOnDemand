@@ -70,6 +70,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 
 	function orderAgain(errand) {
 		$rootScope.errand = errand;
+    $rootScope.errand.task_uploads = {};
 		$state.go('app.home.postnewerrand');
 	}
 

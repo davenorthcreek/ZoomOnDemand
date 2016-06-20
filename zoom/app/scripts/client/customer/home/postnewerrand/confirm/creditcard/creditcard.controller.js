@@ -113,6 +113,7 @@
               $http.post(API_URL + '/client/tasks', {task: $rootScope.errand})
               .then(function(data) {
                 $rootScope.errand.submitted = false;
+                $rootScope.errand.task_uploads = {};
                 $state.go('app.home.errandsprogress', {errand_id: data.data.id});
               }, function(data) {
                 if (data.data && data.data.alert) {

@@ -49,7 +49,7 @@
                                 <textarea name="" id="" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops." ng-model="errand.details"></textarea>
                                 <div class="imageClip" ngf-multiple="true" ng-model="vm.firstFile" ngf-select="vm.uploadFiles($files, 'normal')" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
                             </div>
-                            <div class="pull-right">Count: {{errand.task_uploads['normal'].length || 0}}</div>
+                            <div class="pull-right">Files: {{errand.task_uploads['normal'].length || 0}}</div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                                     <textarea name="" id="" class="form-control no-border-radius" rows="3" placeholder="For example: Mr. Clean carpet cleaner, Lysol all purpose cleaner." ng-model="errand.funds_details"></textarea>
                                     <div class="imageClip" ngf-multiple="true" ng-model="vm.secondFile" ngf-select="vm.uploadFiles($files, 'funds')" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
                                 </div>
-                                <div class="pull-right">Count: {{errand.task_uploads['funds'].length || 0}}</div>
+                                <div class="pull-right">Files: {{errand.task_uploads['funds'].length || 0}}</div>
                             </div>
                         </div>
                     </div>
