@@ -15,8 +15,6 @@
             toastr.success('Your account has been successfully created.', 'Welcome ' + data.email);
             //  $state.go('login');
             vm.waiting = false;
-            $rootScope.user = data;
-            $state.go('app.home');
         });
 
         // event :  'auth:registration-email-error'
@@ -25,6 +23,12 @@
             var errors;
             errors = data.errors.full_messages.join('<br/>');
             return toastr.error(errors);
+        });
+
+        $scope.$on('auth:login-success', function(ev, user) 
+        {
+            toastr.success('Welcome ' + user.email);
+            $state.go('app.home');            
         });
 
     }

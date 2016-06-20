@@ -13,7 +13,6 @@ angular.module('zoomApp').config(function ($stateProvider, $urlRouterProvider, $
 angular.module('zoomApp').run(function ($state, $rootScope, toastr) {
     var cleanupfunc1 = $rootScope.$on('auth:oauth-registration', function (ev, user) {
         toastr.success('Your account has been successfully created through facebook.', 'Welcome ' + user.email);
-        $rootScope.user = user;
         $rootScope.home = true;
         $state.go('app.home');
     });
@@ -24,10 +23,7 @@ angular.module('zoomApp').run(function ($state, $rootScope, toastr) {
 
     var cleanupfunc2 = $rootScope.$on('auth:email-confirmation-success', function (ev, user) {
         toastr.success('Your account has been successfully created.', 'Welcome ' + user.email);
-        $rootScope.user = user;
-        $rootScope.home = true;
         $state.go('app.home');
-
     });
     $rootScope.$on('$destroy', cleanupfunc2);
 

@@ -1,5 +1,6 @@
-var zoomAppDirectives = angular.module('zoomAppDirectives', [])
+var zoomAppDirectives = angular.module('zoomAppDirectives', []);
 zoomAppDirectives.directive("repeatEnd", function($timeout){
+  'use strict'
   return {
     restrict: "A",
     link: function (scope, element, attrs) {

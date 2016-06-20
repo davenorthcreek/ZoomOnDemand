@@ -11,19 +11,16 @@
     function LoginController($state, $scope, toastr, $rootScope) {
         var vm = this;
         vm.waiting = false;
-       $scope.$on('auth:login-success', function (ev, data) {
-           vm.waiting = false;
-           $rootScope.user = data;
-            $state.go('app.home');
+        $scope.$on('auth:login-success', function (ev, data) {
+          vm.waiting = false;
+          $state.go('app.home');
         });
-       $rootScope.$on('auth:validation-success', function (ev, reason) {
-            $rootScope.user = reason;
-            $state.go('app.home');
+        $rootScope.$on('auth:validation-success', function (ev, reason) {
+          $state.go('app.home');
         });
-       $scope.$on('auth:login-error', function (ev, data) {
-           vm.waiting = false;
-            $rootScope.user = {};
-            return toastr.error(data.errors[0], 'Authentication failure', { timeOut: 7000 });
+        $scope.$on('auth:login-error', function (ev, data) {
+          vm.waiting = false;
+          return toastr.error(data.errors[0], 'Authentication failure', { timeOut: 7000 });
         });
 
     }
