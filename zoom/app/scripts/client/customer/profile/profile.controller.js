@@ -19,11 +19,12 @@
 
       vm.updateAccount = function()
       {
-        Upload.upload({
-            url: API_URL + '/auth',
-            data: vm.accountSetting,
-            method: 'put'
-        }).then(function (resp) {
+        if (vm.accountSetting.zoom_office_id == null || vm.accountSetting.zoom_office_id == undefined) {
+          toastr.error("Service location can't be blank");
+          return;
+        }
+        $auth.updateAccount(vm.accountSetting)
+        .then(function (resp) {
           vm.editing = false;
           $rootScope.user = resp.data.data;
           toastr.success('Account setting updated successfully!');
@@ -34,13 +35,22 @@
 
       vm.uploadFile = function(file) {
         if (file) {
-          vm.accountSetting.photo = file;
           var reader = new FileReader();
 
           reader.onload = function (e) {
             $timeout(function() {
-              vm.photo = e.target.result;  
-            });            
+              vm.photo = e.target.result;
+              Upload.upload({
+                  url: API_URL + '/auth',
+                  data: { photo: e.target.result },
+                  method: 'put'
+              }).then(function (resp) {
+                $rootScope.user.photoUrl = resp.data.data.photoUrl;
+                toastr.success('Photo changed successfully!');
+              }, function(resp) {
+                toastr.error(resp.data.errors.full_messages[0]);
+              });
+            });
           }
 
           reader.readAsDataURL(file);          

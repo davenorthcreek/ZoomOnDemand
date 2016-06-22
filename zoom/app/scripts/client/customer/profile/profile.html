@@ -3,7 +3,7 @@
             <div class="col-md-3 col-sm-3 center">
                 <img ng-src="{{vm.photo || vm.accountSetting.photoUrl || 'images/user.jpg'}}" class="img-circle profile-img"/>
                 <div class="imageClip" ngf-multiple="false" ngf-select="vm.uploadFile($file)">
-                    <button type="button" class="pic-btn" ng-show="vm.editing">Change Photo</button>
+                    <button type="button" class="pic-btn">Change Photo</button>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -54,7 +54,7 @@
                 </div>
                 <!-- Location -->
                 <div class="col-md-12 col-sm-12 right bottom-space-20 top-offset-30">
-                    <button type="button" class="reverse-btn" ng-show="!vm.editing" ng-click="vm.editing=true" ng-init="vm.editing=false">Edit Profile</button>
+                    <button type="button" class="reverse-btn" ng-show="!vm.editing" ng-click="vm.editing=true" ng-init="vm.editing=true">Edit Profile</button>
                     <button type="button" class="registration-btn" ng-show="vm.editing" ng-click="vm.updateAccount()">Save Changes</button>
                 </div>
             </div>
