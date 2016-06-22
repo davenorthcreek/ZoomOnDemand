@@ -28,7 +28,8 @@
                     <p>Pick up Location:</p>
                     <p>{{errand.pick_up_address}} <span>{{errand.pick_up_unit}}</span></p>
                 </div>
-                <p>Errand Location:</p>
+                <p ng-show="errand.type.name == 'Delivery'">Drop off Location:</p>
+                <p ng-hide="errand.type.name == 'Delivery'">Errand Location:</p>
                 <p>{{errand.address}} <span>{{errand.unit}}</span></p>
                 <p>Errand Detail:</p>
                 <p ng-bind-html="errand.details.split('\n').join('<br>')"></p>

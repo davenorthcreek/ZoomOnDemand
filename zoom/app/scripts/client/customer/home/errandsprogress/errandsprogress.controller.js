@@ -189,5 +189,11 @@
         vm.editing_errand.datetime.setMinutes(newDate.getMinutes());
       }
 
+      vm.setDate = function(newDate, oldDate) {
+        vm.editing_errand.datetime.setFullYear(newDate.getFullYear());
+        vm.editing_errand.datetime.setMonth(newDate.getMonth());
+        vm.editing_errand.datetime.setDate(newDate.getDate());
+      }
+
     }
 })();
