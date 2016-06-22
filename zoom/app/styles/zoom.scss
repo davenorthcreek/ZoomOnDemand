@@ -1411,7 +1411,7 @@ textarea:-ms-input-placeholder,
 			@include padding(0px,0px,0px,0px);
 			@include margin(0px,0px,0px,0px);
 			table{
-				thead{
+				thead.my-errands-thead{
 					background:$blueZoom;
 					tr{
 						th{

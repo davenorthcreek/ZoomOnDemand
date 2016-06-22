@@ -76,6 +76,12 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 
 	function editErrandRow(index, errand) {
 		vm.editing_errand = angular.copy(errand);
+    if (vm.editing_errand.datetime) {
+      vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+    } else {
+      vm.editing_errand.datetime = new Date;
+    }
+
 		vm.editing_errand_status.index = index;
 		vm.editing_errand_status.type = index;
 		vm.editing_errand_status.details = index;
@@ -86,6 +92,11 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		vm.editing_errand_status.type = index;
 		if (vm.editing_errand_status.details != index) {
 			vm.editing_errand = angular.copy(errand);
+      if (vm.editing_errand.datetime) {
+        vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+      } else {
+        vm.editing_errand.datetime = new Date;
+      }
 			vm.editing_errand_status.details = null;
 		}
 	}
@@ -95,6 +106,11 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		vm.editing_errand_status.details = index;
 		if (vm.editing_errand_status.type != index) {
 			vm.editing_errand = angular.copy(errand);
+      if (vm.editing_errand.datetime) {
+        vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+      } else {
+        vm.editing_errand.datetime = new Date;
+      }
 			vm.editing_errand_status.type = null;
 		}		
 	}
@@ -114,4 +130,11 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		vm.editing_errand_status.type = null;
 		vm.editing_errand_status.details = null;
 	}
+
+  vm.setDate = function(newDate, oldDate) {
+    vm.editing_errand.datetime.setFullYear(newDate.getFullYear());
+    vm.editing_errand.datetime.setMonth(newDate.getMonth());
+    vm.editing_errand.datetime.setDate(newDate.getDate());
+  }
+
 };

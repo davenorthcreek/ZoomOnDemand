@@ -1113,16 +1113,16 @@ input:-ms-input-placeholder {
   .zoom .myErrands .tableErrandsProgress {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px; }
-    .zoom .myErrands .tableErrandsProgress table thead {
+    .zoom .myErrands .tableErrandsProgress table thead.my-errands-thead {
       background: #43C9E1; }
-      .zoom .myErrands .tableErrandsProgress table thead tr th {
+      .zoom .myErrands .tableErrandsProgress table thead.my-errands-thead tr th {
         border: 0px solid transparent;
         text-align: center;
         color: #FFFFFF;
         font-weight: normal;
         vertical-align: middle;
         font-size: 18px; }
-        .zoom .myErrands .tableErrandsProgress table thead tr th:nth-child(5) {
+        .zoom .myErrands .tableErrandsProgress table thead.my-errands-thead tr th:nth-child(5) {
           text-align: left; }
     .zoom .myErrands .tableErrandsProgress table tbody tr td {
       border: 0px solid transparent;
