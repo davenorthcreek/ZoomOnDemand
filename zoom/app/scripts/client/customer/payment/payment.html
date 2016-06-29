@@ -1,13 +1,13 @@
-﻿<div class="container-fluid padding0 pay-title">
-            <div class="container">
-                <h2>1. Choose Your Payment Plan</h2>
-            </div>
-        </div>
+﻿<div class="container-fluid padding0 pay-title bottom-offset-20">
+    <div class="container">
+        <h2>1. Choose Your Payment Plan</h2>
+    </div>
+</div>
         <!-- title -->
         <div class="container-fluid padding0 all-pay">
             <div class="container">
                 <h3 class="check-head">Standard Hourly Rates</h3>
-                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 table-body">
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 table-body">
                     <table class="table">
                         <tbody>
                             <tr ng-class="vm.hour == 1 ? 'back-pink':''">
@@ -18,7 +18,7 @@
                                     <h2 class="offset-20">$32.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" ng-click="vm.setHours(1)" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(1)" class="reverse-btn right-0">Select</button>
                                 </td>
                             </tr>
                             <tr ng-class="vm.hour == 2 ? 'back-pink':''">
@@ -29,7 +29,7 @@
                                     <h2 class="offset-20">$64.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" ng-click="vm.setHours(2)" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(2)" class="reverse-btn right-0">Select</button>
                                 </td>
                             </tr>
                             <tr ng-class="vm.hour == 3 ? 'back-pink':''">
@@ -40,7 +40,7 @@
                                     <h2 class="offset-20">$96.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" ng-click="vm.setHours(3)" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(3)" class="reverse-btn right-0">Select</button>
                                 </td>
                             </tr>
                             <tr ng-class="vm.hour == 4 ? 'back-pink':''">
@@ -51,7 +51,7 @@
                                     <h2 class="offset-20">$128.00</h2>
                                 </td>
                                 <td>
-                                    <button type="button" ng-click="vm.setHours(4)" class="reverse-btn">Select</button>
+                                    <button type="button" ng-click="vm.setHours(4)" class="reverse-btn right-0">Select</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -60,66 +60,70 @@
                 <div class="col-md-12 col-sm-12 top-offset-30">
                     <h3 class="check-head">Packaged Deals</h3>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 center">
-                        <div class="pack-box" ng-class="vm.hour == 5 ? 'border-pink':''">
-                            <h2 class="pack-duration">5 Hours</h2>
-                            <h2 class="sub-text">$145.00</h2>
-                            <h5 class="sub-text">Price per hour</h5>
-                            <h2 class="sub-text">($29.00 per hour)</h2>
-                            <button type="button" ng-click="vm.setHours(5)" class="select-btn">Select</button>
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12">
+                        <div class="col-md-4 col-sm-4 center">
+                            <div class="pack-box" ng-class="vm.hour == 5 ? 'border-pink':''">
+                                <h2 class="pack-duration">5 Hours</h2>
+                                <h2 class="sub-text">$145.00</h2>
+                                <h5 class="sub-text">Price per hour</h5>
+                                <h2 class="sub-text">($29.00 per hour)</h2>
+                                <button type="button" ng-click="vm.setHours(5)" class="select-btn">Select</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- 5 hours -->
-                    <div class="col-md-4 col-sm-4 center">
-                        <div class="pack-box" ng-class="vm.hour == 10 ? 'border-pink':''">
-                            <h2 class="pack-duration">10 Hours</h2>
-                            <h2 class="sub-text">$275.00</h2>
-                            <h5 class="sub-text">Price per hour</h5>
-                            <h2 class="sub-text">($27.50 per hour)</h2>
-                            <button type="button" ng-click="vm.setHours(10)" class="select-btn">Select</button>
+                        <!-- 5 hours -->
+                        <div class="col-md-4 col-sm-4 center">
+                            <div class="pack-box" ng-class="vm.hour == 10 ? 'border-pink':''">
+                                <h2 class="pack-duration">10 Hours</h2>
+                                <h2 class="sub-text">$275.00</h2>
+                                <h5 class="sub-text">Price per hour</h5>
+                                <h2 class="sub-text">($27.50 per hour)</h2>
+                                <button type="button" ng-click="vm.setHours(10)" class="select-btn">Select</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- 10 hours -->
-                    <div class="col-md-4 col-sm-4 center">
-                        <div class="pack-box" ng-class="vm.hour == 20 ? 'border-pink':''">
-                            <h2 class="pack-duration">20 Hours</h2>
-                            <h2 class="sub-text">$535.00</h2>
-                            <h5 class="sub-text">Price per hour</h5>
-                            <h2 class="sub-text">($26.75 per hour)</h2>
-                            <button type="button" ng-click="vm.setHours(20)" class="select-btn">Select</button>
+                        <!-- 10 hours -->
+                        <div class="col-md-4 col-sm-4 center">
+                            <div class="pack-box" ng-class="vm.hour == 20 ? 'border-pink':''">
+                                <h2 class="pack-duration">20 Hours</h2>
+                                <h2 class="sub-text">$535.00</h2>
+                                <h5 class="sub-text">Price per hour</h5>
+                                <h2 class="sub-text">($26.75 per hour)</h2>
+                                <button type="button" ng-click="vm.setHours(20)" class="select-btn">Select</button>
+                            </div>
                         </div>
+                        <!-- 20 hours -->
                     </div>
-                    <!-- 20 hours -->
-                </div>
+                    </div>
                 <!-- blue box -->
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2 center">
-                        <div class="gray-box" ng-class="vm.hour == 30 ? 'border-pink':''">
-                            <h2 class="pack-duration">30 Hours</h2>
-                            <h2 class="sub-text">$780.00</h2>
-                            <h5 class="sub-text">Price per hour</h5>
-                            <h2 class="sub-text">($26.00 per hour)</h2>
-                            <button type="button" ng-click="vm.setHours(30)" class="gray-select-btn">Select</button>
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12">
+                        <div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2 center">
+                            <div class="gray-box" ng-class="vm.hour == 30 ? 'border-pink':''">
+                                <h2 class="pack-duration">30 Hours</h2>
+                                <h2 class="sub-text">$780.00</h2>
+                                <h5 class="sub-text">Price per hour</h5>
+                                <h2 class="sub-text">($26.00 per hour)</h2>
+                                <button type="button" ng-click="vm.setHours(30)" class="gray-select-btn">Select</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- 30 hours -->
-                    <div class="col-md-4 col-sm-4 center">
-                        <div class="gray-box" ng-class="vm.hour == 40 ? 'border-pink':''">
-                            <h2 class="pack-duration">40 Hours</h2>
-                            <h2 class="sub-text">$1000.00</h2>
-                            <h5 class="sub-text">Price per hour</h5>
-                            <h2 class="sub-text">($25.00 per hour)</h2>
-                            <button type="button" ng-click="vm.setHours(40)" class="gray-select-btn">Select</button>
+                        <!-- 30 hours -->
+                        <div class="col-md-4 col-sm-4 center">
+                            <div class="gray-box" ng-class="vm.hour == 40 ? 'border-pink':''">
+                                <h2 class="pack-duration">40 Hours</h2>
+                                <h2 class="sub-text">$1000.00</h2>
+                                <h5 class="sub-text">Price per hour</h5>
+                                <h2 class="sub-text">($25.00 per hour)</h2>
+                                <button type="button" ng-click="vm.setHours(40)" class="gray-select-btn">Select</button>
+                            </div>
                         </div>
+                        <!-- 40 hours -->
                     </div>
-                    <!-- 40 hours -->
-                </div>
+                    </div>
                 <!-- gray box -->
             </div>
         </div>
         <!-- Packages -->
-        <div class="container-fluid padding0 pay-title">
+        <div class="container-fluid padding0 pay-title offset-20-im">
             <div class="container">
                 <h2>2. Payment Options</h2>
             </div>
@@ -188,7 +192,7 @@
         </div>
     </div>
     <!-- purchase for me -->
-    <div class="container-fluid padding0 check-title">
+    <div class="container-fluid padding0 check-title  offset-20-im">
         <div class="container">
             <h2>3. Check Out</h2>
         </div>
@@ -203,8 +207,8 @@
             <h2 class="right">{{vm.total | currency}}</h2>
 
         </div>
-        <div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 top-offset-30 bottom-offset-20 right">
-            <input ng-disabled="vm.payDisabled" type="submit" value="Make Payment" class="registration-btn top-offset-20" />
+        <div class="col-md-12 col-sm-12 top-offset-30 bottom-offset-20 center">
+            <input ng-disabled="vm.payDisabled" type="submit" value="Make Payment" class="registration-btn top-offset-20 new-registration-btn" />
             <!--ng-bind="'Pay ' + ((vm.total)|currency) "-->
         </div>
 

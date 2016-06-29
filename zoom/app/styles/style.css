@@ -74,6 +74,8 @@ button.reverse-btn,button.registration-btn {
 overflow: auto;
 height: auto;
 padding: 10px 15px;
+
+    padding-left: 0px;
 }
 .pay-title h2,.check-title h2{
     margin: 5px;
@@ -752,4 +754,17 @@ color:red;
 }
 h3.small-class{
     font-size:21px;
+}
+.min-expile{
+    min-width:200px;
+}
+.reverse-btn.right-0 {
+    margin-right: 0px;
+}
+.offset-20-im {
+    margin: 20px 0px !important;
+}
+.new-registration-btn {
+    font-size: 28px !important;
+    padding: 8px 25px !important;
 }

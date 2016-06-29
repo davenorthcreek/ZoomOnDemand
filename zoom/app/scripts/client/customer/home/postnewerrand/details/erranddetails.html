@@ -55,25 +55,27 @@
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 textDetails">
                     <div class="form-group">
-                        <label for="">Is there anything you would like us to purchase on your behalf?</label>
+                        <label for="">Is there anything you would like us to purchase on your behalf?
+                            <span class=" componentSwitch">
+                                <!-- <div class="zoomswitch">
+            <input type="checkbox" name="zoomswitch" class="zoomswitch-checkbox" id="myzoomswitch">
+            <label class="zoomswitch-label" for="myzoomswitch">
+                <span class="zoomswitch-inner"></span>
+                <span class="zoomswitch-switch"></span>
+            </label>
+        </div> -->
+                                <div class="zoomSwitchFinal">
+                                    <switch id="enabled" name="enabled" ng-model="errand.escrowable" on="Yes" off="No" class="green"></switch>
+                                </div>
+                            </span>
+                        </label>
                         <p>*We will use ‘Purchase for me’ Funds for this service.</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <div class="form-group">
                         <!-- SWITCH -->
-                        <span class="pull-right componentSwitch">
-                            <!-- <div class="zoomswitch">
-                                <input type="checkbox" name="zoomswitch" class="zoomswitch-checkbox" id="myzoomswitch">
-                                <label class="zoomswitch-label" for="myzoomswitch">
-                                    <span class="zoomswitch-inner"></span>
-                                    <span class="zoomswitch-switch"></span>
-                                </label>
-                            </div> -->
-                            <div class="zoomSwitchFinal">
-                                <switch id="enabled" name="enabled" ng-model="errand.escrowable" on="Yes" off="No" class="green"></switch>                                
-                            </div>
-                        </span>
+                        
                     </div>
                 </div>
                 <div class="contentDependSwitch" ng-show="errand.escrowable">

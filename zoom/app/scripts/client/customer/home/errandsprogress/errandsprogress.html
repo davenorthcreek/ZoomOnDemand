@@ -185,7 +185,7 @@
                         <!-- {{group.title}} -->
                         <span class="number">{{$index + 1}}</span>
                         <span class="text">Errand Date: {{errand.datetime|date:'MM/dd/yyyy'}}</span>
-                        <span class="text">{{errand.type.name}}</span>
+                        <span class="text min-expile">{{errand.type.name}}</span>
                         <span class="text">Time Posted: {{errand.datetime|date:'shortTime'}}</span>
                         <span class="text">Status: In Progress</span>
                         <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': errand.is_open, 'glyphicon-chevron-right': !errand.is_open}"></i>
