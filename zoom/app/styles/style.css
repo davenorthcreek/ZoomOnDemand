@@ -768,3 +768,7 @@ h3.small-class{
     font-size: 28px !important;
     padding: 8px 25px !important;
 }
+.preventclick {
+    pointer-events: none;
+    cursor: default;
+}
