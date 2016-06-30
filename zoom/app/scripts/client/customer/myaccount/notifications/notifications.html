@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">Email</h3>
-                        <div class="shutter" ng-class="vm.form.StatusUpdatesEmail == true ? 'yes' : 'no' " ng-click="vm.form.StatusUpdatesEmail = !vm.form.StatusUpdatesEmail" ng-model="vm.form.StatusUpdatesEmail" ng-init="vm.form.StatusUpdatesEmail=true">
+                        <div class="shutter" ng-class="vm.client_setting.status_update_email ? 'yes' : 'no' " ng-click="vm.client_setting.status_update_email = !vm.client_setting.status_update_email">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">SMS</h3>
-                        <div class="shutter" ng-class="vm.form.StatusUpdatesSms == true ? 'yes' : 'no' " ng-click="vm.form.StatusUpdatesSms = !vm.form.StatusUpdatesSms" ng-model="vm.form.StatusUpdatesSms" ng-init="vm.form.StatusUpdatesSms=true">
+                        <div class="shutter" ng-class="vm.client_setting.status_update_sms ? 'yes' : 'no' " ng-click="vm.client_setting.status_update_sms = !vm.client_setting.status_update_sms">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">Email</h3>
-                        <div class="shutter" ng-class="vm.form.ProviderUpdatesEmail == true ? 'yes' : 'no' " ng-click="vm.form.ProviderUpdatesEmail = !vm.form.ProviderUpdatesEmail" ng-model="vm.form.ProviderUpdatesEmail" ng-init="vm.form.ProviderUpdatesEmail=true">
+                        <div class="shutter" ng-class="vm.client_setting.provider_update_email ? 'yes' : 'no' " ng-click="vm.client_setting.provider_update_email = !vm.client_setting.provider_update_email">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">SMS</h3>
-                        <div class="shutter" ng-class="vm.form.ProviderUpdatesSms == true ? 'yes' : 'no' " ng-click="vm.form.ProviderUpdatesSms = !vm.form.ProviderUpdatesSms" ng-model="vm.form.ProviderUpdatesSms" ng-init="vm.form.ProviderUpdatesSms=true">
+                        <div class="shutter" ng-class="vm.client_setting.provider_update_sms ? 'yes' : 'no' " ng-click="vm.client_setting.provider_update_sms = !vm.client_setting.provider_update_sms">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <!--2 select-->
-                <div class="col-md-12 col-sm-12 left">
+                <div class="col-md-12 col-sm-12 left hidden">
                     <div class="col-md-6 col-sm-6">
                         <h3 class="bottom-space-0 top-space-0 left small-class">
                             When Errand is complete
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">Email</h3>
-                        <div class="shutter" ng-class="vm.form.ErrandCompleteEmail == true ? 'yes' : 'no' " ng-click="vm.form.ErrandCompleteEmail = !vm.form.ErrandCompleteEmail" ng-model="vm.form.ErrandCompleteEmail" ng-init="vm.form.ErrandCompleteEmail=true">
+                        <div class="shutter" ng-class="vm.client_setting.errand_complete_email ? 'yes' : 'no' " ng-click="vm.client_setting.errand_complete_email = !vm.client_setting.errand_complete_email">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">SMS</h3>
-                        <div class="shutter" ng-class="vm.form.ErrandCompleteSms == true ? 'yes' : 'no' " ng-click="vm.form.ErrandCompleteSms = !vm.form.ErrandCompleteSms" ng-model="vm.form.ErrandCompleteSms" ng-init="vm.form.ErrandCompleteSms=true">
+                        <div class="shutter" ng-class="vm.client_setting.errand_complete_sms == true ? 'yes' : 'no' " ng-click="vm.client_setting.errand_complete_sms = !vm.client_setting.errand_complete_sms">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -91,17 +91,12 @@
                         <h3 class="bottom-space-0 top-space-0 left small-class">
                             When Purchased Hours are below
                         </h3>
-                    <select class="selection">
-                        <option>1 Hr</option>
-                        <option>2 Hrs</option>
-                        <option>3 Hrs</option>
-                        <option>4 Hrs</option>
-                        <option>5 Hrs</option>
+                    <select class="selection" ng-model="vm.client_setting.hours" ng-options="hour.value as hour.text for hour in vm.hours">
                     </select>
                    </div>
                    <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">Email</h3>
-                       <div class="shutter" ng-class="vm.form.PurchasedHoursEmail == true ? 'yes' : 'no' " ng-click="vm.form.PurchasedHoursEmail = !vm.form.PurchasedHoursEmail" ng-model="vm.form.PurchasedHoursEmail" ng-init="vm.form.PurchasedHoursEmail=true">
+                       <div class="shutter" ng-class="vm.client_setting.hours_email ? 'yes' : 'no' " ng-click="vm.client_setting.hours_email = !vm.client_setting.hours_email">
                            <span class="float-left">Yes</span>
                            <span class="float-right">No</span>
                            <span class="button"><span class="button-in"></span></span>
@@ -109,7 +104,7 @@
                    </div>
                    <div class="col-md-3 col-sm-3 center">
                     <h3 class="bottom-space-0 for-mobile small-class">SMS</h3>
-                       <div class="shutter" ng-class="vm.form.PurchasedHoursSms == true ? 'yes' : 'no' " ng-click="vm.form.PurchasedHoursSms = !vm.form.PurchasedHoursSms" ng-model="vm.form.PurchasedHoursSms" ng-init="vm.form.PurchasedHoursSms=true">
+                       <div class="shutter" ng-class="vm.client_setting.hours_sms ? 'yes' : 'no' " ng-click="vm.client_setting.hours_sms = !vm.client_setting.hours_sms">
                            <span class="float-left">Yes</span>
                            <span class="float-right">No</span>
                            <span class="button"><span class="button-in"></span></span>
@@ -122,12 +117,12 @@
                         <h3 class="bottom-space-0 top-space-0 left small-class">
                             When 'Purchase For Me' Funds are below
                         </h3>
-                        <input type="number" class="selection2"/>
+                        <input type="number" class="selection2" ng-model="vm.client_setting.funds"/>
                         <span class="selection2dolar">$</span>
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">Email</h3>
-                        <div class="shutter" ng-class="vm.form.PurchaseFundsEmail == true ? 'yes' : 'no' " ng-click="vm.form.PurchaseFundsEmail = !vm.form.PurchaseFundsEmail" ng-model="vm.form.PurchaseFundsEmail" ng-init="vm.form.PurchaseFundsEmail=true">
+                        <div class="shutter" ng-class="vm.client_setting.funds_email ? 'yes' : 'no' " ng-click="vm.client_setting.funds_email = !vm.client_setting.funds_email">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -135,7 +130,7 @@
                     </div>
                     <div class="col-md-3 col-sm-3 center">
                         <h3 class="bottom-space-0 for-mobile small-class">SMS</h3>
-                        <div class="shutter" ng-class="vm.form.PurchaseFundsSms == true ? 'yes' : 'no' " ng-click="vm.form.PurchaseFundsSms = !vm.form.PurchaseFundsSms" ng-model="vm.form.PurchaseFundsSms" ng-init="vm.form.PurchaseFundsSms=true">
+                        <div class="shutter" ng-class="vm.client_setting.funds_sms ? 'yes' : 'no' " ng-click="vm.client_setting.funds_sms = !vm.client_setting.funds_sms">
                             <span class="float-left">Yes</span>
                             <span class="float-right">No</span>
                             <span class="button"><span class="button-in"></span></span>
@@ -144,7 +139,7 @@
                 </div>
                 <!--5 select-->
                 <div class="col-md-12 col-sm-12 right bottom-space-20">
-                    <button type="button" class="registration-btn">Save Changes</button>
+                    <button type="button" class="registration-btn" ng-click="vm.saveSetting()">Save Changes</button>
                 </div>
             </div>
       
