@@ -29,9 +29,11 @@
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                     <div class="form-group">
                         <label for="">Where should we send help?</label>
-                        <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete placeholder="{{errand.address}}" force-selection="true" options="vm.autocompleteOptions" ng-model="errand.addr" ng-class="{'warning-border':vm.invalidAddress}" autocomplete="off" ng-change="vm.blurAddress()" required>
+                        <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete placeholder="{{errand.address}}" force-selection="true" options="vm.autocompleteOptions" ng-model="errand.addr" ng-class="{'warning-border':vm.invalidAddress}" autocomplete="off" ng-change="vm.blurAddress()" >
                         <span ng-show="vm.invalidAddress" class="text-danger">Please complete address with google autocomplete exaclty.</span>
+                        <p class="red-error" ng-show="vm.addresserror && !vm.invalidAddress">Please fill out the above field!</p>
                     </div>
+
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class="form-group">
@@ -50,6 +52,7 @@
                                 <div class="imageClip" ngf-multiple="true" ng-model="vm.firstFile" ngf-select="vm.uploadFiles($files, 'normal')" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
                             </div>
                             <div class="pull-right">Files: {{errand.task_uploads['normal'].length || 0}}</div>
+                            <p class="red-error" ng-show="vm.detailserror">Please fill out the above field!</p>
                         </div>
                     </div>
                 </div>
@@ -120,7 +123,7 @@
                     <button class="btn btnNext pull-left" ui-sref="app.home.postnewerrand.select">BACK</button>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <button class="btn btnBack pull-right" ui-sref="app.home.postnewerrand.confirm.usehours">NEXT</button>
+                    <button class="btn btnBack pull-right" ng-click="vm.selectNext()">NEXT</button>
                 </div>
             </div>
             <div class="clearfix"></div>

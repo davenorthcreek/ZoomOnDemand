@@ -10,7 +10,9 @@
     ErrandDetailsController.$inject = ['$rootScope', '$state', '$scope', 'API_URL', 'Upload'];
 
     function ErrandDetailsController($rootScope, $state, $scope, API_URL, Upload) {
-      var vm      = this;
+        var vm = this;
+        vm.addresserror = false;
+        vm.detailserror = false;
       if (!$rootScope.errand.funds) {
         $rootScope.errand.funds = 0;
       }
@@ -109,6 +111,39 @@
         }
       }
 
+      $rootScope.$watch('errand.address', function () {
+          if ($rootScope.errand.address == undefined){
+              vm.addresserror = true;
+          } else {
+              vm.addresserror = false;
+          }
+      }, true);
+      $rootScope.$watch('errand.details', function () {
+          if ($rootScope.errand.details == undefined) {
+              vm.detailserror = true;
+          } else {
+              vm.detailserror = false;
+          }
+      }, true);
+      vm.selectNext = function () {
+          console.log("$rootScope.errand", $rootScope.errand);
+          vm.addresserror = false;
+          vm.detailserror = false;
+          var count = 0;
+          if ($rootScope.errand.address == undefined)
+          {
+              count++;
+              vm.addresserror = true;
+          }
+          if ($rootScope.errand.details == undefined) {
+              count++;
+              vm.detailserror = true;
+          }
+          if (count == 0) {
+              $state.go('app.home.postnewerrand.confirm.usehours');
+          }
+
+      }
     }
 
 })();

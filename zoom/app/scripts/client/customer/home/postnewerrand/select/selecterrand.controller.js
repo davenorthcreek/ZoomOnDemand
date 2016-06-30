@@ -12,7 +12,8 @@
       var vm = this;
 
       vm.locations = ['Los Angeles', 'San Diego'];
-
+      vm.datetimeerror = false;
+      vm.type_iderror = false;
       if ($rootScope.errand.datetime) {
         $rootScope.errand.datetime = new Date($rootScope.errand.datetime);  
       } else {
@@ -41,9 +42,42 @@
           $log.log(vm.zoomoffices);
         });  
 
-      vm.selectNext = function() {
-        $log.log($rootScope.errand);
-        $state.go('app.home.postnewerrand.details');
+      $rootScope.$watch('errand.datetime', function () {
+          var currentdate = new Date();
+          if ($rootScope.errand.datetime < currentdate) {
+              vm.datetimeerror = true;
+          } else {
+              vm.datetimeerror = false;
+          }
+      }, true);
+      $rootScope.$watch('errand.type_id', function () {
+          if($rootScope.errand.type_id == undefined){
+              vm.type_iderror = true;
+          } else {
+              vm.type_iderror = false;
+          }
+      }, true);
+    vm.selectNext = function() {
+          $log.log($rootScope.errand);
+          vm.datetimeerror = false;
+          vm.type_iderror = false;
+          var count = 0;
+          var currentdate = new Date();
+          if ($rootScope.errand.datetime < currentdate)
+          {
+              vm.datetimeerror = true;
+              count++;
+          }
+          if($rootScope.errand.type_id == undefined)
+          {
+              vm.type_iderror = true;
+              count++;
+          }
+          if (count == 0)
+          {
+              $state.go('app.home.postnewerrand.details');
+          }
+       
       }  
 
       vm.selectedObject = function(selected){

@@ -773,3 +773,9 @@ h3.small-class{
     pointer-events: none;
     cursor: default;
 }
+.block{
+    display:block;
+}
+.red-error{
+    color:#a94442;
+}

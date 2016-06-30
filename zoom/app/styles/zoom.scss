@@ -444,6 +444,7 @@ textarea:-ms-input-placeholder,
 											}
 											select{
 												-webkit-appearance: none;
+                                                -moz-appearance: none;
 												@include border(1px,solid,$borderHoursFunds);
 											    height: 35px;
 											    width: 100%;
