@@ -305,6 +305,7 @@ input:-ms-input-placeholder {
       padding-left: 40px; }
     .zoom section aside#latDer .tabParent .tab-parent-content .tab-pane .tab-content-post-errand .tab-pane .containerForm .form-group select {
       -webkit-appearance: none;
+      -moz-appearance: none;
       border: 1px solid #959595;
       height: 35px;
       width: 100%;
