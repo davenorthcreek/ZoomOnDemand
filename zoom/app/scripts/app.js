@@ -24,7 +24,9 @@ var zoomApp = angular.module('zoomApp', [
   'ipCookie',
   'google.places',
   'infinite-scroll',
-  'zoomAppDirectives'
+  'zoomAppDirectives',
+  "pickadate",
+  "timepickerPop"
 ]);
 
 zoomApp.constant('moment', moment);

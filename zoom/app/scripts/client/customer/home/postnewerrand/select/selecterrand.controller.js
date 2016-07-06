@@ -7,17 +7,35 @@
         .controller('SelectErrandController', SelectErrandController);
 
     /** @ngInject */
-    SelectErrandController.$inject = ['$rootScope', '$state', '$scope', '$http', 'API_URL', '$log'];
-    function SelectErrandController($rootScope, $state, $scope, $http, API_URL, $log) {
+    SelectErrandController.$inject = ['$rootScope', '$state', '$scope', '$http', 'API_URL', '$log', 'dateFilter', '$window'];
+    function SelectErrandController($rootScope, $state, $scope, $http, API_URL, $log, dateFilter, $window) {
       var vm = this;
 
       vm.locations = ['Los Angeles', 'San Diego'];
       vm.datetimeerror = false;
       vm.type_iderror = false;
+       $scope.minDate = new Date();
+       $scope.minDate.setDate($scope.minDate.getDate() - 1);
+   
+       $scope.showMeridian = true;
+       $scope.disabled = false;
+
+      $scope.$watch('date', function () {
+          tryCombineDateTime();
+      }, true);
+ 
+      function tryCombineDateTime() {
+          var date = new Date($scope.date);
+          $rootScope.errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), $scope.errand.datetime.getHours(), $scope.errand.datetime.getMinutes());
+         
+      }
+
       if ($rootScope.errand.datetime) {
-        $rootScope.errand.datetime = new Date($rootScope.errand.datetime);  
+          $rootScope.errand.datetime = new Date($rootScope.errand.datetime);
+          $scope.date = dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
       } else {
-        $rootScope.errand.datetime = new Date;
+          $rootScope.errand.datetime = new Date;
+          $scope.date = dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
       }      
 
       if (!$rootScope.errand.frequency) {
@@ -119,7 +137,14 @@
       vm.setFrequency = function(frequency) {
         $rootScope.errand.frequency = frequency;        
       }
-
+      $scope.showcalendarstatus = false;
+      $scope.showcalendar = function () {
+         $window.onclick = function (event) {
+              $scope.showcalendarstatus = false;
+              $scope.$apply();
+          };
+         $scope.showcalendarstatus = true;
+      }
       // vm.next = function() {
       //   console.log('next');
       //   console.log(vm.form);
