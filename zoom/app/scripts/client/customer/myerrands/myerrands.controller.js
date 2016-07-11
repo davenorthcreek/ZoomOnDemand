@@ -107,11 +107,17 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	  });
   }
 
+  vm.editableErrand = function(errand) {
+    return errand.datetime && (new Date(errand.datetime)) > (new Date())
+  }
+
+
   vm.getErrands('open', 'Active');
 
 	function orderAgain(errand) {
 		$rootScope.errand = errand;
     $rootScope.errand.task_uploads = {};
+    $rootScope.errand.datetime = null;
 		$state.go('app.home.postnewerrand');
 	}
 

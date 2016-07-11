@@ -73,7 +73,7 @@
                         <button class="btnOrderAgain" ng-click="vm.orderAgain(errand)">Order Again</button>
                         <br>
                         <button class="btnEditOrder" ng-show="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index" ng-click="vm.saveOrder($index, errand)">Save Order</button>
-                        <button class="btnEditOrder" ng-hide="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index" ng-click="vm.editErrandRow($index, errand)">Edit Order</button>
+                        <button class="btnEditOrder" ng-hide="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index || !vm.editableErrand(errand)" ng-click="vm.editErrandRow($index, errand)">Edit Order</button>
                     </td>
                 </tr>
             </tbody>

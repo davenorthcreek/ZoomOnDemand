@@ -125,6 +125,10 @@
         }
       }
 
+      vm.editableErrand = function(errand) {
+        return errand.datetime && (new Date(errand.datetime)) > (new Date())
+      }
+
       vm.editErrand = function(errand) {
       	errand.editing = true;
       	vm.editing_errand = angular.copy(errand);
