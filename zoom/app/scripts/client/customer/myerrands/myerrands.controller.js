@@ -8,9 +8,9 @@
  * MyErrandsController of the zoomApp
  */
 zoomApp.controller('MyErrandsController', MyErrandsController);
-MyErrandsController.$inject = ['$rootScope', '$scope', '$state', '$http', 'moment', 'API_URL', 'toastr'];
+MyErrandsController.$inject = ['$rootScope', '$scope', '$state', '$http', 'moment', 'API_URL', 'toastr', 'dateFilter', '$window'];
 
-function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL, toastr) {
+function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL, toastr, dateFilter, $window) {
 	
 	var vm                   = this;
 	vm.orderAgain            = orderAgain;
@@ -23,6 +23,47 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	vm.errand_status_title = { open: 'Active', close: 'Completed', cancel: 'Cancelled'};
 	vm.busy = true;
 	
+
+
+	$scope.minDate = new Date();
+	$scope.minDate.setDate($scope.minDate.getDate() - 1);
+	$scope.showMeridian = true;
+	$scope.disabled = false;
+	$scope.$watch('vm.date', function () {
+	    tryCombineDateTime();
+	}, true);
+	function tryCombineDateTime() {
+	    if (vm.editing_errand) {
+	        var date = new Date(vm.date);
+	        vm.editing_errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), vm.editing_errand.datetime.getHours(), vm.editing_errand.datetime.getMinutes());
+	    }
+	}
+	$scope.$watch('vm.editing_errand.datetime', function () {
+	    if (vm.editing_errand) {
+	        var currentdate = new Date();
+	        if (vm.editing_errand.datetime < currentdate) {
+	            vm.datetimeerror = true;
+	        } else {
+	            vm.datetimeerror = false;
+	        }
+	    }
+	}, true);
+	$scope.showcalendarstatus = false;
+	$scope.showcalendar = function () {
+	    $window.onclick = function (event) {
+	        $scope.showcalendarstatus = false;
+	        $scope.$apply();
+	    };
+	    $scope.showcalendarstatus = true;
+	}
+
+
+
+
+
+
+
+
   $http.get(API_URL + '/all_types')
   .then(function(resp) {
     vm.all_types = resp.data; 
@@ -78,8 +119,12 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		vm.editing_errand = angular.copy(errand);
     if (vm.editing_errand.datetime) {
       vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+      vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
+
     } else {
       vm.editing_errand.datetime = new Date;
+      vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
+
     }
 
 		vm.editing_errand_status.index = index;

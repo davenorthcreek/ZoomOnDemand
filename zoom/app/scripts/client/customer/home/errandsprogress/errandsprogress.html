@@ -256,29 +256,54 @@
                                         </div> 
                                     </div>   
 
-                                    <div class="dropdown date">
-                                        I need this on
+
+
+
+
+
+
+                                    <!--<div class="dropdown date">
+                                        i need this on
                                         <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
                                           <div class="input-group date">
-                                            <input type="text" class="form-control" ng-value="vm.editing_errand.datetime|date:'MM/dd/yyyy'">
+                                            <input type="text" class="form-control" ng-value="vm.editing_errand.datetime|date:'mm/dd/yyyy'">
                                           </div>
                                         </a>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                          <datetimepicker ng-model="vm.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day'}" data-on-set-time="vm.setDate(newDate, oldDate)" ></datetimepicker>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+                                          <datetimepicker ng-model="vm.date" data-datetimepicker-config="{ dropdownselector: '#dropdown1', startview: 'day', minview: 'day'}" data-on-set-time="vm.setdate(newdate, olddate)" ></datetimepicker>
                                         </ul>
                                     </div>
 
-                                    <p>ETA:</p>
+                                    <p>eta:</p>
                                     <div>
                                         <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
                                           <div class="input-group date">
-                                            <input type="text" class="form-control" ng-value="vm.editing_errand.datetime|date:'shortTime'">
+                                            <input type="text" class="form-control" ng-value="vm.editing_errand.datetime|date:'shorttime'">
                                           </div>
                                         </a>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                          <datetimepicker data-ng-model="vm.time" data-datetimepicker-config="{ dropdownSelector: '#dropdown2', startView: 'hour', minView: 'minute' }" data-on-set-time="vm.setTime(newDate, oldDate)" ></datetimepicker>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+                                          <datetimepicker data-ng-model="vm.time" data-datetimepicker-config="{ dropdownselector: '#dropdown2', startview: 'hour', minview: 'minute' }" data-on-set-time="vm.settime(newdate, olddate)" ></datetimepicker>
                                         </ul>
+                                    </div>-->
+
+
+                                    <p class="inline-block width-110 ">I need this on{{date}}</p>
+                                    <div class="inline-block width-220"><a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{vm.editing_errand.datetime|date:'MM/dd/yyyy'}}</a><div ng-show="showcalendarstatus" ng-click="showcalendar();$event.stopPropagation();" pickadate="" ng-model="vm.date" min-date="minDate" class="date-picker-class  width-220"></div></div>
+                                   <br /><br />
+                                    <p class="inline-block width-110 ">eta:</p>
+                                    <div class=' inline-block width-220 div-shift top-space-0'>
+                                        <timepicker-pop input-time="vm.editing_errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>
                                     </div>
+                                    <div class="clearfix"></div>
+                                    <p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>
+
+
+
+
+
+
+
+
                                     <div ng-show="vm.editing_errand.type.name == 'Delivery'">
                                         <p>Item:</p>
                                         <div class="form-group margin-bottom-sm">
@@ -342,4 +367,4 @@
         <div id="map" style="width: 100%; height: 300px; max-width: 335px;"></div>
     </div>
 </div>
-<!-- TAB PARENT ERRANDS IN PROGRESS
+<!-- TAB PARENT ERRANDS IN PROGRESS -->

@@ -814,6 +814,8 @@ h3.small-class{
   timepicker-pop button.btn.btn-default{
       background:#43c9e1;
       color:#fff;
+              border: none;
+    height: 34px;
   }
     timepicker-pop button.btn.btn-default i {
         color: #fff;
@@ -834,4 +836,23 @@ a.date-pick-bor,a.date-pick-bor:hover,a.date-pick-bor:link{
     position: absolute;
     z-index: 9;
     box-shadow: 1px 1px 2px #333;
+}
+.zoom div.errandsProgressDetail h3.pickadate-centered-heading{
+    font-size:15px;
+
+}
+h3.pickadate-centered-heading {
+    font-size:15px !important;
+    color: #FFFFFF !important;
+    background: #43C9E1;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px !important;
+    margin: 20px 20px 20px 20px;
+}
+.date-picker-class.width-220{
+    padding-top:0px;
+}
+.width-220.top-space-0{
+    padding-top:0px;
+    top:0px;
 }

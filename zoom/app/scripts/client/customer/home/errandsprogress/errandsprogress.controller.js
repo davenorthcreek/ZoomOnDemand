@@ -7,13 +7,48 @@
         .controller('ErrandsProgressController', ErrandsProgressController);
 
     /** @ngInject */
-    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr'];
-    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr) {
+    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr', 'dateFilter', '$window'];
+    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr, dateFilter, $window) {
       var vm = this;   
-
+      vm.datetimeerror = false;
       vm.oneAtATime = true;
         
-			var directionsDisplay;
+
+      $scope.minDate = new Date();
+      $scope.minDate.setDate($scope.minDate.getDate() - 1);
+      $scope.showMeridian = true;
+      $scope.disabled = false;
+      $scope.$watch('vm.date', function () {
+          tryCombineDateTime();
+      }, true);
+      function tryCombineDateTime() {
+          if (vm.editing_errand) {
+              var date = new Date(vm.date);
+              vm.editing_errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), vm.editing_errand.datetime.getHours(), vm.editing_errand.datetime.getMinutes());
+          }
+      }
+      $scope.$watch('vm.editing_errand.datetime', function () {
+          if (vm.editing_errand) {
+              var currentdate = new Date();
+              if (vm.editing_errand.datetime < currentdate) {
+                  vm.datetimeerror = true;
+              } else {
+                  vm.datetimeerror = false;
+              }
+          }
+      }, true);
+      $scope.showcalendarstatus = false;
+      $scope.showcalendar = function () {
+          $window.onclick = function (event) {
+              $scope.showcalendarstatus = false;
+              $scope.$apply();
+          };
+          $scope.showcalendarstatus = true;
+      }
+
+
+
+            var directionsDisplay;
 			var directionsService = new google.maps.DirectionsService();
 			var map;
 			var marker;
@@ -94,9 +129,11 @@
       	errand.editing = true;
       	vm.editing_errand = angular.copy(errand);
       	if (vm.editing_errand.datetime) {
-      		vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);	
+      	    vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);
+      	    vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
       	} else {
-      		vm.editing_errand.datetime = new Date;
+      	    vm.editing_errand.datetime = new Date;
+      	    vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
       	}
       	vm.invalidAddress = false;
       	vm.invalidPickUpAddress = false;      	

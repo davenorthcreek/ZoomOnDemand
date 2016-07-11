@@ -26,7 +26,7 @@
  
       function tryCombineDateTime() {
           var date = new Date($scope.date);
-          $rootScope.errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), $scope.errand.datetime.getHours(), $scope.errand.datetime.getMinutes());
+          $rootScope.errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), $rootScope.errand.datetime.getHours(), $rootScope.errand.datetime.getMinutes());
          
       }
 
