@@ -7,8 +7,8 @@
         .controller('ErrandsProgressController', ErrandsProgressController);
 
     /** @ngInject */
-    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr', 'dateFilter', '$window'];
-    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr, dateFilter, $window) {
+    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr',  '$window'];
+    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr,  $window) {
       var vm = this;   
       vm.datetimeerror = false;
       vm.oneAtATime = true;
@@ -134,10 +134,10 @@
       	vm.editing_errand = angular.copy(errand);
       	if (vm.editing_errand.datetime) {
       	    vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);
-      	    vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
+      	    vm.date = vm.editing_errand.datetime;
       	} else {
       	    vm.editing_errand.datetime = new Date;
-      	    vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
+      	    vm.date = vm.editing_errand.datetime;
       	}
       	vm.invalidAddress = false;
       	vm.invalidPickUpAddress = false;      	

@@ -836,6 +836,7 @@ a.date-pick-bor,a.date-pick-bor:hover,a.date-pick-bor:link{
     position: absolute;
     z-index: 9;
     box-shadow: 1px 1px 2px #333;
+        min-width: 260px;
 }
 .zoom div.errandsProgressDetail h3.pickadate-centered-heading{
     font-size:15px;
@@ -855,4 +856,7 @@ h3.pickadate-centered-heading {
 .width-220.top-space-0{
     padding-top:0px;
     top:0px;
+}
+div.table-responsive.tableErrandsProgress{
+    overflow-x:visible;
 }

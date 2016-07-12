@@ -32,10 +32,11 @@
 
       if ($rootScope.errand.datetime) {
           $rootScope.errand.datetime = new Date($rootScope.errand.datetime);
-          $scope.date = dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
+          $scope.date = $rootScope.errand.datetime; //dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
       } else {
           $rootScope.errand.datetime = new Date;
-          $scope.date = dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
+          $scope.date = $rootScope.errand.datetime;  // dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
+        
       }      
 
       if (!$rootScope.errand.frequency) {

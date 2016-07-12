@@ -73,7 +73,7 @@
                 <p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>
             </div>-->
               <label class="inline-block width-110 ">I need this on</label>
-              <div class="inline-block width-220"><a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{errand.datetime|date:'MM/dd/yyyy'}}</a><div ng-show="showcalendarstatus" ng-click="showcalendar();$event.stopPropagation();" pickadate="" ng-model="date" min-date="minDate" class="date-picker-class"></div></div>,<p class="inline-block width-220">{{errand.datetime|date:'EEEE'}}  </p> at 
+              <div class="inline-block width-220"><a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{errand.datetime|date:'MM/dd/yyyy'}}</a><div ng-show="showcalendarstatus" ng-click="showcalendar();$event.stopPropagation();" pickadate="" ng-model="date | date:'yyyy-MM-dd'" min-date="minDate" class="date-picker-class"></div></div>,<p class="inline-block width-220">{{errand.datetime|date:'EEEE'}}  </p> at 
               <div class=' inline-block width-220 div-shift'>
               <timepicker-pop input-time="errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>
              </div>
