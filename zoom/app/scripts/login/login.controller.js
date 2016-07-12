@@ -17,7 +17,7 @@
           $state.go('app.home');
         });
         $rootScope.$on('auth:validation-success', function (ev, reason) {
-          $state.go('app.home');
+          $state.go('app.profile');
         });
         $scope.$on('auth:login-error', function (ev, data) {
           vm.waiting = false;
