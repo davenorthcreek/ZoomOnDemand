@@ -11,6 +11,7 @@
     function LoginController($state, $scope, toastr, $rootScope) {
         var vm = this;
         vm.waiting = false;
+        $rootScope.errand = {};
         $scope.$on('auth:login-success', function (ev, data) {
           vm.waiting = false;
           $state.go('app.home');
