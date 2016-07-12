@@ -11,6 +11,7 @@
     function CustomerController($state, $rootScope, $scope, toastr, Restangular, $auth) {
       var vm = this;
       $rootScope.$on('auth:logout-success', function (ev) {
+        $rootScope.errand = {};
         $state.go('login');  
       });
     }
