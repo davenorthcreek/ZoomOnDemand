@@ -28,6 +28,7 @@
         $scope.$on('auth:login-success', function(ev, user) 
         {
             toastr.success('Welcome ' + user.email);
+            $rootScope.errand = {};
             $state.go('app.home');            
         });
 
