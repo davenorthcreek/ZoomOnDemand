@@ -15,8 +15,7 @@
       vm.datetimeerror = false;
       vm.type_iderror = false;
        $scope.minDate = new Date();
-       $scope.minDate.setDate($scope.minDate.getDate() - 1);
-   
+     //  $scope.minDate.setDate($scope.minDate.getDate() - 1);
        $scope.showMeridian = true;
        $scope.disabled = false;
 
@@ -25,17 +24,18 @@
       }, true);
  
       function tryCombineDateTime() {
-          var date = new Date($scope.date);
-          $rootScope.errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), $rootScope.errand.datetime.getHours(), $rootScope.errand.datetime.getMinutes());
-         
+         var date = new Date($scope.date);
+          var mydate = $scope.date.split('-');
+          $rootScope.errand.datetime = new Date(mydate[0], date.getMonth(), mydate[2], $rootScope.errand.datetime.getHours(), $rootScope.errand.datetime.getMinutes());
+        
       }
 
       if ($rootScope.errand.datetime) {
           $rootScope.errand.datetime = new Date($rootScope.errand.datetime);
-          $scope.date = $rootScope.errand.datetime; //dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
+          $scope.date =  dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
       } else {
           $rootScope.errand.datetime = new Date;
-          $scope.date = $rootScope.errand.datetime;  // dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
+          $scope.date =  dateFilter($rootScope.errand.datetime, 'yyyy-MM-dd');
         
       }      
 

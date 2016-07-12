@@ -37,7 +37,7 @@
                               <datetimepicker ng-model="vm.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day'}" data-on-set-time="vm.setDate(newDate, oldDate)" ></datetimepicker>
                             </ul>-->
 
-                            <div class="inline-block width-220"><a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{vm.editing_errand.datetime|date:'MM/dd/yyyy'}}</a><div ng-show="showcalendarstatus" ng-click="showcalendar();$event.stopPropagation();" pickadate="" ng-model="vm.date | date:'yyyy-MM-dd'" min-date="minDate" class="date-picker-class"></div></div>
+                            <div class="inline-block width-220"><a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{vm.editing_errand.datetime|date:'MM/dd/yyyy'}}</a><div ng-show="showcalendarstatus" ng-click="showcalendar();$event.stopPropagation();" pickadate="" ng-model="vm.date" min-date="minDate" class="date-picker-class"></div></div>
 
                         </div>
                     </td>
