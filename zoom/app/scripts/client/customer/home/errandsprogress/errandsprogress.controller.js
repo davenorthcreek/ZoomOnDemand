@@ -7,15 +7,15 @@
         .controller('ErrandsProgressController', ErrandsProgressController);
 
     /** @ngInject */
-    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr', 'dateFilter', '$window'];
-    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr, dateFilter, $window) {
+    ErrandsProgressController.$inject = ['$state', '$scope', '$stateParams', '$http', 'API_URL', 'toastr', '$window', 'dateFilter'];
+    function ErrandsProgressController($state, $scope, $stateParams, $http, API_URL, toastr, $window, dateFilter) {
       var vm = this;   
       vm.datetimeerror = false;
       vm.oneAtATime = true;
         
 
       $scope.minDate = new Date();
-      $scope.minDate.setDate($scope.minDate.getDate() - 1);
+   //  $scope.minDate.setDate($scope.minDate.getDate() - 1);
       $scope.showMeridian = true;
       $scope.disabled = false;
       $scope.$watch('vm.date', function () {
@@ -24,7 +24,8 @@
       function tryCombineDateTime() {
           if (vm.editing_errand) {
               var date = new Date(vm.date);
-              vm.editing_errand.datetime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), vm.editing_errand.datetime.getHours(), vm.editing_errand.datetime.getMinutes());
+              var mydate = vm.date.split('-');
+              vm.editing_errand.datetime = new Date(mydate[0], date.getMonth(), mydate[2], vm.editing_errand.datetime.getHours(), vm.editing_errand.datetime.getMinutes());
           }
       }
       $scope.$watch('vm.editing_errand.datetime', function () {
