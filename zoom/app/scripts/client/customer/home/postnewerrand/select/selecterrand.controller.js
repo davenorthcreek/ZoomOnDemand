@@ -10,14 +10,20 @@
     SelectErrandController.$inject = ['$rootScope', '$state', '$scope', '$http', 'API_URL', '$log', 'dateFilter', '$window'];
     function SelectErrandController($rootScope, $state, $scope, $http, API_URL, $log, dateFilter, $window) {
       var vm = this;
-
+     
       vm.locations = ['Los Angeles', 'San Diego'];
       vm.datetimeerror = false;
+      vm.datetimeerrorShow = false;
       vm.type_iderror = false;
        $scope.minDate = new Date();
-     //  $scope.minDate.setDate($scope.minDate.getDate() - 1);
+      $scope.minDate.setDate($scope.minDate.getDate() - 1);
        $scope.showMeridian = true;
        $scope.disabled = false;
+
+       $scope.stopPropogation=function(){
+           jQuery(".pickadate-header").addClass("hii");
+
+       }
 
       $scope.$watch('date', function () {
           tryCombineDateTime();
@@ -66,25 +72,28 @@
           if ($rootScope.errand.datetime < currentdate) {
               vm.datetimeerror = true;
           } else {
+              vm.datetimeerrorShow = false;
               vm.datetimeerror = false;
           }
       }, true);
       $rootScope.$watch('errand.type_id', function () {
-          if($rootScope.errand.type_id == undefined){
-              vm.type_iderror = true;
-          } else {
+          if($rootScope.errand.type_id != undefined){
               vm.type_iderror = false;
+          } else {
+             // vm.type_iderror = true;
           }
       }, true);
     vm.selectNext = function() {
           $log.log($rootScope.errand);
           vm.datetimeerror = false;
+          vm.datetimeerrorShow = false;
           vm.type_iderror = false;
           var count = 0;
           var currentdate = new Date();
           if ($rootScope.errand.datetime < currentdate)
           {
               vm.datetimeerror = true;
+              vm.datetimeerrorShow = true;
               count++;
           }
           if($rootScope.errand.type_id == undefined)
@@ -142,7 +151,7 @@
       $scope.showcalendar = function () {
          $window.onclick = function (event) {
               $scope.showcalendarstatus = false;
-              $scope.$apply();
+             $scope.$apply();
           };
          $scope.showcalendarstatus = true;
       }

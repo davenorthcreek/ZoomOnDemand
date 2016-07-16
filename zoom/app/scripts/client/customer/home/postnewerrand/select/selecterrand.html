@@ -1,25 +1,27 @@
 <!-- TAB POST NEW ERRAND SUBTAB SELECT ERRAND -->
 
-<div role="tabpanel" class="tab-pane active" id="selectErrandTab">
+<div role="tabpanel" class="tab-pane active" id="selectErrandTab" ng-init="stopPropogation()">
   
   <div class="containerForm">
     <form>
       <div>
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-          <div class="form-group">
+          <div class="form-group relative">
             <label for="">What errand do you need help with?</label>
-            <div angucomplete-alt id="ex1"
-              placeholder="{{errand.type.comment}}" 
-              pause="100"
-              selected-object="vm.selectedObject"
-              local-data="vm.all_types"
-              search-fields="comment"
-              title-field="comment"
-              minlength="1"
-              input-class="form-control no-border-radius input-md searchZoom"
-              match-class="highlight">
-            </div> 
-              <p class="red-error" ng-show="vm.type_iderror">Please fill out the above field!</p>
+              <div angucomplete-alt id="ex1"
+                   placeholder="{{errand.type.comment}}"
+                   pause="100"
+                   selected-object="vm.selectedObject"
+                   local-data="vm.all_types"
+                   search-fields="comment"
+                   title-field="comment"
+                   minlength="1"
+                   input-class="form-control no-border-radius input-md searchZoom"
+                   match-class="highlight"
+                   ng-class="{'error-red': vm.type_iderror}">
+              </div> 
+              <span class="required-msg" ng-show="vm.type_iderror"> * Required</span>
+              <!--<p class="red-error" ng-show="vm.type_iderror">Please fill out the above field!</p>-->
             <!-- <div class="input-group margin-bottom-sm">
                 <span class="input-group-addon"><i class="fa fa-search fa-fw" aria-hidden="true"></i></span>
               </div> -->  
@@ -73,12 +75,12 @@
                 <p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>
             </div>-->
               <label class="inline-block width-110 ">I need this on</label>
-              <div class="inline-block width-220"><a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{errand.datetime|date:'MM/dd/yyyy'}}</a><div ng-show="showcalendarstatus" ng-click="showcalendar();$event.stopPropagation();" pickadate="" ng-model="date" min-date="minDate" class="date-picker-class"></div></div>,<p class="inline-block width-220">{{errand.datetime|date:'EEEE'}}  </p> at 
+              <div class="inline-block width-220 relative" ng-class="{'error-bottom-red': vm.datetimeerror}"><a data-target="#" class="date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{errand.datetime|date:'MM/dd/yyyy'}}</a><span class="required-msg" ng-show="vm.datetimeerrorShow"> * Required</span><div ng-show="showcalendarstatus"  pickadate="" ng-model="date" min-date="minDate" class="date-picker-class"></div></div>,<p class="inline-block width-220" ng-class="{'error-bottom-red': vm.datetimeerror}">{{errand.datetime|date:'EEEE'}}  </p> at 
               <div class=' inline-block width-220 div-shift'>
               <timepicker-pop input-time="errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>
              </div>
               <div class="clearfix"></div>
-              <p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>
+              <!--<p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>-->
 
               
           </div>
