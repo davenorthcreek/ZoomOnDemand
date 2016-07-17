@@ -12,6 +12,11 @@
       var vm = this;
      
       vm.locations = ['Los Angeles', 'San Diego'];
+      vm.frequencies = [];
+      var i;
+      for (i = 1; i <= 15; i ++) {
+        vm.frequencies.push(i);
+      }
       vm.datetimeerror = false;
       vm.datetimeerrorShow = false;
       vm.type_iderror = false;

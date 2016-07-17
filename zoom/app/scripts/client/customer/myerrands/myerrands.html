@@ -19,6 +19,7 @@
                     <th>Errand Type</th>
                     <th>Description</th>
                     <th>Hours/Funds Used</th>
+                    <th>Recurring</th>
                     <th ng-show="vm.errands_title == 'All'">Status</th>
                     <th></th>
                 </tr>
@@ -67,6 +68,16 @@
                         Hours Used:  {{errand.usedHour}}
                         <br>
                         Funds Used:  ${{(user.usedEscrow || 0).toFixed(2)}}
+                    </td>
+                    <td>
+                        <div ng-show="vm.editing_errand_status.index != $index">
+                            {{errand.frequency == 0 ? 'This one time' : (errand.frequency == 7 ? 'Weekly' : (errand.frequency == 30 ? 'Monthly' : ('Every ' + errand.frequency + ' days')))}}
+                        </div>
+                        <select class="form-control no-border-radius input-md"
+                                ng-show="vm.editing_errand_status.index == $index"
+                                ng-model="vm.editing_errand.frequency"
+                                ng-options="frequency.value as frequency.label for frequency in vm.frequencies">
+                        </select>
                     </td>
                     <td ng-show="vm.errands_status == ''">{{vm.errand_status_title[errand.status]}}</td>
                     <td>

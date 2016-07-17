@@ -234,6 +234,8 @@
                                     <p ng-show="errand.type.name == 'Delivery'">Drop off Location: </p>
                                     <p ng-hide="errand.type.name == 'Delivery'">Errand Location: </p>
                                     <p>{{errand.address}} {{errand.unit}}</p>
+                                    <p>Errand Detail:</p>
+                                    <p ng-bind-html="errand.details.split('\n').join('<br>')"></p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -343,6 +345,10 @@
                                         <div class="form-group margin-bottom-sm">
                                             <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #" ng-model="vm.editing_errand.unit">
                                         </div>
+                                    </div>
+                                    <p>Errand Detail:</p>
+                                    <div>
+                                        <textarea name="" id="" ng-class="{'error-red': vm.detailserror}" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops." ng-model="vm.editing_errand.details"></textarea>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>

@@ -22,6 +22,14 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	vm.editing_errand_status = {}
 	vm.errand_status_title = { open: 'Active', close: 'Completed', cancel: 'Cancelled'};
 	vm.busy = true;
+  vm.frequencies = [];
+  var i;
+  vm.frequencies.push({ label: 'This one time', value: 0 });
+  vm.frequencies.push({ label: 'Weekly', value: 7 });
+  vm.frequencies.push({ label: 'Monthly', value: 30 });
+  for (i = 1; i <= 15; i ++) {
+    vm.frequencies.push({ label: 'Every ' + i + ' days', value: i });
+  }
 	
 
 
