@@ -811,7 +811,10 @@ h3.small-class{
   .pickadate-main{
           background: #fff;
   }
-  timepicker-pop button.btn.btn-default{
+  timepicker-pop .input-group-btn > button.btn.btn-default{
+      display:none;
+  }
+    timepicker-pop button.btn.btn-default{
       background:#43c9e1;
       color:#fff;
               border: none;
@@ -859,4 +862,43 @@ h3.pickadate-centered-heading {
 }
 div.table-responsive.tableErrandsProgress{
     overflow-x:visible;
+}
+.error-red,.error-red > div > input{
+        box-shadow: 0px 0px 2px #ff0000 !important;
+    border-color: #ff0000 !important;
+}
+div.error-red{
+    box-shadow:none !important;
+}
+.error-bottom-red{
+    border-color: #ff0000 !important;
+}
+.relative{
+    position:relative;
+}
+.required-msg{
+        background: #fff;
+    box-shadow: 0px 0px 5px #666;
+    padding: 3px 15px;
+    border-radius: 8px;
+    color: #ff0000;
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+        bottom: -32px;
+}
+textarea.next-clicked::-webkit-input-placeholder {
+color: #999 !important;
+}
+ 
+textarea.next-clicked:-moz-placeholder { /* Firefox 18- */
+color: #999 !important;  
+}
+ 
+textarea.next-clicked::-moz-placeholder {  /* Firefox 19+ */
+color: #999 !important;  
+}
+ 
+textarea.next-clicked:-ms-input-placeholder {  
+color: #999 !important;  
 }

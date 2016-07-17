@@ -26,7 +26,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 
 
 	$scope.minDate = new Date();
-	//$scope.minDate.setDate($scope.minDate.getDate() - 1);
+	$scope.minDate.setDate($scope.minDate.getDate() - 1);
 	$scope.showMeridian = true;
 	$scope.disabled = false;
 	$scope.$watch('vm.date', function () {
