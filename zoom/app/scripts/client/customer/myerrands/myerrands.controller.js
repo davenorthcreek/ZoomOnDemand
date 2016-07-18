@@ -48,23 +48,25 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	            vm.datetimeerror = false;
 	        }
 	    }
+	    $scope.showcalendarflag = false;
 	}, true);
 	$scope.showcalendarstatus = false;
-	$scope.showcalendar = function () {
+	$scope.showcalendar = function (status) {
+        
+	    if (status) {
+	        $scope.showcalendarflag = true;
+	    }
+
 	    $window.onclick = function (event) {
 	        $scope.showcalendarstatus = false;
 	        $scope.$apply();
 	    };
-	    $scope.showcalendarstatus = true;
+	    if ($scope.showcalendarflag) {
+	        $scope.showcalendarstatus = true;
+	    } else {
+	        $scope.showcalendarstatus = false;
+	    }
 	}
-
-
-
-
-
-
-
-
   $http.get(API_URL + '/all_types')
   .then(function(resp) {
     vm.all_types = resp.data; 

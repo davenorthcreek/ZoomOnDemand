@@ -67,7 +67,7 @@
           $log.log(vm.zoomoffices);
         });  
 
-      $rootScope.$watch('errand.datetime', function () {
+      $rootScope.$watch('errand.datetime', function (event) {
           var currentdate = new Date();
           if ($rootScope.errand.datetime < currentdate) {
               vm.datetimeerror = true;
@@ -75,6 +75,8 @@
               vm.datetimeerrorShow = false;
               vm.datetimeerror = false;
           }
+          $scope.showcalendarflag = false;
+        
       }, true);
       $rootScope.$watch('errand.type_id', function () {
           if($rootScope.errand.type_id != undefined){
@@ -148,13 +150,21 @@
         $rootScope.errand.frequency = frequency;        
       }
       $scope.showcalendarstatus = false;
-      $scope.showcalendar = function () {
-         $window.onclick = function (event) {
+      $scope.showcalendar = function (status) {
+          if (status) {
+              $scope.showcalendarflag = true;
+          }
+          $window.onclick = function (event) {
               $scope.showcalendarstatus = false;
              $scope.$apply();
           };
-         $scope.showcalendarstatus = true;
+          if ($scope.showcalendarflag) {
+              $scope.showcalendarstatus = true;
+          } else {
+              $scope.showcalendarstatus = false;
+          }
       }
+     
       // vm.next = function() {
       //   console.log('next');
       //   console.log(vm.form);
