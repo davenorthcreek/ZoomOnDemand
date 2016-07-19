@@ -43,6 +43,8 @@ module.exports = function(config) {
       'bower_components/angular-google-places-autocomplete/dist/autocomplete.min.js',
       'bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
       'bower_components/angular-pickadate/dist/angular-pickadate.js',
+      'bower_components/angular-dateParser/dist/angular-dateparser.js',
+      'bower_components/angular-dateParser/dist/angular-dateparser.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

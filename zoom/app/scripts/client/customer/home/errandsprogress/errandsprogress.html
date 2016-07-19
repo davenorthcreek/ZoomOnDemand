@@ -295,8 +295,9 @@
                                    <br /><br />
                                     <p class="inline-block width-110 ">eta:</p>
                                     <div class=' inline-block width-220 div-shift top-space-0'>
-                                        <timepicker-pop input-time="vm.editing_errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>
-                                    </div>
+                                        <!--<timepicker-pop input-time="vm.editing_errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>-->
+                                        <input type="text" class="timeformat pointer" dn-timepicker ng-model="vm.editing_errand.datetime" />
+                                      </div>
                                     <div class="clearfix"></div>
                                     <p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>
 
