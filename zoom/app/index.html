@@ -22,9 +22,11 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    
     <link rel="stylesheet" href="styles/style.css">
       <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/zoom.css">
+    
     <!-- endbuild -->
   </head>
   <body ng-app="zoomApp">
@@ -84,15 +86,19 @@ ga('send', 'pageview');
     <script src="bower_components/angular-google-places-autocomplete/dist/autocomplete.min.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
     <script src="bower_components/angular-pickadate/dist/angular-pickadate.js"></script>
+    <script src="bower_components/angular-dateParser/dist/angular-dateparser.js"></script>
+    <script src="bower_components/angular-dateParser/dist/angular-dateparser.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAU2_PRjDTZozelgBpSfFtb1MLZnf8RcXo"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-      <script src="scripts/util/script.js"></script>
+
+      <script src="scripts/client/customer/home/angular.timepicker.js"></script>
     <script src="scripts/client/customer/home/postnewerrand/select/timepickerpop.js"></script>
     <script src="scripts/directives.js"></script>
     <script src="scripts/app.js"></script>
+    
     <script src="scripts/constants.js"></script>
     <script src="scripts/config.js"></script>
     <script src="scripts/run.js"></script>

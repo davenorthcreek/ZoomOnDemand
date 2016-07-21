@@ -26,7 +26,10 @@ var zoomApp = angular.module('zoomApp', [
   'infinite-scroll',
   'zoomAppDirectives',
   "pickadate",
-  "timepickerPop"
+  "timepickerPop",
+  "dnTimepicker",
+ 
+  
 ]);
 
 zoomApp.constant('moment', moment);

@@ -75,10 +75,16 @@
                 <p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>
             </div>-->
               <label class="inline-block width-110 ">I need this on</label>
-              <div class="inline-block width-220 relative" ng-class="{'error-bottom-red': vm.datetimeerror}"><a data-target="#" class="date-pick-bor pointer" ng-click="showcalendar();$event.stopPropagation();">{{errand.datetime|date:'MM/dd/yyyy'}}</a><span class="required-msg" ng-show="vm.datetimeerrorShow"> * Required</span><div ng-show="showcalendarstatus"  pickadate="" ng-model="date" min-date="minDate" class="date-picker-class"></div></div>,<p class="inline-block width-220" ng-class="{'error-bottom-red': vm.datetimeerror}">{{errand.datetime|date:'EEEE'}}  </p> at 
-              <div class=' inline-block width-220 div-shift'>
-              <timepicker-pop input-time="errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>
-             </div>
+              <div class="inline-block width-220 relative" ng-class="{'error-bottom-red': vm.datetimeerrorShow}">
+                  <a data-target="#" class="date-pick-bor pointer" ng-click="showcalendarflag=true;showcalendar(true);$event.stopPropagation();">{{errand.datetime|date:'MM/dd/yyyy'}}</a>
+                  <span class="required-msg" ng-show="vm.datetimeerrorShow"> * Required</span>
+                  <div ng-show="showcalendarstatus" pickadate="" ng-click="showcalendar();$event.stopPropagation();" ng-model="date" min-date="minDate" class="date-picker-class"></div>
+              </div>,<p class="inline-block width-220" ng-class="{'error-bottom-red': vm.datetimeerrorShow}">{{errand.datetime|date:'EEEE'}}  </p> at 
+                   <!--<timepicker-pop input-time="errand.datetime" class="input-group" disabled="disabled" show-meridian='showMeridian'></timepicker-pop>-->
+              <div class="inline-block width-220" ng-class="{'error-bottom-red': vm.datetimeerrorShow}">
+                  <input type="text" class="timeformat pointer" dn-timepicker ng-model="errand.datetime" />
+              </div>
+            
               <div class="clearfix"></div>
               <!--<p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>-->
 
