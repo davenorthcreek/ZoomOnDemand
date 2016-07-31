@@ -2084,6 +2084,10 @@ textarea:-ms-input-placeholder,
   background: rgba(0, 0, 0, .4);
   width: 100%;
   height: 100%;
+  input {
+  	font-size: 28px;
+  	height: 50px;
+  }
 }
 
 .contact-description {
