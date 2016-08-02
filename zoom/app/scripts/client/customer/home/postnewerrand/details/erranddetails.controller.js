@@ -118,11 +118,25 @@
                 vm.addresserror = false;
             }
         }, true);
+        $rootScope.$watch('errand.pick_up_address', function () {
+            if ($rootScope.errand.pick_up_address == undefined) {
+                //  vm.addresserror = true;
+            } else {
+                vm.pick_up_address_error = false;
+            }
+        }, true);        
         $rootScope.$watch('errand.details', function () {
             if ($rootScope.errand.details == undefined) {
                 // vm.detailserror = true;
             } else {
                 vm.detailserror = false;
+            }
+        }, true);
+        $rootScope.$watch('errand.item', function () {
+            if ($rootScope.errand.item == undefined) {
+                // vm.detailserror = true;
+            } else {
+                vm.item_error = false;
             }
         }, true);
         vm.selectNext = function () {
@@ -139,6 +153,18 @@
                 count++;
                 vm.detailserror = true;
             }
+
+            if ($scope.errand.type.name == 'Delivery') {
+                if (!$rootScope.errand.pick_up_address) {
+                    vm.pick_up_address_error = true;
+                    count ++;
+                }
+                if (!$rootScope.errand.item) {
+                    count++;
+                    vm.item_error = true;
+                }
+            }
+
             if (count == 0) {
                 $state.go('app.home.postnewerrand.confirm.usehours');
             }
