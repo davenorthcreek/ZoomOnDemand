@@ -10,6 +10,7 @@
     ConfirmErrandController.$inject = ['$rootScope', '$state', '$scope', '$http', 'API_URL', 'toastr'];
     function ConfirmErrandController($rootScope, $state, $scope, $http, API_URL, toastr) {
       var vm = this;
+      $rootScope.errand.submitted = false;
 
       vm.submitErrand = function () {
         if (!$rootScope.errand.type_id) {

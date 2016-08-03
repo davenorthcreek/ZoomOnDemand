@@ -31,11 +31,11 @@
           $rootScope.errand.submitted = true;
           $http.post(API_URL + '/client/tasks', {task: $rootScope.errand})
           .then(function(data) {
-            $rootScope.errand = {};
-            $rootScope.errand.submitted = false;
-            $rootScope.errand.task_uploads = {};
-            toastr.success('Your errand has posted.<br>You will now be directed to errands in progress.', {allowHtml: true, toastClass: 'toast-center'});
-            $state.go('app.home.errandsprogress', {errand_id: data.data.id});
+            toastr.success('Your errand has posted.<br>You will now be directed to errands in progress.', {allowHtml: true, toastClass: 'toast-center', onHidden: function() { 
+              $rootScope.errand = {};
+              $rootScope.errand.task_uploads = {};
+              $state.go('app.home.errandsprogress', {errand_id: data.data.id});
+            }});            
           }, function(data) {
             if (data.data && data.data.alert) {
               toastr.warning(data.data.alert);
