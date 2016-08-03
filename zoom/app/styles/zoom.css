@@ -1057,7 +1057,7 @@ input:-ms-input-placeholder {
   .zoom .myErrands h2 {
     color: #76939e;
     font-size: 30px;
-    margin: 80px 80px 70px 80px;
+    margin: 30px 80px 30px 80px;
     padding: 0px 0px 20px 0px;
     border-bottom: 1px solid #76939e; }
     @media (max-width: 1043px) {
@@ -1080,7 +1080,7 @@ input:-ms-input-placeholder {
     width: 100%; }
   .zoom .myErrands .filters {
     clear: both;
-    margin: 0px 120px 60px 120px; }
+    margin: 0px 120px 30px 120px; }
     @media (max-width: 1043px) {
       .zoom .myErrands .filters {
         margin: 0px 50px 10px 50px; } }
@@ -1119,6 +1119,7 @@ input:-ms-input-placeholder {
       .zoom .myErrands .tableErrandsProgress table thead.my-errands-thead tr th {
         border: 0px solid transparent;
         text-align: center;
+        padding: 4px 8px 4px 8px;
         color: #FFFFFF;
         font-weight: normal;
         vertical-align: middle;
@@ -1127,6 +1128,7 @@ input:-ms-input-placeholder {
           text-align: left; }
     .zoom .myErrands .tableErrandsProgress table tbody tr td {
       border: 0px solid transparent;
+      height: 86px;
       vertical-align: middle;
       width: calc(100% / 6);
       font-size: 18px;
@@ -1199,23 +1201,22 @@ input:-ms-input-placeholder {
       .zoom .myErrands .tableErrandsProgress table tbody tr td button.btnOrderAgain {
         background: #43C9E1;
         border: 0px solid transparent;
-        padding: 5px 5px 5px 5px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        border-radius: 25px;
-        margin: 0px 0px 10px 0px;
+        padding: 3px 3px 3px 3px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
         color: #FFFFFF;
-        width: 120px; }
+        width: 108px; }
       .zoom .myErrands .tableErrandsProgress table tbody tr td button.btnEditOrder {
         background: #FFFFFF;
         color: #43C9E1;
         border: 1px solid #43C9E1;
-        padding: 2px 5px 2px 5px;
-        width: 120px; }
+        padding: 1px 3px 1px 3px;
+        margin: 6px 0px 0px 0px;
+        width: 108px; }
       .zoom .myErrands .tableErrandsProgress table tbody tr td .image {
         width: 40px;
-        height: 40px;
         -webkit-border-radius: 40px;
         -moz-border-radius: 40px;
         -ms-border-radius: 40px;

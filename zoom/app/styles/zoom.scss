@@ -1350,7 +1350,7 @@ textarea:-ms-input-placeholder,
 		h2{
 			color:$graySideBarIzq;
 			font-size:30px;
-			@include margin(80px,80px,70px,80px);
+			@include margin(30px,80px,30px,80px);
 			@include padding(0px,0px,20px,0px);
 			@include border-bottom(1px,solid,$graySideBarIzq);
 			@media (max-width: 1043px){
@@ -1376,7 +1376,7 @@ textarea:-ms-input-placeholder,
 		}
 		.filters{
 			clear: both;
-			@include margin(0px,120px,60px,120px);
+			@include margin(0px,120px,30px,120px);
 			@media (max-width: 1043px){
 				@include margin(0px,50px,10px,50px);
 			}
@@ -1418,6 +1418,7 @@ textarea:-ms-input-placeholder,
 						th{
 							@include border(0px, solid, transparent);
 							@include text-align(center);
+							@include padding(4px, 8px, 4px, 8px);
 							color:$white;
 							font-weight:normal;
 							vertical-align:middle;
@@ -1432,6 +1433,7 @@ textarea:-ms-input-placeholder,
 					tr{
 						td{
 							@include border(0px,solid,transparent);
+							height: 86px;
 							.tooltip{
 								font-family: tw-cem;
 								font-size:14px;
@@ -1512,22 +1514,21 @@ textarea:-ms-input-placeholder,
 							button.btnOrderAgain{
 								background:$blueZoom;
 								@include border(0px, solid, transparent);
-								@include padding(5px,5px,5px,5px);
-								@include border-radius(25px);
-								@include margin(0px,0px,10px,0px);
+								@include padding(3px,3px,3px,3px);
+								@include border-radius(20px);								
 								color:$white;
-								width:120px;
+								width:108px;
 							}
 							button.btnEditOrder{
 								background:$white;
 								color:$blueZoom;
 								@include border(1px, solid, $blueZoom);
-								@include padding(2px,5px,2px,5px);
-								width:120px;
+								@include padding(1px, 3px, 1px, 3px);
+								@include margin(6px, 0px, 0px, 0px);
+								width:108px;
 							}
 							.image{
 								width:40px;
-								height:40px;
 								@include border-radius(40px);
 								overflow:hidden;
 								@include text-align(center);
