@@ -1227,6 +1227,8 @@ input:-ms-input-placeholder {
         .zoom .myErrands .tableErrandsProgress table tbody tr td .image img {
           text-align: center;
           margin: 0px auto 0px auto; }
+      .zoom .myErrands .tableErrandsProgress table tbody tr td .not-assigned {
+        font-size: 13px; }
 .zoom .no-padding {
   padding: 0px 0px 0px 0px; }
 .zoom .no-margin {
@@ -1639,5 +1641,15 @@ input:-ms-input-placeholder {
   background-color: #dddddd; }
 .profile input[disabled] {
   background-color: white; }
+
+.toast-center {
+  left: calc(50% - 150px);
+  top: calc(50vh - 50px); }
+
+.toast {
+  left: calc(100% - 320px); }
+
+.toast-top-right {
+  width: 100%; }
 
 /*# sourceMappingURL=zoom.css.map */

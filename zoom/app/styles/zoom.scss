@@ -1538,6 +1538,9 @@ textarea:-ms-input-placeholder,
 									@include margin(0px,auto,0px,auto);
 								}
 							}
+							.not-assigned {
+								font-size: 13px;
+							}
 						}
 					}
 				}
@@ -2158,4 +2161,17 @@ textarea:-ms-input-placeholder,
 	input[disabled] {
 		background-color: white;
 	}
+}
+
+.toast-center {
+	left: calc(50% - 150px);
+	top: calc(50vh - 50px);
+}
+
+.toast {
+	left: calc(100% - 320px);
+}
+
+.toast-top-right {
+	width: 100%;
 }

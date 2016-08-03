@@ -18,6 +18,9 @@
       $scope.minDate.setDate($scope.minDate.getDate() - 1);
       $scope.showMeridian = true;
       $scope.disabled = false;
+
+      $window.scrollTo(0, 0);
+      
       $scope.$watch('vm.date', function () {
           tryCombineDateTime();
       }, true);
