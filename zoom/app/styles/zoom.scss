@@ -2150,3 +2150,12 @@ textarea:-ms-input-placeholder,
   height: 105px;
   margin-top: 60px;
 }
+
+.profile {
+	input {
+		background-color: #dddddd;
+	}
+	input[disabled] {
+		background-color: white;
+	}
+}

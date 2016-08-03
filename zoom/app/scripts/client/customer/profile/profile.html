@@ -1,62 +1,64 @@
-﻿   <div class="container-fluid">
-            <h2 class="account-head">Edit Profile</h2>
-            <div class="col-md-3 col-sm-3 center">
-                <img ng-src="{{vm.photo || vm.accountSetting.photoUrl || 'images/user.jpg'}}" class="img-circle profile-img"/>
-                <div class="imageClip" ngf-multiple="false" ngf-select="vm.uploadFile($file)">
-                    <button type="button" class="pic-btn">Change Photo</button>
-                </div>
-            </div>
-            <div class="col-md-7 col-sm-7">
-                <div class="col-md-12 col-sm-12 left">
-                    <h3>Name</h3>
-                </div>
-                <div class="col-md-6 col-sm-6 left">
-                    <input type="text" placeholder="First Name" class="inputs" ng-model="vm.accountSetting.fname" ng-disabled="!vm.editing"><br>
-                </div>
-                <div class="col-md-6 col-sm-6 left">
-                    <input type="text" placeholder="Last Name" class="inputs" ng-model="vm.accountSetting.lname" ng-disabled="!vm.editing"><br>
-                </div>
-                <!-- Name -->
-                <div class="col-md-12 col-sm-12 left">
-                    <h3>Address</h3>
-                </div>
-                <div class="col-md-9 col-sm-9 left">
-                    <input type="text" placeholder="Street Name and No." class="inputs" ng-model="vm.accountSetting.address1" ng-disabled="!vm.editing"><br>
-                </div>
-                <div class="col-md-3 col-sm-3 left">
-                    <input type="text" placeholder="Apt/ Unit No." class="inputs" ng-model="vm.accountSetting.address2" ng-disabled="!vm.editing"><br>
-                </div>
-                <div class="col-md-4 col-sm-4 left">
-                    <input type="text" placeholder="City" class="inputs" ng-model="vm.accountSetting.city" ng-disabled="!vm.editing"><br>
-                </div>
-                <div class="col-md-4 col-sm-4 left">
-                    <input type="text" placeholder="State" class="inputs" ng-model="vm.accountSetting.state" ng-disabled="!vm.editing"><br>
-                </div>
-                <div class="col-md-4 col-sm-4 left">
-                    <input type="text" placeholder="Zipcode" class="inputs" ng-model="vm.accountSetting.zip" ng-disabled="!vm.editing"><br>
-                </div>
-                <!-- Address -->
-                <div class="col-md-6 col-sm-6 left">
-                    <h3>Email</h3>
-                    <input type="text" placeholder="Email" class="inputs" ng-model="vm.accountSetting.email" ng-disabled="!vm.editing"><br>
-                    <!--<button type="button" class="plus-btn"><span class="plus">+</span> add email</button>-->
-                </div>
-                <!-- Email -->
-                <div class="col-md-6 col-sm-6 left">
-                    <h3>Mobile</h3>
-                    <input type="text" placeholder="( ) --- -----" class="inputs" ng-model="vm.accountSetting.phone1" ng-disabled="!vm.editing"><br>
-                    <!--<button type="button" class="plus-btn"><span class="plus">+</span> add phone</button>-->
-                </div>
-                <!-- Mobile -->
-                <div class="col-md-12 col-sm-12 left">
-                    <h3>Your Service Location</h3>
-                    <select class="selection-country no-border-radius input-md" ng-model="vm.accountSetting.zoom_office_id" ng-options="office.id as office.longName for office in vm.zoomoffices" ng-model="errand.zoom_office_id" ng-disabled="!vm.editing"></select>
-                </div>
-                <!-- Location -->
-                <div class="col-md-12 col-sm-12 right bottom-space-20 top-offset-30">
-                    <button type="button" class="reverse-btn" ng-show="!vm.editing" ng-click="vm.editing=true" ng-init="vm.editing=false">Edit Profile</button>
-                    <button type="button" class="registration-btn" ng-show="vm.editing" ng-click="vm.updateAccount()">Save Changes</button>
-                </div>
+﻿<div class="profile">
+    <div class="container-fluid">
+        <h2 class="account-head">Edit Profile</h2>
+        <div class="col-md-3 col-sm-3 center">
+            <img ng-src="{{vm.photo || vm.accountSetting.photoUrl || 'images/user.jpg'}}" class="img-circle profile-img"/>
+            <div class="imageClip" ngf-multiple="false" ngf-select="vm.uploadFile($file)">
+                <button type="button" class="pic-btn">Change Photo</button>
             </div>
         </div>
-     
+        <div class="col-md-7 col-sm-7">
+            <div class="col-md-12 col-sm-12 left">
+                <h3>Name</h3>
+            </div>
+            <div class="col-md-6 col-sm-6 left">
+                <input type="text" placeholder="First Name" class="inputs" ng-model="vm.accountSetting.fname" ng-disabled="!vm.editing"><br>
+            </div>
+            <div class="col-md-6 col-sm-6 left">
+                <input type="text" placeholder="Last Name" class="inputs" ng-model="vm.accountSetting.lname" ng-disabled="!vm.editing"><br>
+            </div>
+            <!-- Name -->
+            <div class="col-md-12 col-sm-12 left">
+                <h3>Address</h3>
+            </div>
+            <div class="col-md-9 col-sm-9 left">
+                <input type="text" placeholder="Street Name and No." class="inputs" ng-model="vm.accountSetting.address1" ng-disabled="!vm.editing"><br>
+            </div>
+            <div class="col-md-3 col-sm-3 left">
+                <input type="text" placeholder="Apt/ Unit No." class="inputs" ng-model="vm.accountSetting.address2" ng-disabled="!vm.editing"><br>
+            </div>
+            <div class="col-md-4 col-sm-4 left">
+                <input type="text" placeholder="City" class="inputs" ng-model="vm.accountSetting.city" ng-disabled="!vm.editing"><br>
+            </div>
+            <div class="col-md-4 col-sm-4 left">
+                <input type="text" placeholder="State" class="inputs" ng-model="vm.accountSetting.state" ng-disabled="!vm.editing"><br>
+            </div>
+            <div class="col-md-4 col-sm-4 left">
+                <input type="text" placeholder="Zipcode" class="inputs" ng-model="vm.accountSetting.zip" ng-disabled="!vm.editing"><br>
+            </div>
+            <!-- Address -->
+            <div class="col-md-6 col-sm-6 left">
+                <h3>Email</h3>
+                <input type="text" placeholder="Email" class="inputs" ng-model="vm.accountSetting.email" ng-disabled="!vm.editing"><br>
+                <!--<button type="button" class="plus-btn"><span class="plus">+</span> add email</button>-->
+            </div>
+            <!-- Email -->
+            <div class="col-md-6 col-sm-6 left">
+                <h3>Mobile</h3>
+                <input type="text" placeholder="( ) --- -----" class="inputs" ng-model="vm.accountSetting.phone1" ng-disabled="!vm.editing"><br>
+                <!--<button type="button" class="plus-btn"><span class="plus">+</span> add phone</button>-->
+            </div>
+            <!-- Mobile -->
+            <div class="col-md-12 col-sm-12 left">
+                <h3>Your Service Location</h3>
+                <select class="selection-country no-border-radius input-md" ng-model="vm.accountSetting.zoom_office_id" ng-options="office.id as office.longName for office in vm.zoomoffices" ng-model="errand.zoom_office_id" ng-disabled="!vm.editing"></select>
+            </div>
+            <!-- Location -->
+            <div class="col-md-12 col-sm-12 right bottom-space-20 top-offset-30">
+                <button type="button" class="reverse-btn" ng-show="!vm.editing" ng-click="vm.editing=true" ng-init="vm.editing=false">Edit Profile</button>
+                <button type="button" class="registration-btn" ng-show="vm.editing" ng-click="vm.updateAccount()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 

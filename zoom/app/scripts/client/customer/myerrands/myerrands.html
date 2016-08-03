@@ -48,6 +48,7 @@
                         <div class="image">
                             <img ng-src="{{errand.provider.photoUrl || 'images/zoomlogo.png'}}" alt="" class="img-responsive">
                         </div>
+                        <span ng-show="!errand.provider.photoUrl" class="red">Not Assigned</span>
                     </td>
                     <td>
                         <select class="form-control no-border-radius input-md"
