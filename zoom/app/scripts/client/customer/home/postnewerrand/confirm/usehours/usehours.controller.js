@@ -34,6 +34,7 @@
             $rootScope.errand = {};
             $rootScope.errand.submitted = false;
             $rootScope.errand.task_uploads = {};
+            toastr.success('Your errand has posted.<br>You will not be directed to errands in progress.', {allowHtml: true});
             $state.go('app.home.errandsprogress', {errand_id: data.data.id});
           }, function(data) {
             if (data.data && data.data.alert) {
