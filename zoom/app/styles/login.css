@@ -193,3 +193,32 @@ width: 100%;
 .login-inputs:-ms-input-placeholder {
     color:    #777 !important;
 }
+
+@media (max-width: 768px) {
+    .width150p {
+        width: 160px;
+        margin: 5px auto;
+    }
+    .logo-fixed {
+        height: 24px;
+    }
+    .google-login, .facebook-login {
+        margin: 5px 0;
+    }
+    .login-inputs {
+        margin: 5px 0;
+    }
+    .forgot-shift {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .login-btn, .sign-btn {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 18px;
+        height: 36px;
+    }
+    .bottom-offset-30 {
+        margin-bottom: 20px
+    }
+}
