@@ -14,6 +14,7 @@
         $scope.$on('auth:login-success', function (ev, data) {
           vm.waiting = false;
           $rootScope.errand = {};
+          $rootScope.user = data;
           $state.go('app.home');
         });
         $rootScope.$on('auth:validation-success', function (ev, reason) {
