@@ -50,6 +50,9 @@ body{
 .logo100{
         width: 100px;
 }
+.logo-main {
+    width: 114px;
+}
 .float-left{
     float: left;
 }
@@ -73,7 +76,7 @@ button.reverse-btn,button.registration-btn {
 .navbar-brand {
     overflow: auto;
     height: auto;
-    padding: 8px 15px;
+    padding: 2px 15px;
     padding-left: 0px;
 }
 .pay-title h2,.check-title h2{
