@@ -71,10 +71,9 @@ button.reverse-btn,button.registration-btn {
 }
 }
 .navbar-brand {
-overflow: auto;
-height: auto;
-padding: 10px 15px;
-
+    overflow: auto;
+    height: auto;
+    padding: 8px 15px;
     padding-left: 0px;
 }
 .pay-title h2,.check-title h2{
