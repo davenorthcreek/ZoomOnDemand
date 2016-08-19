@@ -1294,10 +1294,6 @@ input:-ms-input-placeholder {
   width: 100%;
   max-width: 1300px;
   margin: 0px auto 0px auto; }
-@media (max-width: 1400px) {
-  .zoom .containerZoom {
-    width: 100%;
-    max-width: 100%; } }
 .zoom .datetimepicker .active:hover, .zoom .datetimepicker .active:hover:hover, .zoom .datetimepicker .active.disabled:hover, .zoom .datetimepicker .active.disabled:hover:hover, .zoom .datetimepicker .active:active, .zoom .datetimepicker .active:hover:active, .zoom .datetimepicker .active.disabled:active, .zoom .datetimepicker .active.disabled:hover:active, .zoom .datetimepicker .active.active, .zoom .datetimepicker .active:hover.active, .zoom .datetimepicker .active.disabled.active, .zoom .datetimepicker .active.disabled:hover.active, .zoom .datetimepicker .active.disabled, .zoom .datetimepicker .active:hover.disabled, .zoom .datetimepicker .active.disabled.disabled, .zoom .datetimepicker .active.disabled:hover.disabled, .zoom .datetimepicker td.active[disabled], .zoom .datetimepicker td.active:hover[disabled], .zoom .datetimepicker td.active.disabled[disabled], .zoom .datetimepicker td.active.disabled:hover[disabled], .zoom .datetimepicker span.active[disabled], .zoom .datetimepicker span.active:hover[disabled], .zoom .datetimepicker span.active.disabled[disabled], .zoom .datetimepicker span.active.disabled:hover[disabled] {
   background-color: #76939e; }
 .zoom .datetimepicker .active, .zoom .datetimepicker .active:hover, .zoom .datetimepicker .active.disabled, .zoom .datetimepicker .active.disabled:hover {

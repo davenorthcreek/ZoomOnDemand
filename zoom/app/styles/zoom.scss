@@ -1783,12 +1783,6 @@ textarea:-ms-input-placeholder,
 		max-width:1300px;
 		@include margin(0px,auto,0px,auto);
 	}
-	@media (max-width: 1400px){
-		.containerZoom{
-			width:100%;
-			max-width:100%;
-		}
-	}
 	.datetimepicker .active:hover, .datetimepicker .active:hover:hover, .datetimepicker .active.disabled:hover, .datetimepicker .active.disabled:hover:hover, .datetimepicker .active:active, .datetimepicker .active:hover:active, .datetimepicker .active.disabled:active, .datetimepicker .active.disabled:hover:active, .datetimepicker .active.active, .datetimepicker .active:hover.active, .datetimepicker .active.disabled.active, .datetimepicker .active.disabled:hover.active, .datetimepicker .active.disabled, .datetimepicker .active:hover.disabled, .datetimepicker .active.disabled.disabled, .datetimepicker .active.disabled:hover.disabled, .datetimepicker td.active[disabled], .datetimepicker td.active:hover[disabled], .datetimepicker td.active.disabled[disabled], .datetimepicker td.active.disabled:hover[disabled], .datetimepicker span.active[disabled], .datetimepicker span.active:hover[disabled], .datetimepicker span.active.disabled[disabled], .datetimepicker span.active.disabled:hover[disabled] {
 		background-color: #76939e;
 	}
