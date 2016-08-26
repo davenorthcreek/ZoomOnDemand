@@ -6,7 +6,7 @@
       .module('zoomApp')
       .config(config);
 
-   
+
 
     // @ngInject
     config.$inject = ['API_URL', '$authProvider', '$windowProvider', '$locationProvider', 'RestangularProvider'];
@@ -17,7 +17,7 @@
        var $window = $windowProvider.$get();
        var isMob = $window.cordova !== angular.undefined;
         $authProvider.configure(
-          {              
+          {
             apiUrl: API_URL,
             proxyIf: function () { $window.isOldIE(); },
             authProviderPaths: {
@@ -29,17 +29,16 @@
               path: "/",
               expires: 9999,
               expirationUnit: 'days',
-              // domain: 'http://zoomerrands.com',
+              domain: '.zoomerrands.com',
               secure: false
-              
             },
             omniauthWindowType: isMob ? 'inAppBrowser' : 'newWindow',
             storage: isMob ? 'localStorage' : 'cookies'
-              
+
           }
         );
     }
-  
+
 })();
 
 
