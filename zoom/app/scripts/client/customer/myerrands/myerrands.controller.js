@@ -92,7 +92,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		vm.errands_title = vm.errand_status_title[status] || 'All';
 		vm.busy = true;
 		vm.offset = 0;
-		vm.limit = 10;
+		vm.limit = 5;
 
     $http.get(API_URL + '/client/tasks/summary')
 	  .then(function(resp) {

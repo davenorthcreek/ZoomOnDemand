@@ -10,7 +10,7 @@
     </div>
     <h3>{{vm.errands_title}} Orders</h3>
     <!-- <div class="bgHead"></div> -->
-    <div class="table-responsive tableErrandsProgress" infinite-scroll="vm.loadMoreErrands()" infinite-scroll-disabled="vm.busy" infinite-scroll-distance="1">
+    <div class="table-responsive tableErrandsProgress" infinite-scroll="vm.loadMoreErrands()" infinite-scroll-disabled="vm.busy" infinite-scroll-distance="0">
         <table class="table">
             <thead class="my-errands-thead">
                 <tr>
@@ -56,13 +56,13 @@
                                 ng-model="vm.editing_errand.type_id"
                                 ng-options="type.id as type.comment for type in vm.all_types">
                         </select>
-                        <button class="tooltipErrandService" ng-show="vm.editing_errand_status.type != $index" popover-placement="bottom" popover-trigger="focus" 
+                        <button class="tooltipErrandService" ng-show="vm.editing_errand_status.type != $index" popover-placement="bottom" popover-trigger="focus"
                             uib-popover-template="'editErrandType.html'">{{errand.type.comment}}</button>
                     </td>
                     <td>
-                        <textarea class="tooltipErrandService" ng-show="vm.editing_errand_status.details == $index" rows="3" cols="20" 
+                        <textarea class="tooltipErrandService" ng-show="vm.editing_errand_status.details == $index" rows="3" cols="20"
                             ng-model="vm.editing_errand.details"></textarea>
-                        <button class="tooltipDescription" ng-show="vm.editing_errand_status.details != $index" popover-placement="bottom" popover-trigger="focus" 
+                        <button class="tooltipDescription" ng-show="vm.editing_errand_status.details != $index" popover-placement="bottom" popover-trigger="focus"
                             uib-popover-template="'editErrandDescription.html'">
                             {{errand.details}}
                         </button>

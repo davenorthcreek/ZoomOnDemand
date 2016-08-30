@@ -12,7 +12,9 @@
       var vm = this;
       vm.datetimeerror = false;
       vm.oneAtATime = true;
-
+      vm.busy = true;
+      vm.offset = 0;
+      vm.limit = 3;
 
       $scope.minDate = new Date();
       $scope.minDate.setDate($scope.minDate.getDate() - 1);
@@ -64,7 +66,7 @@
 
 
 
-            var directionsDisplay;
+      var directionsDisplay;
 			var directionsService = new google.maps.DirectionsService();
 			var map;
 			var marker;
@@ -81,9 +83,10 @@
         vm.all_types = resp.data;
       });
 
-      $http.get(API_URL + '/client/tasks/mytasks', {params: { status: 'open' }})
+      $http.get(API_URL + '/client/tasks/mytasks', {params: { status: 'open', limit: vm.limit, offset: vm.offset }})
       .then(function(resp) {
           vm.errands = resp.data.tasks;
+          vm.busy = !resp.data.moredata;
           if (vm.errands && vm.errands.length) {
           	angular.forEach(vm.errands, function(errand, index) {
           		$scope.$watch("vm.errands[" + index + "].is_open", function (newValue, oldValue) {
@@ -95,7 +98,39 @@
           } else {
             $('#map').hide();
           }
+      }, function(resp) {
+        vm.busy = true;
       });
+
+      vm.loadMoreErrands = function() {
+        vm.busy = true;
+        vm.offset += vm.limit;
+        $http.get(API_URL + '/client/tasks/mytasks', {params: { status: 'open', limit: vm.limit, offset: vm.offset }})
+        .then(function(resp) {
+          vm.errands = vm.errands.concat(resp.data.tasks);
+          vm.busy = !resp.data.moredata;
+          if (resp.data.tasks && resp.data.tasks.length) {
+            // for (index=vm.errands.length-resp.data.tasks.length-1; index<vm.errands.length; index++){
+            //   $scope.$watch("vm.errands[" + index + "].is_open", function (newValue, oldValue) {
+            //     if (newValue) {
+            //       vm.toggleOpen(index, errand);
+            //     }
+            //   });
+            // }
+            angular.forEach(vm.errands, function(errand, index) {
+              $scope.$watch("vm.errands[" + index + "].is_open", function (newValue, oldValue) {
+                if (newValue) {
+                  vm.toggleOpen(index, errand);
+                }
+              });
+            });
+          } else {
+            $('#map').hide();
+          }
+        }, function(resp) {
+          vm.busy = true;
+        });
+      }
 
       vm.toggleOpen = function(index, errand) {
       	errand.editing = false;
