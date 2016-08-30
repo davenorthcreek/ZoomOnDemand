@@ -11,7 +11,7 @@ zoomApp.controller('MyErrandsController', MyErrandsController);
 MyErrandsController.$inject = ['$rootScope', '$scope', '$state', '$http', 'moment', 'API_URL', 'toastr', '$window', 'dateFilter'];
 
 function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL, toastr, $window, dateFilter) {
-	
+
 	var vm                   = this;
 	vm.orderAgain            = orderAgain;
 	vm.editErrandRow         = editErrandRow;
@@ -30,7 +30,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
   for (i = 1; i <= 15; i ++) {
     vm.frequencies.push({ label: 'Every ' + i + ' days', value: i });
   }
-	
+
 
 
 	$scope.minDate = new Date();
@@ -50,6 +50,8 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	$scope.$watch('vm.editing_errand.datetime', function () {
 	    if (vm.editing_errand) {
 	        var currentdate = new Date();
+          currentdate.setHours(currentdate.getHours()+1);
+
 	        if (vm.editing_errand.datetime < currentdate) {
 	            vm.datetimeerror = true;
 	        } else {
@@ -60,7 +62,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	}, true);
 	$scope.showcalendarstatus = false;
 	$scope.showcalendar = function (status) {
-        
+
 	    if (status) {
 	        $scope.showcalendarflag = true;
 	    }
@@ -77,28 +79,28 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	}
   $http.get(API_URL + '/all_types')
   .then(function(resp) {
-    vm.all_types = resp.data; 
+    vm.all_types = resp.data;
   });
 
   $http.get(API_URL + '/client/tasks/summary')
   .then(function(resp) {
-    vm.errands_counts = resp.data; 
+    vm.errands_counts = resp.data;
   });
 
   vm.getErrands = function(status, title) {
   	vm.errands_status = status;
-		vm.errands_title = vm.errand_status_title[status] || 'All';	
+		vm.errands_title = vm.errand_status_title[status] || 'All';
 		vm.busy = true;
 		vm.offset = 0;
 		vm.limit = 10;
 
     $http.get(API_URL + '/client/tasks/summary')
 	  .then(function(resp) {
-	    vm.errands_counts = resp.data; 
+	    vm.errands_counts = resp.data;
 	  });
-	
+
   	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit }})
-	  .then(function(resp) {   
+	  .then(function(resp) {
 	    vm.errands = resp.data.tasks;
 	    vm.busy = !resp.data.moredata;
 	  }, function(resp) {
@@ -110,7 +112,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
   	vm.busy = true;
   	vm.offset += vm.limit;
   	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit, offset: vm.offset }})
-	  .then(function(resp) {   
+	  .then(function(resp) {
 	    vm.errands = vm.errands.concat(resp.data.tasks);
 	    vm.busy = !resp.data.moredata;
 	  }, function(resp) {
@@ -135,7 +137,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	function editErrandRow(index, errand) {
 		vm.editing_errand = angular.copy(errand);
     if (vm.editing_errand.datetime) {
-      vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+      vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);
       vm.date = dateFilter(vm.editing_errand.datetime, 'yyyy-MM-dd');
 
     } else {
@@ -155,7 +157,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		if (vm.editing_errand_status.details != index) {
 			vm.editing_errand = angular.copy(errand);
       if (vm.editing_errand.datetime) {
-        vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+        vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);
       } else {
         vm.editing_errand.datetime = new Date;
       }
@@ -169,12 +171,12 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		if (vm.editing_errand_status.type != index) {
 			vm.editing_errand = angular.copy(errand);
       if (vm.editing_errand.datetime) {
-        vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);  
+        vm.editing_errand.datetime = new Date(vm.editing_errand.datetime);
       } else {
         vm.editing_errand.datetime = new Date;
       }
 			vm.editing_errand_status.type = null;
-		}		
+		}
 	}
 
 	function saveOrder(index, errand) {
@@ -187,7 +189,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 	    } else {
 	      toastr.warning("error");
 	    }
-	  });  
+	  });
 		vm.editing_errand_status.index = null;
 		vm.editing_errand_status.type = null;
 		vm.editing_errand_status.details = null;
