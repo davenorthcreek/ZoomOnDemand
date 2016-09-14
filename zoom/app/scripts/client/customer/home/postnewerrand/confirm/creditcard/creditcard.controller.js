@@ -13,7 +13,7 @@
       if (!$rootScope.errand.funds) {
         $rootScope.errand.funds = 0;
       }
-        
+
       init();
       vm.escrow = $rootScope.errand.funds;
 
@@ -34,7 +34,7 @@
         $scope.number = null;
         $scope.expiry = null;
         $scope.cvc = null;
-      }    
+      }
 
       $http.get(API_URL + '/client/escrowhours/fee')
       .then(function (data) {
@@ -57,7 +57,7 @@
       vm.setHours = function (h) {
         vm.hour = h;
         vm.hoursPrice = vm.calcPrice(vm.hour)
-        vm.hrsText = h + ' ' + (h == 1 ? 'Hour' : 'Hours');            
+        vm.hrsText = h + ' ' + (h == 1 ? 'Hour' : 'Hours');
       }
 
       vm.calcPrice = function (h) {
@@ -87,10 +87,10 @@
 
       // Stripe Response Handler
       $scope.stripeCallback = function (code, result) {
-        
+
         if (result.error) {
           $rootScope.errand.submitted = false;
-          toastr.warning('it failed! error: ' + result.error.message);
+          toastr.warning(result.error.message, 'It failed!');
         } else {
           vm.waiting = true;
           var payload = {
@@ -105,18 +105,18 @@
                             "Fund Escrow: " + $filter("currency")(resp.data.purchaseEscrow),
                             "You paid " + $filter("currency")(resp.data.charge.amount * 0.01) + " successfully!",
                             {allowHtml: true});
-            
+
             $http.get(API_URL + '/client/escrowhours')
-            .then(function (data) {                        
+            .then(function (data) {
               $rootScope.user.escrow_hour = data.data.eh ? data.data.eh : $rootScope.user.escrow_hour;
 
               $http.post(API_URL + '/client/tasks', {task: $rootScope.errand})
               .then(function(data) {
-                toastr.success('Your errand has posted.<br>You will now be directed to errands in progress.', {allowHtml: true, toastClass: 'toast-center', onHidden: function() { 
+                toastr.success('Your errand has posted.<br>You will now be directed to errands in progress.', {allowHtml: true, toastClass: 'toast-center', onHidden: function() {
                   $rootScope.errand = {};
                   $rootScope.errand.task_uploads = {};
                   $state.go('app.home.errandsprogress', {errand_id: data.data.id});
-                }});            
+                }});
               }, function(data) {
                 if (data.data && data.data.alert) {
                   toastr.warning(data.data.alert);
@@ -124,7 +124,7 @@
                   toastr.warning("error");
                 }
                 $rootScope.errand.submitted = false;
-              });                                  
+              });
             }, function (data) {
               // took from other controller, I believe error will be shown same way.
               $rootScope.errand.submitted = false;
