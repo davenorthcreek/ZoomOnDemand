@@ -12,6 +12,9 @@
        
         var vm = this;
         $scope.user.email = $rootScope.user.email;
+        
+        $window.scrollTo(0, 0);
+
         init();
 
         function init() {
