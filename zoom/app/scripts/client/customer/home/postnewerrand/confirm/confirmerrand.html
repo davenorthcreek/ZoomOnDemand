@@ -1,20 +1,6 @@
 <!-- TAB POST NEW ERRAND SUBTAB CONFIRM & POST -->
 <div role="tabpanel" class="tab-pane" id="confirmErrandTab">
     <div class="containerForm payment-form">
-        <h3>Please choose your payment method:</h3>
-        <div role="tabpanel" class="tabPayment">
-            <ul class="nav nav-tabs header-payment-container" role="tablist">
-                <li role="presentation" ui-sref-active="active">
-                    <a ui-sref=".usehours" aria-controls="tab-use-hours">Use Hours in Account</a>
-                </li>
-                <li role="presentation" ui-sref-active="active">
-                    <a ui-sref=".creditcard" aria-controls="tab-pay">Pay with Credit Card</a>
-                </li>
-            </ul>
-            <div class="tab-content content-payment-container">
-               <div ui-view></div>
-            </div>
-        </div>
         <div class="order">
             <h3>Your Order Summary</h3>
             <div class="text">
@@ -43,7 +29,8 @@
             </div>
         </div>
         <div class="buttonFinish">
-            <button class="btn btnConfirm" ng-disabled="errand.submitted" ng-click="vm.submitErrand()">CONFIRM & POST</button>
+            <button class="btn btnConfirm btnBlue" ng-disabled="errand.submitted" ng-click="vm.submitErrand()">PAY WITH ACCOUNT</button>
+            <button class="btn btnConfirm" ng-disabled="errand.submitted" ng-click="vm.order()">CONFIRM & ORDER</button>
             <p>
                 By selecting this you agree to Zoom Errands <a href="#">Terms & Conditions.</a>
             </p>

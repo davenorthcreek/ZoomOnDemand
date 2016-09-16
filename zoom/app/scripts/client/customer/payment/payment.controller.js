@@ -7,8 +7,8 @@
         .controller('PaymentController', PaymentController);
 
     /** @ngInject */
-    PaymentController.$inject = ['$rootScope', '$log', '$window', '$scope', '$http', 'API_URL', 'toastr', '$filter'];
-    function PaymentController($rootScope, $log, $window, $scope, $http, API_URL, toastr, $filter) {
+    PaymentController.$inject = ['$rootScope', '$state', '$log', '$window', '$scope', '$http', 'API_URL', 'toastr', '$filter'];
+    function PaymentController($rootScope, $state, $log, $window, $scope, $http, API_URL, toastr, $filter) {
        
         var vm = this;
         $scope.user.email = $rootScope.user.email;
@@ -144,14 +144,35 @@
                 .then(function (resp) {
                     vm.waiting = false;
                     init();
-                    toastr.success("Purchase Hour: " + resp.data.purchaseHour + "hrs<br>" +
+                    
+                    if (!$rootScope.errand.confirmed) {
+                        toastr.success("Purchase Hour: " + resp.data.purchaseHour + "hrs<br>" +
                                     "Fund Escrow: " + $filter("currency")(resp.data.purchaseEscrow),
                                     "You paid " + $filter("currency")(resp.data.charge.amount * 0.01) + " successfully!",
-                                    {allowHtml: true});
+                                    {allowHtml: true});                        
+                    }
                     
                     $http.get(API_URL + '/client/escrowhours')
                     .then(function (data) {                        
                         $rootScope.user.escrow_hour = data.data.eh ? data.data.eh : $rootScope.user.escrow_hour;                        
+
+                        if ($rootScope.errand.confirmed) {
+                            $http.post(API_URL + '/client/tasks', {task: $rootScope.errand})
+                            .then(function(data) {
+                                toastr.success('Your errand has posted.<br>You will now be directed to errands in progress.', {allowHtml: true, toastClass: 'toast-center', onHidden: function() {
+                                    $rootScope.errand = {};
+                                    $rootScope.errand.task_uploads = {};
+                                    $state.go('app.home.errandsprogress', {errand_id: data.data.id});
+                                }});
+                            }, function(data) {
+                                if (data.data && data.data.alert) {
+                                    toastr.warning(data.data.alert);
+                                } else {
+                                    toastr.warning("error");
+                                }
+                                $rootScope.errand.submitted = false;
+                            });                            
+                        }
                     }, function (data) {
                         // took from other controller, I believe error will be shown same way.
                         toastr.warning(data.data.alert);
