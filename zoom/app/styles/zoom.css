@@ -1643,6 +1643,12 @@ input:-ms-input-placeholder {
 .toast-center {
   left: calc(50% - 150px);
   top: calc(50vh - 50px); }
+  .toast-center small {
+    color: #2C42B5; }
+
+#toast-container > div.toast-center {
+  width: 320px;
+  opacity: 1; }
 
 .toast {
   left: calc(100% - 320px); }

@@ -12,8 +12,17 @@
         var vm = this;
         vm.waiting = false;
         $scope.$on('auth:registration-email-success', function (ev, data) {
-            toastr.success('Your account has been successfully created.', 'Welcome ' + data.email);
-            //  $state.go('login');
+            toastr.success('Thank you for creating your Zoom Errands account!<br><br>Please click on the link sent to your email to complete the activation process.<br><small>Check your spam folder if not in inbox.</small>', 
+                {
+                    allowHtml: true, 
+                    toastClass: 'toast-center', 
+                    timeOut: 15000,
+                    onHidden: function() {
+                        window.location.href = 'http://zoomerrands.com'
+                    }
+                }
+            );
+
             vm.waiting = false;
         });
 
