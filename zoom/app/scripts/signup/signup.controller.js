@@ -12,16 +12,20 @@
         var vm = this;
         vm.waiting = false;
         $scope.$on('auth:registration-email-success', function (ev, data) {
-            toastr.success('Thank you for creating your Zoom Errands account!<br><br>Please click on the link sent to your email to complete the activation process.<br><small>Check your spam folder if not in inbox.</small>', 
+            var toastr_object = toastr.success('Thank you for creating your Zoom Errands account!<br><br>Please click on the link sent to your email to complete the activation process.<br><small>Check your spam folder if not in inbox.</small>', 
                 {
                     allowHtml: true, 
                     toastClass: 'toast-center', 
-                    timeOut: 15000,
+                    timeOut: 0,
+                    extendedTimeOut: 0,
                     onHidden: function() {
                         window.location.href = 'http://zoomerrands.com'
                     }
                 }
             );
+            setTimeout(function() {
+                toastr_object.scope.close(true);
+            }, 15000);
 
             vm.waiting = false;
         });
