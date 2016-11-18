@@ -29,7 +29,7 @@
               path: "/",
               expires: 9999,
               expirationUnit: 'days',
-              domain: '.zoomerrands.com',
+              // domain: '.zoomerrands.com',
               secure: false
             },
             omniauthWindowType: isMob ? 'inAppBrowser' : 'newWindow',

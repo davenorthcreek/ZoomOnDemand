@@ -59,7 +59,8 @@ ga('send', 'pageview');
     </script>
       <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
       <script>
-    Stripe.setPublishableKey('pk_live_ffVm6Lj136uYbDNgORCbgFx9');
+    // Stripe.setPublishableKey('pk_live_ffVm6Lj136uYbDNgORCbgFx9');
+    Stripe.setPublishableKey('pk_test_9MLCt7tfGDELF03VZN7u4b7h');
       </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
