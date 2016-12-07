@@ -1,29 +1,54 @@
-# README #
+# ZoomErrands Frontend (for Clients)#
 
-This README would normally document whatever steps are necessary to get your application up and running.
+
 
 ### What is this repository for? ###
 
 * Quick summary
+
+      zoomerrands angular client-side project for clients (not providers).
+
 * Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+
+       0.0.1
 
 ### How do I get set up? ###
 
 * Summary of set up
+```
+    install nvm
+    install node 5.0.0, npm, nodejs
+    install bower 1.7.2
+    install grunt
+
+   npm install
+   bower install
+```
 * Configuration
-* Dependencies
-* Database configuration
-* How to run tests
+```
+   edit zoom/app/constant.js  to select api server.
+```
+* How to run in local
+```
+    grunt serve
+```
 * Deployment instructions
+```
+    gulp build
+    http-server dist
+```
 
-### Contribution guidelines ###
+### scss compile runtime
+```
+    gem install sass
 
-* Writing tests
-* Code review
-* Other guidelines
+    sass style.scss
+```
 
 ### Who do I talk to? ###
 
 * Repo owner or admin
+```
+   owner : info@zoomerrands.com
+```
 * Other community or team contact
