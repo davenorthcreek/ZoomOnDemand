@@ -5,34 +5,27 @@
   <div class="containerForm">
     <form>
       <div>
-        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-          <div class="form-group relative">
-            <label for="">What errand do you need help with?</label>
-              <div angucomplete-alt id="ex1"
-                   placeholder="{{errand.type.comment}}"
-                   pause="100"
-                   selected-object="vm.selectedObject"
-                   local-data="vm.all_types"
-                   search-fields="comment"
-                   title-field="comment"
-                   minlength="1"
-                   input-class="form-control no-border-radius input-md searchZoom"
-                   match-class="highlight"
-                   ng-class="{'error-red': vm.type_iderror}">
-              </div> 
-              <span class="required-msg" ng-show="vm.type_iderror"> * Required</span>
-              <!--<p class="red-error" ng-show="vm.type_iderror">Please fill out the above field!</p>-->
-            <!-- <div class="input-group margin-bottom-sm">
-                <span class="input-group-addon"><i class="fa fa-search fa-fw" aria-hidden="true"></i></span>
-              </div> -->  
-          </div>                
-        </div>
-        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <div class="form-group">
             <label for="">Your Service Location</label>
             <select class="form-control no-border-radius input-md" ng-options="office.id as office.longName for office in vm.zoomoffices" ng-model="errand.zoom_office_id"></select>
-          </div>
+          </div>  
         </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+          <div class="form-group">
+            <label for="">Number of Zoomers Needed</label>
+             <div class="form-group margin-bottom-sm relative">
+                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="" ng-model="numbersofzoomers" ng-class="{'error-red': vm.item_error}">
+                            <span class="required-msg" ng-show="vm.item_error && !vm.item"> * Required</span>
+                        </div>
+          </div>  
+        </div>
+
+
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="form-group">
             <div for="">When do you need this service?</div>
@@ -84,51 +77,70 @@
               <div class="inline-block width-220" ng-class="{'error-bottom-red': vm.datetimeerrorShow}">
                   <input type="text" class="timeformat pointer" dn-timepicker ng-model="errand.datetime" />
               </div>
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                    <div class="form-group">
+                        <label for="">What are we delivering?</label>
+                        <div class="form-group margin-bottom-sm relative">
+                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="" ng-model="errand.item" ng-class="{'error-red': vm.item_error}">
+                            <span class="required-msg" ng-show="vm.item_error && !vm.item"> * Required</span>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
+                    <div class="form-group relative">
+                        <label for="">Where should we pick up?</label>
+                        <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete placeholder="{{errand.pick_up_address}}" force-selection="true" options="vm.autocompleteOptions" ng-model="errand.pick_up_addr" ng-class="{'warning-border':vm.invalidPickUpAddress,'error-red': vm.invalidPickUpAddress,'error-red':vm.pick_up_address_error}" autocomplete="off" ng-change="vm.blurPickUpAddress()">
+                        <span class="required-msg" ng-show="vm.pick_up_address_error && !vm.invalidPickUpAddress"> * Required</span>
+                        <span ng-show="vm.invalidPickUpAddress" class="text-danger">Please complete address with google autocomplete exaclty.</span>                      
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-show="errand.type.name == 'Delivery'">
+                    <div class="form-group">
+                        <label for="">&nbsp;</label>
+                        <div class="form-group margin-bottom-sm">
+                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #" ng-model="errand.pick_up_unit">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <div class="form-group relative">
+                        <label for="">{{ errand.type.name == 'Delivery' ? 'Where should we deliver to?' : 'Where should we send help?'}}</label>
+                        <input type="text" name="" id="" class="form-control no-border-radius input-md searchZoom" g-places-autocomplete placeholder="{{errand.address}}" force-selection="true" options="vm.autocompleteOptions" ng-model="errand.addr" ng-class="{'warning-border':vm.invalidAddress,'error-red': vm.invalidAddress,'error-red':vm.addresserror}" autocomplete="off" ng-change="vm.blurAddress()">
+                        <span class="required-msg" ng-show="vm.addresserror && !vm.invalidAddress"> * Required</span>
+                        <span ng-show="vm.invalidAddress" class="text-danger">Please complete address with google autocomplete exaclty.</span>
+                        <!--<p class="red-error" ng-show="vm.addresserror && !vm.invalidAddress">Please fill out the above field!</p>-->
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="form-group">
+                        <label for="">&nbsp;</label>
+                        <div class="form-group margin-bottom-sm">
+                            <input type="text" name="" id="" class="form-control no-border-radius input-md" placeholder="Unit / Apt #" ng-model="errand.unit">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 textDetails">
+                    <div class="form-group">
+                        <label for="">Notes</label>
+                        <div class="form-group margin-bottom-sm">
+                            <div class="textarea relative">
+                                <textarea name="" id="" ng-class="{'error-red': vm.detailserror}" class="form-control no-border-radius" rows="6" placeholder="For example: I have three rooms that needs vaccuming and organizing. Please also make sure to mop my kitchen floor and table tops." ng-model="errand.details"></textarea>
+                                <span class="required-msg" ng-show="vm.detailserror"> * Required</span>
+                                <div class="imageClip" ngf-multiple="true" ng-model="vm.firstFile" ngf-select="vm.uploadFile($files, 'normal')" popover-placement="bottom" popover-trigger="mouseenter" uib-popover-template="'editErrandDescription.html'"></div>
+                            </div>
+                            <div class="pull-right">Files: {{errand.task_uploads['normal'].length || 0}}</div>
+                            <!--<p class="red-error" ng-show="vm.detailserror">Please fill out the above field!</p>-->
+                        </div>
+                    </div>
+                </div>
             
               <div class="clearfix"></div>
               <!--<p class="red-error" ng-show="vm.datetimeerror">Please Select a valid date from today onwards!</p>-->
 
+
               
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="form-group">
-            <label for="">How frequently do you need our service? So we can set a reminder.</label>
-          </div>
-        </div>
-        <div class="col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-12 col-sm-9 col-md-9 col-lg-9">
-          <div class="form-group containerRecurring text-center">
-            <div class="optionPay">
-              <span class="line"></span>
-              <h2>recurring</h2>
-              <span class="line"></span>
-            </div>
-            <!-- <img src="images/recurring.png" alt="" class="img-responsive"> -->
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="form-group">
-            <button class="btn btn-md btnBottomForm" ng-class="{ active: (errand.frequency == 0) }" ng-click="vm.setFrequency(0)">This one time</button>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="form-group">
-            <button class="btn btn-md btnBottomForm" ng-class="{ active: (errand.frequency == 7) }" ng-click="vm.setFrequency(7)">Weekly</button>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="form-group">
-            <button class="btn btn-md btnBottomForm" ng-class="{ active: (errand.frequency == 30) }" ng-click="vm.setFrequency(30)">Monthly</button>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="form-group">
-            <div class="relative">
-              <button class="btn btn-md btnBottomForm" ng-class="{ active: (errand.frequency != 0 && errand.frequency != 7 && errand.frequency != 30) }" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Other {{(errand.frequency != 0 && errand.frequency != 7 && errand.frequency != 30) ? ('- Every ' + errand.frequency + ' days') : ''}}</button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li class="text-center" ng-repeat="frequency in vm.frequencies" ng-click="vm.setFrequency(frequency)">Every {{frequency}} days</li>
-              </ul>
-            </div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
@@ -140,6 +152,15 @@
     </form>  
   </div>
 </div>
+
+<script type="text/ng-template" id="editErrandDescription.html">
+  <div class="contentPopoverClip">
+      <p> Attach File </p>
+      <div class="clearfix"></div>
+  </div>
+</script>
+
+
 
 
     <!-- TAB POST NEW ERRAND SUBTAB SELECT ERRAND -->
