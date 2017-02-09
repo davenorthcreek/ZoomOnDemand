@@ -31,7 +31,7 @@
           $rootScope.errand.task_uploads['funds'] = [];
       }
 
-      $rootScope.errand.pick_up_addr = "los angeles";
+      // $rootScope.errand.pick_up_addr = "los angeles";
 
       vm.autocompleteOptions = {
           componentRestrictions: { country: 'us' },
@@ -186,6 +186,12 @@
 
       console.log(vm.date);
 
+      $http.get(API_URL + '/offices/myoffice')
+        .then(function(resp){
+          $rootScope.errand.pick_up_address = resp.data.street + ' ' + resp.data.city ;
+          $log.log(resp.data)
+        })
+
       $http.get(API_URL + '/all_types')
         .then(function(resp) {
           vm.all_types = resp.data;
@@ -210,13 +216,16 @@
           $scope.showcalendarflag = false;
 
       }, true);
-      $rootScope.$watch('errand.type_id', function () {
-          if($rootScope.errand.type_id != undefined){
-              vm.type_iderror = false;
-          } else {
-             // vm.type_iderror = true;
-          }
-      }, true);
+
+      // $rootScope.$watch('errand.type_id', function () {
+      //     if($rootScope.errand.type_id != undefined){
+      //         vm.type_iderror = false;
+      //     } else {
+      //        // vm.type_iderror = true;
+      //     }
+      // }, true);
+
+
     vm.selectNext = function() {
           $log.log($rootScope.errand);
           vm.datetimeerror = false;
@@ -251,14 +260,14 @@
             vm.detailserror = true
           }
 
-          if (count == 0)
-          {
-              $state.go('app.home.postnewerrand.details');
-          }
+          // if (count == 0)
+          // {
+          //     $state.go('app.home.postnewerrand.details');
+          // }
 
-          // if (count == 0) {
-          //     $state.go('app.home.postnewerrand.confirm.usehours');
-          //   }
+          if (count == 0) {
+              $state.go('app.home.postnewerrand.confirm.usehours');
+            }
 
       }
 
