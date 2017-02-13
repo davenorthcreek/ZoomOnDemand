@@ -38,7 +38,7 @@
        
 
 
-        $http.get(API_URL + '/client/escrowhours/fee')
+        $http.get(API_URL + '/b_client/escrowhours/fee')
         .then(function (data) {
             vm.fee = data.data.fee;
             vm.proFee = vm.escrow * vm.fee.percent * 0.01 + vm.fee.cent * 0.01;
@@ -95,7 +95,7 @@
         vm.couponApply = function () {
             vm.waiting = true;
             if (vm.tmpcoupon) {
-                $http.get(API_URL + '/client/escrowhours/coupon_check', { params: { couponCode: vm.tmpcoupon }})
+                $http.get(API_URL + '/b_client/escrowhours/coupon_check', { params: { couponCode: vm.tmpcoupon }})
                 .then(function (resp) {
                     vm.couponPercent = resp.data.percent;
                     vm.subtotal = vm.escrow + vm.hoursPrice * (1 - vm.couponPercent * 0.01);
@@ -143,7 +143,7 @@
                     stripeEmail: $scope.user.email, stripeToken: result.id, purchaseHour: vm.hour,
                     purchaseEscrow: vm.escrow, couponCode: vm.coupon
                 };
-                $http.post(API_URL + '/client/escrowhours/charge', payload)
+                $http.post(API_URL + '/b_client/escrowhours/charge', payload)
                 .then(function (resp) {
                     vm.waiting = false;
                     init();
@@ -155,12 +155,12 @@
                                     {allowHtml: true});                        
                     }
                     
-                    $http.get(API_URL + '/client/escrowhours')
+                    $http.get(API_URL + '/b_client/escrowhours')
                     .then(function (data) {                        
                         $rootScope.user.escrow_hour = data.data.eh ? data.data.eh : $rootScope.user.escrow_hour;                        
 
                         if ($rootScope.errand.confirmed) {
-                            $http.post(API_URL + '/client/tasks', {task: $rootScope.errand})
+                            $http.post(API_URL + '/b_client/tasks', {task: $rootScope.errand})
                             .then(function(data) {
                                 toastr.success('Your errand has posted.<br>You will now be directed to errands in progress.', {allowHtml: true, toastClass: 'toast-center', onHidden: function() {
                                     $rootScope.errand = {};

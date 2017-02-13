@@ -82,7 +82,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
     vm.all_types = resp.data;
   });
 
-  $http.get(API_URL + '/client/tasks/summary')
+  $http.get(API_URL + '/b_client/tasks/summary')
   .then(function(resp) {
     vm.errands_counts = resp.data;
   });
@@ -94,12 +94,12 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
 		vm.offset = 0;
 		vm.limit = 5;
 
-    $http.get(API_URL + '/client/tasks/summary')
+    $http.get(API_URL + '/b_client/tasks/summary')
 	  .then(function(resp) {
 	    vm.errands_counts = resp.data;
 	  });
 
-  	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit }})
+  	$http.get(API_URL + '/b_client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit }})
 	  .then(function(resp) {
 	    vm.errands = resp.data.tasks;
 	    vm.busy = !resp.data.moredata;
@@ -111,7 +111,7 @@ function MyErrandsController($rootScope, $scope, $state, $http, moment, API_URL,
   vm.loadMoreErrands = function() {
   	vm.busy = true;
   	vm.offset += vm.limit;
-  	$http.get(API_URL + '/client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit, offset: vm.offset }})
+  	$http.get(API_URL + '/b_client/tasks/mytasks', {params: { status: vm.errands_status, limit: vm.limit, offset: vm.offset }})
 	  .then(function(resp) {
 	    vm.errands = vm.errands.concat(resp.data.tasks);
 	    vm.busy = !resp.data.moredata;

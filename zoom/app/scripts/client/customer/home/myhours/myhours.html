@@ -1,285 +1,43 @@
-<div class="myErrands">
-    <h2>My Errands</h2>
-    <div class="filters">
-        <p ng-click="vm.getErrands('open')">Active <span class="circle">{{vm.errands_counts.open || 0}}</span></p>
-        <p ng-click="vm.getErrands('close')">Completed <span class="circle">{{vm.errands_counts.close || 0}}</span></p>
-        <p ng-click="vm.getErrands('cancel')">Cancelled <span class="circle">{{vm.errands_counts.cancel || 0}}</span></p>
-        <p ng-click="vm.getErrands('')">All <span class="circle">{{vm.errands_counts.total || 0}}</span></p>
-        <p>Awaiting review</p>
-        <div class="clearfix"></div>
-    </div>
-    <h3>{{vm.errands_title}} Orders</h3>
-    <!-- <div class="bgHead"></div> -->
-    <div class="table-responsive tableErrandsProgress" infinite-scroll="vm.loadMoreErrands()" infinite-scroll-disabled="vm.busy" infinite-scroll-distance="0">
-        <table class="table">
-            <thead class="my-errands-thead">
-                <tr>
-                    <th>Errand Date</th>
-                    <th>Service Provider</th>
-                    <th>Errand Type</th>
-                    <th>Description</th>
-                    <th>Hours/Funds Used</th>
-                    <th>Recurring</th>
-                    <th ng-show="vm.errands_title == 'All'">Status</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="errand in vm.errands">
-                    <td>
-                        <div  ng-show="vm.editing_errand_status.index != $index">{{errand.datetime|date:'MM/dd/yyyy'}}</div>
-                        <div class="dropdown date" ng-show="vm.editing_errand_status.index == $index">
-                            <!--<a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">
-                              <div class="input-group date">
-                                <input type="text" class="form-control" ng-value="vm.editing_errand.datetime|date:'MM/dd/yyyy'">
-                              </div>
-                            </a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <datetimepicker ng-model="vm.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown1', startView: 'day', minView: 'day'}" data-on-set-time="vm.setDate(newDate, oldDate)" ></datetimepicker>
-                            </ul>-->
-
-                            <div class="inline-block width-220">
-                                <a data-target="#" class=" date-pick-bor pointer" ng-click="showcalendarflag=true;showcalendar(true);$event.stopPropagation();">{{vm.editing_errand.datetime|date:'MM/dd/yyyy'}}</a>
-                                <div ng-show="showcalendarstatus" pickadate="" ng-click="showcalendar();$event.stopPropagation();" ng-model="vm.date" min-date="minDate" class="date-picker-class"></div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="image">
-                            <img ng-src="{{errand.provider.photoUrl || 'images/zoomlogo.png'}}" alt="" class="img-responsive">
-                        </div>
-                        <span ng-show="!errand.provider.photoUrl" class="red not-assigned">Not Assigned</span>
-                    </td>
-                    <td>
-                        <select class="form-control no-border-radius input-md"
-                                ng-show="vm.editing_errand_status.type == $index"
-                                ng-model="vm.editing_errand.type_id"
-                                ng-options="type.id as type.comment for type in vm.all_types">
-                        </select>
-                        <button class="tooltipErrandService" ng-show="vm.editing_errand_status.type != $index" popover-placement="bottom" popover-trigger="focus"
-                            uib-popover-template="'editErrandType.html'">{{errand.type.comment}}</button>
-                    </td>
-                    <td>
-                        <textarea class="tooltipErrandService" ng-show="vm.editing_errand_status.details == $index" rows="3" cols="20"
-                            ng-model="vm.editing_errand.details"></textarea>
-                        <button class="tooltipDescription" ng-show="vm.editing_errand_status.details != $index" popover-placement="bottom" popover-trigger="focus"
-                            uib-popover-template="'editErrandDescription.html'">
-                            {{errand.details}}
-                        </button>
-                    </td>
-                    <td>
-                        Hours Used:  {{errand.usedHour}}
-                        <br>
-                        Funds Used:  ${{(user.usedEscrow || 0).toFixed(2)}}
-                    </td>
-                    <td>
-                        <div ng-show="vm.editing_errand_status.index != $index">
-                            {{errand.frequency == 0 ? 'This one time' : (errand.frequency == 7 ? 'Weekly' : (errand.frequency == 30 ? 'Monthly' : ('Every ' + errand.frequency + ' days')))}}
-                        </div>
-                        <select class="form-control no-border-radius input-md"
-                                ng-show="vm.editing_errand_status.index == $index"
-                                ng-model="vm.editing_errand.frequency"
-                                ng-options="frequency.value as frequency.label for frequency in vm.frequencies">
-                        </select>
-                    </td>
-                    <td ng-show="vm.errands_status == ''">{{vm.errand_status_title[errand.status]}}</td>
-                    <td>
-                        <button class="btnOrderAgain" ng-click="vm.orderAgain(errand)">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder" ng-show="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index" ng-click="vm.saveOrder($index, errand)">Save Order</button>
-                        <button class="btnEditOrder" ng-hide="vm.editing_errand_status.type == $index || vm.editing_errand_status.details == $index || !vm.editableErrand(errand)" ng-click="vm.editErrandRow($index, errand)">Edit Order</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <script type="text/ng-template" id="editErrandType.html">
-            <div class="contentPopoverZoom">
-                <p>{{errand.type.comment}}</p>
-                <button class="btn btn-sm" ng-show="vm.editing_errand_status.type != $index" ng-click="vm.editErrandType($index, errand)">Edit</button>
-                <div class="clearfix"></div>
+<!-- TAB PARENT MY HOURS -->
+<div role="tabpanel" class="tab-pane" id="tab-my-hours">
+    <div class="tab-content-hours text-center">
+        <div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hours">
+                <h1>HOURS</h1>
+                <div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 available-hours">
+                        <h4>+ AVAILABLE</h4>
+                        <h2>{{user.escrow_hour.hoursavail || 0}}</h2>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 used-hours">
+                        <h4>- USED</h4>
+                        <h2>{{user.escrow_hour.hoursused || 0}}</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buttonHours">
+                        <button class="btn" ui-sref="app.payment">ADD HOURS</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
-        </script>
-        <script type="text/ng-template" id="editErrandDescription.html">
-            <div class="contentPopoverZoom">
-                <p>{{errand.details}}</p>
-                <button class="btn btn-sm" ng-show="vm.editing_errand_status.details != $index" ng-click="vm.editErrandDetails($index, errand)">Edit</button>
-                <div class="clearfix"></div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 funds">
+                <h1>‘Purchase For Me’ FUNDS</h1>
+                <div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 available-funds">
+                        <h4>+ AVAILABLE</h4>
+                        <h2>${{(user.escrow_hour.escrowavail || 0).toFixed(2)}}</h2>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 used-funds">
+                        <h4>- USED</h4>
+                        <h2>${{(user.escrow_hour.escrowused || 0).toFixed(2)}}</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 buttonFunds">
+                        <button class="btn" ui-sref="app.payment">ADD FUNDS</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
-        </script>
-        <!-- <div id="contentTooltip" class="hidden">
-            <p>Take document to the pick up location and mail it at the post office on Steiner street. Call me if there are any problems.</p>
-            <button>Edit</button>
             <div class="clearfix"></div>
-        </div> -->
-        <!-- $('.tooltipErrandService, .tooltipDescription').each(function(){
-            $(this).tooltip({
-                html: true,
-                title: $('#contentTooltip').html(),
-                placement:'bottom',
-                trigger:'focus',
-                // trigger:'click',
-                template:'<div class="tooltip" role="tooltip"><div class="tooltip-inner"></div></div>'
-            });
-        }); -->
-        <!-- <div class="table">
-            <div class="headerTabla">
-                <ul>
-                    <li>Errand Date</li>
-                    <li>Service Provider</li>
-                    <li>Errand Type</li>
-                    <li>Description</li>
-                    <li>Hours/Funds Used</li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="contTable">
-                <ul>
-                    <li>04/04/16</li>
-                    <li>
-                        <div class="image">
-                            <img src="images/photo1.png" alt="" class="img-responsive">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </li>
-                    <li>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </li>
-                    <li>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </li>
-                    <li>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>04/04/16</li>
-                    <li>
-                        <div class="image">
-                            <img src="images/photo2.png" alt="" class="img-responsive">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </li>
-                    <li>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </li>
-                    <li>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </li>
-                    <li>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>04/04/16</li>
-                    <li>
-                        <div class="image">
-                            <img src="images/photo3.png" alt="" class="img-responsive">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </li>
-                    <li>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </li>
-                    <li>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </li>
-                    <li>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>04/04/16</li>
-                    <li>
-                        <div class="image">
-                            <img src="images/photo4.png" alt="" class="img-responsive">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </li>
-                    <li>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </li>
-                    <li>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </li>
-                    <li>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>04/04/16</li>
-                    <li>
-                        <div class="image">
-                            <img src="images/photo5.png" alt="" class="img-responsive">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </li>
-                    <li>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </li>
-                    <li>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </li>
-                    <li>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>04/04/16</li>
-                    <li>
-                        <div class="image">
-                            <img src="images/photo6.png" alt="" class="img-responsive">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="tooltipErrandService">Courier Service</button>
-                    </li>
-                    <li>
-                        <button class="tooltipDescription">Take doc to lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, natus.</button>
-                    </li>
-                    <li>
-                        Hours Used:  3
-                        <br>
-                        Funds Used:  None
-                    </li>
-                    <li>
-                        <button class="btnOrderAgain">Order Again</button>
-                        <br>
-                        <button class="btnEditOrder">Edit Order</button>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
+        </div>
     </div>
-    <div class="clearfix"></div>
 </div>
+<!-- TAB PARENT MY HOURS -->

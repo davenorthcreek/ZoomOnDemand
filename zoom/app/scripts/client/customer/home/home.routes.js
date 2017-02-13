@@ -27,6 +27,17 @@ $urlRouterProvider.when('/app/home/postnewerrand/','/app/home/postnewerrand/sele
     .state('app.home.myhours', {
         url: '/myhours',
         controller: 'MyHoursController as vm',
-        templateUrl: 'scripts/client/customer/home/myhours/myhours.html'
+        templateUrl: 'scripts/client/customer/myerrands/myerrands.html'
     })
 });
+
+// 'use strict';
+
+// zoomApp.config(function ($stateProvider, $urlRouterProvider) {
+//   $stateProvider
+//     .state('app.myerrands', {
+//       url: '/myerrands',
+//       controller: 'MyErrandsController as vm',
+//       templateUrl: 'scripts/client/customer/myerrands/myerrands.html'
+//     })
+// });

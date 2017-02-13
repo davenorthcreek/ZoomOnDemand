@@ -5,7 +5,7 @@
         <p ng-click="vm.getErrands('close')">Completed <span class="circle">{{vm.errands_counts.close || 0}}</span></p>
         <p ng-click="vm.getErrands('cancel')">Cancelled <span class="circle">{{vm.errands_counts.cancel || 0}}</span></p>
         <p ng-click="vm.getErrands('')">All <span class="circle">{{vm.errands_counts.total || 0}}</span></p>
-        <p>Awaiting review</p>
+        <!-- <p>Awaiting review</p> -->
         <div class="clearfix"></div>
     </div>
     <h3>{{vm.errands_title}} Orders</h3>
@@ -14,12 +14,12 @@
         <table class="table">
             <thead class="my-errands-thead">
                 <tr>
-                    <th>Errand Date</th>
+                    <th>Delivery Date</th>
                     <th>Service Provider</th>
-                    <th>Errand Type</th>
+                    
                     <th>Description</th>
                     <th>Hours/Funds Used</th>
-                    <th>Recurring</th>
+                    
                     <th ng-show="vm.errands_title == 'All'">Status</th>
                     <th></th>
                 </tr>
@@ -51,15 +51,6 @@
                         <span ng-show="!errand.provider.photoUrl" class="red not-assigned">Not Assigned</span>
                     </td>
                     <td>
-                        <select class="form-control no-border-radius input-md"
-                                ng-show="vm.editing_errand_status.type == $index"
-                                ng-model="vm.editing_errand.type_id"
-                                ng-options="type.id as type.comment for type in vm.all_types">
-                        </select>
-                        <button class="tooltipErrandService" ng-show="vm.editing_errand_status.type != $index" popover-placement="bottom" popover-trigger="focus"
-                            uib-popover-template="'editErrandType.html'">{{errand.type.comment}}</button>
-                    </td>
-                    <td>
                         <textarea class="tooltipErrandService" ng-show="vm.editing_errand_status.details == $index" rows="3" cols="20"
                             ng-model="vm.editing_errand.details"></textarea>
                         <button class="tooltipDescription" ng-show="vm.editing_errand_status.details != $index" popover-placement="bottom" popover-trigger="focus"
@@ -72,16 +63,7 @@
                         <br>
                         Funds Used:  ${{(user.usedEscrow || 0).toFixed(2)}}
                     </td>
-                    <td>
-                        <div ng-show="vm.editing_errand_status.index != $index">
-                            {{errand.frequency == 0 ? 'This one time' : (errand.frequency == 7 ? 'Weekly' : (errand.frequency == 30 ? 'Monthly' : ('Every ' + errand.frequency + ' days')))}}
-                        </div>
-                        <select class="form-control no-border-radius input-md"
-                                ng-show="vm.editing_errand_status.index == $index"
-                                ng-model="vm.editing_errand.frequency"
-                                ng-options="frequency.value as frequency.label for frequency in vm.frequencies">
-                        </select>
-                    </td>
+                    
                     <td ng-show="vm.errands_status == ''">{{vm.errand_status_title[errand.status]}}</td>
                     <td>
                         <button class="btnOrderAgain" ng-click="vm.orderAgain(errand)">Order Again</button>
