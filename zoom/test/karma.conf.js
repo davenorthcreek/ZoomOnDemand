@@ -30,6 +30,7 @@ module.exports = function(config) {
       'bower_components/angular-cookie/angular-cookie.js',
       'bower_components/ng-token-auth/dist/ng-token-auth.js',
       'bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js',
+      'bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js',
       'bower_components/angular-toastr/dist/angular-toastr.tpls.js',
       'bower_components/lodash/lodash.js',
       'bower_components/restangular/dist/restangular.js',

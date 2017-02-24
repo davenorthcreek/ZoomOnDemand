@@ -2,8 +2,9 @@
   "name": "zoom",
   "private": true,
   "dependencies": {
-      "express": "^4.13.1",
-      "compression": "^1.5.2"
+    "compression": "^1.5.2",
+    "express": "^4.13.1",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
@@ -36,7 +37,8 @@
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
     "karma": "^0.13.22",
-    "karma-jasmine": "^1.0.2",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.0",
     "phantomjs-prebuilt": "^2.1.7",
     "time-grunt": "^1.0.0"
